@@ -1,0 +1,25 @@
+﻿platform: Common
+buildPlatform:
+componentType: appcircle_custom_script
+displayName: Custom Script
+description: "Carry out any custom operation in the build machine with a compatible script."
+webUrl: https://github.com/appcircleio/appcircle-custom-script
+repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
+commit: 08e87ce79cddbbd30ecf3ecee652a26f86c2c22c
+inputs:
+- key: "Execute"
+  editorType: select
+  options: "ruby,bash"
+  isRequired: true
+  title: Execute with
+  description: Script to execute with. For example bash or ruby.
+  helpText: 
+- key: "Script"
+  editorType: textarea
+  isRequired: false
+  title: Script
+  description: Script to execute.
+  helpText:
+outputs:
+processFilename:
+processArguments:
