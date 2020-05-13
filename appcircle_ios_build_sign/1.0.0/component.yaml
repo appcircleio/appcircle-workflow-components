@@ -1,10 +1,10 @@
 platform: iOS
 buildPlatform:
-displayName: "Xcode Archive & Export"
+displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git
-commit: 158d37161a2ec4656e67ee6d4cf9fdd05fabe424
+commit: d60d7eee3055f0b10c0b3e3b937400f6b2482c3b
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
