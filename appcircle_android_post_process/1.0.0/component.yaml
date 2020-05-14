@@ -4,11 +4,11 @@ displayName: Android App Analyzer
 description: "System operations to identify and process the output files."
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
-commit: 63fd9a5
+commit: 6b90add
 outputs:
-- key: "AC_ANDROID_APP_ANALYSIS_PATH"
-  defaultValue: "AC_ANDROID_APP_ANALYSIS_PATH"
-  description: Application analysis file.
+- key: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
+  defaultValue: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
+  description: Post process output file.
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
