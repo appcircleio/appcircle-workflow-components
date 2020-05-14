@@ -4,7 +4,7 @@ displayName: Install Node
 description: "Install spesificed node version. Defaults to: latest"
 webUrl: https://github.com/appcircleio/appcircle-node-install-component
 repoUrl: https://github.com/appcircleio/appcircle-node-install-component.git
-commit: bde0660
+commit: 0f29428
 inputs:
 - key: "AC_SELECTED_NODE_VERSION"
   defaultValue: "$AC_SELECTED_NODE_VERSION"

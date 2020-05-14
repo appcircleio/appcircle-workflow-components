@@ -4,7 +4,7 @@ displayName: Activate SSH Private Key
 description: "Activate SSH private key in RSA format."
 webUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component
 repoUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component.git
-commit: 6f3b7dd
+commit: 3ae3238
 inputs:
 - key: "AC_REPOSITORY_SSH_KEY"
   defaultValue: "$AC_REPOSITORY_SSH_KEY"

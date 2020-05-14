@@ -4,7 +4,7 @@ displayName: NPM/YARN Command
 description: "Runs npm/yarn with the given commands."
 webUrl: https://github.com/appcircleio/appcircle-npm-yarn-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-yarn-component.git
-commit: 6fc2f9c
+commit: 0b88223
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"

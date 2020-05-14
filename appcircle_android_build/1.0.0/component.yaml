@@ -4,7 +4,7 @@ displayName: "Android Build"
 description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
 webUrl: https://github.com/appcircleio/appcircle-android-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-component.git
-commit: a022d96
+commit: fcb66f7
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -35,11 +35,11 @@ inputs:
   title: Output type
   description: "Output type. For example: apk or bundle"
   helpText:
-- key: "AC_GRADLE_BUILD_PARAMS"
-  defaultValue: "$AC_GRADLE_BUILD_PARAMS"
+- key: "AC_GRADLE_BUILD_EXTRA_ARGS"
+  defaultValue: "$AC_GRADLE_BUILD_EXTRA_ARGS"
   isRequired: false
   title: Gradle build parameters
-  description: "Add custom build parameters. For example: --stacktrace"
+  description: "Add custom build arguments. For example: --stacktrace"
   helpText:
 outputs:
 - key: "AC_APK_PATH"
