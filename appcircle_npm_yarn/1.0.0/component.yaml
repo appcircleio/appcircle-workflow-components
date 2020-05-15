@@ -4,16 +4,16 @@ displayName: NPM/YARN Command
 description: "Runs npm/yarn with the given commands."
 webUrl: https://github.com/appcircleio/appcircle-npm-yarn-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-yarn-component.git
-commit: 0b88223
+commit: 0b882232ab426b64b6d1be43918cf2a30c07d9b3
 inputs:
-- key: "AC_REPOSITORY_DIR"
+- key: "AC_WORKING_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: true
   title: Repository Path
   description: Specifies the cloned repository directory.
   helpText:
-- key: "AC_NPM_COMMAND"
-  defaultValue: "$AC_NPM_COMMAND"
+- key: "AC_NPM_COMMAND_ARGS"
+  defaultValue: "$AC_NPM_COMMAND_ARGS"
   title: The npm commands to run
   description: "The npm command to run. defaults to: npm/yarn install"
   helpText:
