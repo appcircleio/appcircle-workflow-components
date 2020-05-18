@@ -4,7 +4,7 @@ displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git
-commit: 1260caf6d5d0e8c6ce1420d0063230982c9dbdd7
+commit: ac039b2a2642bca7eafadc7befdd43442b02512b
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -93,14 +93,17 @@ inputs:
   helpText:
 outputs:
 - key: "AC_ARCHIVE_PATH"
+  title: Archive Path
   defaultValue: "AC_ARCHIVE_PATH"
   description: Archive path.
   helpText:
 - key: "AC_ARCHIVE_METADATA_PATH"
+  title: Archive Metadata Path
   defaultValue: "AC_ARCHIVE_METADATA_PATH"
   description: Archive metadata path.
   helpText:
 - key: "AC_EXPORT_DIR"
+  title: Export Directory
   defaultValue: "AC_EXPORT_DIR"
   description: Specifies the directory that contains ipa, exportOptions.plist, and other exported files.
   helpText:
