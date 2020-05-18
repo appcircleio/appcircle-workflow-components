@@ -4,7 +4,7 @@ displayName: "Xcode Select"
 description: "Use to specify xcode version."
 webUrl: https://github.com/appcircleio/appcircle-xcode-select-component
 repoUrl: https://github.com/appcircleio/appcircle-xcode-select-component.git
-commit: 15b862d7252290704e2cb7f84b976d8f2a93003e
+commit: 5aa7c6642a2e8fa23e748457a61184830f32ea74
 inputs:
 - key: "AC_XCODE_LIST_DIR"
   defaultValue: "$AC_XCODE_LIST_DIR"
@@ -19,6 +19,10 @@ inputs:
   description: Specifies the xcode version.
   helpText:
 outputs:
+- key: "XCODE_DEVELOPER_DIR_PATH"
+  defaultValue: "XCODE_DEVELOPER_DIR_PATH"
+  description: Xcode developer directory path.
+  helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:

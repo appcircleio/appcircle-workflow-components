@@ -4,19 +4,13 @@ displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git
-commit: d60d7eee3055f0b10c0b3e3b937400f6b2482c3b
+commit: 1260caf6d5d0e8c6ce1420d0063230982c9dbdd7
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: false
   title: Repository Directory
   description: Specifies the cloned repository directory.
-  helpText:
-- key: "AC_XCODE_LIST_DIR"
-  defaultValue: "$AC_XCODE_LIST_DIR"
-  isRequired: true
-  title: Xcode List Directory
-  description: "Specifies the xcode folder list directory. Current xcode folder structure examples : /Applications/Xcode/10.3/Xcode or /Applications/Xcode/11.0/Xcode"
   helpText:
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
@@ -35,12 +29,6 @@ inputs:
   isRequired: true
   title: Project Path
   description: "Specifies the project path. For example : ./appcircle.xcodeproj"
-  helpText:
-- key: "AC_XCODE_VERSION"
-  defaultValue: "$AC_XCODE_VERSION"
-  isRequired: true
-  title: Xcode Version
-  description: Specifies the xcode version.
   helpText:
 - key: "AC_CERTIFICATES"
   defaultValue: "$AC_CERTIFICATES"
