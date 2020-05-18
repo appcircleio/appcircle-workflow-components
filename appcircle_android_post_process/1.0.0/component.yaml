@@ -1,6 +1,6 @@
 platform: Android
 buildPlatform:
-displayName: Android App Analyzer
+displayName: Android Post Process
 description: "System operations to identify and process the output files."
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
