@@ -4,7 +4,7 @@ displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86 architecture (Required for Preview on Device feature). This step creates the unsigned xcarchive file."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
-commit: 8e284247d358b88bdeb246b4cfa023acb354b06e
+commit: 358c4a82c296e8711e29391a0e535740f249b63e
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -25,7 +25,7 @@ inputs:
   description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
   helpText:
 - key: "AC_PROJECT_PATH"
-  defaultValue: "$AC_PROJECT"
+  defaultValue: "$AC_PROJECT_PATH"
   isRequired: true
   title: Project Path
   description: "Specifies the project path. For example : ./appcircle.xcodeproj"
