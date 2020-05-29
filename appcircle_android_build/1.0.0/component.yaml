@@ -4,7 +4,7 @@ displayName: "Android Build"
 description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
 webUrl: https://github.com/appcircleio/appcircle-android-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-component.git
-commit: 0399687
+commit: b8c1e34
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -43,10 +43,12 @@ inputs:
   helpText:
 outputs:
 - key: "AC_APK_PATH"
+  title: "APK Path"
   defaultValue: "AC_APK_PATH"
   description: "Path of the generated apk file."
   helpText:
 - key: "AC_AAB_PATH"
+  title: "AAB Path"
   defaultValue: "AC_AAB_PATH"
   description: "Path of the generated aab file."
   helpText:

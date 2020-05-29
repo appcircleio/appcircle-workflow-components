@@ -4,7 +4,7 @@ displayName: Android Lint
 description: "Run lint gradle task on your Android project's source files."
 webUrl: https://github.com/appcircleio/appcircle-android-lint-component
 repoUrl: https://github.com/appcircleio/appcircle-android-lint-component.git
-commit: 352be73
+commit: 2ba7444
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"

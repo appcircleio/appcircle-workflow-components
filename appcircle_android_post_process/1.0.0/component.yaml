@@ -4,7 +4,7 @@ displayName: Android Post Process
 description: "System operations to identify and process the output files."
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
-commit: 6b90add
+commit: f4da2cb
 outputs:
 - key: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
   defaultValue: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
