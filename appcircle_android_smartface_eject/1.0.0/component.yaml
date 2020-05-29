@@ -4,6 +4,7 @@ displayName: "Smartface Eject for Android"
 description: "Creates Android Studio project to build from your smartface workspace."
 webUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component
 repoUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component.git
+commit: 9dec359
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"

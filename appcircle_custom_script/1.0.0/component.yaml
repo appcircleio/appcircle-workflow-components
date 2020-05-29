@@ -5,7 +5,7 @@ displayName: Custom Script
 description: "Carry out any custom operation in the build machine with a compatible script."
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
-commit: cbea20f
+commit: 3716658
 inputs:
 - key: "Execute"
   editorType: select
