@@ -7,6 +7,7 @@ repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 commit: f4da2cb
 outputs:
 - key: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
+  title: "Android Post Process Output Path"
   defaultValue: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
   description: Post process output file.
   helpText:
