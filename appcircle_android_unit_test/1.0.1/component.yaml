@@ -1,0 +1,41 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin
+displayName: Android Unit Test
+description: "Run Android project's unit tests."
+webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
+repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git
+commit: 271be23
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+- key: "AC_VARIANTS"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variants
+  description: "Specifies build variants. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_GRADLE_EXTRA_ARGS"
+  defaultValue: "$AC_GRADLE_EXTRA_ARGS"
+  isRequired: false
+  title: Gradle extra arguments
+  description: "Add custom arguments. For example: --stacktrace"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
