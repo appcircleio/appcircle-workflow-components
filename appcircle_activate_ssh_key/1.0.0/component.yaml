@@ -1,0 +1,23 @@
+platform: Common
+buildPlatform:
+displayName: Activate SSH Private Key
+description: "Activate SSH private key in RSA format."
+webUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component
+repoUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component.git
+commit: 54ce947
+inputs:
+- key: "AC_REPOSITORY_SSH_KEY"
+  defaultValue: "$AC_REPOSITORY_SSH_KEY"
+  isRequired: false
+  title: SSH Private Key
+  description: SSH private key in RSA format
+outputs:
+- key: "SSH_AUTH_SOCK"
+  title: SSH Auth Sock
+  defaultValue: "SSH_AUTH_SOCK"
+  description: The path of the SSH Auth Socket.
+  helpText:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"

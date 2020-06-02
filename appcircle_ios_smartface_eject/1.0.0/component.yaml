@@ -1,0 +1,63 @@
+platform: iOS
+buildPlatform: Smartface
+displayName: "Smartface Eject for iOS"
+description: "Generates xcode project for build from the smartface workspace."
+webUrl: https://github.com/appcircleio/appcircle-ios-smartface-eject-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-smartface-eject-component.git
+commit: 963fc42293665a475a93b4b3d0b9e058db59727e
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_XCODE_LIST_DIR"
+  defaultValue: "$AC_XCODE_LIST_DIR"
+  isRequired: true
+  title: Xcode List Directory
+  description: "Specifies the xcode folder list directory. Current xcode folder structure examples : /Applications/Xcode/10.3/Xcode or /Applications/Xcode/11.0/Xcode"
+  helpText:
+- key: "AC_INCLUDE_XCODE_PROJECT"
+  defaultValue: "false"
+  isRequired: true
+  title: Include Xcode Project to Output
+  description: "Specifies whether Smartface xcode project is in output."
+  helpText:
+- key: "AC_SMARTFACE_CLI_VERSION"
+  isRequired: false
+  title: Smartface CLI Version
+  defaultValue: ""
+  description: "Specifies the Smartface CLI version. Defaults to: latest"
+  helpText:
+- key: "AC_SMARTFACE_PLAYER_VERSION"
+  defaultValue: ""
+  isRequired: false
+  title: Smartface iOS Player Version
+  description: "Specifies the Smartface iOS player version. Defaults to: latest"
+  helpText:
+outputs:
+- key: "AC_PROJECT_PATH"
+  title: Project Path
+  defaultValue: "AC_PROJECT_PATH"
+  description: Smartface Project Path.
+  helpText:
+- key: "AC_SCHEME"
+  title: Scheme
+  defaultValue: "AC_SCHEME"
+  description: Smartface scheme.
+  helpText:
+- key: "AC_XCODE_VERSION"
+  title: Xcode Version
+  defaultValue: "AC_XCODE_VERSION"
+  description: Smartface xcode version.
+  helpText:
+- key: "AC_BUNDLE_IDENTIFIERS"
+  title: Bundle Identifiers
+  defaultValue: "AC_BUNDLE_IDENTIFIERS"
+  description: Smartface bundle identifiers.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

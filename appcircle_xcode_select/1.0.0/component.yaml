@@ -1,0 +1,30 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcode Select"
+description: "Use to specify xcode version."
+webUrl: https://github.com/appcircleio/appcircle-xcode-select-component
+repoUrl: https://github.com/appcircleio/appcircle-xcode-select-component.git
+commit: 6ff62f61930f3a1e868cbdbc377fa2f0900569bd
+inputs:
+- key: "AC_XCODE_LIST_DIR"
+  defaultValue: "$AC_XCODE_LIST_DIR"
+  isRequired: true
+  title: Xcode List Directory
+  description: "Specifies the xcode folder list directory. Current xcode folder structure examples : /Applications/Xcode/10.3/Xcode or /Applications/Xcode/11.0/Xcode"
+  helpText:
+- key: "AC_XCODE_VERSION"
+  defaultValue: "$AC_XCODE_VERSION"
+  isRequired: true
+  title: Xcode Version
+  description: Specifies the xcode version.
+  helpText:
+outputs:
+- key: "XCODE_DEVELOPER_DIR_PATH"
+  title: Xcode Developer Dir Path
+  defaultValue: "XCODE_DEVELOPER_DIR_PATH"
+  description: Xcode developer directory path.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

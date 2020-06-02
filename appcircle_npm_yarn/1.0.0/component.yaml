@@ -1,0 +1,23 @@
+platform: Common
+buildPlatform:
+displayName: NPM/YARN Command
+description: "Runs npm/yarn with the given commands."
+webUrl: https://github.com/appcircleio/appcircle-npm-yarn-component
+repoUrl: https://github.com/appcircleio/appcircle-npm-yarn-component.git
+commit: 9b388b2
+inputs:
+- key: "AC_WORKING_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_NPM_COMMAND_ARGS"
+  defaultValue: "$AC_NPM_COMMAND_ARGS"
+  title: The npm commands to run
+  description: "The npm command to run. defaults to: npm/yarn install"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/appcircle_npm_yarn_command.rb'
+files:
+- "appcircle_npm_yarn_command.rb"

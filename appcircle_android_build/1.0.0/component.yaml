@@ -1,0 +1,58 @@
+platform: Android
+buildPlatform:
+displayName: "Android Build"
+description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
+webUrl: https://github.com/appcircleio/appcircle-android-build-component
+repoUrl: https://github.com/appcircleio/appcircle-android-build-component.git
+commit: f8b96f6
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+- key: "AC_VARIANTS"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variants
+  description: "Specifies build variants. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_OUTPUT_TYPE"
+  defaultValue: "$AC_OUTPUT_TYPE"
+  isRequired: true
+  title: Output type
+  description: "Output type. For example: apk or bundle"
+  helpText:
+- key: "AC_GRADLE_BUILD_EXTRA_ARGS"
+  defaultValue: "$AC_GRADLE_BUILD_EXTRA_ARGS"
+  isRequired: false
+  title: Gradle build parameters
+  description: "Add custom build arguments. For example: --stacktrace"
+  helpText:
+outputs:
+- key: "AC_APK_PATH"
+  title: "APK Path"
+  defaultValue: "AC_APK_PATH"
+  description: "Path of the generated apk file."
+  helpText:
+- key: "AC_AAB_PATH"
+  title: "AAB Path"
+  defaultValue: "AC_AAB_PATH"
+  description: "Path of the generated aab file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
