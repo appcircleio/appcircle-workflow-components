@@ -1,6 +1,6 @@
 platform: Common
 buildPlatform:
-displayName: Flutter Build
+displayName: Install Flutter
 description: "Install spesificed flutter version. Defaults to: stable."
 webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
