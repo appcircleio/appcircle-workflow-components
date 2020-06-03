@@ -4,16 +4,15 @@ displayName: Install Flutter
 description: "Install spesificed flutter version. Defaults to: stable."
 webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
-commit: 41699ad
+commit: f24351b
 inputs:
 - key: "AC_SELECTED_FLUTTER_VERSION"
-  defaultValue: "$AC_SELECTED_FLUTTER_VERSION"
   title: Selected Flutter Version
-  description: Specifies the Flutter version to install. You can use any available tag or branch in Flutter SDK repo. 
+  description: Specifies the Flutter version to install. Defaults to: stable.You can use any available tag or branch in Flutter SDK repo. 
   helpText:
 outputs:
 - key: "PATH"
-  defaultValue: "$PATH"
+  defaultValue: "PATH"
   title: PATH variable
   description: PATH variable that add Flutter tool for your workflow.
   helpText:
