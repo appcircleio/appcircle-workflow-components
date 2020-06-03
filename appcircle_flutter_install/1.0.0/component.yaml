@@ -4,7 +4,7 @@ displayName: Install Flutter
 description: "Install spesificed flutter version. Defaults to: stable. You can use any available tag or branch in Flutter SDK repo."
 webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
-commit: 0a4ec79
+commit: d30121c
 inputs:
 - key: "AC_SELECTED_FLUTTER_VERSION"
   isRequired: false
