@@ -4,7 +4,7 @@ displayName: "Flutter Build"
 description: "Build your Flutter project with Flutter SDK."
 webUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component.git
-commit: 971b0b8
+commit: d284dc7
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
