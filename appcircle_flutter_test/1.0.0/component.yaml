@@ -1,0 +1,25 @@
+platform: Common
+buildPlatform:
+displayName: Flutter Test
+description: "Run Flutter test command."
+webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
+commit: 3cb82dc
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_FLUTTER_PROJECT_PATH"
+  isRequired: false
+  title: Flutter Project Path
+  description: "Specifies Flutter project path. Defaults to: ./"
+- key: "AC_FLUTTER_TEST_EXTRA_ARGS"
+  isRequired: false
+  title: Flutter Test Additional Arguments
+  description: "Specifies custom arguments. Defaults to: --machine"
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
