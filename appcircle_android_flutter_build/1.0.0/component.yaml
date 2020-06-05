@@ -4,7 +4,7 @@ displayName: "Flutter Build"
 description: "Build your Flutter project with Flutter SDK."
 webUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component.git
-commit: e01af86
+commit: 59472ca
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -29,7 +29,7 @@ inputs:
   description: "Specifies Flutter build mode. Defaults to: release"
   helpText:
 - key: "AC_FLUTTER_BUILD_EXTRA_ARGS"
-  defaultValue: "$AC_FLUTTER_BUILD_EXTRA_ARGS"
+  defaultValue: ""
   isRequired: false
   title: Custom Build Arguments
   description: "Add custom build arguments. For example: --split-per-abi"
