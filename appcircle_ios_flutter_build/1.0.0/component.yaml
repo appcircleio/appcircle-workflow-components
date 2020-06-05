@@ -1,0 +1,29 @@
+platform: iOS
+buildPlatform:
+displayName: "Flutter Build for iOS"
+description: "Build your flutter project."
+webUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component.git
+commit: f849958e704918c4c99cc358a197bd337bcc6c84
+inputs:
+- key: "AC_FLUTTER_PROJECT_PATH"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Path
+  description: "Specifies the flutter project path."
+- key: "AC_FLUTTER_BUILD_MODE"
+  defaultValue: "--release"
+  isRequired: true
+  title: Build Mode
+  description: "Specifies Flutter build mode. For example : --release"
+  helpText:
+- key: "AC_FLUTTER_BUILD_EXTRA_ARGS"
+  isRequired: false
+  defaultValue: "--no-codesign"
+  title: Custom Build Arguments
+  description: "Add custom build arguments."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
