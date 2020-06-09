@@ -4,17 +4,13 @@ displayName: Flutter Test
 description: "Run Flutter test command."
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
-commit: 3cb82dc
+commit: 2003f24
 inputs:
-- key: "AC_REPOSITORY_DIR"
+- key: "AC_FLUTTER_PROJECT_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: true
-  title: Repository Path
-  description: "Specifies the cloned repository path."
-- key: "AC_FLUTTER_PROJECT_PATH"
-  isRequired: false
-  title: Flutter Project Path
-  description: "Specifies Flutter project path. Defaults to: ./"
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
 - key: "AC_FLUTTER_TEST_EXTRA_ARGS"
   isRequired: false
   title: Flutter Test Additional Arguments
