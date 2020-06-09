@@ -1,0 +1,21 @@
+platform: Common
+buildPlatform: Flutter
+displayName: Flutter Analyze
+description: "Run flutter analyze command."
+webUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component.git
+commit: 4f85ffe
+inputs:
+- key: "AC_FLUTTER_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
+- key: "AC_FLUTTER_ANALYZE_EXTRA_ARGS"
+  isRequired: false
+  title: Flutter Analyzer Additional Arguments
+  description: "Specifies custom arguments."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
