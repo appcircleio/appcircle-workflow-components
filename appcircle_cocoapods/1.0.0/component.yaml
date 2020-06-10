@@ -4,7 +4,7 @@ displayName: Cocoapods Install
 description: "Execute CocoaPods install in the project path."
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-component.git
-commit: e3d1fd1723870c033eabe296d4936fe9e7ef9919
+commit: 977c8e9069f831cbf6abfdd059f6fd04e237be8d
 inputs:
 - key: "AC_PROJECT_PATH"
   defaultValue: "$AC_PROJECT_PATH"
