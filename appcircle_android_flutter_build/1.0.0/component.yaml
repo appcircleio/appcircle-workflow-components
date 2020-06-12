@@ -1,0 +1,46 @@
+platform: Android
+buildPlatform:
+displayName: "Flutter Build for Android"
+description: "Build your Flutter project with Flutter SDK."
+webUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component
+repoUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component.git
+commit: 72f1657
+inputs:
+- key: "AC_FLUTTER_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
+- key: "AC_OUTPUT_TYPE"
+  defaultValue: "$AC_OUTPUT_TYPE"
+  isRequired: true
+  title: Output Type
+  description: "Output type. For example: apk or aab"
+  helpText:
+- key: "AC_FLUTTER_BUILD_MODE"
+  defaultValue: "$AC_FLUTTER_BUILD_MODE"
+  isRequired: false
+  title: Build Mode
+  description: "Specifies Flutter build mode. Defaults to: release"
+  helpText:
+- key: "AC_FLUTTER_BUILD_EXTRA_ARGS"
+  defaultValue: "$AC_FLUTTER_BUILD_EXTRA_ARGS"
+  isRequired: false
+  title: Custom Build Arguments
+  description: "Add custom build arguments. For example: --split-per-abi"
+  helpText:
+outputs:
+- key: "AC_APK_PATH"
+  title: "APK Path"
+  defaultValue: "AC_APK_PATH"
+  description: "Path of the generated apk file."
+  helpText:
+- key: "AC_AAB_PATH"
+  title: "AAB Path"
+  defaultValue: "AC_AAB_PATH"
+  description: "Path of the generated aab file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

@@ -1,0 +1,21 @@
+platform: Common
+buildPlatform:
+displayName: Flutter Test
+description: "Run Flutter test command."
+webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
+commit: 2003f24
+inputs:
+- key: "AC_FLUTTER_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
+- key: "AC_FLUTTER_TEST_EXTRA_ARGS"
+  isRequired: false
+  title: Flutter Test Additional Arguments
+  description: "Specifies custom arguments. Defaults to: --machine"
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
