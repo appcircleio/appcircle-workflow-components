@@ -13,7 +13,7 @@ inputs:
   description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
 - key: "AC_FLUTTER_ANALYZE_EXTRA_ARGS"
   isRequired: false
-  title: Flutter Analyzer Additional Arguments
+  title: Flutter Analyze Additional Arguments
   description: "Specifies custom arguments."
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
