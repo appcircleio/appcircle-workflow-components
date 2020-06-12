@@ -1,5 +1,5 @@
 platform: Common
-buildPlatform:
+buildPlatform: Flutter
 displayName: Flutter Test
 description: "Run Flutter test command."
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
