@@ -4,7 +4,7 @@ displayName: Flutter Test
 description: "Run Flutter test command."
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
-commit: 2003f24
+commit: ff559fa
 inputs:
 - key: "AC_FLUTTER_PROJECT_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
