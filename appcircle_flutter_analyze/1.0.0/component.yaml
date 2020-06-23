@@ -4,7 +4,7 @@ displayName: Flutter Analyze
 description: "Run flutter analyze command."
 webUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component.git
-commit: bde1677
+commit: 0694106
 inputs:
 - key: "AC_FLUTTER_PROJECT_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"

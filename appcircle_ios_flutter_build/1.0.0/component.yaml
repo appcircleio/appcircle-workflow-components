@@ -4,7 +4,7 @@ displayName: "Flutter Build"
 description: "Build your Flutter project for iOS."
 webUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component.git
-commit: 75d9d58f04833eecd455c3561879f14f6429277a
+commit: 3a6d55a
 inputs:
 - key: "AC_FLUTTER_PROJECT_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -19,7 +19,7 @@ inputs:
   helpText:
 - key: "AC_FLUTTER_BUILD_EXTRA_ARGS"
   isRequired: false
-  defaultValue: "--no-codesign"
+  defaultValue: "--no-codesign --verbose"
   title: Custom Build Arguments
   description: "Add custom build arguments."
   helpText:
