@@ -1,10 +1,10 @@
 platform: iOS
 buildPlatform:
-displayName: "Xcodebuild for Test"
-description: "Helps you perform unit and UI tests for your iOS applications."
-webUrl: https://github.com/appcircleio/appcircle-ios-test-component
-repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
-commit: 0d62904c9b74723827cb97fed7da4033e577029b
+displayName: "Xcodebuild for iOS Simulator"
+description: "Build your application for iOS Simulator in x86 architecture (Required for Preview on Device feature). This step creates the unsigned xcarchive file."
+webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
+commit: e716c64d2c94162ba444e3029d52622a4e4d3b67
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -47,27 +47,11 @@ inputs:
   title: Compiler Index Store Enable
   description: You can disable the indexing during the build for faster build.
   helpText:
-- key: "AC_TEST_OS_VERSION"
-  defaultValue: "latest"
-  isRequired: true
-  title: Test OS Version
-  description: Specifies os version for test.
-  helpText:
-- key: "AC_TEST_DEVICE"
-  defaultValue: "iPhone 8 Plus"
-  isRequired: true
-  title: Test Device
-  description: Specifies device for test.
-- key: "AC_TEST_PLATFORM"
-  defaultValue: "iOS Simulator"
-  isRequired: true
-  title: Test Platform
-  description: Specifies platform for test.
 outputs:
-- key: "AC_TEST_RESULT_PATH"
-  title: Test Result Path
-  defaultValue: "AC_TEST_RESULT_PATH"
-  description: Test result path.
+- key: "AC_SIMULATOR_ARCHIVE_PATH"
+  title: Simulator Archive Path
+  defaultValue: "AC_SIMULATOR_ARCHIVE_PATH"
+  description: Simulator archive path.
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
