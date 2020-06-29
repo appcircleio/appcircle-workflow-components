@@ -1,0 +1,59 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcodebuild for iOS Simulator"
+description: "Build your application for iOS Simulator in x86 architecture (Required for Preview on Device feature). This step creates the unsigned xcarchive file."
+webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
+commit: e716c64d2c94162ba444e3029d52622a4e4d3b67
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_OUTPUT_DIR_PATH"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
+  helpText:
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_ARCHIVE_FLAGS"
+  defaultValue: "$AC_XCODE_BUILD_EXTRA_FLAGS"
+  isRequired: false
+  title: Archive Flags
+  description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_CONFIGURATION_NAME"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+  helpText:
+- key: "AC_COMPILER_INDEX_STORE_ENABLE"
+  defaultValue: "NO"
+  isRequired: true
+  title: Compiler Index Store Enable
+  description: You can disable the indexing during the build for faster build.
+  helpText:
+outputs:
+- key: "AC_SIMULATOR_ARCHIVE_PATH"
+  title: Simulator Archive Path
+  defaultValue: "AC_SIMULATOR_ARCHIVE_PATH"
+  description: Simulator archive path.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
