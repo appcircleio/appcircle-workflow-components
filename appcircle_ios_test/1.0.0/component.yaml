@@ -4,13 +4,19 @@ displayName: "Xcodebuild for Test"
 description: "Helps you perform unit and UI tests for your iOS applications."
 webUrl: https://github.com/appcircleio/appcircle-ios-test-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
-commit: e40eb67fb8889bd6d3b20752314adba4ea97a7c1
+commit: 0d62904c9b74723827cb97fed7da4033e577029b
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: true
   title: Repository Directory
   description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_OUTPUT_DIR_PATH"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
   helpText:
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
