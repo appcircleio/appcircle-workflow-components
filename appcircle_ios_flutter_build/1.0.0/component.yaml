@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform: Flutter
-displayName: "Flutter Build"
+displayName: "Flutter Build for iOS"
 description: "Build your Flutter project for iOS."
 webUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component.git
