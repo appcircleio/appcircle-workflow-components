@@ -4,7 +4,7 @@ displayName: Android Unit Test
 description: "Run Android project's unit tests."
 webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git
-commit: 271be23
+commit: 5779f72
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
