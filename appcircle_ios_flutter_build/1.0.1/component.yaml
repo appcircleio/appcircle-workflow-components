@@ -4,7 +4,7 @@ displayName: "Flutter Build for iOS"
 description: "Build your Flutter project for iOS."
 webUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component.git
-commit: 682b26d
+commit: 2783873
 inputs:
 - key: "AC_FLUTTER_PROJECT_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"

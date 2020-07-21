@@ -4,7 +4,7 @@ displayName: "Smartface Eject for iOS"
 description: "Generates xcode project for build from the smartface workspace."
 webUrl: https://github.com/appcircleio/appcircle-ios-smartface-eject-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-smartface-eject-component.git
-commit: 963fc42293665a475a93b4b3d0b9e058db59727e
+commit: 421c079
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
