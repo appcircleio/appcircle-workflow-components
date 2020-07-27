@@ -4,7 +4,7 @@ displayName: Android Sign
 description: "Sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
 webUrl: https://github.com/appcircleio/appcircle-android-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-sign-component.git
-commit: 37eb688
+commit: 65b1af2
 inputs:
 - key: "AC_APK_PATH"
   defaultValue: "$AC_APK_PATH"

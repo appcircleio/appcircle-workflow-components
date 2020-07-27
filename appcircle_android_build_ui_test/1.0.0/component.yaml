@@ -1,10 +1,10 @@
 platform: Android
-buildPlatform: ReactNative, JavaKotlin
-displayName: Android Lint
-description: "Run lint gradle task on your Android project's source files."
-webUrl: https://github.com/appcircleio/appcircle-android-lint-component
-repoUrl: https://github.com/appcircleio/appcircle-android-lint-component.git
-commit: cfe42d5
+buildPlatform: ReactNative, JavaKotlin, Flutter
+displayName: "Android Build for UI Testing"
+description: "Build your test applications with gradlew(./gradlew assembleAndroidTest)."
+webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
+repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
+commit: fb595f3
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -23,11 +23,11 @@ inputs:
   title: Module
   description: "Specifies the project module for build."
   helpText:
-- key: "AC_VARIANTS"
-  defaultValue: "$AC_VARIANTS"
-  isRequired: true
-  title: Variants
-  description: "Specifies build variants. For example : -configuration DEBUG"
+outputs:
+- key: "AC_TEST_APK_PATH"
+  title: "Test APK Path"
+  defaultValue: "AC_TEST_APK_PATH"
+  description: "Path of the generated apk file."
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'

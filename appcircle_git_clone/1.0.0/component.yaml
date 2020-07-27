@@ -4,7 +4,7 @@ displayName: Git Clone
 description: Clone the selected repository to the build machine.
 webUrl: https://github.com/appcircleio/appcircle-git-clone-component
 repoUrl: https://github.com/appcircleio/appcircle-git-clone-component.git
-commit: 6b82254
+commit: 904b83b
 inputs:
 - key: "AC_GIT_URL"
   defaultValue: "$AC_GIT_URL"
