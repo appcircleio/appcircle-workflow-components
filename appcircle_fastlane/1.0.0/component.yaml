@@ -1,0 +1,24 @@
+platform: Common
+buildPlatform:
+displayName: Fastlane
+description: "Runs fastlane lane."
+webUrl: https://github.com/appcircleio/appcircle-fastlane-component
+repoUrl: https://github.com/appcircleio/appcircle-fastlane-component.git
+commit: a050e05
+inputs:
+- key: "AC_FASTLANE_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Fastlane Directory
+  description:  The path where where fastlane folder, Gemfile etc exist
+  helpText:
+- key: "AC_FASTLANE_LANE"
+  isRequired: true
+  title: Fastlane Lane
+  description: "Fastlane lane. For example: android deploy"
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
