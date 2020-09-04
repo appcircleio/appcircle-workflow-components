@@ -4,7 +4,7 @@ displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86 architecture (Required for Preview on Device feature)."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
-commit: 367957d
+commit: d5947ca
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
