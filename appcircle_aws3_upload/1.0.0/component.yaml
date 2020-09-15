@@ -1,0 +1,36 @@
+platform: Common
+buildPlatform:
+displayName: File Upload to AWS3
+description: "Upload a file to AWS3."
+webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
+repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
+commit: 09b540e
+inputs:
+- key: "AC_INPUT_FILE_PATH"
+  isRequired: false
+  title: AWS Input File Path
+  description:  Path to the file to be uploaded
+  helpText:
+- key: "AWS_ACCESS_KEY_ID"
+  isRequired: false
+  title: AWS Access Key Id
+  description:  AWS Access Key Id
+  helpText:
+- key: "AWS_SECRET_ACCESS_KEY"
+  isRequired: false
+  title: AWS Secret Access Key
+  description:  AWS Secret Access Key
+- key: "AWS_BUCKET_NAME"
+  isRequired: false
+  title: AWS Bucket Name
+  description:  AWS Bucket Name
+- key: "AWS_BUCKET_REGION"
+  defaultValue: "us-east-1"
+  isRequired: false
+  title: AWS Bucket Region
+  description:  AWS Bucket Region
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
