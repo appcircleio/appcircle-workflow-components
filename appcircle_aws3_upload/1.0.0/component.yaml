@@ -31,7 +31,7 @@ inputs:
   description:  AWS Bucket Region
 outputs:
 - key: "AC_AWS_UPLOAD_URL"
-  defaultValue: $AC_AWS_UPLOAD_URL
+  defaultValue: AC_AWS_UPLOAD_URL
   title: Amazon S3 Upload Url
   description: Amazon S3 Upload Url. (s3://your-bucket-name/timetsamp/your-upload-file)
   helpText:
