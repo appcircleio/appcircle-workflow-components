@@ -4,7 +4,7 @@ displayName: File Upload to AWS3
 description: "Upload a file to AWS3."
 webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
 repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
-commit: 74d9fb4
+commit: f3581db
 inputs:
 - key: "AC_INPUT_FILE_PATH"
   isRequired: false
@@ -31,6 +31,7 @@ inputs:
   description:  AWS Bucket Region
 outputs:
 - key: "AC_AWS_UPLOAD_URL"
+  defaultValue: $AC_AWS_UPLOAD_URL
   title: Amazon S3 Upload Url
   description: Amazon S3 Upload Url. (s3://your-bucket-name/timetsamp/your-upload-file)
   helpText:
