@@ -1,0 +1,28 @@
+platform: Common
+buildPlatform: Flutter
+displayName: "Flutter Build for Web"
+description: "Build your Flutter project with Flutter SDK."
+webUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component.git
+commit: 98f6628
+inputs:
+- key: "AC_FLUTTER_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your pubspec.yaml file exist."
+- key: "AC_FLUTTER_BUILD_MODE"
+  isRequired: false
+  title: Build Mode
+  description: "Specifies Flutter build mode. Defaults to: release"
+  helpText:
+outputs:
+- key: "AC_FLUTTER_WEB_PATH"
+  title: "Flutter Web Directory Path"
+  defaultValue: "AC_FLUTTER_WEB_PATH"
+  description: "Path of the generated apk file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
