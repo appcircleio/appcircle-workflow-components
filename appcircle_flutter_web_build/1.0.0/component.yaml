@@ -4,7 +4,7 @@ displayName: "Flutter Build for Web"
 description: "Build your Flutter project with Flutter SDK."
 webUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component.git
-commit: 8b05f64
+commit: cc8f550
 inputs:
 - key: "AC_FLUTTER_PROJECT_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
