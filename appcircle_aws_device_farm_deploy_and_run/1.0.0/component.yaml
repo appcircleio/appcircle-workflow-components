@@ -1,0 +1,82 @@
+platform: Common
+buildPlatform:
+displayName: AWS Device Farm Deploy and Run
+description: "Deploy a file to AWS Device Farm and run tests."
+webUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run
+repoUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run.git
+commit: f61248d
+inputs:
+- key: "AWS_ACCESS_KEY_ID"
+  isRequired: true
+  title: AWS Access Key Id
+  description:  AWS Access Key Id
+  helpText:
+- key: "AWS_SECRET_ACCESS_KEY"
+  isRequired: true
+  title: AWS Secret Access Key
+  description:  AWS Secret Access Key
+- key: "AWS_DEFAULT_REGION"
+  defaultValue: "us-west-2"
+  isRequired: false
+  title: AWS Default Region
+  description:  AWS Default Region
+- key: "AWS_PROJECT_ARN"
+  isRequired: true
+  title: AWS Project Arn
+  description:  The ARN of the project for deploy and run.
+- key: "AWS_DEVICE_POOL_ARN"
+  isRequired: true
+  title: AWS Device Pool Arn
+  description:  The ARN of the device pool for the run.
+- key: "AWS_SCHEDULE_RUN_NAME"
+  isRequired: true
+  title: AWS Schedule Run Name
+  description:  The name for the run to be scheduled.
+- key: "AWS_SCHEDULE_TEST_TYPE"
+  isRequired: true
+  title: AWS Schedule Test Type
+  description:  The test's type.
+- key: "AWS_UPLOAD_TIMEOUT"
+  isRequired: true
+  title: AWS Upload Timeout
+  description:  Upload timeout. (second)
+- key: "AWS_TEST_TIMEOUT"
+  isRequired: true
+  title: AWS Test Timeout
+  description:  Test timeout. (second)
+- key: "AWS_APP_ARN"
+  isRequired: false
+  title: AWS App Arn
+  description:  The ARN of an application package to run tests against, created with CreateUpload. If you don't have this parameter, AWS App Upload File Name, AWS App Upload Type, AWS App Upload File Path parameters required.
+- key: "AWS_APP_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS App Upload File Name
+  description:  The upload's file name. The name should not contain any forward slashes (/ ). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension.
+- key: "AWS_APP_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS App Upload Type
+  description:  The upload's upload type.
+- key: "AWS_APP_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS App Upload File Path
+  description:  The upload's file path.
+- key: "AWS_TEST_ARN"
+  isRequired: false
+  title: AWS Test Arn
+  description:  The ARN of the uploaded test to be run. If you don't have this parameter, AWS Test Upload File Name, AWS Test Upload Type, AWS App Upload File Path parameters required.
+- key: "AWS_TEST_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS Test Upload File Name
+  description:  The file name must end with the .zip file extension.
+- key: "AWS_TEST_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS Test Upload Type
+  description:  The upload's upload type.
+- key: "AWS_TEST_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS Test Upload File Path
+  description:  The upload's file path.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
