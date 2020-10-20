@@ -1,10 +1,10 @@
 platform: Android
 buildPlatform: ReactNative, JavaKotlin, Flutter
 displayName: "Android Build for UI Testing"
-description: "Build your test applications with gradlew(./gradlew assembleAndroidTest)."
+description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
 webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
-commit: fb595f3
+commit: 926b566
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
