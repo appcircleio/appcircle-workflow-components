@@ -4,7 +4,7 @@ displayName: "Android Build for UI Testing"
 description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
 webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
-commit: d88ddec
+commit: 1bfaa62
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
