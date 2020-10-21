@@ -1,0 +1,85 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcodebuild Build for Testing"
+description: "Build your application for testing."
+webUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing.git
+commit: 5e033c3
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_ARCHIVE_FLAGS"
+  defaultValue: "$AC_XCODE_BUILD_EXTRA_FLAGS"
+  isRequired: false
+  title: Archive Flags
+  description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_CONFIGURATION_NAME"
+  defaultValue: "Debug"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+  helpText:
+- key: "AC_COMPILER_INDEX_STORE_ENABLE"
+  defaultValue: "NO"
+  isRequired: true
+  title: Compiler Index Store Enable
+  description: You can disable the indexing during the build for faster build.
+  helpText:
+- key: "AC_DESTINATION"
+  defaultValue: "generic/platform=iOS"
+  isRequired: true
+  title: Destination
+  description: Xcodebuild destination flag.
+  helpText:
+outputs:
+- key: "AC_TEST_APP_PATH"
+  title: Test App Path
+  defaultValue: "AC_TEST_APP_PATH"
+  description: Test app path.
+  helpText:
+- key: "AC_UITESTS_RUNNER_PATH"
+  title: UI Tests Runner Path
+  defaultValue: "AC_UITESTS_RUNNER_PATH"
+  description: UI Tests Runner path.
+  helpText:
+- key: "AC_XCTEST_PATH"
+  title: XCTest path
+  defaultValue: "AC_XCTEST_PATH"
+  description: XCTest path.
+  helpText:
+- key: "AC_UITESTS_RUNNER_ZIP_PATH"
+  title: UI Tests Runner Zip Path
+  defaultValue: "AC_UITESTS_RUNNER_ZIP_PATH"
+  description: UI Tests Runner Zip path.
+  helpText:
+- key: "AC_XCTEST_ZIP_PATH"
+  title: XCTest Zip Path
+  defaultValue: "AC_XCTEST_ZIP_PATH"
+  description: XCTest Zip path.
+  helpText:
+- key: "AC_TEST_IPA_PATH"
+  title: Test ipa Path
+  defaultValue: "AC_TEST_IPA_PATH"
+  description: Test ipa path.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
