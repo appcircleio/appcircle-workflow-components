@@ -4,7 +4,7 @@ displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing.git
-commit: 0a4c937
+commit: c33ea3c
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -65,9 +65,9 @@ outputs:
   description: XCTest path.
   helpText:
 - key: "AC_UITESTS_RUNNER_IPA_PATH"
-  title: UI Tests Runner Zip Path
+  title: UI Tests Runner ipa Path
   defaultValue: "AC_UITESTS_RUNNER_IPA_PATH"
-  description: UI Tests Runner Zip path.
+  description: UI Tests Runner ipa path.
   helpText:
 - key: "AC_XCTEST_ZIP_PATH"
   title: XCTest Zip Path
