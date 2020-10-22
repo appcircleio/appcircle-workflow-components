@@ -4,7 +4,7 @@ displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
 webUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run
 repoUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run.git
-commit: 548886d
+commit: 147441e
 inputs:
 - key: "AWS_ACCESS_KEY_ID"
   isRequired: true
