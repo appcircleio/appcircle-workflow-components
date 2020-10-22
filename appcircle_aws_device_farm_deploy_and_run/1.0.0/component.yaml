@@ -4,7 +4,7 @@ displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
 webUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run
 repoUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run.git
-commit: 3eb5f60
+commit: 548886d
 inputs:
 - key: "AWS_ACCESS_KEY_ID"
   isRequired: true
@@ -76,6 +76,22 @@ inputs:
   isRequired: false
   title: AWS Test Upload File Path
   description: The file path for the test upload.
+- key: "AWS_TEST_SPEC_ARN"
+  isRequired: false
+  title: AWS Test Spec Arn
+  description: The ARN of the uploaded test spec to be run.
+- key: "AWS_TEST_SPEC_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS Test Spec Upload File Name
+  description: The test spec file to be uploaded.
+- key: "AWS_TEST_SPEC_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS Test Spec Upload Type
+  description: The upload type of the test spec.
+- key: "AWS_TEST_SPEC_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS Test Spec Upload File Path
+  description: The file path for the test spec upload.
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
