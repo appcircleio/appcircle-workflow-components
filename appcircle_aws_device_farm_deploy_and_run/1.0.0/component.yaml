@@ -4,7 +4,7 @@ displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
 webUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run
 repoUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run.git
-commit: 0a84cbc
+commit: 90e165f
 inputs:
 - key: "AWS_ACCESS_KEY_ID"
   isRequired: true
@@ -42,7 +42,7 @@ inputs:
   description: Time out duration (seconds) for the test file upload. The step is skipped if the time out is reached.
 - key: "AWS_TEST_TIMEOUT"
   isRequired: true
-  title: Maximum Waiting Time for Test Results
+  title: Maximum Waiting Time for Run Test Results
   description: Time out duration (seconds) for the AWS Device Farm run. The step is skipped if this duration is reached, but the test execution continues in AWS Device Farm.
 - key: "AWS_APP_ARN"
   isRequired: false
