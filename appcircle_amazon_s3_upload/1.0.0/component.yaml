@@ -4,7 +4,7 @@ displayName: File Upload to AWS3
 description: "Upload a file to AWS3."
 webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
 repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
-commit: 71bcef3
+commit: 8638a1c
 inputs:
 - key: "AC_INPUT_FILE_PATH"
   isRequired: false
@@ -29,6 +29,10 @@ inputs:
   isRequired: false
   title: AWS Bucket Region
   description:  AWS Bucket Region
+- key: "AWS_TARGET_DIR"
+  isRequired: false
+  title: Amazon S3 Folder Path in Bucket
+  description:  Amazon S3 Folder Path in Bucket
 outputs:
 - key: "AC_AWS_UPLOAD_URL"
   defaultValue: AC_AWS_UPLOAD_URL
