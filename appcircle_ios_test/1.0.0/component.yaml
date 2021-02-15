@@ -1,7 +1,7 @@
 platform: iOS
 buildPlatform:
-displayName: "Xcodebuild for Test"
-description: "Helps you perform unit and UI tests for your iOS applications."
+displayName: "Xcodebuild for Unit and UI Tests"
+description: "Performs unit and UI tests for your iOS applications."
 webUrl: https://github.com/appcircleio/appcircle-ios-test-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
 commit: 39e8981 
