@@ -1,10 +1,10 @@
 platform: Common
 buildPlatform:
-displayName: File Upload to AWS3
-description: "Upload a file to AWS3."
+displayName: Upload Files to Amazon S3
+description: "Upload a file to Amazon S3."
 webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
 repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
-commit: 8638a1c
+commit: f9ad03b
 inputs:
 - key: "AC_INPUT_FILE_PATH"
   isRequired: false
