@@ -1,10 +1,10 @@
 platform: Common
 buildPlatform:
-displayName: NPM/YARN Command
+displayName: npm/Yarn Commands
 description: "Runs npm/yarn with the given commands."
 webUrl: https://github.com/appcircleio/appcircle-npm-yarn-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-yarn-component.git
-commit: 968e2a7
+commit: 59f9fad
 inputs:
 - key: "AC_WORKING_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
