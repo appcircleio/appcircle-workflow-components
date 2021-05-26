@@ -1,4 +1,4 @@
-platform: iOS
+platform: Common
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
