@@ -6,6 +6,12 @@ webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
 commit: afa3453
 inputs:
+- key: "AC_METADATA_OUTPUT_PATH"
+  defaultValue: "$AC_METADATA_OUTPUT_PATH"
+  isRequired: false
+  title: Metadata Directory
+  description: ""
+  helpText:
 outputs:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
