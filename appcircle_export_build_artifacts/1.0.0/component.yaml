@@ -4,14 +4,7 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: 9c29e2f
-inputs:
-- key: "AC_METADATA_OUTPUT_PATH"
-  defaultValue: "$AC_METADATA_OUTPUT_PATH"
-  isRequired: false
-  title: Metadata Directory
-  description: ""
-  helpText:
+commit: 30408cb
 outputs:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
