@@ -4,7 +4,7 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: 30408cb
+commit: 9743bfd
 outputs:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
