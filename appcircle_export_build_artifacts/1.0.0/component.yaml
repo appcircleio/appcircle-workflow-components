@@ -4,7 +4,7 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: afa3453
+commit: 9c29e2f
 inputs:
 - key: "AC_METADATA_OUTPUT_PATH"
   defaultValue: "$AC_METADATA_OUTPUT_PATH"
