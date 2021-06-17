@@ -6,6 +6,12 @@ webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
 commit: 07ed8c1
 inputs:
+- key: "AC_UPLOAD_DIR"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Artifact Directory
+  description: ""
+  helpText:
 outputs:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
