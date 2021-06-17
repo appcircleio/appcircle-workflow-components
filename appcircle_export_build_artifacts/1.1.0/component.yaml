@@ -1,0 +1,13 @@
+platform: Common
+buildPlatform:
+displayName: "Export Build Artifacts"
+description: "Exports the specified build artifacts for download from the completed builds list."
+webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
+repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
+commit: 426ee24
+inputs:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
