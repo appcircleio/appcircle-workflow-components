@@ -11,6 +11,7 @@ inputs:
   isRequired: false
   title: SSH Private Key
   description: SSH private key in RSA format
+  editorType: 1
 outputs:
 - key: "SSH_AUTH_SOCK"
   title: SSH Auth Sock
