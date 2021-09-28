@@ -4,7 +4,7 @@ displayName: Carthage
 description: "Execute Carthage script in the project path."
 webUrl: https://github.com/appcircleio/appcircle-carthage-component
 repoUrl: https://github.com/appcircleio/appcircle-carthage-component.git
-commit: 973d7ea
+commit: be80274
 inputs:
 - key: "AC_CARTFILE_PATH"
   isRequired: false
