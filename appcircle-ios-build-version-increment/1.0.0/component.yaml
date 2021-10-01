@@ -1,0 +1,25 @@
+platform: iOS
+buildPlatform:
+displayName: Increment Build Number
+description: 'Increment Build Number by 1.'
+webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
+commit: 0503e17
+inputs:
+  - key: 'AC_REPOSITORY_DIR'
+    defaultValue: '$AC_REPOSITORY_DIR'
+    isRequired: false
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+    helpText:
+  - key: 'INFO_PLIST_PATH'
+    defaultValue: './Info.plist'
+    isRequired: true
+    title: Info Plist Path.
+    description: Path to your Info.plist. Example usage "./Info.plist"
+    helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'
