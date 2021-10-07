@@ -4,7 +4,7 @@ displayName: Fastlane
 description: "Runs fastlane lane."
 webUrl: https://github.com/appcircleio/appcircle-fastlane-component
 repoUrl: https://github.com/appcircleio/appcircle-fastlane-component.git
-commit: 0c06ee7
+commit: 025cfb7
 inputs:
 - key: "AC_FASTLANE_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
