@@ -4,7 +4,7 @@ displayName: Increment Build Number
 description: 'Increment Build Number by 1.'
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
-commit: 0503e17
+commit: 453d7b0
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
