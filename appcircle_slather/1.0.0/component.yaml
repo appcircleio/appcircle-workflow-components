@@ -12,13 +12,11 @@ inputs:
   title: Scheme
   description: Specifies the project scheme for build.
   helpText:
-inputs:
 - key: "AC_PROJECT_PATH"
   defaultValue: "$AC_PROJECT_PATH"
   isRequired: true
   title: Project Path
   description: "Specifies the project path. For example : ./appcircle.xcodeproj"
-inputs:
 - key: "AC_WORSPACE_PATH"
   defaultValue: "$AC_WORSPACE_PATH"
   isRequired: false
