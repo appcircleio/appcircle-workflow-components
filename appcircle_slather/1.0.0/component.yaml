@@ -4,7 +4,7 @@ displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
 webUrl: https://github.com/appcircleio/appcircle-slather-component
 repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
-commit: 96b1fde
+commit: 082bdeb
 inputs:
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
@@ -39,6 +39,7 @@ inputs:
   description: Extra options for Slather.
 outputs:
 - key: "AC_SLATHER_OUTPUT_PATH"
+  title: Output Path
   description: The directory where your Cobertura XML report will be written to.
   helpText:
 processFilename: ruby
