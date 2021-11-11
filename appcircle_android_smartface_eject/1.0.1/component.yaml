@@ -1,0 +1,44 @@
+platform: Android
+buildPlatform: Smartface
+displayName: "Smartface Eject for Android"
+description: "Creates Android Studio project to build from your smartface workspace."
+webUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component
+repoUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component.git
+commit: 61e009f
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+  helpText:
+- key: "AC_SMARTFACE_CLI_VERSION"
+  isRequired: false
+  title: Smartface CLI Version
+  description: "Specifies the Smartface CLI version. Defaults to: latest"
+  helpText:
+- key: "AC_SMARTFACE_PLAYER_VERSION"
+  isRequired: false
+  title: Smartface Android Player Version
+  description: "Specifies the Smartface Android player version. Defaults to: latest"
+  helpText:
+outputs:
+- key: "AC_PROJECT_PATH"
+  title: "Project Path"
+  defaultValue: "AC_PROJECT_PATH"
+  description: "Android project path."
+  helpText:
+- key: "AC_VARIANTS"
+  title: "Variants"
+  defaultValue: "AC_VARIANTS"
+  description: "Android variant."
+  helpText:
+- key: "AC_MODULE"
+  title: "Module"
+  defaultValue: "AC_MODULE"
+  description: "Android module."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
