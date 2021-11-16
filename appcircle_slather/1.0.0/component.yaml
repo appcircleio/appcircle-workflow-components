@@ -4,7 +4,7 @@ displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
 webUrl: https://github.com/appcircleio/appcircle-slather-component
 repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
-commit: cb0d4a3
+commit: 654f38a
 inputs:
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
