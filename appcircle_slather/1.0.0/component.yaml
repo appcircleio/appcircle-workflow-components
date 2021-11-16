@@ -4,7 +4,7 @@ displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
 webUrl: https://github.com/appcircleio/appcircle-slather-component
 repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
-commit: 654f38a
+commit: 73e3b28
 inputs:
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
@@ -17,8 +17,8 @@ inputs:
   isRequired: true
   title: Project Path
   description: "Specifies the project path. For example : ./appcircle.xcodeproj"
-- key: "AC_WORSPACE_PATH"
-  defaultValue: "$AC_WORSPACE_PATH"
+- key: "AC_WORKSPACE_PATH"
+  defaultValue: "$AC_WORKSPACE_PATH"
   isRequired: false
   title: Workspace Path
   description: "Specifies the project path. For example : ./appcircle.xcworkspace"
