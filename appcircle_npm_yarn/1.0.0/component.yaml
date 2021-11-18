@@ -14,6 +14,7 @@ inputs:
   helpText:
 - key: "AC_NPM_COMMAND_ARGS"
   defaultValue: "$AC_NPM_COMMAND_ARGS"
+  isRequired: false
   title: The npm commands to run
   description: "The npm command to run. defaults to: npm/yarn install"
   helpText:

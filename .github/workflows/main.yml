@@ -1,0 +1,25 @@
+name: Validate Schema
+
+on:
+  push:
+    paths:
+    - ".github/workflows/main.yml"
+    - "**.yaml"
+    - "**.json"
+  pull_request:
+    paths:
+    - "**.yaml"
+    - "**.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: nwisbeta/validate-yaml-schema@v1.0.3
+      with:
+        yamlSchemasJson: |
+          {
+              "./schema.json": ["**component.yaml"]
+          }

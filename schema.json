@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://raw.githubusercontent.com/appcircleio/appcircle-workflow-components/master/schema.json",
+  "title": "Appcircle Workflow",
+  "type": "object",
+  "definitions": {
+    "key": {
+      "type": "string",
+      "description": "Environment variable name"
+    },
+    "defaultValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Default value of the input/output"
+        },
+        {
+          "type": "null",
+          "description": "Empty defaultValue"
+        }
+      ]
+    },
+    "isRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the input/output"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the input/output"
+    }
+  },
+  "properties": {
+    "platform": {
+      "type": "string",
+      "enum": [
+        "Common",
+        "iOS",
+        "Android"
+      ],
+      "default": "Common",
+      "description": "Platform of the workflow"
+    },
+    "buildPlatform": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Build platform(s) for the workflow"
+        },
+        {
+          "type": "null",
+          "description": "Empty buildPlatform"
+        }
+      ]
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Display name of the workflow"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the workflow"
+    },
+    "inputs": {
+      "type": "array",
+      "description": "Inputs of the workflow",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "$ref": "#/definitions/key"
+          },
+          "defaultValue": {
+            "$ref": "#/definitions/defaultValue"
+          },
+          "isRequired": {
+            "$ref": "#/definitions/isRequired"
+          },
+          "title": {
+            "$ref": "#/definitions/title",
+            "description": "Title of the input"
+          },
+          "description": {
+            "$ref": "#/definitions/description",
+            "description": "Description of the input"
+          },
+          "helpText": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Short help about input"
+              },
+              {
+                "type": "null",
+                "description": "No help about input"
+              }
+            ]
+          }
+        },
+        "required": [
+          "key",
+          "isRequired",
+          "title",
+          "description"
+        ]
+      }
+    },
+    "outputs": {
+      "oneOf": [
+        {
+          "type": "null",
+          "description": "No output"
+        },
+        {
+          "type": "array",
+          "description": "Outputs of the workflow",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "$ref": "#/definitions/key"
+              },
+              "defaultValue": {
+                "$ref": "#/definitions/defaultValue",
+                "description": "Default Value of the output"
+              },
+              "isRequired": {
+                "$ref": "#/definitions/isRequired"
+              },
+              "title": {
+                "$ref": "#/definitions/title",
+                "description": "Title of the output"
+              },
+              "description": {
+                "$ref": "#/definitions/description",
+                "description": "Description of the output"
+              },
+              "helpText": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "description": "Short help about output"
+                  },
+                  {
+                    "type": "null",
+                    "description": "No help about output"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "title",
+              "description"
+            ]
+          }
+        }
+      ]
+    },
+    "processFilename": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Script process file name"
+        },
+        {
+          "type": "null",
+          "description": "Empty process file name"
+        }
+      ]
+    },
+    "processArguments": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Script process arguments"
+        },
+        {
+          "type": "null",
+          "description": "Empty process arguments"
+        }
+      ]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
