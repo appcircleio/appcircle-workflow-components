@@ -4,8 +4,18 @@ displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
 webUrl: https://github.com/appcircleio/appcircle-slather-component
 repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
-commit: 73e3b28
+commit: 294e468
 inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+- key: "AC_TEST_RESULT_PATH"
+  defaultValue: "$AC_TEST_RESULT_PATH"
+  isRequired: true
+  title: Test Result Path
+  description: Specifies .xcresult folder location
 - key: "AC_SCHEME"
   defaultValue: "$AC_SCHEME"
   isRequired: true
