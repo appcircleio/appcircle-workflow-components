@@ -1,0 +1,58 @@
+platform: iOS
+buildPlatform:
+displayName: Slather
+description: "Install Slather and generate test coverage reports for Xcode projects."
+webUrl: https://github.com/appcircleio/appcircle-slather-component
+repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
+commit: 294e468
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+- key: "AC_TEST_RESULT_PATH"
+  defaultValue: "$AC_TEST_RESULT_PATH"
+  isRequired: true
+  title: Test Result Path
+  description: Specifies .xcresult folder location
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+- key: "AC_WORKSPACE_PATH"
+  defaultValue: "$AC_WORKSPACE_PATH"
+  isRequired: false
+  title: Workspace Path
+  description: "Specifies the project path. For example : ./appcircle.xcworkspace"
+- key: "AC_COVERAGE_FORMAT"
+  editorType: select
+  options: "cobertura,sonarqube,gutter-json,llvm-cov,json,html,simple"
+  isRequired: false
+  title: Coverage Format
+  description: Exported coverage format.
+  defaultValue: "cobertura"
+- key: "AC_CONFIGURATION_NAME"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+- key: "AC_SLATHER_OPTIONS"
+  isRequired: false
+  title: Extra Options
+  description: Extra options for Slather.
+outputs:
+- key: "AC_SLATHER_OUTPUT_PATH"
+  title: Output Path
+  description: The directory where your Cobertura XML report will be written to.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
