@@ -4,14 +4,13 @@ displayName: Set Environment Variable
 description: "Set environment variables for the build."
 webUrl: https://github.com/appcircleio/appcircle-setenvironment-component
 repoUrl: https://github.com/appcircleio/appcircle-setenvironment-component.git
-commit: 7a52b98
+commit: f7b5a1c
 inputs:
-- key: "AC_ENV_KEYS"
+- key: "AC_SETENV_KEYS"
   isRequired: true
   title: Environment Variable Key(s)
   description: Space-separated list of environment variable keys
-- key: "AC_ENV_VALUE"
-  defaultValue: 
+- key: "AC_SETENV_VALUE"
   isRequired: false
   title: Environment Variable Value
   description: Specifies environment variable value to set
