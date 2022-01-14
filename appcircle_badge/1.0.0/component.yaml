@@ -20,7 +20,7 @@ inputs:
   defaultValue: "1.0"
   isRequired: false
   title: Version Number
-  description: "Version or build number that will appear at the bottom. TIP: You can use '\n' in your string for a new line"
+  description: "Version or build number that will appear at the bottom."
 - key: "AC_BADGE_BGCOLOR"
   defaultValue: "orange"
   isRequired: false
