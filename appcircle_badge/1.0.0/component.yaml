@@ -12,29 +12,25 @@ inputs:
   title: Icons path
   description: "Specifies path of icon files. For example : MyProject/Assets.xcassets/AppIcon.appiconset"
 - key: "AC_BADGE_TEXT"
-  defaultValue: "$AC_BADGE_TEXT"
+  defaultValue: "Beta"
   isRequired: false
   title: Badge text
   description: "Text that appears on the right corner. Beta by defualt"
-  defaultValue: "Beta"
 - key: "AC_BADGE_VERSION"
-  defaultValue: "$AC_BADGE_VERSION"
+  defaultValue: "1.0"
   isRequired: false
   title: Version Number
-  description: "Version or build number that will appear at the bottom. TIP: You can use "\n" in your string for a new line"
-  defaultValue: "1.0"
+  description: "Version or build number that will appear at the bottom. TIP: You can use '\n' in your string for a new line"
 - key: "AC_BADGE_BGCOLOR"
-  defaultValue: "$AC_BADGE_BGCOLOR"
+  defaultValue: "orange"
   isRequired: false
   title: Badge background color
   description: "You can use full color name (orange), hex codes(#FFA500) or rgb values(rgb(255,165,0))."
-  defaultValue: "orange"
 - key: "AC_BADGE_TEXTCOLOR"
-  defaultValue: "$AC_BADGE_TEXTCOLOR"
+  defaultValue: "white"
   isRequired: false
   title: Badge version text color
   description: "You can use full color name (white), hex codes(#FFFFFF) or rgb values(rgb(255,255,255))."
-  defaultValue: "white"
 processFilename: bash
 processArguments: '%AC_STEP_TEMP%/main.sh'
 files:
