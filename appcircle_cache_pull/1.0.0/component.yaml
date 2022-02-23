@@ -1,5 +1,5 @@
-platform: Android
-buildPlatform: JavaKotlin
+platform: Common
+buildPlatform:
 displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
