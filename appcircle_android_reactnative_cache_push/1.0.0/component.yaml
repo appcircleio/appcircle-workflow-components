@@ -4,7 +4,7 @@ displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
-commit: 1e26069
+commit: 2c804b6
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/$AC_GIT_BRANCH/cache"
@@ -16,13 +16,13 @@ inputs:
   defaultValue: ".gradle:~/.gradle:/usr/local/share/.cache/yarn"
   isRequired: true
   title: Included Paths
-  description: "Specifies the files and folder which should be in cache. Multiple glob patterns can be defined with colon seperated. For example; .gradle:app/build"
+  description: "Specifies the files and folders which should be in cache. Multiple glob patterns can be provided as a colon-separated list. For example; .gradle:app/build"
   helpText:
 - key: "AC_CACHE_EXCLUDED_PATHS"
   defaultValue: ".gradle/**/*.lock:~/.gradle/caches/**/*.lock"
   isRequired: false
   title: Excluded Paths
-  description: "Specifies the files and folder which should be ignored from cache. Multiple glob patterns can be defined with colon seperated. For example; .gradle/*.lock:*.apk"
+  description: "Specifies the files and folders which should be ignored from cache. Multiple glob patterns can be provided as a colon-separated list. For example; .gradle/*.lock:*.apk"
   helpText:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
