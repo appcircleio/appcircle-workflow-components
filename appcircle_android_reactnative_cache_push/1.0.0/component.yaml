@@ -4,7 +4,7 @@ displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
-commit: 63542c8
+commit: 14e6426
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/$AC_GIT_BRANCH/cache"
