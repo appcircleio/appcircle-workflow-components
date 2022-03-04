@@ -1,0 +1,23 @@
+platform: Common
+buildPlatform:
+displayName: "Cache Pull"
+description: "Downloads cache from Appcircle, extracts files and folders to source locations."
+webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
+repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git
+commit: 5dafe2f
+inputs:
+- key: "AC_CACHE_LABEL"
+  defaultValue: "$AC_BUILD_PROFILE_ID/$AC_GIT_BRANCH/cache"
+  isRequired: true
+  title: Cache Label
+  description: "User defined cache label to identify one cache from others. Both cache push and pull steps should have the same value to match."
+  helpText:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
