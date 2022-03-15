@@ -4,7 +4,7 @@ displayName: Git Clone
 description: Clone the selected repository to the build machine.
 webUrl: https://github.com/appcircleio/appcircle-git-clone-component
 repoUrl: https://github.com/appcircleio/appcircle-git-clone-component.git
-commit: 5ba4c41
+commit: eabcfab
 inputs:
 - key: "AC_GIT_URL"
   defaultValue: "$AC_GIT_URL"
@@ -44,7 +44,7 @@ inputs:
   isRequired: false
   defaultValue: "true"
   title: Cache Credentials
-  description: If this set to true, the credentials will be cached. This can be useful if same credentials are used for multiple repositories.
+  description: If this set to true, the credentials will be cached. This can be useful if the same credentials are used for multiple repositories.
   helpText:
 outputs:
 - key: "AC_REPOSITORY_DIR"
