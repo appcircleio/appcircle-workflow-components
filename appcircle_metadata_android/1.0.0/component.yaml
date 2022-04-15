@@ -1,0 +1,21 @@
+platform: Android
+buildPlatform:
+displayName: Android Metadata
+description: Produce metadata from the selected repository.
+webUrl: https://github.com/appcircleio/appcircle-android-metadata-component
+repoUrl: https://github.com/appcircleio/appcircle-android-metadata-component.git
+commit: 3e9bac2
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: Repository Path description.
+  helpText:
+outputs:
+- key: "AC_METADATA_OUTPUT_PATH"
+  description: Metadata output file description.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
