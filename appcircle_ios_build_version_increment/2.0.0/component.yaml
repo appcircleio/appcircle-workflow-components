@@ -4,7 +4,7 @@ displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
-commit: d4a0ffc
+commit: 0d842d7
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
@@ -24,7 +24,7 @@ inputs:
   - key: "AC_BUILD_NUMBER_SOURCE"
     editorType: select
     options: "env,xcode"
-    defaultValue: "$AC_BUILD_NUMBER_SOURCE"
+    defaultValue: "env"
     isRequired: true
     title: Build Number Source
     description: Build number source type(env,xcode).
@@ -40,13 +40,13 @@ inputs:
   - key: "AC_VERSION_NUMBER_SOURCE"
     editorType: select
     options: "env,xcode,appstore"
-    defaultValue: "$AC_VERSION_NUMBER_SOURCE"
+    defaultValue: "xcode"
     isRequired: true
     title: Version Number Source
     description: Version number source type(env,xcode,appstore).
   - key: "AC_IOS_VERSION_NUMBER"
     defaultValue: "$AC_IOS_VERSION_NUMBER"
-    isRequired: true
+    isRequired: false
     title: Version Number
     description: Version Number
   - key: "AC_VERSION_STRATEGY"
