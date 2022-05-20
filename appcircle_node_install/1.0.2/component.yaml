@@ -1,0 +1,18 @@
+platform: Common
+buildPlatform:
+displayName: Install Node
+description: "Select a specific Node version for the build. Defaults to: lts"
+webUrl: https://github.com/appcircleio/appcircle-node-install-component
+repoUrl: https://github.com/appcircleio/appcircle-node-install-component.git
+commit: d65ba5b
+inputs:
+- key: "AC_SELECTED_NODE_VERSION"
+  defaultValue: "$AC_SELECTED_NODE_VERSION"
+  isRequired: false
+  title: Selected node version
+  description: "Specifies the node version to install. Defaults to: lts. The version you set on config section will override this setting."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
