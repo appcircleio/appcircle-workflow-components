@@ -1,0 +1,30 @@
+platform: Common
+buildPlatform:
+displayName: Publish Release Notes
+description: "Publish release notes to stores."
+webUrl: https://github.com/appcircleio/appcircle-release-notes-component
+repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git
+commit: 1e07bc0
+inputs:
+  - key: "AC_AUTO_RELEASE_NOTES"
+    defaultValue: "$AC_RELEASE_NOTES_PATH"
+    title: Release notes path
+    description: "Specifies the path of release notes. For example ./release-notes.txt. If the path is empty, release notes will be auto-generated."
+  - key: "AC_AUTO_RELEASE_NOTES"
+    defaultValue: true
+    isRequired: false
+    title: Automatic release notes
+    description: "If this is set to true it will generate release notes according to the below template."
+  - key: "AC_RELEASE_NOTES_TEMPLATE"
+    defaultValue: |
+      Branch: $AC_GIT_BRANCH
+      Commit Hash:  <%= ENV['AC_GIT_COMMIT'][0..6] %>
+      Commit Message: $AC_COMMIT_MESSAGE
+    editorType: textarea
+    isRequired: false
+    title: Release notes template
+    description: "Below is a erb template. You can enrich the contents of your release notes with environment variables or with ruby snippets."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'
