@@ -6,7 +6,7 @@ webUrl: https://github.com/appcircleio/appcircle-release-notes-component
 repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git
 commit: 1e07bc0
 inputs:
-  - key: "AC_AUTO_RELEASE_NOTES"
+  - key: "AC_RELEASE_NOTES_PATH"
     defaultValue: "$AC_RELEASE_NOTES_PATH"
     title: Release notes path
     description: "Specifies the path of release notes. For example ./release-notes.txt. If the path is empty, release notes will be auto-generated."
