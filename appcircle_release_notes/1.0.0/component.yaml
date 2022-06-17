@@ -4,7 +4,7 @@ displayName: Publish Release Notes
 description: "Publish release notes to stores."
 webUrl: https://github.com/appcircleio/appcircle-release-notes-component
 repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git
-commit: 6457962
+commit: 2d5f99a
 inputs:
   - key: "AC_RELEASE_NOTES_PATH"
     defaultValue: "$AC_RELEASE_NOTES_PATH"
@@ -19,7 +19,7 @@ inputs:
     editorType: textarea
     isRequired: false
     title: Release notes template
-    description: "Below is an ERB template. You can enrich the contents of your release notes with environment variables or ruby snippets."
+    description: "Below is an ERB template. You can enrich the contents of your release notes with environment variables or Ruby snippets."
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
