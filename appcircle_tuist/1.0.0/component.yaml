@@ -4,7 +4,7 @@ displayName: Tuist
 description: "Install Tuist and Generate a Project."
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: 6a18ef3
+commit: 7125bc3
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
