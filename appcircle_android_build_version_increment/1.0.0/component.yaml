@@ -4,7 +4,7 @@ displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for Android'
 webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
-commit: ca70361
+commit: 131df8c
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
@@ -17,47 +17,41 @@ inputs:
     title: Project Path
     description: "Specifies the project folder. Defaults to the current directory."
   - key: "AC_BUILD_NUMBER_SOURCE"
-    editorType: select
-    options: "env,gradle"
-    defaultValue: "env"
-    isRequired: true
+    defaultValue: "$AC_BUILD_NUMBER_SOURCE"
+    isRequired: false
     title: Version Code Source
     description: Version code source type(env,gradle).
   - key: "AC_ANDROID_BUILD_NUMBER"
-    defaultValue: "$AC_BUILD_NUMBER"
-    isRequired: true
+    defaultValue: "$AC_ANDROID_BUILD_NUMBER"
+    isRequired: false
     title: Version Code
     description: Version Code. Default value is $AC_BUILD_NUMBER.
   - key: "AC_BUILD_OFFSET"
-    defaultValue: "1"
-    isRequired: true
+    defaultValue: "$AC_BUILD_OFFSET"
+    isRequired: false
     title: Version Code Increment Offset
   - key: "AC_VERSION_NUMBER_SOURCE"
-    editorType: select
-    options: "env,gradle"
-    defaultValue: "gradle"
-    isRequired: true
+    defaultValue: "$AC_VERSION_NUMBER_SOURCE"
+    isRequired: false
     title: Version Name Source
-    description: Version name source type(env,gradle).
+    description: Version number source type(env,gradle).
   - key: "AC_ANDROID_VERSION_NUMBER"
     defaultValue: "$AC_ANDROID_VERSION_NUMBER"
     isRequired: false
     title: Version Name
     description: Version Name
   - key: "AC_VERSION_STRATEGY"
-    editorType: select
-    options: "keep,major,minor,patch"
-    defaultValue: "keep"
-    isRequired: true
+    defaultValue: "$AC_VERSION_STRATEGY"
+    isRequired: false
     title: Version Name Incremeent Strategy
     description: Version Name Increment Strategy major, minor, patch or keep. Default is keep 
   - key: "AC_VERSION_OFFSET"
-    defaultValue: "0"
-    isRequired: true
+    defaultValue: "$AC_VERSION_OFFSET"
+    isRequired: false
     title: Version Name Increment Offset
     description: "The number to be added or subtracted from the version name. Negative values can be written such as -10. Default is 0"
   - key: "AC_OMIT_ZERO_PATCH_VERSION"
-    defaultValue: "false"
+    defaultValue: "$AC_OMIT_ZERO_PATCH_VERSION"
     isRequired: false
     title: Omit Zero Patch Version
     description: "If true omits zero in patch version(so 42.10.0 will become 42.10 and 42.10.1 will remain 42.10.1), default is false"
