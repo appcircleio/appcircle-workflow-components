@@ -4,7 +4,7 @@ displayName: SonarQube Scanner
 description: "Runs SonarQube Scanner CLI."
 webUrl: https://github.com/appcircleio/appcircle-sonarqube-component
 repoUrl: https://github.com/appcircleio/appcircle-sonarqube-component.git
-commit: 11016db
+commit: 4893f6d
 inputs:
 - key: "AC_SONAR_VERSION"
   defaultValue: "latest"
