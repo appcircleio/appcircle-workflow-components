@@ -1,0 +1,36 @@
+platform: Common
+buildPlatform:
+displayName: SonarQube Scanner
+description: "Runs SonarQube Scanner CLI."
+webUrl: https://github.com/appcircleio/appcircle-sonarqube-component
+repoUrl: https://github.com/appcircleio/appcircle-sonarqube-component.git
+commit: 4893f6d
+inputs:
+- key: "AC_SONAR_VERSION"
+  defaultValue: "latest"
+  isRequired: true
+  title: SonarQube Scanner Version
+  description: Specifies Scanner CLI version to be used.
+  helpText:
+- key: "AC_SONAR_PARAMETERS"
+  isRequired: false
+  title: Scanner Parameters
+  description: "Scanner parameters written in Java properties format."
+  defaultValue: |
+      sonar.sources=.
+      sonar.organization=YOUR_ORGANIZATION
+      sonar.login=YOUR_TOKEN
+      sonar.projectKey=PROJECT_NAME
+      sonar.host.url=https://sonar.example.test
+  editorType: textarea
+  helpText:
+- key: "AC_SONAR_EXTRA_PARAMETERS"
+  isRequired: false
+  title: Scanner Commandline Parameters
+  description: "Extra command line parameters. Enter -X for debug mode."
+  helpText:  
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
