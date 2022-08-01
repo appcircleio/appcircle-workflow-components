@@ -4,7 +4,7 @@ displayName: Appium Server
 description: "Installs and runs Appium Server."
 webUrl: https://github.com/appcircleio/appcircle-appium-component
 repoUrl: https://github.com/appcircleio/appcircle-appium-component.git
-commit: f0b89ec
+commit: 029eb0c
 inputs:
 - key: "AC_APPIUM_VERSION"
   defaultValue: "$AC_APPIUM_VERSION"
