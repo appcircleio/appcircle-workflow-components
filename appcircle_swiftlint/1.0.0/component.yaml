@@ -2,9 +2,9 @@ platform: iOS
 buildPlatform:
 displayName: Swiftlint
 description: "Install Swiftlint and lint swift files."
-webUrl: https://github.com/appcircleio/appcircle-badge-component
-repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: a9a98e5
+webUrl: https://github.com/appcircleio/appcircle-swiftlint-component
+repoUrl: https://github.com/appcircleio/appcircle-swiftlint-component.git
+commit: 144bbd6
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
