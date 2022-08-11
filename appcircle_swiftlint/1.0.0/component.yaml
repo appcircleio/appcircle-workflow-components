@@ -4,7 +4,7 @@ displayName: Swiftlint
 description: "Install Swiftlint and lint swift files."
 webUrl: https://github.com/appcircleio/appcircle-swiftlint-component
 repoUrl: https://github.com/appcircleio/appcircle-swiftlint-component.git
-commit: 144bbd6
+commit: d7712de
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
