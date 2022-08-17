@@ -1,0 +1,61 @@
+platform: iOS
+buildPlatform:
+displayName: Swiftlint
+description: "Install Swiftlint and lint swift files."
+webUrl: https://github.com/appcircleio/appcircle-swiftlint-component
+repoUrl: https://github.com/appcircleio/appcircle-swiftlint-component.git
+commit: d7712de
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: "Specifies the cloned repository directory."
+- key: "AC_LINT_PATH"
+  defaultValue: "$AC_LINT_PATH"
+  isRequired: false
+  title: Lint Path
+  description: "Specifies the path to lint."
+- key: "AC_LINT_RANGE"
+  editorType: select
+  options: "all,changed"
+  isRequired: true
+  title: Lint Range
+  defaultValue: "all"
+  description: "Take the git diff and only lint those files"
+- key: "AC_LINT_CONFIG"
+  defaultValue: "$AC_LINT_CONFIG"
+  isRequired: false
+  title: Linting configuration file
+  description: "Specifies linting configuration file. For example : /.swiftlint.yml"
+- key: "AC_LINT_REPORTER"
+  editorType: select
+  options: "xcode,csv,checkstyle,emoji,github-actions-logging,html,json,junit,markdown,sonarqube"
+  isRequired: false
+  title: Reporter Format
+  description: "The custom reporter to use."
+  defaultValue: "xcode"
+- key: "AC_LINT_STRICT"
+  editorType: select
+  options: "yes,no"
+  isRequired: false
+  title: Use strict mode
+  defaultValue: "no"
+  description: "Use strict mode for linting. This will fail the build if linting fails."
+- key: "AC_LINT_QUIET"
+  editorType: select
+  options: "yes,no"
+  isRequired: false
+  title: Use quiet mode
+  defaultValue: "no"
+  description: "Don't print status logs like 'Linting ' & 'Done linting'."
+outputs:
+- key: "AC_LINT_OUTPUT_PATH"
+  title: Output Path
+  defaultValue: "$AC_OUTPUT_DIR"
+  description: "The path of the output file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
