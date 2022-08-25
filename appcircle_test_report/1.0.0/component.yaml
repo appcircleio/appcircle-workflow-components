@@ -4,7 +4,7 @@ displayName: Test Reports
 description: Parse test and coverage results.
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: ea5ffce
+commit: b7576a1
 inputs:
 - key: "AC_TEST_RESULT_PATH"
   defaultValue: "$AC_TEST_RESULT_PATH"
@@ -16,13 +16,13 @@ inputs:
   defaultValue: "$AC_COVERAGE_RESULT_PATH"
   isRequired: false
   title: Coverage result path
-  description: This environment variable is automatically set for native iOS and Android projects. For React Native and Flutter projects, you need to enter the coverage path.
+  description: This environment variable is automatically set for native iOS projects when you run tests. For other projects, you need to set the coverage path.
   helpText:
 outputs:
 - key: "AC_TEST_REPORT_JSON_PATH"
   title: JSON Report Path
   defaultValue: "AC_TEST_REPORT_JSON_PATH"
-  description: Specifies the path of JSON report.
+  description: Specifies the path of the JSON report.
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
