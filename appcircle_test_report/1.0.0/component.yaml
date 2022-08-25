@@ -1,10 +1,10 @@
 platform: Common
 buildPlatform:
-displayName: Test Report
+displayName: Test Reports
 description: Parse test and coverage results.
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: 1b5b1dd
+commit: 68f219d
 inputs:
 - key: "AC_TEST_RESULT_PATH"
   defaultValue: "$AC_TEST_RESULT_PATH"
@@ -21,7 +21,7 @@ inputs:
 outputs:
 - key: "AC_TEST_REPORT_JSON_PATH"
   title: Repository Directory
-  defaultValue: "AC_REPOSITORY_DIR"
+  defaultValue: "AC_TEST_REPORT_JSON_PATH"
   description: Specifies the path of JSON report.
   helpText:
 processFilename: ruby
