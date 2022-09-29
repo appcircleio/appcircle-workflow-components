@@ -4,7 +4,7 @@ displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"
 webUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component.git
-commit: ae30f82
+commit: 3a82108
 inputs:
 - key: "AC_FIREBASE_VERSION"
   defaultValue: "latest"
