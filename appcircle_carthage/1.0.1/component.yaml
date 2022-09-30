@@ -4,7 +4,7 @@ displayName: Carthage
 description: "Execute Carthage script in the project path."
 webUrl: https://github.com/appcircleio/appcircle-carthage-component
 repoUrl: https://github.com/appcircleio/appcircle-carthage-component.git
-commit: 737f52b
+commit: 83b775e
 inputs:
 - key: "AC_CARTFILE_PATH"
   isRequired: false
@@ -24,6 +24,7 @@ inputs:
   description: Specifies carthage command to run.
   helpText:
 - key: "AC_CARTHAGE_FLAGS"
+  defaultValue: "--platform iOS --use-xcframeworks"
   isRequired: false
   title: Additional Carthage Flags
   description: "Specifies carthage flags to add. For example: --platform iOS --use-xcframeworks"

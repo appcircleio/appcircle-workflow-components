@@ -1,0 +1,65 @@
+platform: Common
+buildPlatform:
+displayName: Fortify on Demand Mobile Assessment
+description: "Submits a Fortify on Demand Mobile Assessment"
+webUrl: https://github.com/appcircleio/appcircle-fod-mobile-assessment
+repoUrl: https://github.com/appcircleio/appcircle-fod-mobile-assessment.git
+commit: afeebd8
+inputs:
+- key: "AC_FOD_CLIENT_ID"
+  defaultValue: "$AC_FOD_CLIENT_ID"
+  isRequired: true
+  title: Client ID
+  description: "Authenticating with Client Credentials. The client credentials are the API keys generated in the portal"
+- key: "AC_FOD_CLIENT_SECRET"
+  defaultValue: "$AC_FOD_CLIENT_SECRET"
+  isRequired: true
+  title: Client Secret
+  description: "Authenticating with Client Credentials. The client credentials are the API keys generated in the portal."
+- key: "AC_FOD_CLIENT_DATACENTER"
+  defaultValue: "ams"
+  editorType: select
+  options: "ams,apac,emea,fed,trial"
+  isRequired: true
+  title: Datacenter
+  description: "Select the datacenter assigned to you. This is provided once your are onboarded with Fortify on Demand."
+- key: "AC_FOD_ENTITLEMENT_ID"
+  defaultValue: "$AC_FOD_ENTITLEMENT_ID"
+  isRequired: true
+  title: Entitlement ID
+  description: "The ID assigned to ypur current entitlement. This value can be reterived in Foritfy on Demand portal."
+- key: "AC_FOD_RELEASE_ID"
+  defaultValue: "$AC_FOD_RELEASE_ID"
+  isRequired: true
+  title: Release ID
+  description: "The ID assigned to the created release. This value can be reterived in Foritfy on Demand portal."
+- key: "AC_FOD_ASSESSMENT_TYPE"
+  defaultValue: "SingleScan"
+  editorType: select
+  options: "SingleScan,Subscription"
+  isRequired: true
+  title: Assessment Type
+  description: "Assessment type for this mobile assessment."
+- key: "AC_FOD_FRAMEWORK_TYPE"
+  defaultValue: "Android"
+  editorType: select
+  options: "Android,iOS"
+  isRequired: true
+  title: Framework Type
+  description: "Framework type for this mobile assessment."
+- key: "AC_FOD_PLATFORM_TYPE"
+  defaultValue: "Phone"
+  editorType: select
+  options: "Phone,Tablet,Both"
+  isRequired: true
+  title: Platform Type
+  description: "Platform type for this mobile assessment."
+- key: "AC_FOD_FILE_PATH"
+  defaultValue: "$AC_FOD_FILE_PATH"
+  isRequired: true
+  title: Path to apk/ipa
+  description: "Full path of the artifact."
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
