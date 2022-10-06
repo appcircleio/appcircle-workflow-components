@@ -1,0 +1,30 @@
+platform: Android
+buildPlatform:
+displayName: Detekt
+description: "Runs detekt gradle task"
+webUrl: https://github.com/appcircleio/appcircle-detekt-component
+repoUrl: https://github.com/appcircleio/appcircle-detekt-component.git
+commit: ea2000c
+inputs:
+- key: "AC_DETEKT_TASK"
+  defaultValue: "detekt"
+  isRequired: true
+  title: Gradle task name
+  description: Specifies detekt task name.
+  helpText:
+- key: "AC_DETEKT_EXTRA_PARAMETERS"
+  isRequired: false
+  title: Scanner Parameters
+  description: "Extra command line parameters for detekt."
+  helpText:
+- key: "AC_DETEKT_SAVE_REPORT"
+  defaultValue: "false"
+  isRequired: false
+  title: Save report
+  description: "Report files will be saved into the artifacts folder if set to true."
+  helpText:  
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
