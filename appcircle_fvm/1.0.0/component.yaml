@@ -4,7 +4,7 @@ displayName: Install Flutter Version Manager
 description: "Install Flutter with FVM"
 webUrl: https://github.com/appcircleio/appcircle-fvm-component
 repoUrl: https://github.com/appcircleio/appcircle-fvm-component.git
-commit: 14bda34
+commit: 7691858
 inputs:
 - key: "AC_SELECTED_FLUTTER_VERSION"
   isRequired: false
