@@ -4,7 +4,7 @@ displayName: Test Reports
 description: Parse test and coverage results.
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: bb074d4
+commit: 8c35c56
 inputs:
 - key: "AC_TEST_RESULT_PATH"
   defaultValue: "$AC_TEST_RESULT_PATH"
