@@ -10,7 +10,7 @@ inputs:
   defaultValue: "$AC_XCODE_LIST_DIR"
   isRequired: true
   title: Xcode List Directory
-  description: "Specifies the xcode folder list directory. Current xcode folder structure examples : /Applications/Xcode/10.3/Xcode or /Applications/Xcode/11.0/Xcode"
+  description: "Specifies the Xcode folder list directory. Xcode versions stay in /Volumes directory and selected by given version."
   helpText:
 - key: "AC_XCODE_VERSION"
   defaultValue: "$AC_XCODE_VERSION"
