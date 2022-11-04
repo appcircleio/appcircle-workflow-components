@@ -10,7 +10,7 @@ inputs:
   defaultValue: "$AC_XCODE_LIST_DIR"
   isRequired: true
   title: Xcode List Directory
-  description: "Specifies the Xcode folder list directory. Xcode versions stay in /Volumes directory and selected by given version."
+  description: "Specifies the directory with the Xcode versions. Xcode versions are located under the /Volumes directory and selected according to the given version."
   helpText:
 - key: "AC_XCODE_VERSION"
   defaultValue: "$AC_XCODE_VERSION"
