@@ -4,7 +4,7 @@ displayName: "Xcodebuild for Unit and UI Tests"
 description: "Performs unit and UI tests for your iOS applications."
 webUrl: https://github.com/appcircleio/appcircle-ios-test-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
-commit: 39fde18 
+commit: c3fd6df 
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
