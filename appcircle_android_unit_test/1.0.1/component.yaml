@@ -4,7 +4,7 @@ displayName: Android Unit Tests
 description: "Run Android project's unit tests."
 webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git
-commit: 3383a7f
+commit: 9f2bf11
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -32,6 +32,7 @@ inputs:
 outputs:
 - key: "AC_TEST_RESULT_PATH"
   title: Output Path
+  defaultValue: "AC_TEST_RESULT_PATH"
   description: The directory where your Junit XML report will be written to.
   helpText:    
 processFilename: ruby
