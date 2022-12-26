@@ -4,18 +4,18 @@ displayName: Flutter Test
 description: "Run Flutter test command."
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
-commit: 3e6e526
+commit: 48616a1
 inputs:
 - key: "AC_FLUTTER_PROJECT_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: true
   title: Flutter Project Directory
-  description: "Specifies the root of your Flutter project where your pubspec.yaml file exists."
+  description: "Specifies the root of your Flutter project where your **pubspec.yaml** file exists."
 - key: "AC_FLUTTER_JUNIT_REPORTS"
   defaultValue: "YES"
   isRequired: false
   title: Create JUnit reports
-  description: "If this is set to YES, JUnit Report will be created at AC_TEST_RESULT_PATH"
+  description: "If this is set to `YES`, [JUnit](https://junit.org/junit5/) Report will be created at AC_TEST_RESULT_PATH"
 - key: "AC_FLUTTER_TEST_EXTRA_ARGS"
   isRequired: false
   title: Flutter Test Additional Arguments
