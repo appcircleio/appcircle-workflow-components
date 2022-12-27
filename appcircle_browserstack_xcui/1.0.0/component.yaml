@@ -2,8 +2,8 @@ platform: iOS
 buildPlatform:
 displayName: BrowserStack App Automate - XCUI
 description: "Run your XCUI tests on BrowserStack App Automate"
-webUrl: https://github.com/appcircle/appcircle-browserstack-xcui-component
-repoUrl: https://github.com/appcircle/appcircle-browserstack-xcui-component.git
+webUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component
+repoUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component.git
 commit: b00e8df
 inputs:
 - key: "AC_BROWSERSTACK_USERNAME"
