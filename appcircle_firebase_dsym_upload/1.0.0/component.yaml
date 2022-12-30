@@ -16,13 +16,13 @@ inputs:
   defaultValue: "$AC_FIREBASE_PLIST_PATH"
   isRequired: true
   title: Path of the GoogleService-Info.plist
-  description: "**Relative path** of GoogleService-Info.plist file inside the repository. For example ./GoogleService-Info.plist or ./ios/GoogleService-Info.plist if you're using Flutter or React Native"
+  description: "**Relative path** of GoogleService-Info.plist file inside the repository. For example `./GoogleService-Info.plist` or `./ios/GoogleService-Info.plist` if you're using Flutter or React Native"
   helpText:
 - key: "AC_FIREBASE_CRASHLYTICS_PATH"
   defaultValue: "$AC_FIREBASE_CRASHLYTICS_PATH"
   isRequired: true
   title: Path of the Crashlytics uploader
-  description: Full path of Crashlytics upload-symbols binary. For Cocoapods, enter $AC_REPOSITORY_DIR/Pods/FirebaseCrashlytics/upload-symbols For SPM, enter $HOME/Library/Developer/Xcode/DerivedData/**/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols
+  description: "**Full path** of Crashlytics upload-symbols binary. For Cocoapods, enter `$AC_REPOSITORY_DIR/Pods/FirebaseCrashlytics/upload-symbols` For SPM, enter `$HOME/Library/Developer/Xcode/DerivedData/**/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols`"
   helpText:
 outputs:
 processFilename: ruby
