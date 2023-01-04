@@ -1,0 +1,44 @@
+platform: Common
+buildPlatform:
+displayName: Firebase Deployment
+description: "Deploy your web applications to Firebase Hosting"
+webUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component
+repoUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component.git
+commit: 2d64a6b
+inputs:
+- key: "AC_FIREBASE_VERSION"
+  defaultValue: "latest"
+  isRequired: true
+  title: Firebase Version
+  description: Firebase version to be used. Enter v11.11.0 for a specific version.
+  helpText:
+- key: "AC_FIREBASE_WEB_PATH"
+  defaultValue: "$AC_FLUTTER_WEB_PATH"
+  isRequired: true
+  title: Path of the web application
+  description: Full path of the web application. Don't change if you're using Flutter Web Build.
+  helpText:
+- key: "AC_FIREBASE_TOKEN"
+  defaultValue: "$AC_FIREBASE_TOKEN"
+  isRequired: false
+  title: Firebase Token
+  description: "A refresh token that's printed when you authenticate with `firebase login:ci` command. **Either select Firebase token or Google Service account**."
+  helpText:
+- key: "GOOGLE_APPLICATION_CREDENTIALS"
+  defaultValue: "$GOOGLE_APPLICATION_CREDENTIALS"
+  isRequired: false
+  title: Google Service Account
+  description: "Path of Google Service Account JSON. Upload service account as a file to your environment group and name it `GOOGLE_APPLICATION_CREDENTIALS`. **Either select Firebase token or Google Service account**."
+  helpText:
+- key: "AC_FIREBASE_EXTRA_PARAMETERS"
+  defaultValue: "--debug"
+  isRequired: false
+  title: Extra parameters
+  description: "Extra command line parameters. Enter --debug for debug mode."
+  defaultValue: $AC_FIREBASE_EXTRA_PARAMETERS
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
