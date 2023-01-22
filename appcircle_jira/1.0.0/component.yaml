@@ -1,11 +1,10 @@
 platform: Common
 buildPlatform:
-alwaysRun: true
 displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 6c528c4
+commit: fd3a3aa
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
