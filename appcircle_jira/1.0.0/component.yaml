@@ -4,7 +4,7 @@ displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: d073c9e
+commit: 309a23d
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
