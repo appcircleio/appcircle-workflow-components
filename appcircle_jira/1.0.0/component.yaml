@@ -4,7 +4,7 @@ displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 309a23d
+commit: 0790d1e
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -28,7 +28,7 @@ inputs:
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
   title: Jira Issue
-  description: "The ID or key of the issue. Please check [documentation](https://docs.appcircle.io) to learn how you can get this information from branch names or commit messages."
+  description: "The ID or key of the issue. Please check [documentation](https://docs.appcircle.io/integrations/jira-component) to learn how you can get this information from branch names or commit messages."
   helpText:
 - key: "AC_JIRA_FAIL_TRANSITION"
   defaultValue: "$AC_JIRA_FAIL_TRANSITION"
@@ -209,7 +209,7 @@ inputs:
   isRequired: true
   editorType: textarea
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. Please check [documentation](https://docs.appcircle.io) for more information."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build."
   helpText:
 outputs:
 processFilename: ruby
