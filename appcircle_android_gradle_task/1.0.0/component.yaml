@@ -1,0 +1,30 @@
+platform: Android
+buildPlatform:
+displayName: Gradle Runner
+description: "Runs a Gradle task"
+webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
+repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git
+commit: 663c780
+inputs:
+- key: "AC_GRADLE_TASK"
+  defaultValue: "$AC_GRADLE_TASK"
+  isRequired: true
+  title: Gradle task name
+  description: Specifies Gradle task name.
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_GRADLE_TASK_EXTRA_PARAMETERS"
+  isRequired: false
+  title: Task Parameters
+  description: "Extra command line parameters for the task."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
