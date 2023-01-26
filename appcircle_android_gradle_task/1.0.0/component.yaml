@@ -4,7 +4,7 @@ displayName: Gradle Runner
 description: "Runs a Gradle task"
 webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
 repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git
-commit: 663c780
+commit: 873f0f8
 inputs:
 - key: "AC_GRADLE_TASK"
   defaultValue: "$AC_GRADLE_TASK"
