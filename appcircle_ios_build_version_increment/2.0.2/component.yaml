@@ -4,7 +4,7 @@ displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
-commit: 4707781
+commit: a14f5dd
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
@@ -83,9 +83,11 @@ inputs:
 outputs:
   - key: "AC_IOS_NEW_BUILD_NUMBER"
     title: Changed build number
+    defaultValue: "AC_IOS_NEW_BUILD_NUMBER"
     description: Changed build number that is written to the project.
   - key: "AC_IOS_NEW_VERSION_NUMBER"
     title: Changed version number
+    defaultValue: "AC_IOS_NEW_VERSION_NUMBER"
     description: Changed version number that is written to the project.
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'

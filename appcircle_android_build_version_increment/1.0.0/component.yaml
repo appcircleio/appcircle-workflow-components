@@ -4,7 +4,7 @@ displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for Android'
 webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
-commit: 9ec1626
+commit: f63fb7b
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
@@ -63,9 +63,11 @@ inputs:
 outputs:
   - key: "AC_ANDROID_NEW_VERSION_CODE"
     title: Changed version code
+    defaultValue: AC_ANDROID_NEW_VERSION_CODE
     description: Incremented version code that is written to the project.
   - key: "AC_ANDROID_NEW_VERSION_NAME"
     title: Changed version number
+    defaultValue: AC_ANDROID_NEW_VERSION_NAME
     description: Incremented version name that is written to the project.
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
