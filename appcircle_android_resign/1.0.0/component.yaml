@@ -4,7 +4,7 @@ displayName: Android Re-Sign
 description: "Re-sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
 webUrl: https://github.com/appcircleio/appcircle-android-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-resign-component.git
-commit: aad5002
+commit: 8c6934e
 inputs:
 - key: "AC_RESIGN_APK_URL"
   defaultValue: "$ResignFileUrl"
