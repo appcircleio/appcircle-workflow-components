@@ -4,7 +4,7 @@ displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
 webUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component.git
-commit: 89813ca
+commit: e04d1ba
 inputs:
 - key: "AC_APPCENTER_TOKEN"
   defaultValue: "$AC_APPCENTER_TOKEN"
@@ -16,7 +16,7 @@ inputs:
   defaultValue: "$AC_APK_PATH"
   isRequired: true
   title: APK or AAB Path
-  description: "The full path of the build. Both APK($AC_APK_PATH) and AAB($AC_AAB_PATH) files are supported."
+  description: "The full path of the build. Both APK($AC_APK_PATH, $AC_SIGNED_APK_PATH) and AAB($AC_AAB_PATH, $AC_SIGNED_AAB_PATH) files are supported."
   helpText:
 - key: "AC_APPCENTER_OWNER"
   defaultValue: "$AC_APPCENTER_OWNER"
