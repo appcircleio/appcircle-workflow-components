@@ -4,7 +4,7 @@ displayName: BrowserStack App Automate - Espresso
 description: "Run your Espresso tests on BrowserStack App Automate"
 webUrl: https://github.com/appcircleio/appcircle-browserstack-espresso-component
 repoUrl: https://github.com/appcircleio/appcircle-browserstack-espresso-component.git
-commit: da341ab
+commit: 4fdd6f3
 inputs:
 - key: "AC_BROWSERSTACK_USERNAME"
   defaultValue: "$AC_BROWSERSTACK_USERNAME"
