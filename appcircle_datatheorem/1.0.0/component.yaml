@@ -1,0 +1,31 @@
+platform: Common
+buildPlatform:
+displayName: Data Theorem
+description: "Upload to Data Theorem"
+webUrl: https://github.com/appcircleio/appcircle-datatheorem-component
+repoUrl: https://github.com/appcircleio/appcircle-datatheorem-component.git
+commit: 063d581
+inputs:
+- key: "AC_DT_FILE_PATH"
+  defaultValue: "$AC_DT_FILE_PATH"
+  isRequired: true
+  title: File path to the IPA or APK to upload
+  description: |
+        This variable can for example be set to:
+
+        `$AC\_APK\_PATH` after the `Android Build` step
+        `$AC\_APK\_PATH` or `$AC\_SIGNED\_APK\_PATH` after the "Android Sign" step
+
+        `$AC\_IPA\_PATH` after the "Xcode Archive & Export for iOS" step
+  helpText:
+- key: "AC_DT_UPLOAD_API_KEY"
+  defaultValue: "$AC_DT_UPLOAD_API_KEY"
+  isRequired: true
+  title: Data Theorem Upload API Key
+  description: You will need to retrieve your organization's Upload API key from the portal.
+  helpText:
+outputs:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
