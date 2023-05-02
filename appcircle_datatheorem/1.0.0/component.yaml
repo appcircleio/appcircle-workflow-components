@@ -1,27 +1,25 @@
 platform: Common
 buildPlatform:
-displayName: Data Theorem
-description: "Upload to Data Theorem"
+displayName: Data Theorem Mobile Secure
+description: "Scan your app using Mobile Secure"
 webUrl: https://github.com/appcircleio/appcircle-datatheorem-component
 repoUrl: https://github.com/appcircleio/appcircle-datatheorem-component.git
-commit: 063d581
+commit: bb7b2cb
 inputs:
 - key: "AC_DT_FILE_PATH"
   defaultValue: "$AC_DT_FILE_PATH"
   isRequired: true
   title: File path to the IPA or APK to upload
   description: |
-        This variable can for example be set to:
+      - `$AC_APK_PATH` after the `Android Build` step
+      - `$AC_APK_PATH` or `$AC_SIGNED_APK_PATH` after the `Android Sign` step
 
-        `$AC\_APK\_PATH` after the `Android Build` step
-        `$AC\_APK\_PATH` or `$AC\_SIGNED\_APK\_PATH` after the "Android Sign" step
-
-        `$AC\_IPA\_PATH` after the "Xcode Archive & Export for iOS" step
+      - `$AC_EXPORT_DIR/Myapp.ipa` after the `Xcode Archive & Export for iOS` step
   helpText:
 - key: "AC_DT_UPLOAD_API_KEY"
   defaultValue: "$AC_DT_UPLOAD_API_KEY"
   isRequired: true
-  title: Data Theorem Upload API Key
+  title: Data Theorem Mobile Secure Upload API Key
   description: You will need to retrieve your organization's Upload API key from the portal.
   helpText:
 outputs:
