@@ -4,11 +4,11 @@ displayName: Repeato Test Runner
 description: "You can execute Repeato tests before deploying your app build."
 webUrl: https://github.com/appcircleio/appcircle-repeato-component
 repoUrl: https://github.com/appcircleio/appcircle-repeato-component.git
-commit: 02df72b
+commit: 99fa008
 inputs:
 - key: "AC_REPEATO_CLI_VER"
   defaultValue: "$AC_REPEATO_CLI_VER"
-  isRequired: true
+  isRequired: false
   title: Repeato CLI Version
   description: "Set the Repeato CLI version compatible to your workspace tests."
   helpText:
