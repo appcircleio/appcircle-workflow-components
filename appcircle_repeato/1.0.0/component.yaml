@@ -1,10 +1,10 @@
-platform: Common
+platform: Android
 buildPlatform:
 displayName: Repeato Test Runner
 description: "You can execute Repeato tests before deploying your app build."
 webUrl: https://github.com/appcircleio/appcircle-repeato-component
 repoUrl: https://github.com/appcircleio/appcircle-repeato-component.git
-commit: 6e91495
+commit: 4d367a6
 inputs:
 - key: "AC_REPEATO_CLI_VER"
   defaultValue: "$AC_REPEATO_CLI_VER"
