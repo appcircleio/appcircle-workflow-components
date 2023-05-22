@@ -1,10 +1,10 @@
 platform: Common
 buildPlatform:
-displayName: Azure Board
-description: "Add comment to Azure Board Issue and optionally change the status."
-webUrl: https://github.com/appcircleio/appcircle-azure-board-component
-repoUrl: https://github.com/appcircleio/appcircle-azure-board-component.git
-commit: cb6c09a
+displayName: Azure Boards
+description: "Add comment to Azure Boards Issue and optionally change the status."
+webUrl: https://github.com/appcircleio/appcircle-azure-boards-component
+repoUrl: https://github.com/appcircleio/appcircle-azure-boards-component.git
+commit: 6b92602
 inputs:
 - key: "AC_AZUREBOARD_INSTANCE"
   defaultValue: "https://dev.azure.com"
