@@ -4,7 +4,7 @@ displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
 webUrl: https://github.com/appcircleio/appcircle-android-wait-emulator
 repoUrl: https://github.com/appcircleio/appcircle-android-wait-emulator.git
-commit: fd1440a
+commit: 31ff0a4
 inputs:
 - key: "AC_TEST_DEVICE"
   defaultValue: "Pixel_3a"
@@ -21,11 +21,11 @@ inputs:
   isRequired: true
   title: ADB arguments for the device
   description: You may add new arguments but don't change the default ones such as no-window.
-- key: "AC_APK_PATH"
-  defaultValue: "$AC_APK_PATH"
+- key: "AC_SIGNED_APK_PATH"
+  defaultValue: "$AC_SIGNED_APK_PATH"
   isRequired: false
-  title: APK Path
-  description: Optional full path of the apk file to install after the emulator boots.
+  title: Signed APK Path
+  description: Optional full path of the **signed** APK file to install after the emulator boots.
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
