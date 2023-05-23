@@ -4,7 +4,7 @@ displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86/arm64 architecture."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
-commit: 8a407a7
+commit: a173dec
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -26,8 +26,8 @@ inputs:
   helpText:
 - key: "AC_SIMULATOR_ARCH"
   editorType: select
-  defaultValue: "x86_64"
-  options: "x86_64,arm64"
+  defaultValue: "arm64"
+  options: "arm64,x86_64"
   isRequired: false
   title: Architecture
   description: Specifies the CPU architecture for the simulator build.
