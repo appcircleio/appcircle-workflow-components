@@ -1,0 +1,58 @@
+platform: Common
+buildPlatform:
+displayName: Repeato Test Runner
+description: "You can execute Repeato tests before deploying your app build."
+webUrl: https://github.com/appcircleio/appcircle-repeato-component
+repoUrl: https://github.com/appcircleio/appcircle-repeato-component.git
+commit: 09b710c
+inputs:
+- key: "AC_REPEATO_CLI_VER"
+  defaultValue: "$AC_REPEATO_CLI_VER"
+  isRequired: false
+  title: Repeato CLI Version
+  description: "Set the Repeato CLI version compatible to your workspace tests."
+  helpText:
+- key: "AC_REPEATO_WORKSPACE_DIR"
+  defaultValue: "$AC_REPEATO_WORKSPACE_DIR"
+  isRequired: true
+  title: Workspace Path
+  description: "Repeato test runner need workspace path for setting up the workspace before executing batch. Ex: `./mypath` "
+  helpText:
+- key: "AC_REPEATO_BATCH_ID"
+  defaultValue: "$AC_REPEATO_BATCH_ID"
+  isRequired: true
+  title: Repeato Batch ID
+  description: "Provide batch id for the tests execution."
+  helpText:
+- key: "AC_REPEATO_LIC_KEY"
+  defaultValue: "$AC_REPEATO_LIC_KEY"
+  isRequired: true
+  title: Repeato License Key
+  description: "Provide license key for the tests execution."
+  helpText:
+- key: "AC_REPEATO_LOG_LEVEL"
+  defaultValue: "INFO"
+  isRequired: true
+  editorType: select
+  title: Log Level
+  description: "Switch to DEBUG if you have troubles running your batches. This prints a lot of additional information to the log."
+  options: "INFO,DEBUG,WARN"
+  helpText:
+outputs:
+- key: "AC_REPEATO_REPORT"
+  title: "Repeato Batch Report Zip File"
+  description: Repeato batch report of executed tests.
+  helpText:
+- key: "AC_REPEATO_JUNIT_REPORT"
+  title: Repeato JUnit XML File
+  description: "Repeato executed tests report in JUnit XML format."
+  helpText:
+- key: "AC_TEST_RESULT_PATH"
+  title: Output Path
+  defaultValue: "AC_TEST_RESULT_PATH"
+  description: "The directory where your Junit XML report will be written to."
+  helpText:  
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
