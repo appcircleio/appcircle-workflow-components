@@ -1,0 +1,96 @@
+platform: Common
+buildPlatform:
+displayName: Appcircle Snyk Scan Security Component
+description: "By utilizing this step, you will be able to test your project dependencies for vulnerabilities during builds and use Snyk to monitor your projects."
+webUrl: https://github.com/appcircleio/appcircle-snyk-scan-secure-component
+repoUrl: https://github.com/appcircleio/appcircle-snyk-scan-secure-component.git
+commit: eab9f55
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+- key: "AC_SNYK_AUTH_TOKEN"
+  defaultValue: "$AC_SNYK_AUTH_TOKEN"
+  isRequired: true
+  title: Snyk Authentication Token
+  description: "Your Snyk authentication token (see https://app.snyk.io/account)."
+  helpText:
+- key: "AC_SYK_CLI_COMMAND"
+  defaultValue: "test"
+  isRequired: false
+  editorType: select
+  title: Snyk CLI Command to Run
+  description: "This is the CLI command to run with Snyk.Default value: `test`"
+  options: "test,code test"
+  helpText:
+- key: "AC_SNYK_SEVERITY_THRESHOLD"
+  defaultValue: "low"
+  isRequired: false
+  editorType: select
+  title: Severity Threshold
+  description: "Only report vulnerabilities of the provided level or higher."
+  options: "low,medium,high"
+  helpText:
+- key: "AC_SNYK_FAIL_ON_ISSUES"
+  defaultValue: "yes"
+  isRequired: false
+  editorType: select
+  title: Fail on Issues
+  description: |
+        Specifies whether to fail the build or not based on the results found by Snyk.
+
+        Snyk by default returns an error code from the test command. This may break your Appcircle workflow. By specifying `no`, the build can continue even if vulnerabilities are found.
+  options: "yes,no"
+  helpText:
+- key: "AC_SNYK_CREATE_REPORT"
+  defaultValue: "no"
+  isRequired: false
+  editorType: select
+  title: Create HTML Report
+  description: |
+        Specifies whether to create an HTML report.
+
+        If set to `yes`, an HTML report will be created and available as a build artifact.
+  options: "yes,no"
+- key: "AC_SNYK_MONITOR"
+  defaultValue: "no"
+  isRequired: false
+  editorType: select
+  title: Monitor (Import to Snyk)
+  description: |
+        If enabled, imports the snapshot of dependencies to Snyk for continuous monitoring after a successful test.
+
+        Set this value to `yes` to import the snapshot of dependencies to Snyk after a successful test. Snyk will then start monitoring the dependencies for new vulnerabilities and alert when a new vulnerability is discovered.
+  options: "yes,no"
+  helpText:
+- key: "AC_SNYK_ORGANIZATION"
+  defaultValue: "$AC_SNYK_ORGANIZATION"
+  isRequired: true
+  title: Organization
+  description: |
+        Name of the Snyk organisation name, under which this project should be tested and monitored.
+
+        If omitted the default organization will be used.
+  helpText:
+- key: "AC_SNYK_ADD_ARG"
+  defaultValue: "$AC_SNYK_ADD_ARG"
+  isRequired: false
+  title: Snyk CLI Additional Arguments
+  description: Snyk CLI additional arguments for command line.
+  helpText:
+outputs:
+- key: "AC_SNYK_REPORT"
+  title: "Snyk Report HTML File"
+  description: Snyk report of executed tests.
+  helpText:
+- key: "AC_SNYK_MONITOR_EXPLORE_LINK"
+  title: Snyk Monitor Explore Link
+  defaultValue: "AC_TEST_RESULT_PATH"
+  description: "The link where the project result is monitored."
+  helpText:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
