@@ -4,7 +4,7 @@ displayName: Appcircle Snyk Scan Security Component
 description: "By utilizing this step, you will be able to test your project dependencies for vulnerabilities during builds and use Snyk to monitor your projects."
 webUrl: https://github.com/appcircleio/appcircle-snyk-scan-secure-component
 repoUrl: https://github.com/appcircleio/appcircle-snyk-scan-secure-component.git
-commit: 8d18e00
+commit: 85448e0
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -83,12 +83,12 @@ inputs:
 outputs:
 - key: "AC_SNYK_REPORT"
   title: "Snyk Report HTML File"
-  defaultValue: "$AC_SNYK_REPORT"
+  defaultValue: "AC_SNYK_REPORT"
   description: Snyk report of executed tests.
   helpText:
 - key: "AC_SNYK_MONITOR_EXPLORE_LINK"
   title: Snyk Monitor Explore Link
-  defaultValue: "$AC_TEST_RESULT_PATH"
+  defaultValue: "AC_TEST_RESULT_PATH"
   description: "The link where the project result is monitored."
   helpText:
 processFilename: bash
