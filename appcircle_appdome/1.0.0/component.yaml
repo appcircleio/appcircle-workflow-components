@@ -4,7 +4,7 @@ displayName: Appdome Build-2Secure
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
 webUrl: https://github.com/appcircleio/appcircle-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-appdome-component.git
-commit: 07c3be7
+commit: 382bce9
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
