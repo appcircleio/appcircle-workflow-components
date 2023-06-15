@@ -4,7 +4,7 @@ displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: 382bce9
+commit: 5e9e0e0
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
@@ -27,6 +27,7 @@ inputs:
 - key: "AC_APPDOME_SIGN_METHOD"
   defaultValue: "On-Appdome"
   isRequired: true
+  editorType: select
   title: Signing Method
   description: "App signing method."
   options: "On-Appdome,Private-Signing,Auto-Dev-Signing"
