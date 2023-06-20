@@ -4,7 +4,7 @@ displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: 5e9e0e0
+commit: cfb888d
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
@@ -44,21 +44,21 @@ inputs:
   defaultValue: "false"
   isRequired: true
   editorType: select
-  title: Build with logs?
+  title: Build with Logs?
   description: "Build with diagnostic logs?"
   options: "true,false"
   helpText:
 outputs:
 - key: "AC_APPDOME_SECURED_APK_PATH"
-  title: "Secured .apk file path"
+  title: "Secured .apk File Path"
   description: Local path of the secured .apk file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
   helpText:
 - key: "AC_APPDOME_SECURED_ABB_PATH"
-  title: "Secured .abb file path"
+  title: "Secured .abb File Path"
   description: Local path of the secured .abb file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
   helpText:
 - key: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
-  title: .sh sign script file path
+  title: .sh Sign Script File Path
   description: "Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing"
   helpText:
 - key: "AC_APPDOME_CERTIFICATE_PATH"
