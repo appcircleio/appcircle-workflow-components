@@ -4,7 +4,7 @@ displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: 43b8195
+commit: 7084512
 inputs:
 - key: "AC_ICONS_PATH"
   defaultValue: "$AC_ICONS_PATH"
@@ -17,7 +17,7 @@ inputs:
   title: Badge text
   description: "Text that appears on the right corner."
 - key: "AC_BADGE_VERSION"
-  defaultValue: "$AC_BADGE_VERSION"
+  defaultValue: "1.0"
   isRequired: false
   title: Version Number
   description: "Version or build number that will appear at the bottom."
