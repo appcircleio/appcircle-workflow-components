@@ -4,7 +4,7 @@ displayName: Azure DevOps Bot For Detekt Report
 description: "Bot script that allows Detekt outputs to make changes to Azure DevOps Pull Requests."
 webUrl: https://github.com/appcircleio/appcircle-android-azure-bot-for-detekt-component
 repoUrl: https://github.com/appcircleio/appcircle-android-azure-bot-for-detekt-component.git
-commit: 69dc1b7
+commit: 021e7e3
 inputs:
 - key: "AC_AZURE_ORG_NAME"
   defaultValue: "$AC_AZURE_ORG_NAME"
@@ -58,4 +58,3 @@ processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
 - "main.rb"
-- "git_clone.sh"
