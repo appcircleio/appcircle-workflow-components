@@ -1,0 +1,60 @@
+platform: iOS
+buildPlatform:
+displayName: Azure DevOps Bot For Swiftlint Report
+description: "Bot script that allows Swiftlint outputs to make changes to Azure DevOps Pull Requests."
+webUrl: https://github.com/appcircleio/appcircle-ios-azure-bot-for-swiftlint-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-azure-bot-for-swiftlint-component.git
+commit: 752e83d
+inputs:
+- key: "AC_LINT_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/swiftlint_result.txt"
+  isRequired: true
+  title: Swiftlint File Path
+  description: Swiftlint File Path
+  helpText:
+- key: "AC_AZURE_ORG_NAME"
+  defaultValue: "$AC_AZURE_ORG_NAME"
+  isRequired: true
+  title: Azure DevOps Organization Name
+  description: Azure DevOps Organization Name
+  helpText:
+- key: "AC_AZURE_PROJECT_NAME"
+  defaultValue: "$AC_AZURE_PROJECT_NAME"
+  isRequired: true
+  title: Azure DevOps Project Name
+  description: Azure DevOps Project Name
+  helpText:
+- key: "AC_AZURE_REPO_NAME"
+  defaultValue: "$AC_AZURE_REPO_NAME"
+  isRequired: true
+  title: Azure DevOps Repository Name
+  description: Azure DevOps Repository Name
+  helpText:
+- key: "AC_AZURE_BASE_URL"
+  defaultValue: "$AC_AZURE_BASE_URL"
+  isRequired: true
+  title: Azure DevOps Base URL
+  description: Azure DevOps Base URL
+  helpText:
+- key: "AC_AZURE_API_KEY"
+  defaultValue: "$AC_AZURE_API_KEY"
+  isRequired: true
+  title: Azure DevOps API Key
+  description: Azure DevOps API Key
+  helpText:
+- key: "AC_DOMAIN_NAME"
+  defaultValue: "my.appcircle.io"
+  isRequired: true
+  title: Appcircle Domain Name
+  description: Appcircle Domain Name
+  helpText:
+- key: "AC_AZURE_API_VERSION"
+  defaultValue: "$AC_AZURE_API_VERSION"
+  isRequired: true
+  title: Appcircle Domain Name
+  description: "Appcircle Domain Name. For example: `7.1`"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
