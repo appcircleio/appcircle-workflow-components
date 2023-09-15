@@ -4,7 +4,7 @@ displayName: Azure DevOps Bot For Swiftlint Report
 description: "Bot script that allows Swiftlint outputs to make changes to Azure DevOps Pull Requests."
 webUrl: https://github.com/appcircleio/appcircle-ios-azure-bot-for-swiftlint-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-azure-bot-for-swiftlint-component.git
-commit: 3b5e95c
+commit: ffeec68
 inputs:
 - key: "AC_LINT_PATH"
   defaultValue: "$AC_OUTPUT_DIR/swiftlint_result.txt"
@@ -31,7 +31,7 @@ inputs:
   description: Azure DevOps Repository Name
   helpText:
 - key: "AC_AZURE_BASE_URL"
-  defaultValue: "dev.azure.com"
+  defaultValue: "https://dev.azure.com"
   isRequired: true
   title: Azure DevOps Base URL
   description: Azure DevOps Base URL
