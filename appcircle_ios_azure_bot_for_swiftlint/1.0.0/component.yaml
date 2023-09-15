@@ -51,8 +51,8 @@ inputs:
 - key: "AC_AZURE_API_VERSION"
   defaultValue: "$AC_AZURE_API_VERSION"
   isRequired: true
-  title: Appcircle Domain Name
-  description: "Appcircle Domain Name. For example: `7.1`"
+  title: Appcircle API Version
+  description: "Appcircle API Version. For example: `7.1`"
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
