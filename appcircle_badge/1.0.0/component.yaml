@@ -4,13 +4,13 @@ displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: 7084512
+commit: 81e62f6
 inputs:
 - key: "AC_ICONS_PATH"
   defaultValue: "$AC_ICONS_PATH"
   isRequired: true
   title: Icons path
-  description: "Specifies path of icon files. For example : MyProject/Assets.xcassets/AppIcon.appiconset"
+  description: "Specifies path of icon files. For example : MyProject/Assets.xcassets/AppIcon.appiconset \nThe glob pattern can be used to select multiple image paths. For example: `app/src/main/res/mipmap*` adds badges all pngs under mipmap in this file path."
 - key: "AC_BADGE_TEXT"
   defaultValue: "Beta"
   isRequired: false
