@@ -4,7 +4,7 @@ displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: cadab36
+commit: a11e18c
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
@@ -12,11 +12,17 @@ inputs:
   title: App file URL or environment variable
   description: "URL to app file (apk/aab) or an environment variable representing its path (i.e. $AC_APK_PATH or $AC_AAB_PATH)"
   helpText:
+- key: "AC_APPDOME_API_KEY"
+  defaultValue: "$AC_APPDOME_API_KEY"
+  isRequired: true
+  title: Appdome API Key
+  description: "This value must be taken from the Appdome"
+  helpText:
 - key: "AC_APPDOME_FUSION_SET_ID"
   defaultValue: "$AC_APPDOME_FUSION_SET_ID"
   isRequired: true
   title: Appdome Fusion Set ID
-  description: "Appdome Fusion set ID"
+  description: "This value must be taken from the Appdome"
   helpText:
 - key: "AC_APPDOME_TEAM_ID"
   defaultValue: "$AC_APPDOME_TEAM_ID"
