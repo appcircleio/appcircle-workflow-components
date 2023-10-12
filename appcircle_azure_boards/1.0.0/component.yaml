@@ -4,7 +4,7 @@ displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."
 webUrl: https://github.com/appcircleio/appcircle-azure-boards-component
 repoUrl: https://github.com/appcircleio/appcircle-azure-boards-component.git
-commit: 6b92602
+commit: cb6c09a
 inputs:
 - key: "AC_AZUREBOARD_INSTANCE"
   defaultValue: "https://dev.azure.com"
