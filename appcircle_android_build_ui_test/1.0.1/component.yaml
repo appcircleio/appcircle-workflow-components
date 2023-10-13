@@ -1,0 +1,40 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin, Flutter
+displayName: "Android Build for UI Testing"
+description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
+webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
+repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
+commit: 1d1d4d3
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+outputs:
+- key: "AC_APK_PATH"
+  title: "APK Path"
+  defaultValue: "AC_APK_PATH"
+  description: "Path of the generated apk file."
+  helpText:
+- key: "AC_TEST_APK_PATH"
+  title: "Test APK Path"
+  defaultValue: "AC_TEST_APK_PATH"
+  description: "Path of the generated test apk file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
