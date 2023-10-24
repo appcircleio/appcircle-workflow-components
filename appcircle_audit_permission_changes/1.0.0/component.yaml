@@ -1,0 +1,30 @@
+platform: iOS
+buildPlatform:
+displayName: Audit Permission Changes
+description: "Permission Differance Checker"
+webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
+commit: 32f1844
+inputs:
+- key: "AC_REFERANCE_BRANCH"
+  defaultValue: "$AC_REFERANCE_BRANCH"
+  isRequired: true
+  title: Referance Branch
+  description: "Specifies the referance branch to check permissions."
+- key: "AC_BREAKE_WORKFLOW"
+  isRequired: false
+  editorType: select
+  defaultValue: "false"
+  options: "false,true"
+  title: Break Down Workflow
+  description: It stops workflow if it is true and there is any changes. 
+  helpText:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
