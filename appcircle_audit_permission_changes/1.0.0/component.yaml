@@ -17,7 +17,7 @@ inputs:
   defaultValue: "false"
   options: "false,true"
   title: Break Down Workflow
-  description: It stops workflow if it is true and there is any changes. 
+  description: It stops workflow if it is true for any changes. 
   helpText:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
