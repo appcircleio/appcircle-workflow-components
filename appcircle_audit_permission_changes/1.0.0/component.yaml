@@ -4,7 +4,7 @@ displayName: Audit Permission Changes
 description: "Permission Differance Checker"
 webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
-commit: 466f6eb
+commit: f0cfb45
 inputs:
 - key: "AC_REFERANCE_BRANCH"
   defaultValue: "$AC_REFERANCE_BRANCH"
