@@ -4,7 +4,7 @@ displayName: Testinium
 description: "Run your test plans with Testinium"
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: 7f19972
+commit: 01f3fad
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
@@ -28,28 +28,28 @@ inputs:
   defaultValue: "$AC_TESTINIUM_PROJECT_ID"
   isRequired: true
   title: Project ID
-  description: Testinium project id
+  description: Testinium project ID
   helpText:
 - key: "AC_TESTINIUM_PLAN_ID"
   defaultValue: "$AC_TESTINIUM_PLAN_ID"
   isRequired: true
   title: Plan ID
-  description: Testinium plan id
+  description: Testinium plan ID
   helpText:
 - key: "AC_TESTINIUM_COMPANY_ID"
   defaultValue: "$AC_TESTINIUM_COMPANY_ID"
   isRequired: true
   title: Company ID
-  description: Testinium company id
+  description: Testinium company ID
   helpText:
 - key: "AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
   defaultValue: "$AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
-  isRequired: true
+  isRequired: false
   title: Max Failure Percentage
-  description: "Maximum failure percentage limit to interrupt workflow."
+  description: "Maximum failure percentage limit to interrupt workflow. It must be in the range 1-100."
   helpText:
 - key: "AC_TESTINIUM_TIMEOUT"
-  defaultValue: "600"
+  defaultValue: "6000"
   isRequired: true
   title: Timeout
   description: Testinium plan timeout in seconds
