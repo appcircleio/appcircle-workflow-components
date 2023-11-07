@@ -4,7 +4,7 @@ displayName: Testinium
 description: "Run your test plans with Testinium"
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: a3d516b
+commit: 39e064d
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
