@@ -4,7 +4,7 @@ displayName: Testinium
 description: "Run your test plans with Testinium"
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: e069477
+commit: d433dfe
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
@@ -63,14 +63,17 @@ inputs:
 outputs:
 - key: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
   title: "Total Number of Failures"
+  defaultValue: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
   description: "Total number of failures in test results."
   helpText:
 - key: "AC_TESTINIUM_RESULT_ERROR_SUMMARY"
   title: "Total Number of Errors"
   description: "Total number of errors in test results."
+  defaultValue: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
   helpText:
 - key: "AC_TESTINIUM_RESULT_SUCCESS_SUMMARY"
   title: "Total Number of Succeses"
+  defaultValue: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
   description: "Total number of succeses in test results."
   helpText:
 processFilename: ruby
