@@ -4,7 +4,7 @@ displayName: Appdome-Build-2Secure for iOS
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
 webUrl: https://github.com/appcircleio/appcircle-ios-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-appdome-component.git
-commit: df817e3
+commit: 62aeccb
 inputs:
 - key: "AC_APPDOME_IPA_PATH"
   defaultValue: "$AC_APPDOME_IPA_PATH"
@@ -71,7 +71,7 @@ outputs:
 - key: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
   defaultValue: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
   title: .sh Sign Script File Path
-  description: "Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing"
+  description: Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing'.
   helpText:
 - key: "AC_APPDOME_CERTIFICATE_PATH"
   defaultValue: "AC_APPDOME_CERTIFICATE_PATH"
