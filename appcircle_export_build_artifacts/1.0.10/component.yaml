@@ -4,7 +4,7 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: bc6112c
+commit: 66a8534
 inputs:
 - key: "AC_UPLOAD_DIR"
   defaultValue: "$AC_OUTPUT_DIR"
@@ -18,7 +18,7 @@ inputs:
   editorType: select
   options: "false,true"
   title: Delete artifacts for failed workflows
-  description: "Delete build artifacts if any of your workflows failed. Only build logs will be uploaded."
+  description: "Delete build artifacts if any of your workflow steps failed. Only build logs will be uploaded."
   helpText:
 outputs:
 processFilename: ruby
