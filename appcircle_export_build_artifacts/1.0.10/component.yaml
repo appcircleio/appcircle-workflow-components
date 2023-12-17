@@ -4,13 +4,13 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: a21b1eb
+commit: bc6112c
 inputs:
 - key: "AC_UPLOAD_DIR"
   defaultValue: "$AC_OUTPUT_DIR"
   isRequired: true
   title: Artifact Directory
-  description: ""
+  description: "If a folder path is specified, the files in this folder will be exported as artifacts. If a file path is specified, that file will be exported as an artifact. Uploading files with a 0 byte size in the specified path will be skipped."
   helpText:
 - key: "AC_DISABLE_UPLOAD_ON_FAIL"
   defaultValue: "false"
