@@ -1,0 +1,30 @@
+platform: Common
+buildPlatform:
+displayName: Authenticate with netrc
+description: "Add credentials to the .netrc file"
+webUrl: https://github.com/appcircleio/appcircle-netrc-component
+repoUrl: https://github.com/appcircleio/appcircle-netrc-component.git
+commit: 531cc35
+inputs:
+- key: 'AC_NETRC_HOSTNAME'
+  defaultValue: '$AC_NETRC_HOSTNAME'
+  isRequired: true
+  title: Host
+  description: Specifies the hostname of the server where the username and password will be used, for example, `github.com`.
+- key: "AC_NETRC_USER"
+  defaultValue: "$AC_NETRC_USER"
+  isRequired: true
+  title: Username
+  description: Specifies the username of the host.
+  helpText:
+- key: "AC_NETRC_PASS"
+  defaultValue: "$AC_NETRC_PASS"
+  isRequired: true
+  title: Password
+  description: The password or the authentication-token/access-token in the respective field which will be used by the host to authenticate you.
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
