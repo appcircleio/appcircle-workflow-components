@@ -4,7 +4,7 @@ displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"
 webUrl: https://github.com/appcircleio/appcircle-netrc-component
 repoUrl: https://github.com/appcircleio/appcircle-netrc-component.git
-commit: 531cc35
+commit: 3e39d81
 inputs:
 - key: 'AC_NETRC_HOSTNAME'
   defaultValue: '$AC_NETRC_HOSTNAME'
