@@ -1,10 +1,10 @@
 platform: Android
 buildPlatform:
-displayName: Appdome Build-to-Secure for Android
+displayName: Appdome Build to Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: 588ed87
+commit: 9db9773
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
