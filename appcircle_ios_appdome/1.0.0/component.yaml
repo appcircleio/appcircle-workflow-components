@@ -1,10 +1,10 @@
 platform: iOS
 buildPlatform:
-displayName: Appdome-Build-2Secure for iOS
+displayName: Appdome Build to Secure for iOS
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
 webUrl: https://github.com/appcircleio/appcircle-ios-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-appdome-component.git
-commit: 62aeccb
+commit: b7ac2ac
 inputs:
 - key: "AC_APPDOME_IPA_PATH"
   defaultValue: "$AC_APPDOME_IPA_PATH"
