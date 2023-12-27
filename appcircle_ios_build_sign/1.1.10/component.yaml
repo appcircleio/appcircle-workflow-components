@@ -1,0 +1,126 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcodebuild for Devices"
+description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
+webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git
+commit: 661f78a
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_OUTPUT_DIR_PATH"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
+  helpText:
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_ARCHIVE_FLAGS"
+  defaultValue: "$AC_XCODE_BUILD_EXTRA_FLAGS"
+  isRequired: false
+  title: Archive Flags
+  description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_CERTIFICATES"
+  defaultValue: "$AC_CERTIFICATES"
+  isRequired: false
+  title: Certificates
+  description: URLs of the Certificates.
+  helpText:
+- key: "AC_BUNDLE_IDENTIFIERS"
+  defaultValue: "$AC_BUNDLE_IDENTIFIERS"
+  isRequired: false
+  title: Bundle Identifiers
+  description: Specifies the project bundle identifers.
+  helpText:
+- key: "AC_PROVISIONING_PROFILES"
+  defaultValue: "$AC_PROVISIONING_PROFILES"
+  isRequired: false
+  title: Provisioning Profiles
+  description: URLs of the Provisioning Profiles.
+  helpText:
+- key: "AC_CONFIGURATION_NAME"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+  helpText:
+- key: "AC_COMPILER_INDEX_STORE_ENABLE"
+  defaultValue: "NO"
+  isRequired: true
+  title: Compiler Index Store Enable
+  description: You can disable the indexing during the build for faster build.
+  helpText:
+- key: "AC_METHOD_FOR_EXPORT"
+  defaultValue: "auto-detect"
+  isRequired: false
+  title: Export Method
+  description: Describes how Xcode should export the archive. Available options auto-detect, app-store, ad-hoc, enterprise, development. Default is auto-detect.
+  helpText:
+- key: "AC_TEAMID_FOR_EXPORT"
+  isRequired: false
+  title: Export TeamID
+  description: The Developer Portal team to use for this export. Defaults to the team used to build the archive.
+  helpText:
+- key: "AC_COMPILE_BITCODE_FOR_EXPORT"
+  isRequired: false
+  title: Export Compile Bitcode
+  description: For non-App Store exports, should Xcode re-compile the app from bitcode? Available options YES, NO.
+  helpText:
+- key: "AC_UPLOAD_BITCODE_FOR_EXPORT"
+  isRequired: false
+  title: Export Upload Bitcode
+  description: For App Store exports, should the package include bitcode?. Available options YES, NO.
+  helpText:
+- key: "AC_UPLOAD_SYMBOLS_FOR_EXPORT"
+  isRequired: false
+  title: Export Upload Symbols
+  description: For App Store exports, should the package include symbols?. Available options YES, NO.
+  helpText:
+- key: "AC_ICLOUD_CONTAINER_ENVIRONMENT_FOR_EXPORT"
+  isRequired: false
+  title: Export ICloud Container Environment
+  description: For non-App Store exports, if the app is using CloudKit, this configures the "com.apple.developer.icloud-container-environment" entitlement. Available options Development and Production.
+  helpText:
+- key: "AC_DELETE_ARCHIVE"
+  isRequired: false
+  editorType: select
+  defaultValue: "false"
+  options: "false,true"
+  title: Delete Archive
+  description: Delete `build.xcarchive` file after creating ipa file.
+  helpText:
+outputs:
+- key: "AC_ARCHIVE_PATH"
+  title: Archive Path
+  defaultValue: "AC_ARCHIVE_PATH"
+  description: Archive path.
+  helpText:
+- key: "AC_ARCHIVE_METADATA_PATH"
+  title: Archive Metadata Path
+  defaultValue: "AC_ARCHIVE_METADATA_PATH"
+  description: Archive metadata path.
+  helpText:
+- key: "AC_EXPORT_DIR"
+  title: Export Directory
+  defaultValue: "AC_EXPORT_DIR"
+  description: Specifies the directory that contains ipa, exportOptions.plist, and other exported files.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
