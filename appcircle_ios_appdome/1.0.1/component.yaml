@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform:
-displayName: Appdome Build to Secure for iOS
+displayName: Appdome Build-2Secure for iOS
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
 webUrl: https://github.com/appcircleio/appcircle-ios-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-appdome-component.git
