@@ -1,10 +1,10 @@
-platform: Common
+platform: Android
 buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: 583affd
+commit: b794aed
 inputs:
 - key: "AC_TEST_RESULT_PATH"
   defaultValue: "$AC_TEST_RESULT_PATH"
@@ -17,6 +17,14 @@ inputs:
   isRequired: false
   title: Coverage result path
   description: This environment variable is automatically set for native iOS projects when you run tests. For other projects, you need to set the coverage path.
+  helpText:
+- key: "AC_JACOCO_COVERAGE_TYPE"
+  defaultValue: "INSTRUCTION"
+  isRequired: true
+  editorType: select
+  title: Jacoco Coverage Type
+  description: "According to which parameter in your Jacoco report coverage will be calculated. It will run if you have Jacoco and specify Jacoco Coverage path."
+  options: "INSTRUCTION,BRANCH,LINE,COMPLEXITY,METHOD,CLASS"
   helpText:
 outputs:
 - key: "AC_TEST_REPORT_JSON_PATH"
