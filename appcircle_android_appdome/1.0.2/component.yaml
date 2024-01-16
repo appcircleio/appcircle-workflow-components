@@ -1,0 +1,81 @@
+platform: Android
+buildPlatform:
+displayName: Appdome Build-2Secure for Android
+description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
+webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
+repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
+commit: 2e3a2ac
+inputs:
+- key: "AC_APPDOME_APP_PATH"
+  defaultValue: "$AC_APPDOME_APP_PATH"
+  isRequired: true
+  title: App file URL or environment variable
+  description: "URL to app file (apk/aab) or an environment variable representing its path (i.e. $AC_APK_PATH or $AC_AAB_PATH)."
+  helpText:
+- key: "AC_APPDOME_API_KEY"
+  defaultValue: "$AC_APPDOME_API_KEY"
+  isRequired: true
+  title: Appdome API Key
+  description: "This value must be taken from the Appdome."
+  helpText:
+- key: "AC_APPDOME_FUSION_SET_ID"
+  defaultValue: "$AC_APPDOME_FUSION_SET_ID"
+  isRequired: true
+  title: Appdome Fusion Set ID
+  description: "This value must be taken from the Appdome."
+  helpText:
+- key: "AC_APPDOME_TEAM_ID"
+  defaultValue: "$AC_APPDOME_TEAM_ID"
+  isRequired: false
+  title: Appdome Team ID
+  description: "Appdome Team ID."
+  helpText:
+- key: "AC_APPDOME_SIGN_METHOD"
+  defaultValue: "On-Appdome"
+  isRequired: true
+  editorType: select
+  title: Signing Method
+  description: "App signing method."
+  options: "On-Appdome,Private-Signing,Auto-Dev-Signing"
+  helpText:
+- key: "AC_APPDOME_GP_SIGNING"
+  defaultValue: "false"
+  isRequired: true
+  editorType: select
+  title: Google Play Signing?
+  description: "Sign the app for Google Play? If 'true', requires $AC_SIGN_FINGERPRINT in the Secrets tab."
+  options: "true,false"
+  helpText:
+- key: "AC_APPDOME_BUILD_LOGS"
+  defaultValue: "false"
+  isRequired: true
+  editorType: select
+  title: Build with Logs?
+  description: "Build with diagnostic logs?"
+  options: "true,false"
+  helpText:
+outputs:
+- key: "AC_APPDOME_SECURED_APK_PATH"
+  defaultValue: "AC_APPDOME_SECURED_APK_PATH"
+  title: "Secured .apk File Path"
+  description: Local path of the secured .apk file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
+  helpText:
+- key: "AC_APPDOME_SECURED_AAB_PATH"
+  defaultValue: "AC_APPDOME_SECURED_AAB_PATH"
+  title: "Secured .aab File Path"
+  description: Local path of the secured .aab file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
+  helpText:
+- key: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
+  defaultValue: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
+  title: .sh Sign Script File Path
+  description: "Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing'."
+  helpText:
+- key: "AC_APPDOME_CERTIFICATE_PATH"
+  defaultValue: "AC_APPDOME_CERTIFICATE_PATH"
+  title: Certified Secure Certificate .pdf file path
+  description: "Local path of the Certified Secure Certificate .pdf file."
+  helpText:  
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
