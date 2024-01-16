@@ -23,7 +23,7 @@ inputs:
   isRequired: true
   editorType: select
   title: Jacoco Coverage Type
-  description: "According to which parameter in your Jacoco report coverage will be calculated. It will run if you have Jacoco and specify Jacoco Coverage path."
+  description: "According to which parameter in your Jacoco report, coverage will be calculated. It will run if you have Jacoco and specify the Jacoco coverage path."
   options: "INSTRUCTION,BRANCH,LINE,COMPLEXITY,METHOD,CLASS"
   helpText:
 outputs:
