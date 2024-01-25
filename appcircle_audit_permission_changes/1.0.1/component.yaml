@@ -4,7 +4,7 @@ displayName: Audit Permission Changes
 description: "Permission Differance Checker"
 webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
-commit: 5601186
+commit: 57cfb7f
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
