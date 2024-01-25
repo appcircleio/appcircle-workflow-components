@@ -11,8 +11,6 @@ inputs:
   isRequired: false
   title: Repository Path
   description: "Specifies the cloned repository path."
-processFilename: ruby
-processArguments: '%AC_STEP_TEMP%/main.rb'
 - key: "AC_REFERANCE_BRANCH"
   defaultValue: "$AC_REFERANCE_BRANCH"
   isRequired: true
