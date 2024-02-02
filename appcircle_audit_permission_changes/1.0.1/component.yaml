@@ -4,7 +4,7 @@ displayName: Audit Permission Changes
 description: "Permission Differance Checker"
 webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
-commit: 57cfb7f
+commit: 173857e
 inputs:
 - key: "AC_REFERANCE_BRANCH"
   defaultValue: "$AC_REFERANCE_BRANCH"
@@ -17,10 +17,10 @@ inputs:
   title: Repository Path
   description: "Specifies the cloned repository path."
 - key: "AC_PROJECT_PATH"
-    defaultValue: "$AC_PROJECT_PATH"
-    isRequired: true
-    title: Project Path
-    description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
