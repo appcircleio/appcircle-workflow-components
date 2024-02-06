@@ -4,12 +4,12 @@ displayName: "Audit Permission Changes"
 description: "Check your permissions of app according to reference branch"
 webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
-commit: 2ccee1f
+commit: 5397ed3
 inputs:
 - key: "AC_REFERENCE_BRANCH"
   defaultValue: "$AC_REFERENCE_BRANCH"
   isRequired: true
-  title: Referance Branch
+  title: Reference Branch
   description: "Specifies the reference branch to check permissions."
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -20,7 +20,7 @@ inputs:
   defaultValue: "$AC_PROJECT_PATH"
   isRequired: true
   title: Project Path
-  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  description: "Specifies the project path. For example: ./appcircle.xcodeproj"
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
