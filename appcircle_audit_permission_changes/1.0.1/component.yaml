@@ -4,7 +4,7 @@ displayName: "Audit Permission Changes"
 description: "Check your permissions of app according to reference branch"
 webUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-permission-check-component.git
-commit: 5397ed3
+commit: fac4505
 inputs:
 - key: "AC_REFERENCE_BRANCH"
   defaultValue: "$AC_REFERENCE_BRANCH"
