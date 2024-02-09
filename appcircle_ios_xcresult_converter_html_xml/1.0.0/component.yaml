@@ -1,7 +1,7 @@
 platform: iOS
 buildPlatform:
-displayName: "Xcresult Convert to HTML/XML"
-description: "Convert test results from Xcresutl to HTML/XML"
+displayName: "Convert Xcresult to HTML/XML"
+description: "Convert test results from Xcresult to HTML/XML"
 webUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component.git
 commit: 8902ec6
