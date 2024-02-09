@@ -4,7 +4,7 @@ displayName: "MarathonLabs"
 description: "Run your test on MarathonLabs"
 webUrl: https://github.com/appcircleio/appcircle-marathonlabs-component
 repoUrl: https://github.com/appcircleio/appcircle-marathonlabs-component.git
-commit: 76a01ce
+commit: 64b01bf
 inputs:
 - key: "AC_MARATHON_API_KEY"
   defaultValue: "$AC_MARATHON_API_KEY"
