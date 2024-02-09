@@ -4,7 +4,7 @@ displayName: "Xcresult Convert to HTML/XML"
 description: "Convert test results from Xcresutl to HTML/XML"
 webUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component.git
-commit: 834e7d1
+commit: 8902ec6
 inputs:
 - key: "AC_OUTPUT_DIR"
   defaultValue: "$AC_OUTPUT_DIR"
@@ -29,7 +29,7 @@ inputs:
   isRequired: true
   editorType: select
   title: Convert Type
-  description: Which type will be converted
+  description: Which type will be converted to
   options: "xml, html"
   helpText:
 outputs:
