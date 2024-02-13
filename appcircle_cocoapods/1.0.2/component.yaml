@@ -4,7 +4,7 @@ displayName: Cocoapods Install
 description: "Execute CocoaPods install in the project path."
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-component.git
-commit: de1b40b
+commit: 9de2cf4
 inputs:
 - key: "AC_PROJECT_PATH"
   defaultValue: "$AC_PROJECT_PATH"
@@ -29,7 +29,7 @@ inputs:
   editorType: select
   title: Pod File Existing
   description: If project repository has already Pods file, this value will not install dependencies again.
-  options: "true,false"
+  options: "false,true"
   helpText:
 - key: "AC_POD_REPO_UPDATE"
   defaultValue: "false"
@@ -37,7 +37,7 @@ inputs:
   editorType: select
   title: Cocoapods Repo Update
   description: This value will update the Cocoapods native repository. If any majr changes in Cocoapods, pod repo update will run if it is true.
-  options: "true,false"
+  options: "false,true"
   helpText:
 outputs:
 processFilename: ruby
