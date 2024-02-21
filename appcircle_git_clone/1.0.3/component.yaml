@@ -1,0 +1,68 @@
+platform: Common
+buildPlatform:
+displayName: Git Clone
+description: Clone the selected repository to the build machine.
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#git-clone
+requiredComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-git-clone-component
+repoUrl: https://github.com/appcircleio/appcircle-git-clone-component.git
+commit: 5408764
+inputs:
+- key: "AC_GIT_URL"
+  defaultValue: "$AC_GIT_URL"
+  isRequired: true
+  title: Git Url
+  description: Url of the repository.
+  helpText:
+- key: "AC_GIT_COMMIT"
+  defaultValue: "$AC_GIT_COMMIT"
+  isRequired: false
+  title: Commit
+  description: Commit of the repository.
+  helpText:
+- key: "AC_GIT_BRANCH"
+  defaultValue: "$AC_GIT_BRANCH"
+  isRequired: false
+  title: Branch
+  description: Branch of the repository.
+  helpText:
+- key: "AC_GIT_TAG"
+  isRequired: false
+  title: Tag
+  description: Tag of the repository.
+  helpText:
+- key: "AC_GIT_LFS"
+  defaultValue: "false"
+  isRequired: false
+  title: Large File Storage
+  description: Used to specify whether large files will be downloaded.
+  helpText:
+- key: "AC_GIT_SUBMODULE"
+  isRequired: false
+  title: Submodule
+  description: Used to specify whether the submodule should be cloned.
+  helpText:
+- key: "AC_GIT_CACHE_CREDENTIALS"
+  isRequired: false
+  defaultValue: "true"
+  title: Cache Credentials
+  description: If this set to true, the credentials will be cached. This can be useful if the same credentials are used for multiple repositories.
+  helpText:
+- key: "AC_GIT_EXTRA_PARAMS"
+  isRequired: false
+  defaultValue: "$AC_GIT_EXTRA_PARAMS"
+  title: Git Extra Params
+  description: If this set, sends extra parameter for git requests.
+  helpText:
+outputs:
+- key: "AC_REPOSITORY_DIR"
+  title: Repository Directory
+  defaultValue: "AC_REPOSITORY_DIR"
+  description: Specifies the cloned repository directory.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
+- "git_clone.sh"
