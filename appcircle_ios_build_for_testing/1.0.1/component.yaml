@@ -4,7 +4,7 @@ displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."
 webUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing.git
-commit: e38b18a
+commit: 8525838
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
