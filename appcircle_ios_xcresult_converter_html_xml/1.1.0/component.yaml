@@ -1,0 +1,52 @@
+platform: iOS
+buildPlatform:
+displayName: "Convert Xcresult to HTML/XML"
+description: "Convert test results from Xcresult to HTML/XML"
+webUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-xcresult-convert-html-xml-component.git
+commit: bc3eb5d
+inputs:
+- key: "AC_OUTPUT_DIR"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
+  helpText:
+- key: "AC_TEST_RESULT_PATH"
+  defaultValue: "$AC_TEST_RESULT_PATH"
+  isRequired: true
+  title: Test result path
+  description: This directory will be used for converting to HTML/XML.
+  helpText:
+- key: "AC_CONVERT_FILE_NAME"
+  defaultValue: "test_results"
+  isRequired: true
+  title: Convert File Name
+  description: Name of the converted test result file name
+  helpText:
+- key: "AC_CONVERT_TYPE"
+  defaultValue: "xml"
+  isRequired: true
+  editorType: select
+  title: Convert Type
+  description: Which type will be converted to
+  options: "xml, html"
+  helpText:
+- key: "AC_INCLUDE_COVERAGE"
+  defaultValue: "No"
+  isRequired: true
+  editorType: select
+  title: Include Coverage
+  description: It will include the coverage result to converted file.
+  options: "Yes, No"
+  helpText:
+outputs:
+- key: "AC_CONVERTED_TEST_RESULT_PATH"
+  title: Converted Test Result Path
+  defaultValue: "AC_CONVERTED_TEST_RESULT_PATH"
+  description: Converted Result Path
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
