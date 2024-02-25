@@ -4,6 +4,7 @@ displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#export-build-artifacts
 requiredComponents:
+precedingComponents: "appcircle_git_clone,appcircle_android_test_report,appcircle_ios_test_report,appcircle_android_build,appcircle_android_build_ui_test,appcircle_ios_build_for_testing,appcircle_ios_build_simulator"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git

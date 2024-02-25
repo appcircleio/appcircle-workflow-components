@@ -5,6 +5,7 @@ displayName: Custom Script
 description: "Carry out any custom operation in the build machine with a compatible script."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#custom-scripts
 requiredComponents:
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git

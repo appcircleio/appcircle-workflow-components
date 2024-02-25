@@ -4,21 +4,22 @@ displayName: Activate SSH Private Key
 description: "Activate SSH private key in RSA format."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#activate-ssh-key
 requiredComponents:
-followingComponents:
+precedingComponents:
+followingComponents: "appcircle_git_clone"
 webUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component
 repoUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component.git
 commit: 8cd6d92
 inputs:
 - key: "AC_REPOSITORY_SSH_KEY"
   defaultValue: "$AC_REPOSITORY_SSH_KEY"
-  isRequired: false
+  isRequired: true
   title: SSH Private Key
   description: "SSH private key in RSA format."
   editorType: 1
 outputs:
 - key: "SSH_AUTH_SOCK"
   title: SSH Auth Sock
-  defaultValue: "SSH_AUTH_SOCK""
+  defaultValue: "SSH_AUTH_SOCK"
   description: "The path of the SSH Auth Socket."
   helpText:
 processFilename: bash
