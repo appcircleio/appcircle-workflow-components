@@ -12,7 +12,7 @@ commit: 8cd6d92
 inputs:
 - key: "AC_REPOSITORY_SSH_KEY"
   defaultValue: "$AC_REPOSITORY_SSH_KEY"
-  isRequired: true
+  isRequired: false
   title: SSH Private Key
   description: "SSH private key in RSA format."
   editorType: 1
