@@ -4,7 +4,7 @@ displayName: "Server Diagnostic"
 description: "The Server Diagnostic Component is responsible for diagnosing the upload speed and server timeout. It is only available in SELF-HOSTED deployments. Firstly creates a dummy file with given size in MB and uploads into temporary location to test upload speed. Secondly sends a test request to build server api to detect whether the server time outs for the given timeout input in minutes. "
 webUrl: https://github.com/appcircleio/appcircle-server-diagnostic
 repoUrl: https://github.com/appcircleio/appcircle-server-diagnostic.git
-commit: 90159d9
+commit: 13e37b2
 inputs:
   - key: "AC_DIAGNOSTIC_UPLOAD_FILE_SIZE_MB"
     editorType: select
