@@ -1,0 +1,29 @@
+platform: Common
+buildPlatform:
+displayName: "Server Diagnostic"
+description: "The Server Diagnostic Component is responsible for diagnosing the upload speed and server timeout. It is only available in SELF-HOSTED deployments. Firstly creates a dummy file with given size in MB and uploads into temporary location to test upload speed. Secondly sends a test request to build server api to detect whether the server time outs for the given timeout input in minutes. "
+webUrl: https://github.com/appcircleio/appcircle-server-diagnostic
+repoUrl: https://github.com/appcircleio/appcircle-server-diagnostic.git
+commit: 90159d9
+inputs:
+  - key: "AC_DIAGNOSTIC_UPLOAD_FILE_SIZE_MB"
+    editorType: select
+    defaultValue: "5"
+    options: "1,5,10,15,20,30,50,100,250,500,1000"
+    isRequired: true
+    title: Diagnostic Upload File Size (MB)
+    description: "Specifies the size of the file to be uploaded in MB."
+    helpText:
+  - key: "AC_DIAGNOSTIC_SERVER_TIMEOUT_MINUTES"
+    defaultValue: "1"
+    editorType: select
+    options: "1,5,10,15,20,30"
+    isRequired: true
+    title: Diagnostic Server Timeout (Minutes)
+    description: "Specifies the timeout value in minutes to test server timeouts."
+    helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - "main.rb"
