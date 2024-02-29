@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
-commit: f680a36
+commit: ed1b419
 inputs:
 - key: "Execute"
   editorType: select
@@ -23,7 +23,7 @@ inputs:
   editorType: textarea
   isRequired: false
   title: Script
-  description: Script to execute.
+  description: "Script to execute."
   helpText:
 outputs:
 processFilename:
