@@ -5,7 +5,7 @@ description: "Execute CocoaPods install in the project path."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#cocoapods-install
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_cocoapods_deintegrate"
-followingComponents: "appcircle_ios_build_for_testing,appcircle_ios_test,appcircle_swiftlint,appcircle_ios_build_simulator"
+followingComponents: "appcircle_ios_build_for_testing,appcircle_ios_test,appcircle_swiftlint,appcircle_ios_build_simulator,appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-component.git
 commit: c8e05ac

@@ -1,0 +1,79 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcodebuild for Unit and UI Tests"
+description: "Performs unit and UI tests for your iOS applications."
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#xcodebuild-for-unit-and-ui-tests
+requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
+precedingComponents: "appcircle_cocoapods,appcircle_carthage"
+followingComponents: "appcircle_export_build_artifacts,appcircle_ios_test_report"
+webUrl: https://github.com/appcircleio/appcircle-ios-test-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
+commit: 867f154
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_OUTPUT_DIR_PATH"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
+  helpText:
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_ARCHIVE_FLAGS"
+  defaultValue: "$AC_XCODE_BUILD_EXTRA_FLAGS"
+  isRequired: false
+  title: Archive Flags
+  description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_CONFIGURATION_NAME"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+  helpText:
+- key: "AC_COMPILER_INDEX_STORE_ENABLE"
+  defaultValue: "NO"
+  isRequired: true
+  title: Compiler Index Store Enable
+  description: You can disable the indexing during the build for faster build.
+  helpText:
+- key: "AC_TEST_OS_VERSION"
+  defaultValue: "latest"
+  isRequired: true
+  title: Test OS Version
+  description: Specifies os version for test.
+  helpText:
+- key: "AC_TEST_DEVICE"
+  defaultValue: "iPhone 8 Plus"
+  isRequired: true
+  title: Test Device
+  description: Specifies device for test.
+- key: "AC_TEST_PLATFORM"
+  defaultValue: "iOS Simulator"
+  isRequired: true
+  title: Test Platform
+  description: Specifies platform for test.
+outputs:
+- key: "AC_TEST_RESULT_PATH"
+  title: Test Result Path
+  defaultValue: "AC_TEST_RESULT_PATH"
+  description: Test result path.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

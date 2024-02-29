@@ -5,7 +5,7 @@ description: "Download and install certificates and provisioning profiles."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#install-certificates-and-profiles
 requiredComponents: "appcircle_git_clone"
 precedingComponents: 
-followingComponents: "appcircle_ios_test,appcircle_ios_build_simulator,appcircle_ios_build_sign"
+followingComponents: "appcircle_ios_test,appcircle_ios_build_simulator,appcircle_ios_build_sign,appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-install-certificates-and-profiles-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-install-certificates-and-profiles-component.git
 commit: 9c03945

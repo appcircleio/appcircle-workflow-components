@@ -1,0 +1,34 @@
+platform: iOS
+buildPlatform:
+displayName: Cocoapods Deintegrate
+description: "Remove all traces of CocoaPods from the project."
+docsUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component
+requiredComponents: "appcircle_git_clone"
+precedingComponents: 
+followingComponents: "appcircle_ios_build_sign,appcircle_ios_build_for_testing,appcircle_ios_build_simulator,appcircle_ios_test,appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component
+repoUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component.git
+commit: c02a0df
+inputs:
+- key: "AC_XCODEPROJ_PATH"
+  defaultValue: ""
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj Empty value will look for an .xcodeproj file." 
+  helpText:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_COCOAPODS_VERSION"
+  isRequired: false
+  title: Cocoapods Version
+  description: Specifies cocoapods version.
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
