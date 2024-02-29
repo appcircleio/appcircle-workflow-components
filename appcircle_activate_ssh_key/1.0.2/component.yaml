@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform:
 displayName: Activate SSH Private Key
-description: "Activate SSH private key in RSA format."
+description: "This step sets up your SSH key in the build machine if you used one to connect your repository. This allows the build machine to connect to your private repository using your SSH key."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#activate-ssh-key
 requiredComponents:
 precedingComponents:
 followingComponents: "appcircle_git_clone"
 webUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component
 repoUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component.git
-commit: 771519e
+commit: 6f58522
 inputs:
 - key: "AC_REPOSITORY_SSH_KEY"
   defaultValue: "$AC_REPOSITORY_SSH_KEY"
