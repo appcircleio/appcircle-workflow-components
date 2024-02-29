@@ -4,7 +4,7 @@ displayName: "Server Diagnostic"
 description: "The Server Diagnostic Component is responsible for diagnosing the upload speed and server timeout in SELF-HOSTED deployments. "
 webUrl: https://github.com/appcircleio/appcircle-server-diagnostic
 repoUrl: https://github.com/appcircleio/appcircle-server-diagnostic.git
-commit: 3003b76
+commit: 8dee1c2
 inputs:
   - key: "AC_DIAGNOSTIC_UPLOAD_FILE_SIZE_MB"
     editorType: select
