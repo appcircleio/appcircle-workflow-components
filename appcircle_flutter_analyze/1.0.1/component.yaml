@@ -5,7 +5,7 @@ description: "Run flutter analyze command."
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-analyze
 requiredComponents: "appcircle_flutter_install"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component.git
 commit: 1b5b1dd

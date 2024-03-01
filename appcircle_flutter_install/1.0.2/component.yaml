@@ -3,9 +3,9 @@ buildPlatform: Flutter
 displayName: Flutter Install
 description: "Install spesificed flutter version. Defaults to: stable. You can use any available tag or branch in Flutter SDK repo."
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-install
-requiredComponents: "appcircle_git_clone"
+requiredComponents: 
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
 commit: 37852d6

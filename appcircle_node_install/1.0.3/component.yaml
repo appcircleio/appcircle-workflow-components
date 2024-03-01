@@ -3,7 +3,7 @@ buildPlatform:
 displayName: Install Node
 description: "Select a specific Node version for the build. Defaults to: lts"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps#install-node
-requiredComponents: "appcircle_git_clone"
+requiredComponents: 
 precedingComponents: 
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-node-install-component

@@ -5,7 +5,7 @@ description: "Scan your app using Mobile Secure"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#data-theorem-mobile-secure
 requiredComponents: "appcircle_android_sign,appcircle_android_build,appcircle_ios_build_sign"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-datatheorem-component
 repoUrl: https://github.com/appcircleio/appcircle-datatheorem-component.git
 commit: 4600167

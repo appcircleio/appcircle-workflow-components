@@ -3,8 +3,8 @@ buildPlatform: ReactNative
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-push
-requiredComponents: "appcircle_cocoapods,appcircle_npm_yarn,appcircle_node_install"
-precedingComponents: "appcircle_ios_test,appcircle_ios_build_simulator,appcircle_ios_build_sign"
+requiredComponents: 
+precedingComponents: "appcircle_ios_test,appcircle_ios_build_simulator,appcircle_ios_build_sign,appcircle_cocoapods,appcircle_npm_yarn,appcircle_node_install"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git

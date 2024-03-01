@@ -3,9 +3,9 @@ buildPlatform: Flutter
 displayName: Flutter Test
 description: "Run Flutter test command."
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-test
-requiredComponents: "appcircle_flutter_install"
+requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
 commit: 48616a1

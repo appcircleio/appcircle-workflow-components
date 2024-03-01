@@ -3,7 +3,7 @@ buildPlatform:
 displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#slather
-requiredComponents: "appcircle_ios_test"
+requiredComponents: "appcircle_git_clone,appcircle_ios_test"
 precedingComponents: 
 followingComponents: "appcircle_export_build_artifacts" 
 webUrl: https://github.com/appcircleio/appcircle-slather-component

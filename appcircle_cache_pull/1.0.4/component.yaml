@@ -3,9 +3,9 @@ buildPlatform:
 displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-pull
-requiredComponents: "appcircle_git_clone"
-precedingComponents: 
-followingComponents: "appcircle_cocoapods,appcircle_export_build_artifacts,appcircle_ios_build_sign,appcircle_ios_build_simulator,appcircle_ios_build_for_testing,appcircle_cocoapods"
+requiredComponents: 
+precedingComponents: "appcircle_git_clone"
+followingComponents: "appcircle_cocoapods,appcircle_ios_build_sign,appcircle_ios_build_simulator,appcircle_ios_build_for_testing"
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git
 commit: bda5b72

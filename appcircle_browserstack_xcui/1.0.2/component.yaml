@@ -5,7 +5,7 @@ description: "Run your XCUI tests on BrowserStack App Automate"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#browserstack-app-automate---xcui
 requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
 precedingComponents: "appcircle_cocoapods,appcircle_cocoapods_deintegrate"
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component
 repoUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component.git
 commit: b00e8df

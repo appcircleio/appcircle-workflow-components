@@ -5,7 +5,7 @@ description: "Upload debug symbols to Firebase"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-upload-dsym
 requiredComponents: "appcircle_ios_build_sign"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-firebase-dsym-upload-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-dsym-upload-component.git
 commit: bd84279

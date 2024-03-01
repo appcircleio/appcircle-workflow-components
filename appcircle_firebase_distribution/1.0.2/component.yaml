@@ -5,7 +5,7 @@ description: "Distribute your builds via Firebase App Distribution"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-app-distribution
 requiredComponents: "appcircle_ios_build_sign,appcircle_android_build"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component.git
 commit: 2a0f447

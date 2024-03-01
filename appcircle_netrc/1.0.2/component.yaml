@@ -4,7 +4,7 @@ displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#authenticate-with-netrc
 requiredComponents: 
-precedingComponents: 
+precedingComponents: "appcircle_git_clone"
 followingComponents: "appcircle_git_clone,appcircle_export_build_artifacts" 
 webUrl: https://github.com/appcircleio/appcircle-netrc-component
 repoUrl: https://github.com/appcircleio/appcircle-netrc-component.git

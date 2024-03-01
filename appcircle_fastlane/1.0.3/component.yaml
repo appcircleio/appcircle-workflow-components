@@ -5,7 +5,7 @@ description: "Runs fastlane lane."
 docsUrl: https://docs.appcircle.io/integrations/using-fastlane-in-the-workflows
 requiredComponents: "appcircle_git_clone"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-fastlane-component
 repoUrl: https://github.com/appcircleio/appcircle-fastlane-component.git
 commit: 8faf250
