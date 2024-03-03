@@ -1,0 +1,44 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin, Flutter
+displayName: "Android Build for UI Testing"
+description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
+docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps#android-build-for-ui-testing"
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_activate_ssh_key,appcircle_node_install,appcircle_npm_yarn,appcircle_android_build_version_increment"
+followingComponents: "appcircle_android_sign,appcircle_android_resign,appcircle_android_test_report,appcircle_android_post_process,appcircle_export_build_artifacts,appcircle_android_wait_emulator,appcircle_badge,appcircle_bundletool,appcircle_datatheorem,appcircle_android_appdome,appcircle_repeato,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_firebase_test_lab"
+webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
+repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
+commit: c24d2ff
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+outputs:
+- key: "AC_APK_PATH"
+  title: "APK Path"
+  defaultValue: "AC_APK_PATH"
+  description: "Path of the generated apk file."
+  helpText:
+- key: "AC_TEST_APK_PATH"
+  title: "Test APK Path"
+  defaultValue: "AC_TEST_APK_PATH"
+  description: "Path of the generated test apk file."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

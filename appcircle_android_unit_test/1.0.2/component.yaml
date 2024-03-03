@@ -1,0 +1,45 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin
+displayName: Android Unit Tests
+description: "Run Android project's unit tests."
+docUrl: "https://docs.appcircle.io/continuous-testing/running-android-unit-tests"
+requiredComponents:
+precedingComponents:
+followingComponents: "appcircle_android_test_report,appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
+repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git
+commit: 9f2bf11
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+- key: "AC_VARIANTS"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variants
+  description: "Specifies build variants. For example : -configuration DEBUG"
+  helpText:
+outputs:
+- key: "AC_TEST_RESULT_PATH"
+  title: Output Path
+  defaultValue: "AC_TEST_RESULT_PATH"
+  description: The directory where your Junit XML report will be written to.
+  helpText:    
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

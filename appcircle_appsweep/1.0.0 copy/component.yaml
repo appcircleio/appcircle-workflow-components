@@ -1,0 +1,38 @@
+platform: Android
+buildPlatform:
+displayName: AppSweep Mobile Security Testing
+description: "Scan your Android app using AppSweep"
+docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#appsweep-mobile-security-testing"
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_activate_ssh_key"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-appsweep-component
+repoUrl: https://github.com/appcircleio/appcircle-appsweep-component.git
+commit: 6dc4179
+inputs:
+- key: "AC_APPSWEEP_API_KEY"
+  defaultValue: "$AC_APPSWEEP_API_KEY"
+  isRequired: true
+  title: API Key
+  description: AppSweep API key.
+  helpText:
+- key: "AC_APPSWEEP_VARIANT"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variant
+  description: "Android build variant."
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project folder. Defaults to the current directory."
+outputs:
+  - key: "AC_APPSWEEP_URL"
+    title: AppSweep upload URL
+    defaultValue: AC_APPSWEEP_URL
+    description: Direct link to the scan results on AppSweep website.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
