@@ -5,7 +5,7 @@ description: "Runs npm/yarn with the given commands."
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps#npmyarn-commands
 requiredComponents: "appcircle_git_clone,appcircle_node_install"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts,appcircle_ios_build_sign,appcircle_ios_build_simulator,appcircle_ios_build_for_testing"
+followingComponents: "appcircle_ios_build_sign,appcircle_ios_build_simulator,appcircle_ios_build_for_testing"
 webUrl: https://github.com/appcircleio/appcircle-npm-yarn-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-yarn-component.git
 commit: 59f9fad

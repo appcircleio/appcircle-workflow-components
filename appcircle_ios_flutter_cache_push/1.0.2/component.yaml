@@ -3,8 +3,8 @@ buildPlatform: Flutter
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-push
-requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_flutter_analyze,appcircle_flutter_install,appcircle_flutter_test,appcircle_ios_flutter_build"
+requiredComponents: 
+precedingComponents: 
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git

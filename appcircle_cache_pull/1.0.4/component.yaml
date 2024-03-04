@@ -5,7 +5,7 @@ description: "Downloads cache from Appcircle, extracts files and folders to sour
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-pull
 requiredComponents: 
 precedingComponents: "appcircle_git_clone"
-followingComponents: "appcircle_cocoapods,appcircle_ios_build_sign,appcircle_ios_build_simulator,appcircle_ios_build_for_testing"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git
 commit: bda5b72

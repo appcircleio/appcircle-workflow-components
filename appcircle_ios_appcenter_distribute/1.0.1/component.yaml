@@ -5,7 +5,7 @@ description: "Distribute IPA and dSYM files to App Center."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#app-center-ios-distribution
 requiredComponents: "appcircle_ios_build_sign"
 precedingComponents: 
-followingComponents: "appcircle_export_build_artifacts"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-ios-appcenter-distribute-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-appcenter-distribute-component.git
 commit: 0052a04
