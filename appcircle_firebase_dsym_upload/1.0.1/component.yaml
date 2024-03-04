@@ -1,0 +1,35 @@
+platform: iOS
+buildPlatform:
+displayName: Firebase Upload dSYM
+description: "Upload debug symbols to Firebase"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-upload-dsym
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents: 
+followingComponents: 
+webUrl: https://github.com/appcircleio/appcircle-firebase-dsym-upload-component
+repoUrl: https://github.com/appcircleio/appcircle-firebase-dsym-upload-component.git
+commit: bd84279
+inputs:
+- key: "AC_FIREBASE_EXPORT_ALL"
+  defaultValue: "YES"
+  isRequired: true
+  title: Export all debug symbols including frameworks
+  description: If you want to export only the app's debug symbols, set this to NO.
+  helpText:
+- key: "AC_FIREBASE_PLIST_PATH"
+  defaultValue: "$AC_FIREBASE_PLIST_PATH"
+  isRequired: true
+  title: Path of the GoogleService-Info.plist
+  description: "**Relative path** of GoogleService-Info.plist file inside the repository. For example `./GoogleService-Info.plist` or `./ios/GoogleService-Info.plist` if you're using Flutter or React Native"
+  helpText:
+- key: "AC_FIREBASE_CRASHLYTICS_PATH"
+  defaultValue: "$AC_FIREBASE_CRASHLYTICS_PATH"
+  isRequired: true
+  title: Path of the Crashlytics uploader
+  description: "**Full path** of Crashlytics upload-symbols binary. For Cocoapods, enter `$AC_REPOSITORY_DIR/Pods/FirebaseCrashlytics/upload-symbols` For SPM, enter `$HOME/Library/Developer/Xcode/DerivedData/**/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols`"
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

@@ -1,0 +1,65 @@
+platform: iOS
+buildPlatform:
+displayName: BrowserStack App Automate - XCUI
+description: "Run your XCUI tests on BrowserStack App Automate"
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#browserstack-app-automate---xcui
+requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
+precedingComponents: "appcircle_cocoapods,appcircle_cocoapods_deintegrate"
+followingComponents: 
+webUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component
+repoUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component.git
+commit: b00e8df
+inputs:
+- key: "AC_BROWSERSTACK_USERNAME"
+  defaultValue: "$AC_BROWSERSTACK_USERNAME"
+  isRequired: true
+  title: BrowserStack username
+  description: Username of the BrowserStack account.
+  helpText:
+- key: "AC_BROWSERSTACK_ACCESS_KEY"
+  defaultValue: "$AC_BROWSERSTACK_ACCESS_KEY"
+  isRequired: true
+  title: BrowserStack access key
+  description: Access key for the BrowserStack account.
+  helpText:
+- key: "AC_TEST_IPA_PATH"
+  defaultValue: "$AC_TEST_IPA_PATH"
+  isRequired: true
+  title: Path of the build
+  description: Full path of the ipa file
+  helpText:
+- key: "AC_UITESTS_RUNNER_PATH"
+  defaultValue: "$AC_UITESTS_RUNNER_PATH"
+  isRequired: true
+  title: Path of the output bundle
+  description: Full path of the *-Runner.app.
+  helpText:
+- key: "AC_BROWSERSTACK_PAYLOAD"
+  defaultValue: |
+    {
+      "app": "AC_BROWSERSTACK_APP_URL",
+      "testSuite": "AC_BROWSERSTACK_TEST_URL",
+      "devices": ["iPhone 14-16"],
+      "instrumentationLogs": true,
+      "networkLogs": false,
+      "deviceLogs": false,
+      "debugscreenshots": false,
+      "video": true,
+      "project": "MyProject",
+      "local": false,
+      "dynamicTests": false
+    }
+  editorType: textarea
+  isRequired: false
+  title: Build Payload
+  description: "`AC_BROWSERSTACK_APP_URL` and `AC_BROWSERSTACK_TEST_URL` will be auto generated. Please check [documentation](https://www.browserstack.com/docs/app-automate/api-reference/xcuitest/builds#execute-a-build) for more details about the payload."
+- key: "AC_BROWSERSTACK_TIMEOUT"
+  defaultValue: "600"
+  isRequired: true
+  title: Timeout
+  description: BrowserStack plan timeout in seconds
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'

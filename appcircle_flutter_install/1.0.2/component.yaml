@@ -1,0 +1,27 @@
+platform: Common
+buildPlatform: Flutter
+displayName: Flutter Install
+description: "Install spesificed flutter version. Defaults to: stable. You can use any available tag or branch in Flutter SDK repo."
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-install
+requiredComponents: 
+precedingComponents: 
+followingComponents: 
+webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
+commit: 37852d6
+inputs:
+- key: "AC_SELECTED_FLUTTER_VERSION"
+  isRequired: false
+  title: Selected Flutter Version
+  description: "Specifies the Flutter version to install. Defaults to: stable. The version you set on config section will override this setting." 
+  helpText:
+outputs:
+- key: "PATH"
+  defaultValue: "PATH"
+  title: PATH Variable
+  description: PATH variable that add Flutter tool for your workflow.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

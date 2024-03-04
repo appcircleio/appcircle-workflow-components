@@ -1,0 +1,36 @@
+platform: Common
+buildPlatform: Flutter
+displayName: Flutter Test
+description: "Run Flutter test command."
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-test
+requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
+precedingComponents: 
+followingComponents: 
+webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
+commit: 48616a1
+inputs:
+- key: "AC_FLUTTER_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Flutter Project Directory
+  description: "Specifies the root of your Flutter project where your **pubspec.yaml** file exists."
+- key: "AC_FLUTTER_JUNIT_REPORTS"
+  defaultValue: "YES"
+  isRequired: false
+  title: Create JUnit reports
+  description: "If this is set to `YES`, [JUnit](https://junit.org/junit5/) Report will be created at AC_TEST_RESULT_PATH"
+- key: "AC_FLUTTER_TEST_EXTRA_ARGS"
+  isRequired: false
+  title: Flutter Test Additional Arguments
+  description: "Specifies custom arguments. Defaults to: --machine"
+outputs:
+- key: "AC_TEST_RESULT_PATH"
+  title: JUnit Report
+  defaultValue: "AC_TEST_RESULT_PATH"
+  description: Specifies the path of the JUnit Report.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
