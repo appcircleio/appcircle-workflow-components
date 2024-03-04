@@ -1,0 +1,43 @@
+platform: Android
+buildPlatform:
+displayName: Android Dependency Report
+description: "Rendering the dependency report."
+docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-dependency-report"
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_activate_ssh_key"
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-dependency-report
+repoUrl: https://github.com/appcircleio/appcircle-dependency-report.git
+commit: 83a22ac
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+- key: "AC_DEPENDENCY_CONFIGURATION"
+  defaultValue: "implementation"
+  isRequired: true
+  title: Dependency Configuration
+  description: "Indicates which configuration to resolve for showing the dependency information."
+  helpText:
+outputs:
+- key: "AC_ANDROID_DEPENDENCY_REPORT_PATH"
+  title: "Android Dependency Report File Path"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

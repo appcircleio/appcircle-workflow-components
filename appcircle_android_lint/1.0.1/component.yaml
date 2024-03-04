@@ -1,0 +1,39 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin
+displayName: Android Lint
+description: "Run lint gradle task on your Android project's source files."
+docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-lint"
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_activate_ssh_key"
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-android-lint-component
+repoUrl: https://github.com/appcircleio/appcircle-android-lint-component.git
+commit: cfe42d5
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module for build."
+  helpText:
+- key: "AC_VARIANTS"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variants
+  description: "Specifies build variants. For example : -configuration DEBUG"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
