@@ -5,7 +5,7 @@ description: "Sign the unsigned output file from the build step with the selecte
 docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps#android-sign"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_flutter_build"
-followingComponents: "appcircle_android_post_process,appcircle_export_build_artifacts,appcircle_android_wait_emulator,appcircle_firebase_distribution,appcircle_datatheorem,appcircle_android_appdome,appcircle_repeato,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_appcenter_distribute,appcircle_android_firebase_test_lab"
+followingComponents: "appcircle_android_post_process,appcircle_export_build_artifacts,appcircle_android_wait_emulator,appcircle_firebase_distribution,appcircle_datatheorem,appcircle_android_appdome,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_appcenter_distribute,appcircle_android_firebase_test_lab"
 webUrl: https://github.com/appcircleio/appcircle-android-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-sign-component.git
 commit: a3d10d4
