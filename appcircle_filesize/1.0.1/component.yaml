@@ -3,9 +3,9 @@ buildPlatform:
 displayName: File size check
 description: "Checks the file size of build artifacts."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#file-size-check
-requiredComponents: "appcircle_ios_build_sign,appcircle_android_build"
-precedingComponents: 
-followingComponents: 
+requiredComponents:
+precedingComponents: "appcircle_ios_build_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_ios_flutter_build"
+followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-filesize-component
 repoUrl: https://github.com/appcircleio/appcircle-filesize-component.git
 commit: c00845e
