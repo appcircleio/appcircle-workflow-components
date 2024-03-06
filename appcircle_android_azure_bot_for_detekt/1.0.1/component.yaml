@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: Azure DevOps Bot for Detekt Report
 description: "Bot script that allows Detekt outputs to make changes to Azure DevOps Pull Requests."
-docUrl: "https://docs.appcircle.io/integrations/azure-bot-for-swiftlint-and-detekt/#azure-devops-bot-for-detekt"
+docsUrl: "https://docs.appcircle.io/integrations/azure-bot-for-swiftlint-and-detekt/#azure-devops-bot-for-detekt"
 requiredComponents: "appcircle_detekt"
 precedingComponents:
 followingComponents:

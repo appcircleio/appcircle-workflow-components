@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: Android Dependency Report
 description: "Rendering the dependency report."
-docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-dependency-report"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-dependency-report"
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"

@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: BrowserStack App Automate - Espresso
 description: "Run your Espresso tests on BrowserStack App Automate"
-docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#browserstack-app-automate---espresso"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#browserstack-app-automate---espresso"
 requiredComponents:
 precedingComponents: "appcircle_android_build_ui_test"
 followingComponents:

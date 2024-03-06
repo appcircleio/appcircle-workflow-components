@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
-docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#app-center-android-distribution"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#app-center-android-distribution"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_appdome,appcircle_android_resign,appcircle_bundletool"
 followingComponents:
