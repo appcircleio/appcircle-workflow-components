@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: Android Sign
 description: "Sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
-docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps#android-sign"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-sign"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_flutter_build"
 followingComponents: "appcircle_android_post_process,appcircle_export_build_artifacts,appcircle_android_wait_emulator,appcircle_firebase_distribution,appcircle_datatheorem,appcircle_android_appdome,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_appcenter_distribute,appcircle_android_firebase_test_lab"
