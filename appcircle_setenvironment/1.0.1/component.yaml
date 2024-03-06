@@ -1,0 +1,24 @@
+platform: Common
+buildPlatform:
+displayName: Set Environment Variable
+description: "Set environment variables for the build."
+docsUrl: https://github.com/appcircleio/appcircle-setenvironment-component
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-setenvironment-component
+repoUrl: https://github.com/appcircleio/appcircle-setenvironment-component.git
+commit: f7b5a1c
+inputs:
+- key: "AC_SETENV_KEYS"
+  isRequired: true
+  title: Environment Variable Key(s)
+  description: Space-separated list of environment variable keys
+- key: "AC_SETENV_VALUE"
+  isRequired: false
+  title: Environment Variable Value
+  description: Specifies environment variable value to set
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

@@ -3,8 +3,8 @@ buildPlatform:
 displayName: Publish Release Notes
 description: "Publish release notes to stores."
 docsUrl: https://docs.appcircle.io/integrations/managing-release-notes
-requiredComponents: 
-precedingComponents: 
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-release-notes-component
 repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git

@@ -1,0 +1,23 @@
+platform: Common
+buildPlatform:
+displayName: Appium Server
+description: "Installs and runs Appium Server."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#appium-server
+requiredComponents:
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-appium-component
+repoUrl: https://github.com/appcircleio/appcircle-appium-component.git
+commit: 029eb0c
+inputs:
+- key: "AC_APPIUM_VERSION"
+  defaultValue: "$AC_APPIUM_VERSION"
+  isRequired: false
+  title: Appium Server Version
+  description: "Specifies the version of Appium Server to use, for example v1.22.3. If no version is specified, the latest version will be installed."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
