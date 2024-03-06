@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: 
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
-docUrl: "https://docs.appcircle.io/infrastructure/android-build-infrastructure/#emulator"
+docsUrl: "https://docs.appcircle.io/infrastructure/android-build-infrastructure/#emulator"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_resign,appcircle_bundletool"
 followingComponents:

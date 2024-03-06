@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: Flutter
 displayName: "Flutter Build for Android"
 description: "Build your Flutter project with Flutter SDK."
-docUrl: "https://github.com/appcircleio/appcircle-android-flutter-build-component"
+docsUrl: "https://github.com/appcircleio/appcircle-android-flutter-build-component"
 requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
 precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_android_sign,appcircle_android_post_process,appcircle_export_build_artifacts"

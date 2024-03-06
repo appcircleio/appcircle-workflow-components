@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: Android App Post-Processor
 description: "System operations to identify and process the output files."
-docUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-app-post-processor
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/#android-app-post-processor
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_android_build,appcircle_android_flutter_build,appcircle_android_appdome,appcircle_android_sign"
 followingComponents: "appcircle_export_build_artifacts"

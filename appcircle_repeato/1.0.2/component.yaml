@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Repeato Test Runner
 description: "You can execute Repeato tests before deploying your app build."
-docUrl: "https://docs.appcircle.io/workflows/common-workflow-steps/#repeato-mobile-test-automation"
+docsUrl: "https://docs.appcircle.io/workflows/common-workflow-steps/#repeato-mobile-test-automation"
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts,appcircle_android_test_report"

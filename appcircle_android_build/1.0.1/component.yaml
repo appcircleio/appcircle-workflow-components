@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: ReactNative, JavaKotlin, Smartface
 displayName: "Android Build"
 description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
-docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps#android-build"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps#android-build"
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_activate_ssh_key,appcircle_node_install,appcircle_npm_yarn,appcircle_android_build_version_increment"
 followingComponents: "appcircle_android_sign,appcircle_android_resign,appcircle_android_post_process,appcircle_export_build_artifacts,appcircle_android_wait_emulator,appcircle_badge,appcircle_bundletool,appcircle_firebase_distribution,appcircle_datatheorem,appcircle_android_appdome,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_appcenter_distribute,appcircle_android_firebase_test_lab"

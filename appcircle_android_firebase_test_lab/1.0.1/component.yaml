@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: ReactNative, JavaKotlin, Flutter
 displayName: Firebase Test Lab for Android
 description: "Run Firebase Test Lab tests."
-docUrl: "https://docs.appcircle.io/continuous-testing/firebase-test-lab-for-android"
+docsUrl: "https://docs.appcircle.io/continuous-testing/firebase-test-lab-for-android"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_appdome,appcircle_android_resign,appcircle_bundletool"
 followingComponents:

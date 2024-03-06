@@ -2,7 +2,7 @@ platform: Android
 buildPlatform:
 displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
-docUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#appdome-build-2secure-for-android"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#appdome-build-2secure-for-android"
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_resign,appcircle_bundletool"
 followingComponents: "appcircle_export_build_artifacts"
