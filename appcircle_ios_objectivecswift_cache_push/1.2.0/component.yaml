@@ -2,9 +2,13 @@ platform: iOS
 buildPlatform: ObjectiveCSwift
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-push
+requiredComponents: "appcircle_git_clone"
+precedingComponents: 
+followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
-commit: 3773251
+commit: abf78a2
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/$AC_GIT_BRANCH/cache"
