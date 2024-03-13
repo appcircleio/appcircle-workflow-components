@@ -2,6 +2,10 @@ platform: Android
 buildPlatform:
 displayName: Detekt
 description: "Runs detekt gradle task"
+docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#detekt"
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-detekt-component
 repoUrl: https://github.com/appcircleio/appcircle-detekt-component.git
 commit: 4eccf49
@@ -13,8 +17,8 @@ inputs:
   description: Specifies detekt task name.
   helpText:
 - key: "AC_DETEKT_OUTPUT_PATH"
-  defaultValue: "$AC_DETEKT_OUTPUT_PATH"
-  isRequired: true
+  defaultValue: "$AC_MODULE/build/reports"
+  isRequired: false
   title: Detekt Output Path
   description: If `AC_DETEKT_SAVE_REPORT` variable is set true and this value is not defined, default path (`<ac_module>/build/reports`) will be defined.
   helpText:
