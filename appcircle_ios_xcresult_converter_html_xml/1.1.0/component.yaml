@@ -37,7 +37,7 @@ inputs:
   isRequired: true
   editorType: select
   title: Include Coverage
-  description: It will include the coverage result to converted file.
+  description: It will include the coverage result in the converted file.
   options: "Yes, No"
   helpText:
 outputs:
