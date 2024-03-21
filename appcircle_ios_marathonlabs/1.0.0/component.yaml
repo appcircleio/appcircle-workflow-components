@@ -4,7 +4,7 @@ displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android and iOS tests on Marathon Cloud."
 webUrl: https://github.com/appcircleio/appcircle-marathonlabs-component
 repoUrl: https://github.com/appcircleio/appcircle-marathonlabs-component.git
-commit: d367ab4
+commit: 2766d0d
 inputs:
 - key: "AC_MARATHON_API_KEY"
   defaultValue: "$AC_MARATHON_API_KEY"
