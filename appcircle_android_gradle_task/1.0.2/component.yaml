@@ -8,7 +8,7 @@ precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
 repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git
-commit: 020c214
+commit: f2e2166
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -19,7 +19,7 @@ inputs:
   defaultValue: "$AC_MODULE"
   isRequired: true
   title: Module
-  description: "Specifies the project module for build."
+  description: "Specifies the project module to be built."
   helpText:
 - key: "AC_VARIANTS"
   defaultValue: "$AC_VARIANTS"
@@ -48,7 +48,7 @@ inputs:
 - key: "AC_GRADLE_TASK_EXTRA_PARAMETERS"
   isRequired: false
   title: Task Parameters
-  description: "Extra command line parameters for the task."
+  description: "Extra command-line parameters for the task."
   helpText:
 outputs:
 processFilename: ruby
