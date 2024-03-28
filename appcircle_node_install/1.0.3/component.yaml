@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Install Node
 description: "Select a specific Node version for the build. Defaults to: lts"
-docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps#install-node
+docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install
 requiredComponents: 
 precedingComponents: 
 followingComponents: 

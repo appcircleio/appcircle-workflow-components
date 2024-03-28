@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: File size check
 description: "Checks the file size of build artifacts."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#file-size-check
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/file-size-check
 requiredComponents:
 precedingComponents: "appcircle_ios_build_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_ios_flutter_build"
 followingComponents:
