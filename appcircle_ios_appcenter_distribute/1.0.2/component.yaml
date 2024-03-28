@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform:
 displayName: "App Center iOS Distribute"
 description: "Distribute IPA and dSYM files to App Center."
-docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#app-center-ios-distribution
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/appcenter-ios-distribution
 requiredComponents: "appcircle_ios_build_sign"
 precedingComponents: 
 followingComponents: 

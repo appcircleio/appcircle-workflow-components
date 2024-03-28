@@ -5,7 +5,7 @@ description: 'Increment Build and Version Number for iOS'
 docsUrl: https://docs.appcircle.io/versioning/ios-version
 requiredComponents: "appcircle_git_clone"
 precedingComponents: 
-followingComponents: 
+followingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build,appcircle_android_flutter_build"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
 commit: a14f5dd

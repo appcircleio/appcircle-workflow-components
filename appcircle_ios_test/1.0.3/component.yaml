@@ -5,7 +5,7 @@ description: "Performs unit and UI tests for your iOS applications."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#xcodebuild-for-unit-and-ui-tests
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
 precedingComponents: "appcircle_cocoapods,appcircle_carthage"
-followingComponents: "appcircle_export_build_artifacts,appcircle_ios_test_report"
+followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-test-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
 commit: 867f154
