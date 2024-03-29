@@ -2,10 +2,10 @@ platform: Android
 buildPlatform:
 displayName: Android Re-Sign
 description: "Re-sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
-docsUrl: "https://docs.appcircle.io/distribute/resign/#resigning-android-binaries"
+docsUrl: https://docs.appcircle.io/distribute/resign/#resigning-android-binaries
 requiredComponents:
-precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_sign"
-followingComponents: "appcircle_export_build_artifacts"
+precedingComponents:
+followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-android-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-resign-component.git
 commit: 8ae0f5f

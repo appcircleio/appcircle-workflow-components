@@ -2,9 +2,9 @@ platform: Android
 buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.
-docsUrl: "https://docs.appcircle.io/continuous-testing/running-android-unit-tests/#generating-test-report"
-requiredComponents:
-precedingComponents: "appcircle_android_unit_test,appcircle_android_build_ui_test,appcircle_repeato"
+docsUrl: https://docs.appcircle.io/continuous-testing/running-android-unit-tests/#generating-test-report
+requiredComponents: "appcircle_android_unit_test"
+precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git

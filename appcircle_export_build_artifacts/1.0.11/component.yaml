@@ -2,9 +2,9 @@ platform: Common
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts from the build agent to the Appcircle dashboard. The exported files will be available for download from the artifacts section of the completed build."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#export-build-artifacts
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/export-build-artifacts
 requiredComponents:
-precedingComponents: "appcircle_git_clone,appcircle_android_test_report,appcircle_ios_test_report,appcircle_android_build,appcircle_android_build_ui_test,appcircle_ios_build_for_testing,appcircle_ios_build_simulator"
+precedingComponents: "appcircle_git_clone"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git

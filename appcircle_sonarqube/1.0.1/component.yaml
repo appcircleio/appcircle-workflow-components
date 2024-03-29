@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: SonarQube Scanner
 description: "Runs SonarQube Scanner CLI."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#sonarqube
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/sonarqube
 requiredComponents:
 precedingComponents:
 followingComponents:

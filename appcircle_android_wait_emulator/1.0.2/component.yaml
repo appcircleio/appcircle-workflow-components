@@ -2,9 +2,9 @@ platform: Android
 buildPlatform: 
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
-docsUrl: "https://docs.appcircle.io/infrastructure/android-build-infrastructure/#emulator"
-requiredComponents:
-precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_resign,appcircle_bundletool"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/wait-for-android-emulator
+requiredComponents: "appcircle_android_build_ui_test"
+precedingComponents: "appcircle_android_sign,appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-android-wait-emulator
 repoUrl: https://github.com/appcircleio/appcircle-android-wait-emulator.git

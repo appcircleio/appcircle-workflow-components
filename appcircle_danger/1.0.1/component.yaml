@@ -4,7 +4,7 @@ displayName: Danger
 description: "Runs Danger CI"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#code-reviews-with-danger
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-danger-component
 repoUrl: https://github.com/appcircleio/appcircle-danger-component.git
