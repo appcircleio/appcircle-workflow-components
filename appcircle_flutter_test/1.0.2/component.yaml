@@ -4,7 +4,7 @@ displayName: Flutter Test
 description: "Run Flutter test command."
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-test
 requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git

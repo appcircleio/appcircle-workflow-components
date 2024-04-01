@@ -4,7 +4,7 @@ displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
 docsUrl: https://docs.appcircle.io/versioning/ios-version
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_ios_build_sign"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git

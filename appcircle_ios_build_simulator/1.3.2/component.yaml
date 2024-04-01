@@ -5,7 +5,7 @@ description: "Build your application for iOS Simulator in x86/arm64 architecture
 description: "Download and install certificates and provisioning profiles."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-ios-simulator
 requiredComponents: "appcircle_git_clone,appcircle_xcode_select"
-precedingComponents: "appcircle_cocoapods,appcircle_cocoapods_deintegrate,appcircle_carthage,appcircle_swiftlint"
+precedingComponents: "appcircle_cocoapods,appcircle_cocoapods_deintegrate,appcircle_carthage,appcircle_swiftlint,appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git

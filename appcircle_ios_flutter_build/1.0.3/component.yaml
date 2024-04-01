@@ -4,7 +4,7 @@ displayName: "Flutter Build for iOS"
 description: "Build your Flutter project for iOS."
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-build-ios
 requiredComponents: "appcircle_git_clone,appcircle_xcode_select,appcircle_flutter_install"
-precedingComponents: "appcircle_cocoapods"
+precedingComponents: "appcircle_cocoapods,appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-flutter-build-component.git
