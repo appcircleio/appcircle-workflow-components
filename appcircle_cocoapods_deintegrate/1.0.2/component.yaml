@@ -4,8 +4,8 @@ displayName: Cocoapods Deintegrate
 description: "Remove all traces of CocoaPods from the project."
 docsUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
-followingComponents: "appcircle_ios_build_sign,appcircle_ios_build_for_testing,appcircle_ios_build_simulator,appcircle_ios_test"
+precedingComponents: "appcircle_activate_ssh_key"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component.git
 commit: c02a0df

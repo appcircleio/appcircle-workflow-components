@@ -2,10 +2,10 @@ platform: iOS
 buildPlatform:
 displayName: "Xcode Select"
 description: "Use to specify xcode version."
-docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#xcode-select-version
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcode-select
 requiredComponents:
 precedingComponents:
-followingComponents: "appcircle_ios_build_for_testing,appcircle_ios_build_simulator,appcircle_ios_build_sign,appcircle_ios_test,appcircle_cocoapods"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-xcode-select-component
 repoUrl: https://github.com/appcircleio/appcircle-xcode-select-component.git
 commit: f94a19c

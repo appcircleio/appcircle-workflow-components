@@ -1,0 +1,34 @@
+platform: iOS
+buildPlatform:
+displayName: Cocoapods Install
+description: "Execute CocoaPods install in the project path."
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/cocoapods-install
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_cocoapods_deintegrate,appcircle_activate_ssh_key"
+followingComponents:  
+webUrl: https://github.com/appcircleio/appcircle-cocoapods-component
+repoUrl: https://github.com/appcircleio/appcircle-cocoapods-component.git
+commit: 2c80939
+inputs:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_COCOAPODS_VERSION"
+  isRequired: false
+  title: Cocoapods Version
+  description: Specifies cocoapods version.
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

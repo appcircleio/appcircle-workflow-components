@@ -2,9 +2,9 @@ platform: Common
 buildPlatform: Flutter
 displayName: "Flutter Build for Web"
 description: "Build your Flutter project with Flutter SDK."
-docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps#flutter-build-for-web
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-build-for-web
 requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component.git

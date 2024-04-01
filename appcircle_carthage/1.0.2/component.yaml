@@ -2,10 +2,10 @@ platform: iOS
 buildPlatform:
 displayName: Carthage
 description: "Execute Carthage script in the project path."
-docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#carthage
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/carthage
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
-followingComponents: "appcircle_ios_build_sign,appcircle_ios_build_for_testing,appcircle_ios_build_simulator,appcircle_ios_test,appcircle_export_build_artifacts,appcircle_swiftlint"
+precedingComponents: "appcircle_activate_ssh_key"
+followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-carthage-component
 repoUrl: https://github.com/appcircleio/appcircle-carthage-component.git
 commit: 83b775e
