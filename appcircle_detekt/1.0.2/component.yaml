@@ -2,9 +2,9 @@ platform: Android
 buildPlatform:
 displayName: Detekt
 description: "Runs detekt gradle task"
-docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#detekt"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/#detekt
 requiredComponents: "appcircle_git_clone"
-precedingComponents:
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-detekt-component
 repoUrl: https://github.com/appcircleio/appcircle-detekt-component.git

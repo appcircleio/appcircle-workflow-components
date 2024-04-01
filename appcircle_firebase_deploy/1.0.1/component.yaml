@@ -4,7 +4,7 @@ displayName: Firebase Deployment
 description: "Deploy your web applications to Firebase Hosting"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-deployment
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component.git

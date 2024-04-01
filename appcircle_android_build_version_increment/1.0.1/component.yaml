@@ -1,11 +1,11 @@
 platform: Android
-buildPlatform:
+buildPlatform: ReactNative, JavaKotlin
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for Android'
-docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/post-processor"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/increment-build-and-version-number
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_activate_ssh_key"
-followingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_resign,appcircle_android_post_process,appcircle_android_wait_emulator,appcircle_badge,appcircle_bundletool,appcircle_firebase_distribution,appcircle_datatheorem,appcircle_android_appdome,appcircle_testinium,appcircle_browserstack_espresso,appcircle_android_appcenter_distribute,appcircle_android_firebase_test_lab"
+followingComponents: "appcircle_android_build"
 webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
 commit: f63fb7b

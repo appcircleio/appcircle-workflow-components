@@ -4,7 +4,7 @@ displayName: Fastlane
 description: "Runs fastlane lane."
 docsUrl: https://docs.appcircle.io/integrations/using-fastlane-in-the-workflows
 requiredComponents: "appcircle_git_clone"
-precedingComponents: 
+precedingComponents: "appcircle_activate_ssh_key"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-fastlane-component
 repoUrl: https://github.com/appcircleio/appcircle-fastlane-component.git

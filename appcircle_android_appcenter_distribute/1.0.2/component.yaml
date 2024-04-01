@@ -1,10 +1,10 @@
 platform: Android
-buildPlatform:
+buildPlatform: ReactNative, JavaKotlin
 displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
-docsUrl: "https://docs.appcircle.io/workflows/android-specific-workflow-steps/#app-center-android-distribution"
-requiredComponents:
-precedingComponents: "appcircle_android_build,appcircle_android_sign,appcircle_android_flutter_build,appcircle_android_appdome,appcircle_android_resign,appcircle_bundletool"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/app-center-android-distribution
+requiredComponents: "appcircle_android_build"
+precedingComponents: "appcircle_android_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component.git
