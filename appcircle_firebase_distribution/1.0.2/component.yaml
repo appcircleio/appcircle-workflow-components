@@ -1,10 +1,10 @@
 platform: Common
-buildPlatform:
+buildPlatform: N/A
 displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-app-distribution
 requiredComponents:
-precedingComponents: "appcircle_ios_build_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_ios_flutter_build,appcircle_android_sign"
+precedingComponents: "appcircle_ios_build_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_ios_flutter_build,appcircle_android_sign,appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component.git
