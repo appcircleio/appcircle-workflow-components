@@ -1,11 +1,11 @@
 platform: Common
-buildPlatform:
+buildPlatform: N/A
 displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
 docsUrl: https://github.com/appcircleio/appcircle-badge-component
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_ios_build_version_increment,appcircle_android_build_version_increment"
-followingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build,appcircle_android_build,appcircle_android_flutter_build"
+followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
 commit: 61fab3c
