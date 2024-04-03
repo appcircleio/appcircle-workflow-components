@@ -4,7 +4,7 @@ displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."
 docsUrl: https://docs.appcircle.io/integrations/azure-board
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-azure-boards-component
 repoUrl: https://github.com/appcircleio/appcircle-azure-boards-component.git

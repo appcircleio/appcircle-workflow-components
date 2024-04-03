@@ -4,7 +4,7 @@ displayName: Gradle Runner
 description: "Runs a Gradle task"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/gradle-runner
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
 repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git

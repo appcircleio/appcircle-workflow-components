@@ -4,7 +4,7 @@ displayName: Android App Post-Processor
 description: "System operations to identify and process the output files."
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/post-processor
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key,appcircle_android_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_android_flutter_sign"
+precedingComponents: "appcircle_android_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_android_flutter_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git

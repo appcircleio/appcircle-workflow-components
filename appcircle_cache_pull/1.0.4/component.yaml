@@ -4,7 +4,7 @@ displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-pull
 requiredComponents: 
-precedingComponents: "appcircle_activate_ssh_key,appcircle_git_clone"
+precedingComponents: "appcircle_git_clone"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git

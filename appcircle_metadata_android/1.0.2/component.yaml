@@ -4,7 +4,7 @@ displayName: Android Metadata
 description: Produce metadata from the selected repository.
 docsUrl: https://github.com/appcircleio/appcircle-android-metadata-component
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-metadata-component
 repoUrl: https://github.com/appcircleio/appcircle-android-metadata-component.git

@@ -4,7 +4,7 @@ displayName: Swiftlint
 description: "Install Swiftlint and lint swift files."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/swiftlint
 requiredComponents: "appcircle_cocoapods,appcircle_xcode_select,appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-swiftlint-component
 repoUrl: https://github.com/appcircleio/appcircle-swiftlint-component.git

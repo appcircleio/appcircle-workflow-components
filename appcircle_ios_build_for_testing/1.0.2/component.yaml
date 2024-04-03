@@ -4,7 +4,7 @@ displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-testing
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
-precedingComponents: "appcircle_cocoapods,appcircle_carthage,appcircle_activate_ssh_key"
+precedingComponents: "appcircle_cocoapods,appcircle_carthage"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing.git
