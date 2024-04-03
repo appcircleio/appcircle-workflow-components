@@ -1,5 +1,5 @@
 platform: Common
-buildPlatform: "N/A"
+buildPlatform:
 displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
 docsUrl: https://github.com/appcircleio/appcircle-badge-component
