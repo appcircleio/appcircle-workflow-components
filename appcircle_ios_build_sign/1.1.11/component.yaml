@@ -4,7 +4,7 @@ displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-devices
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
-precedingComponents: "appcircle_ios_build_for_testing,appcircle_ios_test,appcircle_ios_flutter_build,appcircle_ios_build_version_increment,appcircle_cocoapods,appcircle_cocoapods_deintegrate,appcircle_carthage,appcircle_swiftlint,appcircle_activate_ssh_key"
+precedingComponents: "appcircle_ios_build_for_testing,appcircle_ios_test,appcircle_ios_flutter_build,appcircle_ios_build_version_increment,appcircle_cocoapods,appcircle_cocoapods_deintegrate,appcircle_carthage,appcircle_swiftlint"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git

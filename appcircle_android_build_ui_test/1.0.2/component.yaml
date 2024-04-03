@@ -4,7 +4,7 @@ displayName: "Android Build for UI Testing"
 description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-build-for-ui-testing
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key,appcircle_node_install,appcircle_npm_yarn,appcircle_android_build_version_increment"
+precedingComponents: "appcircle_node_install,appcircle_npm_yarn,appcircle_android_build_version_increment"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git

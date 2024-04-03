@@ -4,7 +4,7 @@ displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
 docsUrl: https://docs.appcircle.io/integrations/jira-integration
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git

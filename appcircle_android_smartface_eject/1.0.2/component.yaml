@@ -4,7 +4,7 @@ displayName: "Smartface Eject for Android"
 description: "Creates Android Studio project to build from your smartface workspace."
 docsUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key"
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component
 repoUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component.git

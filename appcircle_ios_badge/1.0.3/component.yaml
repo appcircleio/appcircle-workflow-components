@@ -4,7 +4,7 @@ displayName: Add Badge onto Your App Icon for iOS
 description: "Install Imagemagick and add badge onto your icons."
 docsUrl: https://github.com/appcircleio/appcircle-badge-component
 requiredComponents: "appcircle_git_clone"
-precedingComponents: "appcircle_activate_ssh_key,appcircle_ios_build_version_increment"
+precedingComponents: "appcircle_ios_build_version_increment"
 followingComponents: "appcircle_ios_build_sign"
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
