@@ -1,5 +1,5 @@
 platform: Common
-buildPlatform: N/A
+buildPlatform: "N/A"
 displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
 docsUrl: https://docs.appcircle.io/continuous-testing/using-aws-device-farm-for-ios-and-android-continuous-testing
