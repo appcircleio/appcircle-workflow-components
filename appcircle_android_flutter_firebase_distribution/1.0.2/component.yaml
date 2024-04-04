@@ -1,6 +1,6 @@
 platform: Android
 buildPlatform: Flutter
-displayName: Firebase App Distribution for Flutter
+displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-app-distribution
 requiredComponents: "appcircle_android_flutter_build"
