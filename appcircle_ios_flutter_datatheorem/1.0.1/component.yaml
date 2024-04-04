@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform: Flutter
-displayName: Data Theorem Mobile Secure for Flutter
+displayName: Data Theorem Mobile Secure
 description: "Scan your app using Mobile Secure"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#data-theorem-mobile-secure
 requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
