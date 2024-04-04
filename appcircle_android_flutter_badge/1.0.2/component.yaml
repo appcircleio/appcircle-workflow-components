@@ -1,16 +1,20 @@
-platform: Common
-buildPlatform:
-displayName: Add badge onto your app icon
+platform: Android
+buildPlatform: Flutter
+displayName: Add Badge onto Your App Icon for Flutter
 description: "Install Imagemagick and add badge onto your icons."
+docsUrl: https://github.com/appcircleio/appcircle-badge-component
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_android_build_version_increment"
+followingComponents: "appcircle_android_flutter_build"
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: 7084512
+commit: 61fab3c
 inputs:
 - key: "AC_ICONS_PATH"
   defaultValue: "$AC_ICONS_PATH"
   isRequired: true
   title: Icons path
-  description: "Specifies path of icon files. For example : MyProject/Assets.xcassets/AppIcon.appiconset"
+  description: "Specifies path of icon files. For example: `MyProject/Assets.xcassets/AppIcon.appiconset`. The glob pattern can be used to select multiple image paths. For example: `app/src/main/res/mipmap*` adds badges all pngs under mipmap in this file path."
 - key: "AC_BADGE_TEXT"
   defaultValue: "Beta"
   isRequired: false

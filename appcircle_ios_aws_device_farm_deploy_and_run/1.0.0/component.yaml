@@ -1,0 +1,98 @@
+platform: Common
+buildPlatform:
+displayName: AWS Device Farm Deploy and Run
+description: "Deploy a file to AWS Device Farm and run tests."
+webUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run
+repoUrl: https://github.com/appcircleio/appcircle-aws-device-farm-deploy-and-run.git
+commit: 90e165f
+inputs:
+- key: "AWS_ACCESS_KEY_ID"
+  isRequired: true
+  title: AWS Access Key ID
+  description: AWS Access Key ID
+  helpText:
+- key: "AWS_SECRET_ACCESS_KEY"
+  isRequired: true
+  title: AWS Secret Access Key
+  description: AWS Secret Access Key
+- key: "AWS_DEFAULT_REGION"
+  defaultValue: "us-west-2"
+  isRequired: false
+  title: AWS Default Region
+  description: AWS Default Region
+- key: "AWS_PROJECT_ARN"
+  isRequired: true
+  title: AWS Project ARN
+  description: The ARN of the project for deploy and run.
+- key: "AWS_DEVICE_POOL_ARN"
+  isRequired: true
+  title: AWS Device Pool Arn
+  description: The ARN of the device pool for the run.
+- key: "AWS_SCHEDULE_RUN_NAME_PREFIX"
+  isRequired: true
+  title: AWS Device Farm Run Name Prefix
+  description: The name prefix for the run to be scheduled.
+- key: "AWS_SCHEDULE_TEST_TYPE"
+  isRequired: true
+  title: AWS Device Farm Run Test Type
+  description: The type of the test for the run.
+- key: "AWS_UPLOAD_TIMEOUT"
+  isRequired: true
+  title: AWS Device Farm File Upload Time Out
+  description: Time out duration (seconds) for the test file upload. The step is skipped if the time out is reached.
+- key: "AWS_TEST_TIMEOUT"
+  isRequired: true
+  title: Maximum Waiting Time for Run Test Results
+  description: Time out duration (seconds) for the AWS Device Farm run. The step is skipped if this duration is reached, but the test execution continues in AWS Device Farm.
+- key: "AWS_APP_ARN"
+  isRequired: false
+  title: AWS Device Farm App ARN
+  description: The ARN of the application package to run tests against, created with CreateUpload. If you don't set this parameter, the subsequent App Upload File Name, App Upload Type and App Upload File Path parameters are required.
+- key: "AWS_APP_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS Device Farm App Upload File Name
+  description: The file to be uploaded. The name should not contain any forward slashes (/ ). If you are uploading an iOS app, the file must have an .ipa extension. If you are uploading an Android app, the file must have an .apk extension.
+- key: "AWS_APP_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS Device Farm App Upload Type
+  description: The upload type of the file.
+- key: "AWS_APP_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS Device Farm App Upload File Path
+  description: The file path for the app upload.
+- key: "AWS_TEST_ARN"
+  isRequired: false
+  title: AWS Device Farm Test ARN
+  description: The ARN of the uploaded test to be run. If you don't set this parameter, the subsequent AWS Test Upload File Name, AWS Test Upload Type and AWS App Upload File Path parameters are required.
+- key: "AWS_TEST_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS Device Farm Test Upload File Name
+  description: The test file to be uploaded.
+- key: "AWS_TEST_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS Device Farm Test Upload Type
+  description: The upload type of the test.
+- key: "AWS_TEST_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS Device Farm Test Upload File Path
+  description: The file path for the test upload.
+- key: "AWS_TEST_SPEC_ARN"
+  isRequired: false
+  title: AWS Test Spec Arn
+  description: The ARN of the uploaded test spec to be run.
+- key: "AWS_TEST_SPEC_UPLOAD_FILE_NAME"
+  isRequired: false
+  title: AWS Test Spec Upload File Name
+  description: The test spec file to be uploaded.
+- key: "AWS_TEST_SPEC_UPLOAD_TYPE"
+  isRequired: false
+  title: AWS Test Spec Upload Type
+  description: The upload type of the test spec.
+- key: "AWS_TEST_SPEC_UPLOAD_FILE_PATH"
+  isRequired: false
+  title: AWS Test Spec Upload File Path
+  description: The file path for the test spec upload.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
