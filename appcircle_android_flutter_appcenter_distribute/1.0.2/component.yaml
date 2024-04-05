@@ -1,0 +1,93 @@
+platform: Android
+buildPlatform: Flutter
+displayName: "App Center Android Distribute"
+description: "Distribute APK, AAB, and mapping files to App Center."
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/app-center-android-distribution
+requiredComponents: "appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component
+repoUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component.git
+commit: d82fc74
+inputs:
+- key: "AC_APPCENTER_TOKEN"
+  defaultValue: "$AC_APPCENTER_TOKEN"
+  isRequired: true
+  title: API Token
+  description: "Appcenter API Token."
+  helpText:
+- key: "AC_APPCENTER_APK_PATH"
+  defaultValue: "$AC_APK_PATH"
+  isRequired: true
+  title: APK or AAB Path
+  description: "The full path of the build. Both APK($AC_APK_PATH, $AC_SIGNED_APK_PATH) and AAB($AC_AAB_PATH, $AC_SIGNED_AAB_PATH) files are supported."
+  helpText:
+- key: "AC_APPCENTER_OWNER"
+  defaultValue: "$AC_APPCENTER_OWNER"
+  isRequired: true
+  title: Owner Name
+  description: "Owner of the app. The app's owner can be identified in its URL, such as `https://appcenter.ms/users/JohnDoe/apps/myapp` for a user-owned app (where **JohnDoe** is the owner) and `https://appcenter.ms/orgs/Appcircle/apps/myapp` for an org-owned app (owner is **Appcircle**)."
+  helpText:
+- key: "AC_APPCENTER_APPNAME"
+  defaultValue: "$AC_APPCENTER_APPNAME"
+  isRequired: true
+  title: App Name
+  description: "The name of the app. The app's name can be identified in its URL, such as `https://appcenter.ms/users/JohnDoe/apps/myapp` for a user-owned app (where **myapp** is the app name) and `https://appcenter.ms/orgs/Appcircle/apps/myapp` for an org-owned app (owner is **myapp**)."
+  helpText:
+- key: "AC_APPCENTER_GROUPS"
+  defaultValue: "$AC_APPCENTER_GROUPS"
+  isRequired: false
+  title: Group Names
+  description: "Comma-separated distribution group names"
+  helpText:
+- key: "AC_APPCENTER_STORE"
+  defaultValue: "$AC_APPCENTER_STORE"
+  isRequired: false
+  title: Store name
+  description: "Name of the store(App Store, Google Play, Intune)"
+  helpText:
+- key: "AC_APPCENTER_RELEASE_NOTES_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/release-notes.txt"
+  isRequired: false
+  title: Release Notes
+  description: "If you use the `Publish Release Notes` component before this step, release-notes.txt will be used as release notes."
+  helpText:
+- key: "AC_APPCENTER_MAPPING_PATH"
+  defaultValue: "AC_APPCENTER_MAPPING_PATH"
+  isRequired: false
+  title: Android mappings
+  description: "The path of mapping.txt file. Example: `$AC_REPOSITORY_DIR/build/app/outputs/mapping/release/mapping.txt`"
+  helpText:
+- key: "AC_APPCENTER_MANDATORY"
+  defaultValue: "false"
+  isRequired: false
+  editorType: select
+  options: "false,true"
+  title: Mandatory Update
+  description: "This parameter specifies whether the update should be considered mandatory or not."
+  helpText:
+- key: "AC_APPCENTER_NOTIFY"
+  defaultValue: "true"
+  isRequired: false
+  editorType: select
+  options: "false,true"
+  title: Notify Testers
+  description: "Notify testers of this release."
+  helpText:
+- key: "AC_APPCENTER_VERSION"
+  defaultValue: "$AC_APPCENTER_VERSION"
+  isRequired: false
+  title: App Center CLI Version
+  description: "The latest version will be used if no version is set."
+  helpText:
+- key: "AC_APPCENTER_EXTRA"
+  defaultValue: "$AC_APPCENTER_EXTRA"
+  isRequired: false
+  title: Extra arguments
+  description: "Extra command line arguments for appcenter. For example, add `--debug` for verbose logs."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

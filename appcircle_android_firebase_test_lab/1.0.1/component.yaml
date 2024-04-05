@@ -1,0 +1,52 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin, Flutter
+displayName: Firebase Test Lab for Android
+description: "Run Firebase Test Lab tests."
+docsUrl: https://docs.appcircle.io/continuous-testing/firebase-test-lab-for-android
+requiredComponents: "appcircle_android_build_ui_test"
+precedingComponents: "appcircle_android_sign,appcircle_android_flutter_sign"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-android-firebase-test-lab-component
+repoUrl: https://github.com/appcircleio/appcircle-android-firebase-test-lab-component.git
+commit: d9ac01a
+inputs:
+- key: "AC_FIREBASE_PROJECT_ID"
+  isRequired: false
+  title: Firebase Project Id
+  description: "Specifies firebase project id."
+- key: "AC_FIREBASE_KEY_FILE"
+  isRequired: false
+  title: Firebase Key File
+  description: "Specifies the firebase key file."
+  helpText:
+- key: "AC_FIREBASE_TEST_TYPE"
+  defaultValue: "robo"
+  isRequired: true
+  title: Firebase Test Type
+  description: "Specifies the test type (robo or instrumentation)."
+  helpText:
+- key: "AC_FIREBASE_BUCKET_NAME"
+  isRequired: false
+  title: Bucket Name
+  description: "Specifies the bucket name. For example : gs://..."
+  helpText:
+- key: "AC_APK_PATH"
+  defaultValue: "$AC_APK_PATH"
+  isRequired: false
+  title: Apk Path
+  description: "The path to the application binary file."
+  helpText:
+- key: "AC_TEST_APK_PATH"
+  isRequired: false
+  title: Test Apk Path
+  description: "The path to the binary file containing instrumentation tests."
+  helpText:
+- key: "AC_FIREBASE_EXTRA_ARGS"
+  isRequired: false
+  title: Firebase Test Extra Arguments
+  description: "The extra arguments for firebase test lab tests. For example: --timeout=3m"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

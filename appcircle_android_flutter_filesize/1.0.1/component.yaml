@@ -1,0 +1,37 @@
+platform: Android
+buildPlatform: Flutter
+displayName: File Size Check
+description: "Checks the file size of build artifacts."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-and-test/file-size-check
+requiredComponents: "appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-filesize-component
+repoUrl: https://github.com/appcircleio/appcircle-filesize-component.git
+commit: c00845e
+inputs:
+- key: "AC_ANALYZER_SOURCE_PATH"
+  defaultValue: "$AC_ANALYZER_SOURCE_PATH"
+  isRequired: false
+  title: Path of your artifacts
+  description: "Full path of APK, AAB or IPA file. Don't change it to use default artifacts."
+  helpText:
+- key: "AC_ANALYZER_FILESIZE_THRESHOLD"
+  defaultValue: "200"
+  isRequired: false
+  title: File size
+  description: "File size threshold of the artifacts in mega bytes. Enter 0 to disable the check."
+  helpText:
+- key: "AC_ANALYZER_FILESIZE_ACTION"
+  defaultValue: "warn"
+  editorType: select
+  options: "warn,fail"
+  isRequired: false
+  title: File size check action
+  description: "Create warning or fail the workflow if threshold limit is passed"
+  helpText:  
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

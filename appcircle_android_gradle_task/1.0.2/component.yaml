@@ -1,0 +1,57 @@
+platform: Android
+buildPlatform:
+displayName: Gradle Runner
+description: "Runs a Gradle task"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/gradle-runner
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
+repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git
+commit: 7ac6699
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+- key: "AC_MODULE"
+  defaultValue: "$AC_MODULE"
+  isRequired: true
+  title: Module
+  description: "Specifies the project module to be built."
+  helpText:
+- key: "AC_VARIANTS"
+  defaultValue: "$AC_VARIANTS"
+  isRequired: true
+  title: Variants
+  description: "Specifies build variants. For example : `-configuration DEBUG`."
+  helpText:
+- key: "AC_GRADLE_OUTPUT_DIR"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: "Specifies the directory path for the generated app files."
+  helpText:
+- key: "AC_GRADLE_TASK"
+  defaultValue: "$AC_GRADLE_TASK"
+  isRequired: true
+  title: Gradle task name
+  description: "Specifies Gradle task name."
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: false
+  title: Project Path
+  description: "Specifies the project path."
+  helpText:
+- key: "AC_GRADLE_TASK_EXTRA_PARAMETERS"
+  isRequired: false
+  title: Task Parameters
+  description: "Extra command-line parameters for the task."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

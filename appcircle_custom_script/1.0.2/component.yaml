@@ -3,7 +3,7 @@ buildPlatform:
 componentType: appcircle_custom_script
 displayName: Custom Script
 description: "Carry out any custom operation in the build machine with a compatible script."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#custom-scripts
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/custom-script
 requiredComponents:
 precedingComponents:
 followingComponents:

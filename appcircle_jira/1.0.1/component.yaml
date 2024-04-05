@@ -1,0 +1,222 @@
+platform: Common
+buildPlatform:
+displayName: Jira Comment
+description: "Add comment to Jira Issue and optionally change the status."
+docsUrl: https://docs.appcircle.io/integrations/jira-integration
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-jira-component
+repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
+commit: dc4ba69
+inputs:
+- key: "AC_JIRA_HOST"
+  defaultValue: "$AC_JIRA_HOST"
+  isRequired: true
+  title: Jira Host
+  description: "Your Jira subdomain. Example: `mysubdomain.atlassian.net`"  
+  helpText:
+- key: "AC_JIRA_EMAIL"
+  defaultValue: "$AC_JIRA_EMAIL"
+  isRequired: true
+  title: Jira Email
+  description: "Email of Jira user. Please add this using **locked** environment variables."
+  helpText:
+- key: "AC_JIRA_TOKEN"
+  defaultValue: "$AC_JIRA_TOKEN"
+  isRequired: true
+  title: API Token
+  description: "User's API Token. Please add this using **locked** environment variables. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
+  helpText:
+- key: "AC_JIRA_ISSUE"
+  defaultValue: "$AC_JIRA_ISSUE"
+  isRequired: true
+  title: Jira Issue
+  description: "The ID or key of the issue. Please check [documentation](https://docs.appcircle.io/integrations/jira-integration/) to learn how you can get this information from branch names or commit messages."
+  helpText:
+- key: "AC_JIRA_FAIL_TRANSITION"
+  defaultValue: "$AC_JIRA_FAIL_TRANSITION"
+  isRequired: false
+  title: Error Transition
+  description: "Transition ID or name for the failed step. If the previous state succeeds, you can optionally change the status of your issue."
+  helpText:
+- key: "AC_JIRA_SUCCESS_TRANSITION"
+  defaultValue: "$AC_JIRA_SUCCESS_TRANSITION"
+  isRequired: false
+  title: Success Transition
+  description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
+  helpText:
+- key: "AC_JIRA_TEMPLATE"
+  defaultValue: |
+      {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Appcircle",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "attrs": {
+            "panelType": "AC_JIRA_PANEL"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Commit $AC_GIT_COMMIT | $AC_GIT_BRANCH | $AC_COMMIT_MESSAGE"
+              }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "attrs": {
+            "isNumberColumnEnabled": false,
+            "layout": "default",
+            "localId": "b7fbb332-57e4-4cbc-b66d-da2a7de7b5d5"
+          },
+          "content": [
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableHeader",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Key",
+                          "marks": [
+                            {
+                              "type": "strong"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Value",
+                          "marks": [
+                            {
+                              "type": "strong"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Workflow"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "$AC_WORKFLOW_NAME"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Date (UTC)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "AC_JIRA_DATE"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      } 
+  isRequired: true
+  editorType: textarea
+  title: Comment Template
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

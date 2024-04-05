@@ -1,0 +1,49 @@
+platform: Common
+buildPlatform:
+displayName: Upload Files to Amazon S3
+description: "Upload a file to Amazon S3."
+docsUrl: https://docs.appcircle.io/integrations/uploading-files-to-amazon-sin-the-workflows
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
+repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
+commit: f9ad03b
+inputs:
+- key: "AC_INPUT_FILE_PATH"
+  isRequired: false
+  title: AWS Input File Path
+  description:  Path to the file to be uploaded
+  helpText:
+- key: "AWS_ACCESS_KEY_ID"
+  isRequired: false
+  title: AWS Access Key Id
+  description:  AWS Access Key Id
+  helpText:
+- key: "AWS_SECRET_ACCESS_KEY"
+  isRequired: false
+  title: AWS Secret Access Key
+  description:  AWS Secret Access Key
+- key: "AWS_BUCKET_NAME"
+  isRequired: false
+  title: AWS Bucket Name
+  description:  AWS Bucket Name
+- key: "AWS_BUCKET_REGION"
+  defaultValue: "us-east-1"
+  isRequired: false
+  title: AWS Bucket Region
+  description:  AWS Bucket Region
+- key: "AWS_TARGET_DIR"
+  isRequired: false
+  title: Amazon S3 Folder Path in Bucket
+  description:  Amazon S3 Folder Path in Bucket
+outputs:
+- key: "AC_AWS_UPLOAD_URL"
+  defaultValue: AC_AWS_UPLOAD_URL
+  title: Amazon S3 Upload Url
+  description: Amazon S3 Upload Url. (s3://your-bucket-name/timetsamp/)
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
