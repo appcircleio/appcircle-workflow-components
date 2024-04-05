@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Git Clone
 description: Clone the selected repository to the build machine.
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#git-clone
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/git-clone
 requiredComponents:
 precedingComponents: "appcircle_activate_ssh_key"
 followingComponents:

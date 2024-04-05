@@ -1,0 +1,88 @@
+platform: iOS
+buildPlatform:
+displayName: Appdome Build-2Secure for iOS
+description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/#appdome-build-2secure-for-ios
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents: 
+followingComponents: "appcircle_export_build_artifacts" 
+webUrl: https://github.com/appcircleio/appcircle-ios-appdome-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-appdome-component.git
+commit: c96c499
+inputs:
+- key: "AC_APPDOME_IPA_PATH"
+  defaultValue: "$AC_APPDOME_IPA_PATH"
+  isRequired: true
+  title: App File Path
+  description: "URL to app file (ipa) or an environment variable representing its path (i.e. `$AC_EXPORT_DIR/<myappname>.ipa`)."
+  helpText:
+- key: "AC_APPDOME_API_KEY"
+  defaultValue: "$AC_APPDOME_API_KEY"
+  isRequired: true
+  title: Appdome API Key
+  description: "This API key must be taken from the Appdome."
+  helpText:
+- key: "AC_APPDOME_FUSION_SET_ID"
+  defaultValue: "$AC_APPDOME_FUSION_SET_ID"
+  isRequired: true
+  title: Appdome Fusion Set ID
+  description: "Fusion Set ID must be taken from the Appdome."
+  helpText:
+- key: "AC_APPDOME_TEAM_ID"
+  defaultValue: "$AC_APPDOME_TEAM_ID"
+  isRequired: false
+  title: Appdome Team ID
+  description: "Team ID must be taken from the Appdome."
+  helpText:
+- key: "AC_APPDOME_SIGN_METHOD"
+  defaultValue: "On-Appdome"
+  isRequired: true
+  editorType: select
+  title: Signing Method
+  description: "Signing method for automatically sign applications using the Appdome service in accordance with Apple's guidelines."
+  options: "On-Appdome,Private-Signing,Auto-Dev-Signing"
+  helpText:
+- key: "AC_APPDOME_IOS_ENTITLEMENTS"
+  defaultValue: "$AC_APPDOME_IOS_ENTITLEMENTS"
+  isRequired: false
+  title: iOS Entitlement File Paths
+  description: "Entitlements must be taken from the Xcode. You can separate entitlement files with commas. It must have `plist`, `txt` or `xml` file extension."
+  helpText:
+- key: "AC_APPDOME_PROVISIONING_PROFILES"
+  defaultValue: "$AC_APPDOME_PROVISIONING_PROFILES"
+  isRequired: true
+  title: Appdome Provisioning Profiles
+  description: "Paths of the provisioning profiles. You can separate files with commas. It must have `mobileprovision` extension."
+  helpText:
+- key: "AC_APPDOME_CERTIFICATES"
+  defaultValue: "$AC_APPDOME_CERTIFICATES"
+  isRequired: true
+  title: iOS Certificate File Path
+  description: "Paths of the certificate file. It must have `p12` extension."
+  helpText:
+- key: "AC_APPDOME_CERTIFICATES_PASS"
+  defaultValue: "$AC_APPDOME_CERTIFICATES_PASS"
+  isRequired: false
+  title: iOS Certificate Password
+  description: "iOS Certificate Password."
+  helpText:
+outputs:
+- key: "AC_APPDOME_SECURED_IPA_PATH"
+  defaultValue: "AC_APPDOME_SECURED_IPA_PATH"
+  title: "Secured .ipa File Path"
+  description: Local path of the secured .ipa file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
+  helpText:
+- key: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
+  defaultValue: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
+  title: .sh Sign Script File Path
+  description: Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing'.
+  helpText:
+- key: "AC_APPDOME_CERTIFICATE_PATH"
+  defaultValue: "AC_APPDOME_CERTIFICATE_PATH"
+  title: Certified Secure Certificate .pdf file path
+  description: "Local path of the Certified Secure Certificate .pdf file"
+  helpText: 
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"

@@ -1,0 +1,63 @@
+platform: Common
+buildPlatform:
+displayName: Firebase App Distribution
+description: "Distribute your builds via Firebase App Distribution"
+webUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component
+repoUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component.git
+commit: 4b96ec8
+inputs:
+- key: "AC_FIREBASE_VERSION"
+  defaultValue: "latest"
+  isRequired: true
+  title: Firebase Version
+  description: Firebase version to be used. Enter v11.11.0 for a specific version.
+  helpText:
+- key: "AC_FIREBASE_APP_PATH"
+  defaultValue: "$AC_FIREBASE_APP_PATH"
+  isRequired: true
+  title: Path of the build
+  description: Full path of the build. For example $AC_EXPORT_DIR/Myapp.ipa
+  helpText:
+- key: "AC_FIREBASE_APP_ID"
+  defaultValue: "$AC_FIREBASE_APP_ID"
+  isRequired: true
+  title: App ID
+  description: Your app's Firebase App ID. You can find the App ID in the Firebase console.
+  helpText:
+- key: "AC_FIREBASE_TOKEN"
+  defaultValue: "$AC_FIREBASE_TOKEN"
+  isRequired: true
+  title: Firebase Token
+  description: A refresh token that's printed when you authenticate with firebase login:ci command.
+  helpText:
+- key: "AC_FIREBASE_RELEASE_NOTES"
+  defaultValue: "$AC_FIREBASE_RELEASE_NOTES"
+  isRequired: false
+  editorType: textarea
+  title: Release Notes
+  description: Release notes for this build. If you want to use a file for release notes, leave this place empty and configure the next section.
+  helpText:
+- key: "AC_FIREBASE_RELEASE_NOTES_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/release-notes.txt"
+  isRequired: false
+  title: Release Notes Path
+  description: If you use Publish Release Notes component before this step, release-notes.txt will be used as release notes.
+  helpText:
+- key: "AC_FIREBASE_GROUPS"
+  defaultValue: "$AC_FIREBASE_GROUPS"
+  isRequired: false
+  title: Firebase Groups
+  description: Firebase tester groups you want to invite.
+  helpText:
+- key: "AC_FIREBASE_EXTRA_PARAMETERS"
+  defaultValue: "--debug"
+  isRequired: false
+  title: Extra parameters
+  description: "Extra command line parameters. Enter --debug for debug mode."
+  defaultValue: $AC_FIREBASE_EXTRA_PARAMETERS
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

@@ -1,0 +1,37 @@
+platform: Common
+buildPlatform:
+displayName: Add badge onto your app icon
+description: "Install Imagemagick and add badge onto your icons."
+webUrl: https://github.com/appcircleio/appcircle-badge-component
+repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
+commit: 7084512
+inputs:
+- key: "AC_ICONS_PATH"
+  defaultValue: "$AC_ICONS_PATH"
+  isRequired: true
+  title: Icons path
+  description: "Specifies path of icon files. For example : MyProject/Assets.xcassets/AppIcon.appiconset"
+- key: "AC_BADGE_TEXT"
+  defaultValue: "Beta"
+  isRequired: false
+  title: Badge text
+  description: "Text that appears on the right corner."
+- key: "AC_BADGE_VERSION"
+  defaultValue: "1.0"
+  isRequired: false
+  title: Version Number
+  description: "Version or build number that will appear at the bottom."
+- key: "AC_BADGE_BGCOLOR"
+  defaultValue: "orange"
+  isRequired: false
+  title: Badge background color
+  description: "You can use full color name (orange), hex codes(#FFA500) or rgb values(rgb(255,165,0))."
+- key: "AC_BADGE_TEXTCOLOR"
+  defaultValue: "white"
+  isRequired: false
+  title: Badge version text color
+  description: "You can use full color name (white), hex codes(#FFFFFF) or rgb values(rgb(255,255,255))."
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"

@@ -1,0 +1,84 @@
+platform: Common
+buildPlatform:
+displayName: Azure Boards
+description: "Add comment to Azure Boards Issue and optionally change the status."
+docsUrl: https://docs.appcircle.io/integrations/azure-board
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-azure-boards-component
+repoUrl: https://github.com/appcircleio/appcircle-azure-boards-component.git
+commit: 6b92602
+inputs:
+- key: "AC_AZUREBOARD_INSTANCE"
+  defaultValue: "https://dev.azure.com"
+  isRequired: true
+  title: Instance
+  description: "If you're using a self-hosted instance, write the instance URL."
+  helpText:
+- key: "AC_AZUREBOARD_API_VERSION"
+  defaultValue: "7.0"
+  isRequired: true
+  title: API Version
+  description: "The version of the Azure DevOps Services REST API"
+  helpText:
+- key: "AC_AZUREBOARD_EMAIL"
+  defaultValue: "$AC_AZUREBOARD_EMAIL"
+  isRequired: true
+  title: Email
+  description: "Email of Azure user. Please add this using **locked** environment variables."
+  helpText:
+- key: "AC_AZUREBOARD_TOKEN"
+  defaultValue: "$AC_AZUREBOARD_TOKEN"
+  isRequired: true
+  title: Personal Access Token
+  description: "Personal access token of the user. It can be created by visiting User settings. Please add this using **locked** environment variables."
+  helpText:
+- key: "AC_AZUREBOARD_ORG"
+  defaultValue: "$AC_AZUREBOARD_ORG"
+  isRequired: true
+  title: Organization
+  description: "Azure Organization. The organization can be identified by its URL, such as for the `https://dev.azure.com/JohnDoe/MyProject/_boards/board/t/MyTeam/Issues` **JohnDoe** is the organization name."
+  helpText:
+- key: "AC_AZUREBOARD_PROJECT"
+  defaultValue: "$AC_AZUREBOARD_PROJECT"
+  isRequired: true
+  title: Project
+  description: "Azure Project. The project can be identified by its URL, such as for the `https://dev.azure.com/JohnDoe/MyProject/_boards/board/t/MyTeam/Issues` **MyProject** is the project name."
+  helpText:
+- key: "AC_AZUREBOARD_WORKITEM"
+  defaultValue: "$AC_AZUREBOARD_WORKITEM"
+  isRequired: true
+  title: The work item ID
+  description: "Azure work item ID. The work item ID(integer) is shown next to the issue."
+  helpText:
+- key: "AC_AZUREBOARD_FAIL_STATE"
+  defaultValue: "$AC_AZUREBOARD_FAIL_STATE"
+  isRequired: false
+  title: Fail State
+  description: "The state name for the failed step. If the previous state fails, you can optionally change the state of your issue."
+  helpText:
+- key: "AC_AZUREBOARD_SUCCESS_STATE"
+  defaultValue: "$AC_AZUREBOARD_SUCCESS_STATE"
+  isRequired: false
+  title: Success State
+  description: "The state name for the successful step. If the previous state succeeds, you can optionally change the state of your issue."
+  helpText:
+- key: "AC_AZUREBOARD_TEMPLATE"
+  defaultValue: |
+    [
+      {
+        "op": "add",
+        "path": "/fields/System.History",
+        "value": "<div><b>Commit:</b> $AC_COMMIT_MESSAGE | $AC_GIT_COMMIT<br></div><div><b>Workflow:</b> $AC_WORKFLOW_NAME<br></div>"
+      }
+    ]
+  isRequired: true
+  editorType: textarea
+  title: Comment Template
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. Please check [this document](https://learn.microsoft.com/en-us/rest/api/azure/devops/wit/work-items/update?view=azure-devops-rest-7.0) to learn more about possible updates."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

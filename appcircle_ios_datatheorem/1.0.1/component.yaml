@@ -1,0 +1,31 @@
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
+displayName: Data Theorem Mobile Secure
+description: "Scan your app using Mobile Secure"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#data-theorem-mobile-secure
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents: 
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-datatheorem-component
+repoUrl: https://github.com/appcircleio/appcircle-datatheorem-component.git
+commit: 4600167
+inputs:
+- key: "AC_DT_FILE_PATH"
+  defaultValue: "$AC_DT_FILE_PATH"
+  isRequired: true
+  title: File path to the IPA or APK to upload
+  description: |
+      - For Android: `$AC_APK_PATH` or `$AC_SIGNED_APK_PATH`
+      - For IOS: `$AC_EXPORT_DIR/Myapp.ipa`
+  helpText:
+- key: "AC_DT_UPLOAD_API_KEY"
+  defaultValue: "$AC_DT_UPLOAD_API_KEY"
+  isRequired: true
+  title: Data Theorem Mobile Secure Upload API Key
+  description: You will need to retrieve your organization's Upload API key from the portal.
+  helpText:
+outputs:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"

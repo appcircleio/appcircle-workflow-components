@@ -1,0 +1,79 @@
+platform: iOS
+buildPlatform:
+displayName: "Xcodebuild for iOS Simulator"
+description: "Build your application for iOS Simulator in x86/arm64 architecture."
+description: "Download and install certificates and provisioning profiles."
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-ios-simulator
+requiredComponents: "appcircle_git_clone,appcircle_xcode_select"
+precedingComponents: "appcircle_cocoapods,appcircle_cocoapods_deintegrate,appcircle_carthage,appcircle_swiftlint"
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
+commit: 4300336
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: Specifies the cloned repository directory.
+  helpText:
+- key: "AC_OUTPUT_DIR_PATH"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Output Directory Path
+  description: Specifies the path for outputs.
+  helpText:
+- key: "AC_SCHEME"
+  defaultValue: "$AC_SCHEME"
+  isRequired: true
+  title: Scheme
+  description: Specifies the project scheme for build.
+  helpText:
+- key: "AC_SIMULATOR_ARCH"
+  editorType: select
+  defaultValue: "arm64"
+  options: "arm64,x86_64"
+  isRequired: false
+  title: Architecture
+  description: Specifies the CPU architecture for the simulator build.
+  helpText:
+- key: "AC_SIMULATOR_NAME"
+  defaultValue: "$AC_SIMULATOR_NAME"
+  isRequired: false
+  title: Simulator Name
+  description: Destination name of the simulator. Ex. `iPhone 14`. If you set a simulator name, the build will be installed into the given simulator. Please be aware setting the simulator name invalidates the `AC_SIMULATOR_ARCH` option. 
+  helpText:
+- key: "AC_ARCHIVE_FLAGS"
+  defaultValue: "$AC_XCODE_BUILD_EXTRA_FLAGS"
+  isRequired: false
+  title: Archive Flags
+  description: "Specifies the extra xcodebuild flag. For example : -configuration DEBUG"
+  helpText:
+- key: "AC_PROJECT_PATH"
+  defaultValue: "$AC_PROJECT_PATH"
+  isRequired: true
+  title: Project Path
+  description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  helpText:
+- key: "AC_CONFIGURATION_NAME"
+  defaultValue: "Debug"
+  isRequired: false
+  title: Configuration
+  description: The configuration to use. You can overwrite it with this option.
+  helpText:
+- key: "AC_COMPILER_INDEX_STORE_ENABLE"
+  defaultValue: "NO"
+  isRequired: true
+  title: Compiler Index Store Enable
+  description: You can disable the indexing during the build for faster build.
+  helpText:
+outputs:
+- key: "AC_SIMULATOR_APP_PATH"
+  title: Simulator App Path
+  defaultValue: "AC_SIMULATOR_APP_PATH"
+  description: Simulator app path.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
