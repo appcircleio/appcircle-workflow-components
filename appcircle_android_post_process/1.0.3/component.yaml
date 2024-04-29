@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_sign,appcircle_android_build,appcircle_a
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
-commit: c3ee4cd
+commit: 9498afa
 outputs:
 - key: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
   title: "Android App Post-Processor Output Path"
