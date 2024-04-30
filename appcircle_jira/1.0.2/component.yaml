@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 80f562d
+commit: 4db4fd2
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -24,10 +24,21 @@ inputs:
   helpText:
 - key: "AC_JIRA_TOKEN"
   defaultValue: "$AC_JIRA_TOKEN"
-  isRequired: true
+  isRequired: false
   title: API Token
-  description: "User's API Token. Please add this using **locked** environment variables. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
+  description: "User's API Token. Please add this using **locked** environment variables. If this value is set, the Jira e-mail field must be filled for Basic Authentication. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
   helpText:
+- key: "AC_JIRA_PAT"
+  defaultValue: "$AC_JIRA_PAT"
+  isRequired: false
+  title: Personal Access Token
+  description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
+  helpText:
+- key: "AC_JIRA_REST_API_VERSION"
+  defaultValue: "3"
+  isRequired: true
+  title: Jira REST API Version
+  description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
@@ -45,18 +56,6 @@ inputs:
   isRequired: false
   title: Success Transition
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
-  helpText:
-- key: "AC_JIRA_REST_API_VERSION"
-  defaultValue: "3"
-  isRequired: true
-  title: Jira REST API Version
-  description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
-- key: "AC_JIRA_USE_PAT_AUTH"
-  defaultValue: "false"
-  isRequired: false
-  options: "true,false"
-  title: Use Personal Access Token for Jira Authentication
-  description: "Specify whether to use Personal Access Token (PAT) as the authentication type for Jira. If this value is set to `false`, the Jira e-mail field must be filled for Basic Authentication."
   helpText:
 - key: "AC_JIRA_TEMPLATE"
   defaultValue: |
