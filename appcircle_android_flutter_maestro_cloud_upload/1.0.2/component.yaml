@@ -1,10 +1,10 @@
-platform: Common
-buildPlatform:
+platform: Android
+buildPlatform: Flutter
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#maestro-cloud-upload
-requiredComponents: "appcircle_git_clone"
-precedingComponents:
+requiredComponents: "appcircle_git_clone,appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component
 repoUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component.git
