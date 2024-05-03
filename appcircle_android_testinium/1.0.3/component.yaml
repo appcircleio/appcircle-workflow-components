@@ -1,10 +1,10 @@
-platform: Android
-buildPlatform: ReactNative, JavaKotlin
+platform: Common
+buildPlatform:
 displayName: Testinium
 description: "Run your test plans with Testinium"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#testinium
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+requiredComponents:
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
