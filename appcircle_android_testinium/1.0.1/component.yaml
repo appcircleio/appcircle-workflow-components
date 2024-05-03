@@ -1,0 +1,61 @@
+platform: Common
+buildPlatform:
+displayName: Testinium
+description: "Run your test plans with Testinium"
+webUrl: https://github.com/appcircleio/appcircle-testinium-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
+commit: 39e064d
+inputs:
+- key: "AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_TESTINIUM_APP_PATH"
+  isRequired: true
+  title: Path of the build
+  description: Full path of the build. For example $AC_EXPORT_DIR/Myapp.ipa
+  helpText:
+- key: "AC_TESTINIUM_USERNAME"
+  defaultValue: "$AC_TESTINIUM_USERNAME"
+  isRequired: true
+  title: Username
+  description: Testinium username.
+  helpText:
+- key: "AC_TESTINIUM_PASSWORD"
+  defaultValue: "$AC_TESTINIUM_PASSWORD"
+  isRequired: true
+  title: Password
+  description: Testinium password
+  helpText:
+- key: "AC_TESTINIUM_PROJECT_ID"
+  defaultValue: "$AC_TESTINIUM_PROJECT_ID"
+  isRequired: true
+  title: Project ID
+  description: Testinium project ID
+  helpText:
+- key: "AC_TESTINIUM_PLAN_ID"
+  defaultValue: "$AC_TESTINIUM_PLAN_ID"
+  isRequired: true
+  title: Plan ID
+  description: Testinium plan ID
+  helpText:
+- key: "AC_TESTINIUM_COMPANY_ID"
+  defaultValue: "$AC_TESTINIUM_COMPANY_ID"
+  isRequired: true
+  title: Company ID
+  description: Testinium company ID
+  helpText:
+- key: "AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
+  defaultValue: "$AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
+  isRequired: false
+  title: Max Failure Percentage
+  description: "Maximum failure percentage limit to interrupt workflow. It must be in the range 1-100."
+  helpText:
+- key: "AC_TESTINIUM_TIMEOUT"
+  defaultValue: "6000"
+  isRequired: true
+  title: Timeout
+  description: Testinium plan timeout in seconds
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
