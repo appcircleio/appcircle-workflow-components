@@ -35,10 +35,13 @@ inputs:
   description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
   helpText:
 - key: "AC_JIRA_REST_API_VERSION"
-  defaultValue: "3"
+  defaultValue: "2"
   isRequired: true
+  editorType: select
   title: Jira REST API Version
   description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
+  options: "2"
+  helpText: "To modify the Jira API version, simply adjust it in the component version. For instance, to utilize API version `3`, update the component version to `3.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
