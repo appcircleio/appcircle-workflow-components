@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 4db4fd2
+commit: d5b4663
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -37,10 +37,12 @@ inputs:
 - key: "AC_JIRA_REST_API_VERSION"
   defaultValue: "3"
   isRequired: true
+  editorType: select
   title: Jira REST API Version
   description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
+  options: "3"
+  helpText: "To modify the Jira API version, simply adjust it in the component version. For instance, to utilize API version `2`, update the component version to `2.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
 - key: "AC_JIRA_ISSUE"
-  defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
   title: Jira Issue
   description: "The ID or key of the issue. Please check [documentation](https://docs.appcircle.io/integrations/jira-integration/) to learn how you can get this information from branch names or commit messages."
