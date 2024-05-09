@@ -60,7 +60,7 @@ inputs:
   title: Success Transition
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
-- key: "AC_JIRA_TEMPLATE"
+- key: "AC_JIRA_TEMPLATE_FOR_V2"
   defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
   isRequired: true
   title: Comment Template
