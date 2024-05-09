@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: d5b4663
+commit: ad05a20
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -34,14 +34,6 @@ inputs:
   title: Personal Access Token
   description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
   helpText:
-- key: "AC_JIRA_REST_API_VERSION"
-  defaultValue: "2"
-  isRequired: true
-  editorType: select
-  title: Jira REST API Version
-  description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
-  options: "2"
-  helpText: "To modify the Jira API version, simply adjust it in the component version. For instance, to utilize API version `3`, update the component version to `3.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
@@ -60,11 +52,11 @@ inputs:
   title: Success Transition
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
-- key: "AC_JIRA_TEMPLATE_FOR_V2"
+- key: "AC_JIRA_TEMPLATE_V2"
   defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
   isRequired: true
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version 3, templates can be sent different type via JSON. To modify the Jira API version, adjust it on the component version. For instance, to utilize API version `3`, update the component version to `3.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
   helpText:
 outputs:
 processFilename: ruby
