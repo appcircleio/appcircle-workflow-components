@@ -60,7 +60,7 @@ inputs:
   title: Success Transition
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
-- key: "AC_JIRA_TEMPLATE"
+- key: "AC_JIRA_TEMPLATE_V3"
   defaultValue: |
       {
       "version": 1,
