@@ -63,7 +63,6 @@ inputs:
 - key: "AC_JIRA_TEMPLATE"
   defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
   isRequired: true
-  editorType: textarea
   title: Comment Template
   description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build."
   helpText:
