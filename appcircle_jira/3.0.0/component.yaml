@@ -34,14 +34,6 @@ inputs:
   title: Personal Access Token
   description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
   helpText:
-- key: "AC_JIRA_REST_API_VERSION"
-  defaultValue: "3"
-  isRequired: true
-  editorType: select
-  title: Jira REST API Version
-  description: "Specify the REST API version of Jira. Cloud Jira users generally use the latest version (currently `3`) of the API, but Jira enterprise users can use different API versions."
-  options: "3"
-  helpText: "To modify the Jira API version, simply adjust it in the component version. For instance, to utilize API version `2`, update the component version to `2.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
@@ -227,7 +219,7 @@ inputs:
   isRequired: true
   editorType: textarea
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version 2, templates can only be sent as text. To modify the Jira API version, adjust it on the component version. For instance, to utilize API version `2`, update the component version to `2.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
+  description: "This comment template will be used to post a comment."
   helpText:
 outputs:
 processFilename: ruby
