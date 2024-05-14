@@ -20,7 +20,7 @@ inputs:
   defaultValue: "$AC_JIRA_EMAIL"
   isRequired: false
   title: Jira Email
-  description: "Email of Jira user. Please add this using **locked** environment variables."
+  description: "The email associated with your Jira account. This field is required for using API tokens instead of PAT."
   helpText:
 - key: "AC_JIRA_TOKEN"
   defaultValue: "$AC_JIRA_TOKEN"
@@ -44,7 +44,7 @@ inputs:
   defaultValue: "$AC_JIRA_FAIL_TRANSITION"
   isRequired: false
   title: Error Transition
-  description: "Transition ID or name for the failed step. If the previous state succeeds, you can optionally change the status of your issue."
+  description: "Transition ID or name for the failed step. Optionally change the status of your issue if the previous state fails. Ensure that the `Always run this step even if the previous steps fail` switch is turned for this feature to work."
   helpText:
 - key: "AC_JIRA_SUCCESS_TRANSITION"
   defaultValue: "$AC_JIRA_SUCCESS_TRANSITION"
