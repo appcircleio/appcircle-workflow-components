@@ -219,7 +219,7 @@ inputs:
   isRequired: true
   editorType: textarea
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **3**, templates can be sent different type via JSON. To modify the Jira API version, adjust it on the component version. For instance, to utilize API version `2`, update the component version to `2.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **3**, templates can be sent in any types via JSON. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference). You can use [ADF Builder](https://developer.atlassian.com/cloud/jira/platform/apis/document/playground/) to create your custom comment template."
   helpText:
 outputs:
 processFilename: ruby

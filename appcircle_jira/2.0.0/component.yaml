@@ -56,7 +56,7 @@ inputs:
   defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
   isRequired: true
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. To modify the Jira API version, adjust it on the component version. For instance, to utilize API version `3`, update the component version to `3.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference)."
   helpText:
 outputs:
 processFilename: ruby
