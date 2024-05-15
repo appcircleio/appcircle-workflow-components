@@ -18,22 +18,16 @@ inputs:
   helpText:
 - key: "AC_JIRA_EMAIL"
   defaultValue: "$AC_JIRA_EMAIL"
-  isRequired: false
+  isRequired: true
   title: Jira Email
-  description: "The email associated with your Jira account. This field is required for using API tokens instead of PAT."
+  description: "The email associated with your Jira account."
   helpText:
 - key: "AC_JIRA_TOKEN"
   defaultValue: "$AC_JIRA_TOKEN"
-  isRequired: false
+  isRequired: true
   title: API Token
-  description: "User's API Token. Please add this using **locked** environment variables. If this value is set, the Jira e-mail field must be filled for Basic Authentication. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
-  helpText:
-- key: "AC_JIRA_PAT"
-  defaultValue: "$AC_JIRA_PAT"
-  isRequired: false
-  title: Personal Access Token
-  description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
-  helpText:
+  description: "User's API Token. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens) (Only Jira On-Prem users can use PAT. For PAT auth, use component version 2.x.x with Jira API Version 2. More details [here](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference).)."
+  helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
