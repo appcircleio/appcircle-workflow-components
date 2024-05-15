@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 32e0cf5
+commit: d8c2e11
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -20,20 +20,20 @@ inputs:
   defaultValue: "$AC_JIRA_EMAIL"
   isRequired: false
   title: Jira Email
-  description: "Email of Jira user. Please add this using **locked** environment variables."
+  description: "The email associated with your Jira account. This field is required for using API tokens instead of PAT."
   helpText:
 - key: "AC_JIRA_TOKEN"
   defaultValue: "$AC_JIRA_TOKEN"
   isRequired: false
   title: API Token
-  description: "User's API Token. Please add this using **locked** environment variables. If this value is set, the Jira e-mail field must be filled for Basic Authentication. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
-  helpText:
+  description: "User's API Token. If this value is fill, the Jira e-mail field must be filled. Only Jira Cloud users can use API Token. You can create token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)."
+  helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_PAT"
   defaultValue: "$AC_JIRA_PAT"
   isRequired: false
   title: Personal Access Token
-  description: "Specify the Personal Access Token (PAT) for Jira authentication. If you have filled in this field for authentication, you do not need to fill in the `AC_JIRA_TOKEN` field."
-  helpText:
+  description: "Specify the Personal Access Token for Jira authentication. Only Jira On-Prem users can use PAT."
+  helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
@@ -44,7 +44,7 @@ inputs:
   defaultValue: "$AC_JIRA_FAIL_TRANSITION"
   isRequired: false
   title: Error Transition
-  description: "Transition ID or name for the failed step. If the previous state succeeds, you can optionally change the status of your issue."
+  description: "Transition ID or name for the failed step. Optionally change the status of your issue if the previous state fails. Ensure that the `Always run this step even if the previous steps fail` switch is turned for this feature to work."
   helpText:
 - key: "AC_JIRA_SUCCESS_TRANSITION"
   defaultValue: "$AC_JIRA_SUCCESS_TRANSITION"
@@ -56,7 +56,7 @@ inputs:
   defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
   isRequired: true
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. To modify the Jira API version, adjust it on the component version. For instance, to utilize API version `3`, update the component version to `3.0.*`. Explore the [Jira comment documentation](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference) for further details."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference)."
   helpText:
 outputs:
 processFilename: ruby
