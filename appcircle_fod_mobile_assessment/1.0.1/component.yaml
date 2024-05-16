@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Fortify on Demand Mobile Assessment
 description: "Submits a Fortify on Demand Mobile Assessment"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#fortify-on-demand
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/fod-mobile-assesment
 requiredComponents:
 precedingComponents:
 followingComponents:

@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Activate SSH Private Key
 description: "This step sets up your SSH key in the build machine if you used one to connect your repository. This allows the build machine to connect to your private repository using your SSH key."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#activate-ssh-key
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/active-ssh-private-key
 requiredComponents:
 precedingComponents:
 followingComponents: "appcircle_git_clone"

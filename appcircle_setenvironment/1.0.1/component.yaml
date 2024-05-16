@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Set Environment Variable
 description: "Set environment variables for the build."
-docsUrl: https://github.com/appcircleio/appcircle-setenvironment-component
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/set-environment-variable
 requiredComponents:
 precedingComponents:
 followingComponents:

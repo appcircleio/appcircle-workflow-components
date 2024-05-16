@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-app-distribution
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/firebase-app-distribution
 requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
 precedingComponents:
 followingComponents:
