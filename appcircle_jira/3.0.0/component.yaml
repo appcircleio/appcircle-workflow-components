@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: d8c2e11
+commit: d6351d6
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
