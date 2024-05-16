@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Snyk Scan Security
 description: "By utilizing this step, you will be able to test your project dependencies for vulnerabilities during builds and use Snyk to monitor your projects."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#snyk-scan-security
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/snyk-scan-security
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"

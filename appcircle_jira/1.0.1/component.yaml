@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
-docsUrl: https://docs.appcircle.io/integrations/jira-integration
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/jira-component
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents:

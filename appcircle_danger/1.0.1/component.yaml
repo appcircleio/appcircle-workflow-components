@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Danger
 description: "Runs Danger CI"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#code-reviews-with-danger
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/danger
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: 

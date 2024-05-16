@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: FTP Upload
 description: "Upload file or folders to given FTP server."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#ftp-upload
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/ftp-upload
 requiredComponents:
 precedingComponents:
 followingComponents:

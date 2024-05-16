@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#cache-pull
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-cache/cache-pull
 requiredComponents: 
 precedingComponents: "appcircle_git_clone"
 followingComponents: 

@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: ReactNative, JavaKotlin
 displayName: Firebase App Distribution for Android
 description: "Distribute your builds via Firebase App Distribution"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-app-distribution
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/firebase-app-distribution
 requiredComponents: "appcircle_android_build"
 precedingComponents: "appcircle_android_sign"
 followingComponents:

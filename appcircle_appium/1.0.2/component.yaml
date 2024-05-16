@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Appium Server
 description: "Installs and runs Appium Server."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#appium-server
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/appium-server
 requiredComponents:
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
