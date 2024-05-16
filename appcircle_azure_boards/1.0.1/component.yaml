@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."
-docsUrl: https://docs.appcircle.io/integrations/azure-board
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/azure-board
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents:

@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Publish Release Notes
 description: "Publish release notes to stores."
-docsUrl: https://docs.appcircle.io/integrations/managing-release-notes
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/publish-release-notes
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
