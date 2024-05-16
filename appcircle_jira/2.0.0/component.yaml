@@ -26,7 +26,7 @@ inputs:
   defaultValue: "$AC_JIRA_TOKEN"
   isRequired: false
   title: API Token
-  description: "User's API Token. If this value is fill, the Jira e-mail field must be filled. Only Jira Cloud users can use API Token. You can create token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)."
+  description: "User's API Token. If this value is filled, the Jira e-mail field must be filled. Only Jira Cloud users can use API Token. You can create token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)."
   helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_PAT"
   defaultValue: "$AC_JIRA_PAT"
