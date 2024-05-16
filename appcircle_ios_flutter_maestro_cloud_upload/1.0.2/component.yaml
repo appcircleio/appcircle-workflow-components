@@ -1,0 +1,123 @@
+platform: iOS
+buildPlatform: Flutter
+displayName: Maestro Cloud Upload
+description: "Upload both your app binary and flows to Maestro Cloud."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/maestro-cloud-upload
+requiredComponents: "appcircle_git_clone,appcircle_ios_build_sign,appcircle_ios_flutter_build"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component
+repoUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component.git
+commit: a8c7189
+inputs:
+- key: "AC_MAESTRO_API_KEY"
+  defaultValue: "$AC_MAESTRO_API_KEY"
+  isRequired: true
+  title: API key
+  description: "Maestro Cloud API key"  
+  helpText:
+- key: "AC_MAESTRO_APP_FILE"
+  defaultValue: "$AC_MAESTRO_APP_FILE"
+  isRequired: true
+  title: App File
+  description: "**Android**: `app_file` should point to an x86 compatible APK file. **iOS**: `app_file` should point to an x86 compatible Simulator build packaged in a zip archive."
+  helpText:
+- key: "AC_MAESTRO_WORKSPACE"
+  defaultValue: ".maestro"
+  isRequired: true
+  title: Flow file or directory
+  description: "By default, the action is looking for a .maestro folder with Maestro flows in the root directory of the project. If you would like to customize this behaviour, you can override it with a workspace argument"
+  helpText:
+- key: "AC_MAESTRO_UPLOAD_NAME"
+  defaultValue: "$AC_COMMIT_MESSAGE"
+  isRequired: false
+  title: Upload Name
+  description: "Custom upload name"
+  helpText:
+- key: "AC_MAESTRO_ASYNC"
+  defaultValue: "false"
+  isRequired: false
+  editorType: select
+  options: "false,true"
+  title: Async Mode
+  description: "Run in async mode"
+  helpText:
+- key: "AC_MAESTRO_ENV"
+  defaultValue: "$AC_MAESTRO_ENV"
+  isRequired: false
+  title: Environment variables
+  description: "Pass environment variables to your flows"
+  helpText: "If you want to pass environment variables along with your upload, add variables separated by a new line or **\n**.i.e VAR1=1\nVAR2=2 ..."
+- key: "AC_MAESTRO_ANDROID_API_LEVEL"
+  defaultValue: "$AC_MAESTRO_ANDROID_API_LEVEL"
+  isRequired: false
+  title: Android api level
+  description: "Set the Android api level the devices should run (Default: 30)"
+  helpText:
+- key: "AC_MAESTRO_INCLUDE_TAGS"
+  defaultValue: "$AC_MAESTRO_INCLUDE_TAGS"
+  isRequired: false
+  title: Include tags
+  description: "Run only flows that contain the specified tags (comma separated) i.e dev,pull-request"
+  helpText:
+- key: "AC_MAESTRO_EXCLUDE_TAGS"
+  defaultValue: "$AC_MAESTRO_EXCLUDE_TAGS"
+  isRequired: false
+  title: Exclude tags
+  description: "Exclude flows from running with the specified tags (comma separated) i.e pull-request,experimental"
+  helpText:
+- key: "AC_MAESTRO_EXPORT_TEST_REPORT"
+  defaultValue: "false"
+  isRequired: false
+  editorType: select
+  options: "false,true"
+  title: Export test report (JUnit)
+  description: "Generate test suite report (JUnit)"
+  helpText:
+- key: "AC_MAESTRO_EXPORT_OUTPUT"
+  defaultValue: "$AC_MAESTRO_EXPORT_OUTPUT"
+  isRequired: false
+  title: Export test output
+  description: "Export test file output (Default: report.xml)"
+  helpText:
+- key: "AC_MAESTRO_MAPPING_FILE"
+  defaultValue: "$AC_MAESTRO_MAPPING_FILE"
+  isRequired: false
+  title: Mapping File
+  description: "**Android**: Include the Proguard mapping file to deobfuscate Android performance traces.**iOS**: Include the generated .dSYM file (unique per build)"
+  helpText:
+- key: "AC_MAESTRO_BRANCH"
+  defaultValue: "$AC_GIT_BRANCH"
+  isRequired: false
+  title: Build branch
+  description: "The branch this upload originated from"
+  helpText:
+- key: "AC_MAESTRO_REPO_NAME"
+  defaultValue: "$AC_MAESTRO_REPO_NAME"
+  isRequired: false
+  title: Repository name
+  description: "Repository name (ie: GitHub repo slug)"
+  helpText:
+- key: "AC_MAESTRO_REPO_OWNER"
+  defaultValue: "$AC_MAESTRO_REPO_OWNER"
+  isRequired: false
+  title: Repository owner
+  description: "Repository owner (ie: GitHub organization or user slug)"
+  helpText:
+- key: "AC_MAESTRO_PULL_ID"
+  defaultValue: "$AC_PULL_NUMBER"
+  isRequired: false
+  title: Pull request id
+  description: "The ID of the pull request this upload originated from"
+  helpText:
+- key: "AC_MAESTRO_CLI_VERSION"
+  defaultValue: "$AC_MAESTRO_CLI_VERSION"
+  isRequired: false
+  title: Maestro CLI version
+  description: "Maestro CLI version to be downloaded in your CI (Default: latest)"
+  helpText:
+outputs:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
