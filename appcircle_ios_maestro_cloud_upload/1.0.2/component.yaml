@@ -2,8 +2,8 @@ platform: iOS
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#maestro-cloud-upload
-requiredComponents: "appcircle_git_clone,appcircle_ios_flutter_build,appcircle_ios_build_sign"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/maestro-cloud-upload
+requiredComponents: "appcircle_git_clone,appcircle_ios_build_sign"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component

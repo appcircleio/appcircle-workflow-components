@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: ReactNative, JavaKotlin
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/#maestro-cloud-upload
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/maestro-cloud-upload
 requiredComponents: "appcircle_git_clone,appcircle_android_build"
 precedingComponents: "appcircle_android_sign"
 followingComponents: "appcircle_export_build_artifacts"
