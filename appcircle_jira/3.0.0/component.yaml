@@ -2,13 +2,13 @@ platform: Common
 buildPlatform:
 displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/jira-component
+docsUrl: https://docs.appcircle.io/integrations/jira-integration
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: dc4ba69
+commit: d6351d6
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -20,14 +20,14 @@ inputs:
   defaultValue: "$AC_JIRA_EMAIL"
   isRequired: true
   title: Jira Email
-  description: "Email of Jira user. Please add this using **locked** environment variables."
+  description: "The email associated with your Jira account."
   helpText:
 - key: "AC_JIRA_TOKEN"
   defaultValue: "$AC_JIRA_TOKEN"
   isRequired: true
   title: API Token
-  description: "User's API Token. Please add this using **locked** environment variables. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)"
-  helpText:
+  description: "User's API Token. You can create your token from [here](https://id.atlassian.com/manage-profile/security/api-tokens) (Only Jira On-Prem users can use PAT. For PAT auth, use component version 2.x.x with Jira API Version 2. More details [here](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference).)."
+  helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_ISSUE"
   defaultValue: "$AC_JIRA_ISSUE"
   isRequired: true
@@ -38,7 +38,7 @@ inputs:
   defaultValue: "$AC_JIRA_FAIL_TRANSITION"
   isRequired: false
   title: Error Transition
-  description: "Transition ID or name for the failed step. If the previous state succeeds, you can optionally change the status of your issue."
+  description: "Transition ID or name for the failed step. Optionally change the status of your issue if the previous state fails. Ensure that the `Always run this step even if the previous steps fail` switch is turned for this feature to work."
   helpText:
 - key: "AC_JIRA_SUCCESS_TRANSITION"
   defaultValue: "$AC_JIRA_SUCCESS_TRANSITION"
@@ -46,7 +46,7 @@ inputs:
   title: Success Transition
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
-- key: "AC_JIRA_TEMPLATE"
+- key: "AC_JIRA_TEMPLATE_V3"
   defaultValue: |
       {
       "version": 1,
@@ -213,7 +213,7 @@ inputs:
   isRequired: true
   editorType: textarea
   title: Comment Template
-  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build."
+  description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **3**, templates can be sent in any types via JSON. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference). You can use [ADF Builder](https://developer.atlassian.com/cloud/jira/platform/apis/document/playground/) to create your custom comment template."
   helpText:
 outputs:
 processFilename: ruby

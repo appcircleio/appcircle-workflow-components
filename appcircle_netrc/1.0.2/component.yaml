@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/authanticate-with-netrc
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/authenticate-with-netrc
 requiredComponents: 
 precedingComponents: 
 followingComponents:  
