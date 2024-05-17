@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Fastlane
 description: "Runs fastlane lane."
-docsUrl: https://docs.appcircle.io/integrations/using-fastlane-in-the-workflows
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/fastlane
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: 

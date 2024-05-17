@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform:
 displayName: "Xcodebuild for Unit and UI Tests"
 description: "Performs unit and UI tests for your iOS applications."
-docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#xcodebuild-for-unit-and-ui-tests
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-unit-and-ui-test
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
 precedingComponents: "appcircle_cocoapods,appcircle_carthage"
 followingComponents: "appcircle_export_build_artifacts"

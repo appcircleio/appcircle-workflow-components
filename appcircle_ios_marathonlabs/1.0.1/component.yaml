@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform: ObjectiveCSwift
 displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android and iOS tests on Marathon Cloud."
-docsUrl: https://github.com/appcircleio/appcircle-marathonlabs-component
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/marathon-cloud
 requiredComponents: "appcircle_ios_build_for_testing"
 precedingComponents: 
 followingComponents: "appcircle_export_build_artifacts"

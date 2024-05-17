@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Upload Files to Amazon S3
 description: "Upload a file to Amazon S3."
-docsUrl: https://docs.appcircle.io/integrations/uploading-files-to-amazon-sin-the-workflows
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/upload-files-to-amazon-s3
 requiredComponents:
 precedingComponents:
 followingComponents:

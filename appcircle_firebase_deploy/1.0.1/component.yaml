@@ -2,7 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Firebase Deployment
 description: "Deploy your web applications to Firebase Hosting"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#firebase-deployment
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/firebase-deployment
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: 

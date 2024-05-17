@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: d8c2e11
+commit: 8fefaaf
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -26,7 +26,7 @@ inputs:
   defaultValue: "$AC_JIRA_TOKEN"
   isRequired: false
   title: API Token
-  description: "User's API Token. If this value is fill, the Jira e-mail field must be filled. Only Jira Cloud users can use API Token. You can create token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)."
+  description: "User's API Token. If this value is filled, the Jira e-mail field must be filled. Only Jira Cloud users can use API Token. You can create token from [here](https://id.atlassian.com/manage-profile/security/api-tokens)."
   helpText: "Please add this using **locked** environment variables."
 - key: "AC_JIRA_PAT"
   defaultValue: "$AC_JIRA_PAT"
@@ -53,8 +53,14 @@ inputs:
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
 - key: "AC_JIRA_TEMPLATE_V2"
-  defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
+  defaultValue: |
+    - **Date (UTC)**: AC_JIRA_DATE 
+    - **Appcircle Workflow Name**: $AC_WORKFLOW_NAME 
+    - **Commit ID**: $AC_GIT_COMMIT
+    - **Git Branch**: $AC_GIT_BRANCH 
+    - **Commit Message**: $AC_COMMIT_MESSAGE
   isRequired: true
+  editorType: textarea
   title: Comment Template
   description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference)."
   helpText:
