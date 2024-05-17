@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform:
 displayName: Azure DevOps Bot for Swiftlint Report
 description: "Bot script that allows Swiftlint outputs to make changes to Azure DevOps Pull Requests."
-docsUrl: https://docs.appcircle.io/integrations/azure-bot-for-swiftlint-and-detekt#azure-devops-bot-for-swiftlint
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/azure-bot-for-swiftlint#azure-devops-bot-for-swiftlint
 requiredComponents: "appcircle_swiftlint"
 precedingComponents: 
 followingComponents: 

@@ -2,8 +2,8 @@ platform: iOS
 buildPlatform:
 displayName: Tuist
 description: "Install Tuist and Generate a Project."
-docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps#tuist
-requiredComponents: 
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist
+requiredComponents:
 precedingComponents: 
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-tuist-component

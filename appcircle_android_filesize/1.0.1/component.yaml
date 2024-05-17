@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: ReactNative, JavaKotlin
 displayName: File Size Check for Android
 description: "Checks the file size of build artifacts."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-and-test/file-size-check
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/file-size-check
 requiredComponents: "appcircle_android_build"
 precedingComponents: "appcircle_android_sign"
 followingComponents:

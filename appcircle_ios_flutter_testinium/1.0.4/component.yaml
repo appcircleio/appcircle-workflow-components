@@ -1,0 +1,86 @@
+platform: iOS
+buildPlatform: Flutter
+displayName: Testinium
+description: "Run your test plans with Testinium"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
+requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-testinium-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
+commit: f1d0305
+inputs:
+- key: "AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_TESTINIUM_APP_PATH"
+  isRequired: true
+  title: Path of the build
+  description: "Full path of the build. For example $AC_EXPORT_DIR/Myapp.ipa."
+  helpText:
+- key: "AC_TESTINIUM_USERNAME"
+  defaultValue: "$AC_TESTINIUM_USERNAME"
+  isRequired: true
+  title: Username
+  description: "Testinium username."
+  helpText:
+- key: "AC_TESTINIUM_PASSWORD"
+  defaultValue: "$AC_TESTINIUM_PASSWORD"
+  isRequired: true
+  title: Password
+  description: "Testinium password."
+  helpText:
+- key: "AC_TESTINIUM_PROJECT_ID"
+  defaultValue: "$AC_TESTINIUM_PROJECT_ID"
+  isRequired: true
+  title: Project ID
+  description: "Testinium project ID."
+  helpText:
+- key: "AC_TESTINIUM_PLAN_ID"
+  defaultValue: "$AC_TESTINIUM_PLAN_ID"
+  isRequired: true
+  title: Plan ID
+  description: "Testinium plan ID."
+  helpText:
+- key: "AC_TESTINIUM_COMPANY_ID"
+  defaultValue: "$AC_TESTINIUM_COMPANY_ID"
+  isRequired: true
+  title: Company ID
+  description: "Testinium company ID."
+  helpText:
+- key: "AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
+  defaultValue: "$AC_TESTINIUM_MAX_FAIL_PERCENTAGE"
+  isRequired: false
+  title: Max Failure Percentage
+  description: "Maximum failure percentage limit to interrupt workflow. It must be in the range 1-100."
+  helpText:
+- key: "AC_TESTINIUM_TIMEOUT"
+  defaultValue: "60"
+  isRequired: true
+  title: Timeout
+  description: "Testinium plan timeout in minutes."
+  helpText:
+- key: "AC_TESTINIUM_MAX_API_RETRY_COUNT"
+  defaultValue: "4"
+  isRequired: true
+  title: Testinium Maximum API Repetition Count
+  description: "Determine max repetition in case of Testinium platform congestion or API errors."
+  helpText:
+outputs:
+- key: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
+  title: "Total Number of Failures"
+  defaultValue: "AC_TESTINIUM_RESULT_FAILURE_SUMMARY"
+  description: "Total number of failures in test results."
+  helpText:
+- key: "AC_TESTINIUM_RESULT_ERROR_SUMMARY"
+  title: "Total Number of Errors"
+  description: "Total number of errors in test results."
+  defaultValue: "AC_TESTINIUM_RESULT_ERROR_SUMMARY"
+  helpText:
+- key: "AC_TESTINIUM_RESULT_SUCCESS_SUMMARY"
+  title: "Total Number of Successes"
+  defaultValue: "AC_TESTINIUM_RESULT_SUCCESS_SUMMARY"
+  description: "Total number of successes in test results."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

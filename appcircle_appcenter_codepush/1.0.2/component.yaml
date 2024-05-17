@@ -2,7 +2,7 @@ platform: Common
 buildPlatform: ReactNative
 displayName: App Center CodePush
 description: "Release a React Native update to App Center CodePush."
-docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/#app-center-codepush
+docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/app-center-code-push
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents:

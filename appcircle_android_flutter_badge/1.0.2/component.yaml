@@ -2,7 +2,7 @@ platform: Android
 buildPlatform: Flutter
 displayName: Add Badge onto Your App Icon
 description: "Install Imagemagick and add badge onto your icons."
-docsUrl: https://github.com/appcircleio/appcircle-badge-component
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/add-badge-app-icon
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_android_flutter_build_version_increment"
 followingComponents: "appcircle_android_flutter_build"
