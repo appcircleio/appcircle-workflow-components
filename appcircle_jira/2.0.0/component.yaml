@@ -8,13 +8,13 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: d6351d6
+commit: 3097b11
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
   isRequired: true
   title: Jira Host
-  description: "Your Jira subdomain. Example: `mysubdomain.atlassian.net`"  
+  description: "Your Jira subdomain. Example: `https://mysubdomain.atlassian.net`"  
   helpText:
 - key: "AC_JIRA_EMAIL"
   defaultValue: "$AC_JIRA_EMAIL"
@@ -53,8 +53,14 @@ inputs:
   description: "Transition ID or name for the successful step. If the previous state succeeds, you can optionally change the status of your issue."
   helpText:
 - key: "AC_JIRA_TEMPLATE_V2"
-  defaultValue: "Commit ID: $AC_GIT_COMMIT | Git Branch: $AC_GIT_BRANCH | Commit Message: $AC_COMMIT_MESSAGE | Appcircle Workflow Name: $AC_WORKFLOW_NAME | Date (UTC): AC_JIRA_DATE" 
+  defaultValue: |
+    - *Date (UTC)*: AC_JIRA_DATE 
+    - *Appcircle Workflow Name*: $AC_WORKFLOW_NAME 
+    - *Commit ID*: $AC_GIT_COMMIT
+    - *Git Branch*: $AC_GIT_BRANCH 
+    - *Commit Message*: $AC_COMMIT_MESSAGE
   isRequired: true
+  editorType: textarea
   title: Comment Template
   description: "This comment template will be used to post a comment. Variables donated with `$` will be replaced during the build. In Jira API version **2**, templates can only be sent as text. [To modify the Jira API version, adjust the component version](https://docs.appcircle.io/workflows/common-workflow-steps/jira-comment/#jira-rest-api-version-reference)."
   helpText:
