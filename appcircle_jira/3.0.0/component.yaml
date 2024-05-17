@@ -8,13 +8,13 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: 8fefaaf
+commit: 3bd7807
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
   isRequired: true
   title: Jira Host
-  description: "Your Jira subdomain. Example: `mysubdomain.atlassian.net`"  
+  description: "Your Jira subdomain. Example: `https://mysubdomain.atlassian.net`"  
   helpText:
 - key: "AC_JIRA_EMAIL"
   defaultValue: "$AC_JIRA_EMAIL"
