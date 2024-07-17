@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-jira-component
 repoUrl: https://github.com/appcircleio/appcircle-jira-component.git
-commit: f617819
+commit: e5d2ec6
 inputs:
 - key: "AC_JIRA_HOST"
   defaultValue: "$AC_JIRA_HOST"
@@ -54,10 +54,10 @@ inputs:
   helpText:
 - key: "AC_JIRA_TEMPLATE_V2"
   defaultValue: |
-    - *Date (UTC)*: AC_JIRA_DATE 
-    - *Appcircle Workflow Name*: $AC_WORKFLOW_NAME 
-    - *Commit ID*: $AC_GIT_COMMIT
-    - *Git Branch*: $AC_GIT_BRANCH 
+    - *Date (UTC)*: AC_JIRA_DATE \\
+    - *Appcircle Workflow Name*: $AC_WORKFLOW_NAME \\
+    - *Commit ID*: $AC_GIT_COMMIT \\
+    - *Git Branch*: $AC_GIT_BRANCH \\
     - *Commit Message*: $AC_COMMIT_MESSAGE
   isRequired: true
   editorType: textarea
