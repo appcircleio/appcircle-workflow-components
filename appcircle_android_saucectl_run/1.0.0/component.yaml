@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
 repoUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component.git
-commit: 62b6e4e
+commit: 3076f16
 inputs:
   - key: "AC_SL_CONFIG_PATH"
     defaultValue: ".sauce/config.yml"
@@ -62,7 +62,7 @@ inputs:
     title: Sauce Labs When to Download Artifacts
     description: "Criteria for downloading assets. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactsdownloadwhen) documentation for the option detail."
   - key: "AC_SL_ASYNC"
-    defaultValue: "true"
+    defaultValue: "false"
     editorType: select
     options: "true,false"
     isRequired: false
