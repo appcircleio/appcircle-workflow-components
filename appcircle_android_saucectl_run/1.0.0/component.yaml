@@ -38,7 +38,7 @@ inputs:
     title: Sauce Labs Select Suite
     description: "Specifies a test suite to execute by name rather than all suites defined in the config file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--select-suite) documentation for the option detail."
   - key: "AC_SL_ARTIFACT_CLEANUP"
-    defaultValue: "$AC_SL_ARTIFACT_CLEANUP"
+    defaultValue: "false"
     editorType: select
     options: "true,false"
     isRequired: false
@@ -91,7 +91,7 @@ inputs:
     title: Sauce Labs Fail Fast
     description: "Stop suite execution after the first failure. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--fail-fast) documentation for the option detail."
   - key: "AC_SL_REGION"
-    defaultValue: "$AC_SL_REGION"
+    defaultValue: "eu-central-1"
     editorType: select
     options: "us-west-1,us-east-4,eu-central-1"
     isRequired: true
