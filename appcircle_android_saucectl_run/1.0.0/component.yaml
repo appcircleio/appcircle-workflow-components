@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
 repoUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component.git
-commit: 62b6e4e
+commit: 3076f16
 inputs:
   - key: "AC_SL_CONFIG_PATH"
     defaultValue: ".sauce/config.yml"
@@ -62,7 +62,7 @@ inputs:
     title: Sauce Labs When to Download Artifacts
     description: "Criteria for downloading assets. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactsdownloadwhen) documentation for the option detail."
   - key: "AC_SL_ASYNC"
-    defaultValue: "true"
+    defaultValue: "false"
     editorType: select
     options: "true,false"
     isRequired: false
@@ -74,7 +74,7 @@ inputs:
     title: Sauce Labs Build Reference
     description: "Associates the tests with a build to support easy filtering of related test results in the Sauce Labs UI. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--build) documentation for the option detail."
   - key: "AC_SL_CCY"
-    defaultValue: "AC_SL_CCY"
+    defaultValue: "$AC_SL_CCY"
     isRequired: false
     title: Sauce Labs Concurrency
     description: "Maximum tests to run concurrently. If the config defines more suites than the max, excess suites are queued and run in order as each suite completes. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--ccy) documentation for the option detail."
