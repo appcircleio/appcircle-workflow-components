@@ -1,5 +1,5 @@
 platform: Android
-buildPlatform: ReactNative, JavaKotlin, Flutter
+buildPlatform: Flutter
 displayName: "Android Saucectl Run"
 description: "Automate the execution of UI tests for Android applications using Saucectl by Sauce Labs."
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-saucectl-run
