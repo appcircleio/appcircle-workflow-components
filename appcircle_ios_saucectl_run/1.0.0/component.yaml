@@ -1,9 +1,9 @@
-platform: Android
-buildPlatform: JavaKotlin
+platform: iOS
+buildPlatform: ObjectiveCSwift
 displayName: "Saucectl Run"
-description: "Automate the execution of UI tests for Android applications using Saucectl by Sauce Labs."
-docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-saucectl-run
-requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
+description: "Automate the execution of UI tests for iOS applications using Saucectl by Sauce Labs."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run
+requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
@@ -38,15 +38,15 @@ inputs:
     title: Sauce Labs Select Suite
     description: "Specifies a test suite to execute by name rather than all suites defined in the config file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--select-suite) documentation for the option detail."
   - key: "AC_SL_APP_PATH"
-    defaultValue: "$AC_APK_PATH"
+    defaultValue: "$AC_TEST_IPA_PATH"
     isRequired: false
     title: Sauce Labs App
-    description: "Path to the main application file that will be tested. This should be the location of the APK within the Sauce Labs environment or your build process. If not provided, app will be used as default in config.yml"
+    description: "Path to the main application file that will be tested. This should be the location of the app (APK for Android or IPA for iOS) within the Sauce Labs environment or your build process. If not provided, app will be used as default in config.yml"
   - key: "AC_SL_TEST_APP_PATH"
-    defaultValue: "$AC_TEST_APK_PATH"
+    defaultValue: "$AC_UITESTS_RUNNER_PATH"
     isRequired: false
     title: Sauce Labs Test App
-    description: "Path to the test application file, which contains the test code to be run against the main app. This is usually a separate test APK. If not provided, app will be used as default in config.yml"
+    description: "Path to the test application file, which contains the test code to be run against the main app. This is usually a separate test APK for Android or an additional test bundle for iOS. If not provided, app will be used as default in config.yml"
   - key: "AC_SL_ARTIFACT_CLEANUP"
     defaultValue: "false"
     editorType: select
