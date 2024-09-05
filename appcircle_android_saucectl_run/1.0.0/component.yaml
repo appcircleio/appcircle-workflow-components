@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
 repoUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component.git
-commit: 6362854
+commit: 8ff3b2c
 inputs:
   - key: "AC_SL_CONFIG_PATH"
     defaultValue: ".sauce/config.yml"
