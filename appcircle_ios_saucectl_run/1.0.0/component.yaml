@@ -6,8 +6,8 @@ docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run
 requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
-webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
-repoUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component.git
+webUrl: https://github.com/appcircleio/appcircle-saucectl-run-component
+repoUrl: https://github.com/appcircleio/appcircle-saucectl-run-component.git
 commit: 8ff3b2c
 inputs:
   - key: "AC_SL_CONFIG_PATH"
