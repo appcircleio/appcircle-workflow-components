@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: 06b7990
+commit: c27c01c
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -17,7 +17,6 @@ inputs:
   description: The path to the directory that contains the definition of the project. Defaults to current directory.
   helpText:
 - key: "AC_TUIST_VERSION"
-  defaultValue: "$AC_TUIST_VERSION"
   isRequired: false
   title: Tuist Version
   description: The version of Tuist, you can specify a specific Tuist version. If it is empty, Appcircle will install the latest version of Tuist.
