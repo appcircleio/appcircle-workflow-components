@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_android_build"
 webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
-commit: bf970db
+commit: 7ec18e5
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
