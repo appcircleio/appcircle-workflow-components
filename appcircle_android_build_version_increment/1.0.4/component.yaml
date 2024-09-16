@@ -1,0 +1,79 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin
+displayName: Increment Build and Version Number
+description: 'Increment Build and Version Number for Android'
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/increment-build-and-version-number
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents: "appcircle_android_build"
+webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
+repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
+commit: 7ec18e5
+inputs:
+  - key: 'AC_REPOSITORY_DIR'
+    defaultValue: '$AC_REPOSITORY_DIR'
+    isRequired: true
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+  - key: "AC_PROJECT_PATH"
+    defaultValue: "$AC_PROJECT_PATH"
+    isRequired: false
+    title: Project Path
+    description: "Specifies the project folder. Defaults to the current directory."
+  - key: "AC_BUILD_NUMBER_SOURCE"
+    defaultValue: "$AC_BUILD_NUMBER_SOURCE"
+    isRequired: false
+    title: Version Code Source
+    description: Version code source type(env,gradle).
+  - key: "AC_ANDROID_BUILD_NUMBER"
+    defaultValue: "$AC_ANDROID_BUILD_NUMBER"
+    isRequired: false
+    title: Version Code
+    description: Version Code. Default value is $AC_BUILD_NUMBER.
+  - key: "AC_BUILD_OFFSET"
+    defaultValue: "$AC_BUILD_OFFSET"
+    isRequired: false
+    title: Version Code Increment Offset
+  - key: "AC_VERSION_NUMBER_SOURCE"
+    defaultValue: "$AC_VERSION_NUMBER_SOURCE"
+    isRequired: false
+    title: Version Name Source
+    description: Version number source type(env,gradle).
+  - key: "AC_ANDROID_VERSION_NUMBER"
+    defaultValue: "$AC_ANDROID_VERSION_NUMBER"
+    isRequired: false
+    title: Version Name
+    description: Version Name
+  - key: "AC_VERSION_STRATEGY"
+    defaultValue: "$AC_VERSION_STRATEGY"
+    isRequired: false
+    title: Version Name Incremeent Strategy
+    description: Version Name Increment Strategy major, minor, patch or keep. Default is keep 
+  - key: "AC_VERSION_OFFSET"
+    defaultValue: "$AC_VERSION_OFFSET"
+    isRequired: false
+    title: Version Name Increment Offset
+    description: "The number to be added or subtracted from the version name. Negative values can be written such as -10. Default is 0"
+  - key: "AC_OMIT_ZERO_PATCH_VERSION"
+    defaultValue: "$AC_OMIT_ZERO_PATCH_VERSION"
+    isRequired: false
+    title: Omit Zero Patch Version
+    description: "If true omits zero in patch version(so 42.10.0 will become 42.10 and 42.10.1 will remain 42.10.1), default is false"
+  - key: "AC_VERSION_FLAVOR"
+    defaultValue: "$AC_VERSION_FLAVOR"
+    isRequired: false
+    title: Flavor
+    description: Name of the flavor to update. Default is none.
+outputs:
+  - key: "AC_ANDROID_NEW_VERSION_CODE"
+    title: Changed version code
+    defaultValue: AC_ANDROID_NEW_VERSION_CODE
+    description: Incremented version code that is written to the project.
+  - key: "AC_ANDROID_NEW_VERSION_NAME"
+    title: Changed version number
+    defaultValue: AC_ANDROID_NEW_VERSION_NAME
+    description: Incremented version name that is written to the project.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'
