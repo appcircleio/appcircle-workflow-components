@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform: ObjectiveCSwift
-displayName: "Saucectl Run"
+displayName: "Sauce Labs Saucectl"
 description: "Automate the execution of UI tests for iOS applications using Saucectl by Sauce Labs."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run
 requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-saucectl-run-component
 repoUrl: https://github.com/appcircleio/appcircle-saucectl-run-component.git
-commit: 8ff3b2c
+commit: 9583921
 inputs:
   - key: "AC_SL_CONFIG_PATH"
     defaultValue: ".sauce/config.yml"
@@ -25,7 +25,7 @@ inputs:
     isRequired: true
     title: Sauce Labs Access Key
     description: "Sauce Labs access key. It must be set as a secret environment variable."
-  - key: "AC_RUN_ONLY_VIA_CONFIG"
+  - key: "AC_SL_RUN_ONLY_VIA_CONFIG"
     defaultValue: "false"
     editorType: select
     options: "true,false"
