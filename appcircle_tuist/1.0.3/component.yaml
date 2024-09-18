@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: a71a98b
+commit: abf8494
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -36,14 +36,6 @@ inputs:
   isRequired: false
   title: Run Your Test
   description: Run your Tests in your project via `tuist test` command
-  helpText:
-- key: "AC_TUIST_FETCH"
-  editorType: select
-  options: "false,true"
-  defaultValue: "false"
-  isRequired: false
-  title: Fetch Project Dependencies
-  description: Fetch all project dependencies via `tuist fetch` command before generate or build commands.
   helpText:
 - key: "AC_TUIST_CLEAN"
   editorType: select
