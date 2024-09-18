@@ -2,12 +2,12 @@ platform: iOS
 buildPlatform: ObjectiveCSwift
 displayName: "Sauce Labs Saucectl"
 description: "Automate the execution of UI tests for iOS applications using Saucectl by Sauce Labs."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/sauce-labs-saucectl
 requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
-webUrl: https://github.com/appcircleio/appcircle-saucectl-run-component
-repoUrl: https://github.com/appcircleio/appcircle-saucectl-run-component.git
+webUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component
+repoUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component.git
 commit: 9583921
 inputs:
   - key: "AC_SL_CONFIG_PATH"
