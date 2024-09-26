@@ -1,0 +1,45 @@
+platform: Common
+buildPlatform: ReactNative
+displayName: "React Native E2E Test"
+description: "Run React Native E2E Tests with Detox"
+docsUrl: https://docs.appcircle.io/continuous-testing
+requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn,appcircle_cocoapods"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-react-native-e2e-test-component
+repoUrl: https://github.com/appcircleio/appcircle-react-native-e2e-test-component.git
+commit: f94eb7a
+inputs:
+  - key: "AC_REPOSITORY_DIR"
+    defaultValue: "$AC_REPOSITORY_DIR"
+    isRequired: true
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+    helpText:
+  - key: "AC_OUTPUT_DIR"
+    defaultValue: "$AC_OUTPUT_DIR"
+    isRequired: true
+    title: Output Direction
+    description: Specify the output directory.
+    helpText:
+  - key: "AC_RN_DETOX_CONFIGURATION"
+    defaultValue: "$AC_RN_DETOX_CONFIGURATION"
+    isRequired: true
+    title: Detox Configuration Name
+    description: Specify the detox configuration name to used when building and running the tests.
+    helpText:
+outputs:
+  - key: "AC_TEST_RESULT_PATH"
+    defaultValue: "AC_TEST_RESULT_PATH"
+    title: Test Result Path
+    description: Path to the test result file.
+    helpText:
+  - key: "AC_COVERAGE_RESULT_PATH"
+    defaultValue: "AC_COVERAGE_RESULT_PATH"
+    title: Coverage Result Path
+    description: Path to the coverage result file.
+    helpText:
+processFilename: ruby
+processArguments: "%AC_STEP_TEMP%/main.rb"
+files:
+  - "main.rb"
