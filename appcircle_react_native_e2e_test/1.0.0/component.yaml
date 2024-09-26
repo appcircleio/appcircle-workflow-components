@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-e2e-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-e2e-test-component.git
-commit: f94eb7a
+commit: b56b80b
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
@@ -33,11 +33,6 @@ outputs:
     defaultValue: "AC_TEST_RESULT_PATH"
     title: Test Result Path
     description: Path to the test result file.
-    helpText:
-  - key: "AC_COVERAGE_RESULT_PATH"
-    defaultValue: "AC_COVERAGE_RESULT_PATH"
-    title: Coverage Result Path
-    description: Path to the coverage result file.
     helpText:
 processFilename: ruby
 processArguments: "%AC_STEP_TEMP%/main.rb"
