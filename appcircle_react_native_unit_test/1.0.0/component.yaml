@@ -2,7 +2,7 @@ platform: Common
 buildPlatform: ReactNative
 displayName: "React Native Unit Test"
 description: "Run your react native tests"
-docsUrl: https://docs.appcircle.io/continuous-testing
+docsUrl: https://docs.appcircle.io//workflows/react-native-specific-workflow-steps/react-native-unit-test
 requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
@@ -32,7 +32,7 @@ outputs:
   - key: "AC_TEST_RESULT_PATH"
     defaultValue: "AC_TEST_RESULT_PATH"
     title: Test Result Path
-    description: Path to the test result file.
+    description: Path to the unit test result file.
     helpText:
   - key: "AC_COVERAGE_RESULT_PATH"
     defaultValue: "AC_COVERAGE_RESULT_PATH"
