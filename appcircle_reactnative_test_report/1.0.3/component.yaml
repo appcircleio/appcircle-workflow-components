@@ -2,7 +2,8 @@ platform: Common
 buildPlatform: ReactNative
 displayName: Test Reports
 description: Parse test and coverage results.
-docsUrl: https://docs.appcircle.io/continuous-testing/running-ios-unit-and-ui-tests#generating-test-report
+docsUrl: https://docs.appcircle.io/continuous-testing/react-native-testing/react-native-unit-testing#generating-test-report
+requiredComponents:
 precedingComponents: "appcircle_reactnative_unit_test,appcircle_reactnative_ui_test"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
