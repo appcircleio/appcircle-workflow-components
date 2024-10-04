@@ -1,4 +1,4 @@
-platform: Common
+platform: iOS
 buildPlatform: ReactNative
 displayName: "React Native UI Test"
 description: "Run React Native UI Tests with Detox"
