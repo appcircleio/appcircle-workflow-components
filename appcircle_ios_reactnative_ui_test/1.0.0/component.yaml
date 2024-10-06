@@ -1,4 +1,4 @@
-platform: Common
+platform: iOS
 buildPlatform: ReactNative
 displayName: "React Native UI Test"
 description: "Run React Native UI Tests with Detox"
@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component.git
-commit: e07081b
+commit: 1c308dd
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"

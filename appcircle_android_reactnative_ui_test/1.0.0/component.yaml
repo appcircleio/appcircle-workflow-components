@@ -1,0 +1,40 @@
+platform: Android
+buildPlatform: ReactNative
+displayName: "React Native UI Test"
+description: "Run React Native UI Tests with Detox"
+docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/react-native-ui-test
+requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn, appcircle_andriod_reactnative_wait_emulator"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
+repoUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component.git
+commit: 1c308dd
+inputs:
+  - key: "AC_REPOSITORY_DIR"
+    defaultValue: "$AC_REPOSITORY_DIR"
+    isRequired: true
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+    helpText:
+  - key: "AC_OUTPUT_DIR"
+    defaultValue: "$AC_OUTPUT_DIR"
+    isRequired: true
+    title: Output Direction
+    description: Specify the output directory.
+    helpText:
+  - key: "AC_RN_DETOX_CONFIGURATION"
+    defaultValue: "$AC_RN_DETOX_CONFIGURATION"
+    isRequired: true
+    title: Detox Configuration Name
+    description: Specify the detox configuration name to used when building and running the tests.
+    helpText:
+outputs:
+  - key: "AC_TEST_RESULT_PATH"
+    defaultValue: "AC_TEST_RESULT_PATH"
+    title: Test Result Path
+    description: Path to the ui test result file.
+    helpText:
+processFilename: ruby
+processArguments: "%AC_STEP_TEMP%/main.rb"
+files:
+  - "main.rb"

@@ -1,0 +1,36 @@
+platform: Android
+buildPlatform: JavaKotlin
+displayName: "Wait for Android emulator"
+description: "Wait for Android emulator to boot"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/wait-for-android-emulator
+requiredComponents: "appcircle_android_build_ui_test"
+precedingComponents: "appcircle_android_sign,appcircle_android_flutter_sign"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-android-wait-emulator
+repoUrl: https://github.com/appcircleio/appcircle-android-wait-emulator.git
+commit: 31ff0a4
+inputs:
+- key: "AC_TEST_DEVICE"
+  defaultValue: "Pixel_3a"
+  isRequired: true
+  title: Test Device
+  description: Specifies device for the test. If you use an emulator other than Pixel_3a, you need to create it by yourself.
+- key: "AC_TEST_ADB_WAIT_SECONDS"
+  defaultValue: "300"
+  isRequired: false
+  title: Boot Timeout
+  description: Specifies the number of seconds the component must wait for the emulator to boot.
+- key: "AC_TEST_ADB_ARGUMENTS"
+  defaultValue: "-no-window -no-audio -no-boot-anim -netdelay none -no-snapshot -wipe-data -gpu auto"
+  isRequired: true
+  title: ADB arguments for the device
+  description: You may add new arguments but don't change the default ones such as no-window.
+- key: "AC_SIGNED_APK_PATH"
+  defaultValue: "$AC_SIGNED_APK_PATH"
+  isRequired: false
+  title: Signed APK Path
+  description: Optional full path of the **signed** APK file to install after the emulator boots.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
