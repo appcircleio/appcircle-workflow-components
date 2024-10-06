@@ -3,12 +3,12 @@ buildPlatform: ReactNative
 displayName: "React Native UI Test"
 description: "Run React Native UI Tests with Detox"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/react-native-ui-test
-requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn"
+requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn, appcircle_andriod_reactnative_wait_emulator"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component.git
-commit: e07081b
+commit: 1c308dd
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
