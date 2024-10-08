@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: abf8494
+commit: 356345c
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -20,38 +20,6 @@ inputs:
   isRequired: false
   title: Tuist Version
   description: The version of Tuist, you can specify a specific Tuist version. If it is empty, Appcircle will install the latest version of Tuist.
-  helpText:
-- key: "AC_TUIST_BUILD"
-  editorType: select
-  options: "false,true"
-  defaultValue: "false"
-  isRequired: false
-  title: Build Project
-  description: Build your project via `tuist build` command
-  helpText:
-- key: "AC_TUIST_TEST"
-  editorType: select
-  options: "false,true"
-  defaultValue: "false"
-  isRequired: false
-  title: Run Your Test
-  description: Run your Tests in your project via `tuist test` command
-  helpText:
-- key: "AC_TUIST_CLEAN"
-  editorType: select
-  options: "false,true"
-  defaultValue: "false"
-  isRequired: false
-  title: Clean All Project Files
-  description: Before build command, it will clean all previous build files via `tuist clean` command.
-  helpText:
-- key: "AC_TUIST_PROJECT_ONLY"
-  editorType: select
-  options: "false,true"
-  defaultValue: "false"
-  isRequired: false
-  title: Generate project only
-  description: Only generate the local project (without generating its dependencies).
   helpText:
 outputs:
 processFilename: ruby
