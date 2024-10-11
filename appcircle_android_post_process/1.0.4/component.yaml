@@ -1,0 +1,21 @@
+platform: Android
+buildPlatform: ReactNative, JavaKotlin, Flutter
+displayName: Android App Post-Processor
+description: "System operations to identify and process the output files."
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/post-processor
+requiredComponents: "appcircle_git_clone"
+precedingComponents: "appcircle_android_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_android_flutter_sign"
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
+repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
+commit: 047e15c
+outputs:
+- key: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
+  title: "Android App Post-Processor Output Path"
+  defaultValue: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
+  description: Post process output file.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
