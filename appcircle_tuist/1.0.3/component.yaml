@@ -8,13 +8,13 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: 42b7722
+commit: b506eeb
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
-  isRequired: false
+  isRequired: true
   title: Project Path
-  description: The path to the directory that contains the definition of the project. Defaults to current directory.
+  description: The path to the directory of Tuist project. By default, it is set to the root directory of the cloned repository.
   helpText:
 - key: "AC_TUIST_VERSION"
   isRequired: false

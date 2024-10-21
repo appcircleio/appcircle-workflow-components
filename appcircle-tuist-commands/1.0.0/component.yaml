@@ -1,25 +1,25 @@
 platform: iOS
 buildPlatform:
 displayName: Tuist Commands
-description: "Run Tuist Commands for Project."
+description: "Run Tuist Commands"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist-commands
 requiredComponents: "appcircle_git_clone,appcircle_tuist"
 precedingComponents: 
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-tuist-commands-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-commands-component.git
-commit: c75abf2
+commit: eafea06
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
-  isRequired: false
+  isRequired: true
   title: Project Path
-  description: The path to the directory that contains the definition of the project. Defaults to current directory.
+  description: The path to the directory of Tuist project. By default, it is set to the root directory of the cloned repository.
   helpText:
 - key: "AC_TUIST_COMMANDS"
   isRequired: true
   title: Tuist Commands
-  description: The commands of Tuist, you can specify the specific Tuist command to run.
+  description: The commands of Tuist, you can specify the specific Tuist command to run. For example; `tuist build` or `tuist install`
   helpText:
 outputs:
 processFilename: ruby
