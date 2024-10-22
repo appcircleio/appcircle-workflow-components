@@ -8,10 +8,10 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component
 repoUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component.git
-commit: 100eddb
+commit: caeafe0
 inputs:
   - key: "AC_SL_CONFIG_PATH"
-    defaultValue: ".sauce/config.yml"
+    defaultValue: "./.sauce/config.yml"
     isRequired: true
     title: Sauce Labs Configuration File Path
     description: "Path to the Sauce Labs configuration file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--config) documentation for the option detail."
