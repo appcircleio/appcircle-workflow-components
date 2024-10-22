@@ -2,12 +2,12 @@ platform: Android
 buildPlatform: JavaKotlin
 displayName: "Sauce Labs Saucectl"
 description: "Automate the execution of UI tests for Android applications using Saucectl by Sauce Labs."
-docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-saucectl-run
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/sauce-labs-saucectl
 requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
-webUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component
-repoUrl: https://github.com/appcircleio/appcircle-android-saucelabs-component.git
+webUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component
+repoUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component.git
 commit: 100eddb
 inputs:
   - key: "AC_SL_CONFIG_PATH"
