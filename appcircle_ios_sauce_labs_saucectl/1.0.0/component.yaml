@@ -2,7 +2,7 @@ platform: iOS
 buildPlatform: ObjectiveCSwift
 displayName: "Sauce Labs Saucectl"
 description: "Automate the execution of UI tests for iOS applications using Saucectl by Sauce Labs."
-docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/sauce-labs-saucectl
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/sauce-labs-saucectl
 requiredComponents: "appcircle_git_clone,appcircle_ios_build_for_testing"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
