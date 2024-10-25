@@ -1,6 +1,6 @@
 platform: iOS
-buildPlatform:
-displayName: Tuist
+buildPlatform: ObjectiveCSwift
+displayName: Tuist Install
 description: "Install Tuist and Generate a Project."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist
 requiredComponents: "appcircle_git_clone"
@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: b506eeb
+commit: 69ea832
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
