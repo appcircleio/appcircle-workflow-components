@@ -8,15 +8,15 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-change-java-version-component
 repoUrl: https://github.com/appcircleio/appcircle-change-java-version-component.git
-commit: 4eef70f
+commit: c7ba760
 inputs:
   - key: "AC_SELECTED_JAVA_VERSION"
     defaultValue: "17"
     isRequired: true
     title: "Java Version"
     editorType: select
-    options: "8,11,17,21"
-    description: "Select the Java version to switch to."
+    options: "8,11,17,21,23"
+    description: "Select the Java version to switch to. If the selected version is not available on the runner, an error will occur. Check available Java versions for your runner [here](https://docs.appcircle.io/infrastructure/android-build-infrastructure#java-version)."
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
