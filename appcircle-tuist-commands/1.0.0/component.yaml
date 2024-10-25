@@ -1,5 +1,5 @@
 platform: iOS
-buildPlatform:
+buildPlatform: ObjectiveCSwift
 displayName: Tuist Commands
 description: "Run Tuist Commands"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist-commands
