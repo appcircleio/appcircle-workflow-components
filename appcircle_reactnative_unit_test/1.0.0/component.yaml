@@ -23,7 +23,6 @@ inputs:
     description: Specify the output directory.
     helpText:
   - key: "AC_RN_TEST_COMMAND_ARGS"
-    defaultValue: "$AC_RN_TEST_COMMAND_ARGS"
     isRequired: false
     title: Extra commands
     description: Specifiy extra commands to run the tests.
