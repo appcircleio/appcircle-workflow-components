@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component.git
-commit: 8ed61fc
+commit: 06a454b
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
@@ -28,11 +28,11 @@ inputs:
     title: Detox Configuration Name
     description: Specify the detox configuration name to used when building and running the tests.
     helpText:
-  - key: "AC_RN_DETOX_ARGS"
+  - key: "AC_RN_DETOX_TEST_ARGS"
     defaultValue: "--take-screenshots all"
-    isRequired: true
+    isRequired: false
     title: Detox Extra Arguments
-    description: Specify the Detox extra commands to add the test command. Appcircle uses the command `detox build --configuration<configname>` command to be able to run Detox tests. The commands written here will be executed by appending detox build --configuration<configname> to the end of the command.
+    description: Specify the Detox extra commands to add the test command. Appcircle uses the command `detox test --configuration<configname>` command to be able to run Detox tests. The commands written here will be executed by appending detox test --configuration<configname> to the end of the command.
     helpText:
 outputs:
   - key: "AC_TEST_RESULT_PATH"
