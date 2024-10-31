@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component.git
-commit: a0d0897
+commit: c3f3217
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
