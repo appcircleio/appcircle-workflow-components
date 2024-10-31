@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component.git
-commit: 108cf0e
+commit: a0d0897
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
@@ -24,8 +24,8 @@ inputs:
     helpText:
   - key: "AC_RN_TEST_COMMAND_ARGS"
     isRequired: false
-    title: Extra commands
-    description: Specifiy extra commands to run the tests.
+    title: Jest Extra commands
+    description: Specify additional command arguments for running Jest tests. An extra parameter will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
     helpText:
 outputs:
   - key: "AC_TEST_RESULT_PATH"
