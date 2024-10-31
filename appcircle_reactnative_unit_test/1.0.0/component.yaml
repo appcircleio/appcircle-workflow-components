@@ -1,7 +1,7 @@
 platform: Common
 buildPlatform: ReactNative
 displayName: "React Native Unit Test"
-description: "Run your react native tests"
+description: "Run React Native unit tests with Jest"
 docsUrl: https://docs.appcircle.io//workflows/react-native-specific-workflow-steps/react-native-unit-test
 requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn"
 precedingComponents:
@@ -25,7 +25,7 @@ inputs:
   - key: "AC_RN_TEST_COMMAND_ARGS"
     isRequired: false
     title: Jest Extra commands
-    description: Specify additional command arguments for running Jest tests. An extra parameter will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
+    description: Specify additional command arguments for running Jest tests. An extra parameter will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. You can add extra arguments, such as `--debug --colors`, without affecting the default ones. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
     helpText:
 outputs:
   - key: "AC_TEST_RESULT_PATH"
