@@ -20,7 +20,7 @@ inputs:
     defaultValue: "$AC_COVERAGE_RESULT_PATH"
     isRequired: false
     title: Coverage result path
-    description: This environment variable is automatically set for native iOS projects when you run tests. For other projects, you need to set the coverage path.
+    description: This environment variable is automatically set for React Native apps when you run tests with the Appcircle test components. Otherwise, you should set it manually in the build pipeline.
     helpText:
 outputs:
   - key: "AC_TEST_REPORT_JSON_PATH"
