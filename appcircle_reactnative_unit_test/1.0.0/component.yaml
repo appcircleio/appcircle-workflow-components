@@ -19,7 +19,7 @@ inputs:
   - key: "AC_OUTPUT_DIR"
     defaultValue: "$AC_OUTPUT_DIR"
     isRequired: true
-    title: Output Direction
+    title: Output Directory Path
     description: Specify the output directory.
     helpText:
   - key: "AC_RN_TEST_COMMAND_ARGS"
