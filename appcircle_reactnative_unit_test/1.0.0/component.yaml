@@ -1,7 +1,7 @@
 platform: Common
 buildPlatform: ReactNative
 displayName: "React Native Unit Test"
-description: "Run React Native unit tests with Jest"
+description: "Run React Native unit tests with Jest."
 docsUrl: https://docs.appcircle.io//workflows/react-native-specific-workflow-steps/react-native-unit-test
 requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn"
 precedingComponents:
