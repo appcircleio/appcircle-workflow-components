@@ -1,0 +1,37 @@
+platform: iOS
+buildPlatform:
+displayName: Test Reports
+description: Parse test and coverage results.
+webUrl: https://github.com/appcircleio/appcircle-test-report-component
+repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
+commit: 583affd
+inputs:
+- key: "AC_TEST_RESULT_PATH"
+  defaultValue: "$AC_TEST_RESULT_PATH"
+  isRequired: true
+  title: Test result path
+  description: This directory and subdirectories will be searched for compatible test files.
+  helpText:
+- key: "AC_COVERAGE_RESULT_PATH"
+  defaultValue: "$AC_COVERAGE_RESULT_PATH"
+  isRequired: false
+  title: Coverage result path
+  description: This environment variable is automatically set for native iOS projects when you run tests. For other projects, you need to set the coverage path.
+  helpText:
+outputs:
+- key: "AC_TEST_REPORT_JSON_PATH"
+  title: JSON Report Path
+  defaultValue: "AC_TEST_REPORT_JSON_PATH"
+  description: Specifies the path of the JSON report.
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
+- "cobertura_parser.rb"
+- "coverage_parser.rb"
+- "jacoco_parser.rb"
+- "junit_parser.rb"
+- "lcov_parser.rb"
+- "test_parser.rb"
+- "xcode_parser.rb"
