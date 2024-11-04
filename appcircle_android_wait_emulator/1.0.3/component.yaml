@@ -1,5 +1,5 @@
 platform: Android
-buildPlatform: JavaKotlin
+buildPlatform: JavaKotlin, Flutter
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/wait-for-android-emulator

@@ -3,7 +3,7 @@ buildPlatform: ReactNative
 displayName: "React Native UI Test"
 description: "Run React Native UI tests with Detox"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/react-native-ui-test
-requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn,appcircle_andriod_reactnative_wait_emulator"
+requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn,appcircle_android_reactnative_wait_emulator"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
