@@ -1,5 +1,5 @@
 platform: Android
-buildPlatform: JavaKotlin
+buildPlatform:
 displayName: "Sauce Labs Saucectl"
 description: "Automate the execution of UI tests for iOS and Android applications using Saucectl by Sauce Labs."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run

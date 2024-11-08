@@ -1,5 +1,5 @@
 platform: iOS
-buildPlatform: ObjectiveCSwift
+buildPlatform:
 displayName: "Saucectl Run"
 description: "Automate the execution of UI tests for iOS applications using Saucectl by Sauce Labs."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/saucectl-run
