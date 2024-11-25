@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-change-java-version-component
 repoUrl: https://github.com/appcircleio/appcircle-change-java-version-component.git
-commit: 4cd84a6
+commit: 6577872
 inputs:
   - key: "AC_SELECTED_JAVA_VERSION"
     defaultValue: "17"
