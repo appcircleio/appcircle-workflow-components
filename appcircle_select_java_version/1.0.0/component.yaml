@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform:
-displayName: "Change Java Version"
+displayName: "Select Java Version"
 description: "Switch the current Java version to the selected one."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/change-java-version
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/select-java-version
 requiredComponents:
 precedingComponents:
 followingComponents:
-webUrl: https://github.com/appcircleio/appcircle-change-java-version-component
-repoUrl: https://github.com/appcircleio/appcircle-change-java-version-component.git
-commit: b4f9583
+webUrl: https://github.com/appcircleio/appcircle-select-java-version-component
+repoUrl: https://github.com/appcircleio/appcircle-select-java-version-component.git
+commit: 73ff06c
 inputs:
   - key: "AC_SELECTED_JAVA_VERSION"
     defaultValue: "17"
