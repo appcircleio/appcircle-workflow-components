@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-select-java-version-component
 repoUrl: https://github.com/appcircleio/appcircle-select-java-version-component.git
-commit: 8f16c32
+commit: 615a44d
 inputs:
   - key: "AC_SELECTED_JAVA_VERSION"
     defaultValue: "17"
