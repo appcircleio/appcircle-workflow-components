@@ -8,7 +8,7 @@ precedingComponents: "appcircle_reactnative_unit_test,appcircle_reactnative_ui_t
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: 694670b
+commit: c5071a5
 inputs:
   - key: "AC_TEST_RESULT_PATH"
     defaultValue: "$AC_TEST_RESULT_PATH"
