@@ -6,9 +6,9 @@ docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-pla
 requiredComponents:
 precedingComponents:
 followingComponents:
-webUrl: https://github.com/appcircleio/appcircle-testinium-plan-runner-component
-repoUrl: https://github.com/appcircleio/appcircle-testinium-plan-runner-component.git
-commit: 89392df
+webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
+commit: 70a1c5d
 inputs:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
