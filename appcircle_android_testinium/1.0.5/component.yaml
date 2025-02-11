@@ -1,14 +1,14 @@
 platform: Android
 buildPlatform: ReactNative, JavaKotlin
-displayName: Testinium App Upload
-description: "The Testinium App Upload step enables uploading mobile applications to the Testinium platform."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-app-upload
+displayName: Testinium
+description: "Enables uploading mobile applications to Testinium and running the selected test plan."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
 requiredComponents: "appcircle_android_build"
 precedingComponents: "appcircle_android_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: f6b5cfe
+commit: 379369f
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
