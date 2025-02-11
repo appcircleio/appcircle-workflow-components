@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
-commit: e6e6234
+commit: fe580b9
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
