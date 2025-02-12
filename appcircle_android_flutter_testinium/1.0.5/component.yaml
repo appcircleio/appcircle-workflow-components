@@ -8,13 +8,13 @@ precedingComponents: "appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: 74bbdf5
+commit: ce1931a
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
-  defaultValue: "$AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_APK_PATH"
   isRequired: true
   title: Path of the build
-  description: "Full path of the build. For example `$AC_APK_PATH`."
+  description: "Full path of the build."
   helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
@@ -42,7 +42,7 @@ inputs:
   helpText:
 - key: "AC_TESTINIUM_COMPANY_ID"
   defaultValue: "$AC_TESTINIUM_COMPANY_ID"
-  isRequired: false
+  isRequired: true
   title: Company ID
   description: "Testinium company ID."
   helpText:
