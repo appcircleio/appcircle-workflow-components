@@ -1,15 +1,21 @@
-platform: Common
-buildPlatform:
-displayName: Testinium Plan Runner
-description: "Run your test plan with Testinium"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-plan-runner
-requiredComponents:
-precedingComponents:
+platform: Android
+buildPlatform: Flutter
+displayName: Testinium
+description: "Enables uploading mobile applications to Testinium and running the selected test plan."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
+requiredComponents: "appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
 followingComponents:
-webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
-repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
-commit: 70a1c5d
+webUrl: https://github.com/appcircleio/appcircle-testinium-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
+commit: 74bbdf5
 inputs:
+- key: "AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_TESTINIUM_APP_PATH"
+  isRequired: true
+  title: Path of the build
+  description: "Full path of the build. For example `$AC_APK_PATH`."
+  helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
   isRequired: true
@@ -22,6 +28,12 @@ inputs:
   title: Password
   description: "Testinium password."
   helpText:
+- key: "AC_TESTINIUM_PROJECT_ID"
+  defaultValue: "$AC_TESTINIUM_PROJECT_ID"
+  isRequired: true
+  title: Project ID
+  description: "Testinium project ID."
+  helpText:
 - key: "AC_TESTINIUM_PLAN_ID"
   defaultValue: "$AC_TESTINIUM_PLAN_ID"
   isRequired: true
@@ -30,7 +42,7 @@ inputs:
   helpText:
 - key: "AC_TESTINIUM_COMPANY_ID"
   defaultValue: "$AC_TESTINIUM_COMPANY_ID"
-  isRequired: true
+  isRequired: false
   title: Company ID
   description: "Testinium company ID."
   helpText:
