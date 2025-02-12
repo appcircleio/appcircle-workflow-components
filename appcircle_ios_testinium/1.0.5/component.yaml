@@ -1,10 +1,10 @@
-platform: Android
-buildPlatform: ReactNative, JavaKotlin
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Testinium
 description: "Enables uploading mobile applications to Testinium and running the selected test plan."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
@@ -14,7 +14,7 @@ inputs:
   defaultValue: "$AC_TESTINIUM_APP_PATH"
   isRequired: true
   title: Path of the build
-  description: "Full path of the build. For example `$AC_APK_PATH`."
+  description: "Full path of the build. For example $AC_EXPORT_DIR/Myapp.ipa."
   helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"

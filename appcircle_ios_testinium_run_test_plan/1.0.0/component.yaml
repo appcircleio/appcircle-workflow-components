@@ -1,21 +1,15 @@
-platform: Android
-buildPlatform: ReactNative, JavaKotlin
-displayName: Testinium
-description: "Enables uploading mobile applications to Testinium and running the selected test plan."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
+displayName: Testinium Run Test Plan
+description: "Run test plan with Testinium."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-run-test-plan
+requiredComponents: "appcircle_ios_testinium_upload_app"
+precedingComponents:
 followingComponents:
-webUrl: https://github.com/appcircleio/appcircle-testinium-component
-repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: 74bbdf5
+webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
+commit: 274f746
 inputs:
-- key: "AC_TESTINIUM_APP_PATH"
-  defaultValue: "$AC_TESTINIUM_APP_PATH"
-  isRequired: true
-  title: Path of the build
-  description: "Full path of the build. For example `$AC_APK_PATH`."
-  helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
   isRequired: true
@@ -27,12 +21,6 @@ inputs:
   isRequired: true
   title: Password
   description: "Testinium password."
-  helpText:
-- key: "AC_TESTINIUM_PROJECT_ID"
-  defaultValue: "$AC_TESTINIUM_PROJECT_ID"
-  isRequired: true
-  title: Project ID
-  description: "Testinium project ID."
   helpText:
 - key: "AC_TESTINIUM_PLAN_ID"
   defaultValue: "$AC_TESTINIUM_PLAN_ID"
