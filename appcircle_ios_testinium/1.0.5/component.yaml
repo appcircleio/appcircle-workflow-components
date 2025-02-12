@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-component.git
-commit: ce1931a
+commit: d08fa3f
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_TESTINIUM_APP_PATH"
