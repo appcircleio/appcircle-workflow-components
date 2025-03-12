@@ -1,0 +1,33 @@
+platform: iOS
+buildPlatform:
+displayName: "Resign IPA"
+description: "Resign IPA with different certificates and provisioning profiles."
+webUrl: https://github.com/appcircleio/appcircle-ios-resign-component
+repoUrl: https://github.com/appcircleio/appcircle-ios-resign-component.git
+commit: 51183ed
+inputs:
+- key: "AC_RESIGN_IPA_URL"
+  defaultValue: "$ResignFileUrl"
+  isRequired: true
+  title: IPA Path
+  description: "Path to the ipa file to resign"  
+  helpText:
+- key: "AC_RESIGN_TARGETS"
+  defaultValue: "$Targets"
+  isRequired: true
+  title: Targets
+  description: "iOS Targets."
+  helpText:
+- key: "AC_RESIGN_FILENAME"
+  defaultValue: "$ResignFileName"
+  isRequired: true
+  title: File Name
+  description: "Original file name"
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
+- "provisioning_parser.rb"
+- "resign.sh"
