@@ -1,0 +1,75 @@
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
+displayName: Testinium Upload App
+description: "Enables uploading mobile applications to the Testinium platform."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-upload-app
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
+repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
+commit: 135492c
+inputs:
+- key: "AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
+  isRequired: true
+  title: Path of the build
+  description: "Full path of the build file."
+  helpText:
+- key: "AC_TESTINIUM_USERNAME"
+  defaultValue: "$AC_TESTINIUM_USERNAME"
+  isRequired: true
+  title: Username
+  description: "Testinium username."
+  helpText:
+- key: "AC_TESTINIUM_PASSWORD"
+  defaultValue: "$AC_TESTINIUM_PASSWORD"
+  isRequired: true
+  title: Password
+  description: "Testinium password."
+  helpText:
+- key: "AC_TESTINIUM_ENTERPRISE_BASE_URL"
+  defaultValue: "$AC_TESTINIUM_ENTERPRISE_BASE_URL"
+  isRequired: false
+  title: Testinium Enterprise Base URL
+  description: "The base URL for Testinium enterprise. This is required if you are using Testinium enterprise. Only for Testinium cloud users, this input is not mandatory."
+  helpText:
+- key: "AC_TESTINIUM_PROJECT_ID"
+  defaultValue: "$AC_TESTINIUM_PROJECT_ID"
+  isRequired: true
+  title: Project ID
+  description: "Testinium project ID."
+  helpText:
+- key: "AC_TESTINIUM_COMPANY_ID"
+  defaultValue: "$AC_TESTINIUM_COMPANY_ID"
+  isRequired: true
+  title: Company ID
+  description: "Testinium company ID."
+  helpText:
+- key: "AC_TESTINIUM_TIMEOUT"
+  defaultValue: "60"
+  isRequired: true
+  title: Timeout
+  description: "Testinium plan timeout in minutes."
+  helpText:
+- key: "AC_TESTINIUM_MAX_API_RETRY_COUNT"
+  defaultValue: "4"
+  isRequired: true
+  title: Testinium Maximum API Repetition Count
+  description: "Determine max repetition in case of Testinium platform congestion or API errors."
+  helpText:
+outputs:
+- key: "AC_TESTINIUM_UPLOADED_APP_ID"
+  defaultValue: "AC_TESTINIUM_UPLOADED_APP_ID"
+  title: "Uploaded Application ID"
+  description: "The unique identifier for the application uploaded to Testinium. This ID is used to select the uploaded application on **Testinium Run Test Plan** step."
+  helpText:
+- key: "AC_TESTINIUM_APP_OS"
+  defaultValue: "AC_TESTINIUM_APP_OS"
+  title: "Application Operating System"
+  description: "The operating system of the uploaded application, either iOS or Android. This helps to run the test plan according to the platform OS in **Testinium Run Test Plan** step."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
