@@ -8,7 +8,7 @@ precedingComponents: "appcircle_ios_build_version_increment"
 followingComponents: "appcircle_ios_build_sign"
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: 159e03a
+commit: 783b476
 inputs:
 - key: "AC_ICONS_PATH"
   defaultValue: "$AC_ICONS_PATH"
