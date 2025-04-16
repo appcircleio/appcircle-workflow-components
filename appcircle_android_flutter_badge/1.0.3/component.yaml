@@ -35,11 +35,11 @@ inputs:
   isRequired: false
   title: Badge version text color
   description: "You can use full color name (white), hex codes(#FFFFFF) or rgb values(rgb(255,255,255))."
-- key: "AC_BADGE_DISTANCE_FROM_CENTER"
-  defaultValue: "15"
+- key: "AC_BADGE_CORNER_SHIFT"
+  defaultValue: "5"
   isRequired: false
   title: Distance from center
-  description: "This value defines the badge's distance from the center as a percentage of the image width/height."
+  description: "This value defines how much the top-right badge should shift toward the bottom-left, based on a percentage of the image dimensions. The default value is `5`."
 processFilename: bash
 processArguments: '%AC_STEP_TEMP%/main.sh'
 files:
