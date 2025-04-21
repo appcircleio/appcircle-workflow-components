@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
-commit: fe6846d
+commit: 8667770
 inputs:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
@@ -26,7 +26,7 @@ inputs:
   defaultValue: "$AC_TESTINIUM_ENTERPRISE_BASE_URL"
   isRequired: false
   title: Testinium Enterprise Base URL
-  description: "The base URL for Testinium enterprise. This is required if you are using Testinium enterprise. Only for Testinium cloud users, this input is not mandatory."
+  description: "The base URL for Testinium enterprise. This input is only required for Testinium enterprise users. Cloud users can ignore it."
   helpText:
 - key: "AC_TESTINIUM_UPLOADED_APP_ID"
   defaultValue: "$AC_TESTINIUM_UPLOADED_APP_ID"
