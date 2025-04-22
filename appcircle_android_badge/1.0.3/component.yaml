@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_build_version_increment"
 followingComponents: "appcircle_android_build"
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
-commit: 5c7dbfc
+commit: 3710550
 inputs:
 - key: "AC_ICONS_PATH"
   defaultValue: "$AC_ICONS_PATH"
