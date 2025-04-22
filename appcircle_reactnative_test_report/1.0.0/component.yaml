@@ -1,5 +1,5 @@
-platform: Common
-buildPlatform: ReactNative
+platform: iOS
+buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.
 webUrl: https://github.com/appcircleio/appcircle-test-report-component

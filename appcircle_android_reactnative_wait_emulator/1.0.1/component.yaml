@@ -1,5 +1,5 @@
 platform: Android
-buildPlatform: ReactNative
+buildPlatform: 
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
 webUrl: https://github.com/appcircleio/appcircle-android-wait-emulator

@@ -8,7 +8,7 @@ precedingComponents: "appcircle_cocoapods"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-ui-test-component.git
-commit: d9bdff4
+commit: c3f82ff
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"

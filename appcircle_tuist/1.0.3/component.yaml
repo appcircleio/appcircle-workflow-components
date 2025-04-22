@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
-commit: ebbe51a
+commit: bb174d8
 inputs:
 - key: "AC_TUIST_PATH"
   defaultValue: "$AC_REPOSITORY_DIR"
