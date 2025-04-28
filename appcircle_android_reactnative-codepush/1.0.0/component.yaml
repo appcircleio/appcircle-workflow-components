@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-codepush-component
 repoUrl: https://github.com/appcircleio/appcircle-codepush-component.git
-commit: 4a35fc9
+commit: 96f7b8d
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -21,6 +21,18 @@ inputs:
   isRequired: true
   title: Appcircle Personal Access Token
   description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`."
+  helpText:
+- key: "AC_CODE_PUSH_SERVER_URL"
+  defaultValue: "$AC_CODE_PUSH_SERVER_URL"
+  isRequired: true
+  title: Appcircle CodePush Server URL
+  description: "Appcircle CodePush server URL. Leave it empty if you do not use self-hosted server."
+  helpText:
+- key: "AC_CODE_PUSH_AUTH_URL"
+  defaultValue: "$AC_CODE_PUSH_AUTH_URL"
+  isRequired: true
+  title: Appcircle CodePush Auth URL
+  description: "Appcircle CodePush auth URL. Leave it empty if you do not use self-hosted server."
   helpText:
 - key: "AC_CODE_PUSH_APP_NAME"
   defaultValue: "$AC_CODE_PUSH_APP_NAME"
