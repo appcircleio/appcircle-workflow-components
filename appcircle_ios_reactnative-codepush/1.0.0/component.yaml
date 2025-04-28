@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-codepush-component
 repoUrl: https://github.com/appcircleio/appcircle-codepush-component.git
-commit: 96f7b8d
+commit: 4a79dd6
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -24,13 +24,13 @@ inputs:
   helpText:
 - key: "AC_CODE_PUSH_SERVER_URL"
   defaultValue: "$AC_CODE_PUSH_SERVER_URL"
-  isRequired: true
+  isRequired: false
   title: Appcircle CodePush Server URL
   description: "Appcircle CodePush server URL. Leave it empty if you do not use self-hosted server."
   helpText:
 - key: "AC_CODE_PUSH_AUTH_URL"
   defaultValue: "$AC_CODE_PUSH_AUTH_URL"
-  isRequired: true
+  isRequired: false
   title: Appcircle CodePush Auth URL
   description: "Appcircle CodePush auth URL. Leave it empty if you do not use self-hosted server."
   helpText:
