@@ -2,13 +2,13 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-upload-app
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-upload-app
 requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
-commit: 135492c
+commit: 29c5416
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
@@ -32,7 +32,7 @@ inputs:
   defaultValue: "$AC_TESTINIUM_ENTERPRISE_BASE_URL"
   isRequired: false
   title: Testinium Enterprise Base URL
-  description: "The base URL for Testinium enterprise. This is required if you are using Testinium enterprise. Only for Testinium cloud users, this input is not mandatory."
+  description: "The base URL for Testinium enterprise. This input is only required for Testinium enterprise users. Cloud users can ignore it."
   helpText:
 - key: "AC_TESTINIUM_PROJECT_ID"
   defaultValue: "$AC_TESTINIUM_PROJECT_ID"

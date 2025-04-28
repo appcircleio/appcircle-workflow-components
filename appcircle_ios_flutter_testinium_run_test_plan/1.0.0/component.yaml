@@ -2,13 +2,13 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Testinium Run Test Plan
 description: "Run test plan with Testinium."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-run-test-plan
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-run-test-plan
 requiredComponents: "appcircle_ios_flutter_testinium_upload_app"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
-commit: efe9c89
+commit: 8667770
 inputs:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
@@ -26,19 +26,19 @@ inputs:
   defaultValue: "$AC_TESTINIUM_ENTERPRISE_BASE_URL"
   isRequired: false
   title: Testinium Enterprise Base URL
-  description: "The base URL for Testinium enterprise. This is required if you are using Testinium enterprise. Only for Testinium cloud users, this input is not mandatory."
+  description: "The base URL for Testinium enterprise. This input is only required for Testinium enterprise users. Cloud users can ignore it."
   helpText:
 - key: "AC_TESTINIUM_UPLOADED_APP_ID"
   defaultValue: "$AC_TESTINIUM_UPLOADED_APP_ID"
-  isRequired: true
+  isRequired: false
   title: "Uploaded Application ID"
-  description: "The unique identifier for the application uploaded to Testinium. This ID is generated after the **Testinium App Upload** step."
+  description: "The unique identifier for the application uploaded to Testinium. This ID is generated after the **Testinium App Upload** step when using Testinium as an enterprise solution."
   helpText:
 - key: "AC_TESTINIUM_APP_OS"
   defaultValue: "$AC_TESTINIUM_APP_OS"
-  isRequired: true
+  isRequired: false
   title: "Application Operating System"
-  description: "The operating system of the uploaded application, either iOS or Android. This value is determined after the **Testinium App Upload** step."
+  description: "The operating system of the uploaded application, either iOS or Android. This value is determined after the **Testinium App Upload** step when using Testinium as an enterprise solution."
   helpText:
 - key: "AC_TESTINIUM_PLAN_ID"
   defaultValue: "$AC_TESTINIUM_PLAN_ID"
