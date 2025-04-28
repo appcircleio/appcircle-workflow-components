@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform:
 displayName: Publish Release Notes
-description: "Publish release notes to stores."
+description: "Publish release notes to the selected distribution modules."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/publish-release-notes
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-release-notes-component
 repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git
-commit: 08f5310
+commit: a6e9a9e
 inputs:
   - key: "AC_RELEASE_NOTES_PATH"
     defaultValue: "$AC_RELEASE_NOTES_PATH"
