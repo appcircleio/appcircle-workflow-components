@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
-commit: 29c5416
+commit: 464e8ca
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
