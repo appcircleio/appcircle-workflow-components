@@ -1,6 +1,6 @@
 platform: common
 buildPlatform: ReactNative
-displayName: Appcircle CodePush for iOS
+displayName: Appcircle CodePush
 description: "Release a React Native update to Appcircle CodePush."
 docsUrl: https://docs.appcircle.io
 requiredComponents: "appcircle_git_clone,appcircle_npm_yarn,appcircle_node_install"
