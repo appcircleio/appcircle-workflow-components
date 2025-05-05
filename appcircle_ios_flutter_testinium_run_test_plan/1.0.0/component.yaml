@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
-commit: c30b784
+commit: 431717c
 inputs:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
