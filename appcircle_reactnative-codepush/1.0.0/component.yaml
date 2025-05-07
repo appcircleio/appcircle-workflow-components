@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-codepush-component
 repoUrl: https://github.com/appcircleio/appcircle-codepush-component.git
-commit: e132aae
+commit: a001ebe
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -20,31 +20,31 @@ inputs:
   defaultValue: "$AC_CODE_PUSH_TOKEN"
   isRequired: true
   title: Appcircle Personal Access Token
-  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`."
+  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`. For details, see [Generating and Managing Personal API Tokens](/appcircle-api-and-cli/api-authentication#generatingmanaging-the-personal-api-tokens)."
   helpText:
 - key: "AC_CODE_PUSH_SERVER_URL"
   defaultValue: "$AC_CODE_PUSH_SERVER_URL"
   isRequired: false
   title: Appcircle CodePush Server URL
-  description: "Appcircle CodePush server URL. Leave it empty if you do not use self-hosted server."
+  description: "This parameter specifies the server URL used by self-hosted Appcircle instances to authenticate CLI access. Ignore this if you are not a self-hosted Appcircle user."
   helpText:
 - key: "AC_CODE_PUSH_AUTH_URL"
   defaultValue: "$AC_CODE_PUSH_AUTH_URL"
   isRequired: false
   title: Appcircle CodePush Auth URL
-  description: "Appcircle CodePush auth URL. Leave it empty if you do not use self-hosted server."
+  description: "This parameter specifies the authentication URL used by self-hosted Appcircle instances to authenticate CLI access. Ignore this if you are not a self-hosted Appcircle user."
   helpText:
 - key: "AC_CODE_PUSH_APP_NAME"
   defaultValue: "$AC_CODE_PUSH_APP_NAME"
   isRequired: true
   title: App Name
-  description: "This parameter specifies the name of the app in Appcircle. For example `MyApp-Android` or `MyApp-iOS`."
+  description: "This parameter specifies the name of the app in Appcircle. The App Name parameter is the Appcircle CodePush profile name.  For example `MyApp-Android` or `MyApp-iOS`."
   helpText:
 - key: "AC_CODE_PUSH_DEPLOYMENT_NAME"
   defaultValue: "$AC_CODE_PUSH_DEPLOYMENT_NAME"
   isRequired: true
-  title: Deployment Name
-  description: "This parameter specifies which deployment you want to release the update to. For example `Staging`."
+  title: Deployment Channel
+  description: "This parameter specifies the deployment channel name in Appcircle. The Deployment Channel parameter is the Appcircle CodePush deployment name. For example `Staging` or `Production`."
   helpText:
 - key: "AC_CODE_PUSH_TARGET_BINARY_VERSION"
   defaultValue: "$AC_CODE_PUSH_TARGET_BINARY_VERSION"
@@ -56,7 +56,7 @@ inputs:
   defaultValue: "$AC_CODE_PUSH_DESCRIPTION"
   isRequired: false
   title: Description
-  description: "This parameter provides an optional change log for the deployment."
+  description: "This parameter provides an optional changelog for the deployment."
   helpText:
 - key: "AC_CODE_PUSH_ROLLOUT_PERCENTAGE"
   defaultValue: "$AC_CODE_PUSH_ROLLOUT_PERCENTAGE"
@@ -68,7 +68,7 @@ inputs:
   defaultValue: "$AC_CODE_PUSH_EXTRA_ARGUMENTS"
   isRequired: false
   title: Extra arguments
-  description: "Extra command line arguments for Appcircle. For example, add `--debug` for verbose logs."
+  description: "Extra command line arguments for Appcircle CodePush CLI command. For example, add `--debug` for verbose logs."
   helpText:
 outputs:
 processFilename: ruby
