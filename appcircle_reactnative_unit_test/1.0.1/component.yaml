@@ -1,0 +1,45 @@
+platform: Common
+buildPlatform: ReactNative
+displayName: "React Native Unit Test"
+description: "Run React Native unit tests with Jest."
+docsUrl: https://docs.appcircle.io//workflows/react-native-specific-workflow-steps/react-native-unit-test
+requiredComponents: "appcircle_git_clone,appcircle_node_install,appcircle_npm_yarn"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component
+repoUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component.git
+commit: efb1578
+inputs:
+  - key: "AC_REPOSITORY_DIR"
+    defaultValue: "$AC_REPOSITORY_DIR"
+    isRequired: true
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+    helpText:
+  - key: "AC_OUTPUT_DIR"
+    defaultValue: "$AC_OUTPUT_DIR"
+    isRequired: true
+    title: Output Directory Path
+    description: Specify the output directory.
+    helpText:
+  - key: "AC_RN_TEST_COMMAND_ARGS"
+    defaultValue: "--debug --colors"
+    isRequired: false
+    title: Jest Extra Arguments
+    description: Specify additional arguments for running the Jest command. These arguments will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. You can add extra arguments without affecting the default ones. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
+    helpText:
+outputs:
+  - key: "AC_TEST_RESULT_PATH"
+    defaultValue: "AC_TEST_RESULT_PATH"
+    title: Test Result Path
+    description: Path to the test result file.
+    helpText:
+  - key: "AC_COVERAGE_RESULT_PATH"
+    defaultValue: "AC_COVERAGE_RESULT_PATH"
+    title: Coverage Result Path
+    description: Path to the coverage result file.
+    helpText:
+processFilename: ruby
+processArguments: "%AC_STEP_TEMP%/main.rb"
+files:
+  - "main.rb"
