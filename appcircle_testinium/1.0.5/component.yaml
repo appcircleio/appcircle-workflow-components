@@ -1,9 +1,9 @@
-platform: iOS
-buildPlatform: Flutter
+platform:
+buildPlatform:
 displayName: Testinium
 description: "Run your test plans with Testinium"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium
-requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
+requiredComponents:
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-component

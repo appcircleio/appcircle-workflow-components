@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
-commit: f28ee05
+commit: 97186a3
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/$AC_GIT_BRANCH/cache"

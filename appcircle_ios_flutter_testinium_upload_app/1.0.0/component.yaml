@@ -2,13 +2,13 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-upload-app
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-upload-app
 requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
-commit: 29c5416
+commit: 464e8ca
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
   defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"

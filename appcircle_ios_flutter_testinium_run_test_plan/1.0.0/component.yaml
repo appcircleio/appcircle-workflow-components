@@ -2,13 +2,13 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Testinium Run Test Plan
 description: "Run test plan with Testinium."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-run-test-plan
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-run-test-plan
 requiredComponents: "appcircle_ios_flutter_testinium_upload_app"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-run-test-plan-component.git
-commit: 438d680
+commit: 431717c
 inputs:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"

@@ -2,19 +2,19 @@ platform: Android
 buildPlatform: Flutter
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-upload-app
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-upload-app
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component
 repoUrl: https://github.com/appcircleio/appcircle-testinium-upload-app-component.git
-commit: 29c5416
+commit: 464e8ca
 inputs:
 - key: "AC_TESTINIUM_APP_PATH"
-  defaultValue: "$AC_TESTINIUM_APP_PATH"
+  defaultValue: "$AC_APK_PATH"
   isRequired: true
   title: Path of the build
-  description: "Full path of the build file. Example for iOS: `$AC_EXPORT_DIR/MyApp.ipa`. Example for Android: `$AC_APK_PATH`."
+  description: "Full path of the build file."
   helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"

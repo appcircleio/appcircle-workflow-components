@@ -1,8 +1,8 @@
 platform: iOS
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Testinium
-description: "Enables uploading mobile applications to Testinium and running the selected test plan."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
+description: "Run your test plans with Testinium"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium
 requiredComponents: "appcircle_ios_build_sign"
 precedingComponents:
 followingComponents:
@@ -14,7 +14,7 @@ inputs:
   defaultValue: "$AC_TESTINIUM_APP_PATH"
   isRequired: true
   title: Path of the build
-  description: "Full path of the build. For example `$AC_EXPORT_DIR/Myapp.ipa`."
+  description: "Full path of the build. For example $AC_EXPORT_DIR/Myapp.ipa."
   helpText:
 - key: "AC_TESTINIUM_USERNAME"
   defaultValue: "$AC_TESTINIUM_USERNAME"
