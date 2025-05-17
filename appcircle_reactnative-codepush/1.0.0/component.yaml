@@ -2,13 +2,13 @@ platform: common
 buildPlatform: ReactNative
 displayName: Appcircle CodePush
 description: "Release a React Native update to Appcircle CodePush."
-docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/appcircle-codepush
+docsUrl: https://docs.appcircle.io
 requiredComponents: "appcircle_git_clone,appcircle_npm_yarn,appcircle_node_install"
 precedingComponents: 
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-codepush-component
 repoUrl: https://github.com/appcircleio/appcircle-codepush-component.git
-commit: 8dc6cfd
+commit: a001ebe
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -20,7 +20,7 @@ inputs:
   defaultValue: "$AC_CODE_PUSH_TOKEN"
   isRequired: true
   title: Appcircle Personal Access Token
-  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`. For details, see [Generating and Managing Personal API Tokens](https://docs.appcircle.io/appcircle-api-and-cli/api-authentication#generatingmanaging-the-personal-api-tokens)."
+  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`. For details, see [Generating and Managing Personal API Tokens](/appcircle-api-and-cli/api-authentication#generatingmanaging-the-personal-api-tokens)."
   helpText:
 - key: "AC_CODE_PUSH_SERVER_URL"
   defaultValue: "$AC_CODE_PUSH_SERVER_URL"
