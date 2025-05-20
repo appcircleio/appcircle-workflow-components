@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-codepush-component
 repoUrl: https://github.com/appcircleio/appcircle-codepush-component.git
-commit: 8dc6cfd
+commit: 30ea156
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
