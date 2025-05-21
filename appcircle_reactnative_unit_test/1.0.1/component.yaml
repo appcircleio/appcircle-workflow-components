@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-react-native-unit-test-component.git
-commit: 64ca01c
+commit: efb1578
 inputs:
   - key: "AC_REPOSITORY_DIR"
     defaultValue: "$AC_REPOSITORY_DIR"
@@ -23,9 +23,10 @@ inputs:
     description: Specify the output directory.
     helpText:
   - key: "AC_RN_TEST_COMMAND_ARGS"
+    defaultValue: "--debug --colors"
     isRequired: false
     title: Jest Extra Arguments
-    description: Specify additional arguments for running the Jest command. These arguments will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. You can add extra arguments, such as `--debug --colors`, without affecting the default ones. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
+    description: Specify additional arguments for running the Jest command. These arguments will be added to the end of the command `jest --coverage --coverageDirectory=coverage --coverageReporters=lcov` which will be used by default. You can add extra arguments without affecting the default ones. For more information, see the Jest [CLI options](https://jestjs.io/docs/cli#options).
     helpText:
 outputs:
   - key: "AC_TEST_RESULT_PATH"

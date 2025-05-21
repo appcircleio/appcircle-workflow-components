@@ -2,13 +2,13 @@ platform: Common
 buildPlatform: ReactNative
 displayName: Test Reports
 description: Parse test and coverage results.
-docsUrl: https://docs.appcircle.io/continuous-testing/react-native-testing/react-native-unit-testing#generating-test-report
+docsUrl: https://docs.appcircle.io/continuous-testing/react-native-testing/react-native-unit-test-with-jest#generating-test-report
 requiredComponents:
 precedingComponents: "appcircle_reactnative_unit_test,appcircle_reactnative_ui_test"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: 02cbb2a
+commit: 4bd4164
 inputs:
   - key: "AC_TEST_RESULT_PATH"
     defaultValue: "$AC_TEST_RESULT_PATH"
