@@ -8,7 +8,7 @@ precedingComponents: "appcircle_ios_xcresult_converter_html_xml"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
-commit: 4bd4164
+commit: 152ea44
 inputs:
 - key: "AC_TEST_RESULT_PATH"
   defaultValue: "$AC_TEST_RESULT_PATH"
