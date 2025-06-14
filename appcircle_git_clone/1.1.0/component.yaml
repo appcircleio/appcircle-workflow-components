@@ -8,7 +8,7 @@ precedingComponents: "appcircle_activate_ssh_key"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-git-clone-component
 repoUrl: https://github.com/appcircleio/appcircle-git-clone-component.git
-commit: 1b35fac
+commit: f0236ee
 inputs:
 - key: "AC_GIT_URL"
   defaultValue: "$AC_GIT_URL"
