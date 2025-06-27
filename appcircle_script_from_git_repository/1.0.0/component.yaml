@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component
 repoUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component.git
-commit: 02437ec
+commit: 16b7d27
 inputs:
   - key: "CS_GIT_CLONE_URL"
     title: "Git repository clone URL"
