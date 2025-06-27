@@ -1,0 +1,50 @@
+platform: Common
+buildPlatform:
+displayName: Script from Git Repository
+description: "Get your compatible scripts from a Git repository onto the build machine."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps#custom-scripts
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-git-clone-component
+repoUrl: https://github.com/appcircleio/appcircle-git-clone-component.git
+commit: f2dc16a
+inputs:
+  - key: "CS_GIT_CLONE_URL"
+    defaultValue: ""
+    isRequired: true
+    title: CS_GIT_CLONE_URL
+    description: "CS_GIT_CLONE_URL."
+    helpText:
+  - key: "CS_GIT_USERNAME"
+    defaultValue: ""
+    isRequired: true
+    title: CS_GIT_USERNAME
+    description: "CS_GIT_USERNAME."
+    helpText:
+  - key: "CS_GIT_PAT"
+    defaultValue: ""
+    isRequired: true
+    title: CS_GIT_PAT
+    description: "CS_GIT_PAT."
+    helpText:
+  - key: "CS_GIT_BRANCH"
+    isRequired: true
+    title: CS_GIT_BRANCH
+    description: "CS_GIT_BRANCH."
+    helpText:
+  - key: "CS_GIT_SCRIPT_FILE"
+    defaultValue: "false"
+    isRequired: true
+    title: CS_GIT_SCRIPT_FILE
+    description: "CS_GIT_SCRIPT_FILE."
+    helpText:
+  - key: "CS_GIT_EXTRA_PARAMS"
+    isRequired: false
+    defaultValue: ""
+    title: Extra Params
+    description: "If this set, sends extra parameter for git requests."
+    helpText:
+outputs:
+processFilename:
+processArguments:
