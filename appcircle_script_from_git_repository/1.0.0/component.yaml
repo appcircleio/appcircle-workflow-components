@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component
 repoUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component.git
-commit: 9142d79
+commit: e728847
 inputs:
   - key: "AC_REUSABLE_REPO_PATH"
     title: "Reusable script Git repository input path"
