@@ -12,7 +12,7 @@ commit: bc9e92c
 inputs:
   - key: "AC_REUSABLE_REPO_SCRIPT_REPO_PATH"
     title: "Reusable script Git repository input path"
-    description: "If this step required again, output path should be here"
+    description: "If this step required again, AC_REUSABLE_SCRIPT_OUTPUT_PATH should be here"
     defaultValue: ""
     isRequired: false
     helpText: ""
@@ -55,8 +55,8 @@ inputs:
 outputs:
   - key: "AC_REUSABLE_SCRIPT_OUTPUT_PATH"
     title: "Reuseable"
-    defaultValue: "AC_ANDROID_POST_PROCESS_OUTPUT_PATH"
-    description: Post process output file.
+    defaultValue: "AC_REUSABLE_SCRIPT_OUTPUT_PATH"
+    description: "If this steps repository required again, AC_REUSABLE_REPO_SCRIPT_REPO_PATH requires this key"
     helpText: ""
 processFilename:
 processArguments:
