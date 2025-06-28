@@ -1,11 +1,11 @@
 platform: iOS
-buildPlatform: Flutter
+buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
 docsUrl: https://docs.appcircle.io/versioning/ios-version
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
-followingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build"
+followingComponents: "appcircle_ios_build_sign"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
 commit: 75c95fb
