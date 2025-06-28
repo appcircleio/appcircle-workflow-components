@@ -8,48 +8,48 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component
 repoUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component.git
-commit: bc9e92c
+commit: 208c0f8
 inputs:
-  - key: "AC_REUSABLE_REPO_SCRIPT_REPO_PATH"
+  - key: "AC_REUSABLE_REPO_PATH"
     title: "Reusable script Git repository input path"
     description: "If this step required again, AC_REUSABLE_SCRIPT_OUTPUT_PATH should be here"
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_PATH"
     isRequired: false
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_GIT_CLONE_URL"
     title: "Git repository clone URL"
     description: "URL of the Git repository to clone."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_CLONE_URL"
     isRequired: false
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_GIT_USERNAME"
     title: "Git Provider username"
     description: "Username for Git authentication."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_USERNAME"
     isRequired: false
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
     title: "Git Provider personal access token"
     description: "Personal access token for Git authentication."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_GIT_BRANCH"
     title: "Preferred branch name"
     description: "Branch name to checkout after cloning."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_BRANCH"
     isRequired: false
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_FILE"
     title: "Exact name of the script"
     description: "Path to the script file within the repository to execute."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_FILE"
     isRequired: true
     helpText: ""
   - key: "AC_REUSABLE_REPO_SCRIPT_EXTRA_PARAMETERS"
     title: "Extra parameters for the script"
     description: "Additional parameters to pass to the script after cloning (optional)."
-    defaultValue: ""
+    defaultValue: "AC_REUSABLE_REPO_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
 outputs:
