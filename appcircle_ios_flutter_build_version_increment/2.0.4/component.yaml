@@ -1,0 +1,99 @@
+platform: iOS
+buildPlatform: Flutter
+displayName: Increment Build and Version Number
+description: 'Increment Build and Version Number for iOS'
+docsUrl: https://docs.appcircle.io/versioning/ios-version
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build"
+webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
+repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
+commit: b24c841
+inputs:
+  - key: 'AC_REPOSITORY_DIR'
+    defaultValue: '$AC_REPOSITORY_DIR'
+    isRequired: true
+    title: Repository Directory
+    description: Specifies the cloned repository directory.
+  - key: "AC_PROJECT_PATH"
+    defaultValue: "$AC_PROJECT_PATH"
+    isRequired: true
+    title: Project Path
+    description: "Specifies the project path. For example : ./appcircle.xcodeproj"
+  - key: "AC_SCHEME"
+    defaultValue: "$AC_SCHEME"
+    isRequired: true
+    title: Scheme
+    description: "Specifies the project scheme for the build."
+  - key: "AC_BUILD_NUMBER_SOURCE"
+    defaultValue: "$AC_BUILD_NUMBER_SOURCE"
+    isRequired: false
+    title: Build Number Source
+    description: Build number source type(env,xcode).
+  - key: "AC_IOS_BUILD_NUMBER"
+    defaultValue: "$AC_IOS_BUILD_NUMBER"
+    isRequired: false
+    title: Build Number
+    description: Build Number. Default value is $AC_BUILD_NUMBER.
+  - key: "AC_BUILD_OFFSET"
+    defaultValue: "$AC_BUILD_OFFSET"
+    isRequired: false
+    title: Build Incremeent Offset
+  - key: "AC_VERSION_NUMBER_SOURCE"
+    defaultValue: "$AC_VERSION_NUMBER_SOURCE"
+    isRequired: false
+    title: Version Number Source
+    description: Version number source type(env,xcode,appstore).
+  - key: "AC_IOS_VERSION_NUMBER"
+    defaultValue: "$AC_IOS_VERSION_NUMBER"
+    isRequired: false
+    title: Version Number
+    description: Version Number
+  - key: "AC_VERSION_STRATEGY"
+    defaultValue: "$AC_VERSION_STRATEGY"
+    isRequired: false
+    title: Version Increment Strategy
+    description: Version Increment Strategy major, minor, patch, or keep. Default is keep 
+  - key: "AC_VERSION_OFFSET"
+    defaultValue: "$AC_VERSION_OFFSET"
+    isRequired: false
+    title: Version Increment Offset
+    description: "The number to be added or subtracted from the version number. Negative values can be written such as -10. Default is 0"
+  - key: "AC_OMIT_ZERO_PATCH_VERSION"
+    defaultValue: "$AC_OMIT_ZERO_PATCH_VERSION"
+    isRequired: false
+    title: Omit Zero Patch Version
+    description: "If true omits zero in patch version(so 42.10.0 will become 42.10 and 42.10.1 will remain 42.10.1), default is false"
+  - key: "AC_BUNDLE_ID"
+    defaultValue: "$AC_BUNDLE_ID"
+    isRequired: false
+    title: Bundle ID
+    description: "If the build number source is `appstore`, this variable should have the bundle id of your application"
+  - key: "AC_APPSTORE_COUNTRY"
+    defaultValue: "$AC_APPSTORE_COUNTRY"
+    isRequired: false
+    title: Country
+    description: "If the build number source is `appstore`, optional two letter country code"
+  - key: "AC_TARGETS"
+    defaultValue: "$AC_TARGETS"
+    isRequired: false
+    title: Targets
+    description: Name of the targets to update. You can separate multiple targets by the pipe symbol. If you don't specify any target, all runnable targets will be updated.
+  - key: "AC_IOS_CONFIGURATION_NAME"
+    defaultValue: "$AC_IOS_CONFIGURATION_NAME"
+    isRequired: false
+    title: Configuration
+    description: The build configuration to use. If you don't specify any configuration, the target's archive configuration will be used.
+outputs:
+  - key: "AC_IOS_NEW_BUILD_NUMBER"
+    title: Changed build number
+    defaultValue: "AC_IOS_NEW_BUILD_NUMBER"
+    description: Changed build number that is written to the project.
+  - key: "AC_IOS_NEW_VERSION_NUMBER"
+    title: Changed version number
+    defaultValue: "AC_IOS_NEW_VERSION_NUMBER"
+    description: Changed version number that is written to the project.
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'
