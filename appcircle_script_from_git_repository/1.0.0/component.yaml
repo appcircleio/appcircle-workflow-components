@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: 8d61436
+commit: fce631f
 inputs:
   - key: "AC_SCRIPT_REPO_DIR"
     title: "Git Repository Directory On The Build Machine For Script Reuse"
