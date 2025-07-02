@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: cf4b274
+commit: 8d61436
 inputs:
   - key: "AC_SCRIPT_REPO_DIR"
     title: "Git Repository Directory On The Build Machine For Script Reuse"
@@ -16,7 +16,7 @@ inputs:
     defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
     isRequired: false
     helpText: ""
-  - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
+  - key: "AC_SCRIPT_REPO_CLONE_URL"
     title: "Git Repository Clone URL"
     description: "The URL of the Git repository to clone. Required if the repository directory is not provided."
     defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
