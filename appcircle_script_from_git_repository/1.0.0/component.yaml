@@ -1,62 +1,62 @@
 platform: Common
 buildPlatform:
-displayName: Reusable Script
+displayName: Custom Script from Git
 description: "Get your compatible scripts from a Git repository onto the build machine."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/script-from-git-repository
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/custom-script-from-git
 requiredComponents:
 precedingComponents:
 followingComponents:
-webUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component
-repoUrl: https://github.com/appcircleio/appcircle-script-from-git-repository-component.git
-commit: e728847
+webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
+repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
+commit: cf4b274
 inputs:
-  - key: "AC_REUSABLE_REPO_PATH"
-    title: "Reusable script Git repository input path"
-    description: "If this step required again, AC_REUSABLE_SCRIPT_OUTPUT_PATH should be here"
-    defaultValue: "AC_REUSABLE_REPO_PATH"
+  - key: "AC_SCRIPT_REPO_DIR"
+    title: "Git Repository Directory On The Build Machine For Script Reuse"
+    description: "The local directory of the Git repository on the build machine. Required if Clone URL, Username, and Personal Access Token are not provided. If the script has already been cloned in a previous step, set this to AC_SCRIPT_REPO_OUTPUT_DIR."
+    defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
     isRequired: false
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_GIT_CLONE_URL"
-    title: "Git repository clone URL"
-    description: "URL of the Git repository to clone."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_CLONE_URL"
+  - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
+    title: "Git Repository Clone URL"
+    description: "The URL of the Git repository to clone. Required if the repository directory is not provided."
+    defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
     isRequired: false
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_GIT_USERNAME"
-    title: "Git Provider username"
-    description: "Username for Git authentication."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_USERNAME"
+  - key: "AC_SCRIPT_GIT_USERNAME"
+    title: "Username"
+    description: "The username for Git provider authentication. Required if the repository directory is not provided."
+    defaultValue: "$AC_SCRIPT_GIT_USERNAME"
     isRequired: false
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
-    title: "Git Provider personal access token"
-    description: "Personal access token for Git authentication."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
+  - key: "AC_SCRIPT_GIT_PAT"
+    title: "Personal Access Token"
+    description: "The personal access token for Git provider authentication. Required if the repository directory is not provided."
+    defaultValue: "$AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_GIT_BRANCH"
-    title: "Preferred branch name"
-    description: "Branch name to checkout after cloning."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_GIT_BRANCH"
+  - key: "AC_SCRIPT_GIT_BRANCH"
+    title: "Branch Name"
+    description: "The name of the branch to check out from the script repository."
+    defaultValue: "$AC_SCRIPT_GIT_BRANCH"
     isRequired: false
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_FILE"
-    title: "Exact name of the script"
-    description: "Path to the script file within the repository to execute."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_FILE"
+  - key: "AC_SCRIPT_FILENAME"
+    title: "Script File Name"
+    description: "Provide the exact name of the script file to execute within the repository (e.g., test.sh, code.rb)."
+    defaultValue: "$AC_SCRIPT_FILENAME"
     isRequired: true
     helpText: ""
-  - key: "AC_REUSABLE_REPO_SCRIPT_EXTRA_PARAMETERS"
-    title: "Extra parameters for the script"
-    description: "Additional parameters to pass to the script after cloning (optional)."
-    defaultValue: "AC_REUSABLE_REPO_SCRIPT_EXTRA_PARAMETERS"
+  - key: "AC_SCRIPT_EXTRA_PARAMETERS"
+    title: "Extra Parameters For The Script"
+    description: "Additional parameters to pass to the relevant script. Separate multiple parameters with \",\". If a parameter contains spaces, enclose it in \"\"."
+    defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
 outputs:
-  - key: "AC_REUSABLE_SCRIPT_OUTPUT_PATH"
-    title: "Reuseable"
-    defaultValue: "AC_REUSABLE_SCRIPT_OUTPUT_PATH"
-    description: "If this steps repository required again, AC_REUSABLE_REPO_SCRIPT_REPO_PATH requires this key"
+  - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
+    title: "Repository Directory Output To Reuse The Script"
+    defaultValue: "AC_SCRIPT_REPO_DIR"
+    description: "The directory path of the cloned script repository on the build machine for reuse in subsequent steps."
     helpText: ""
 processFilename:
 processArguments:
