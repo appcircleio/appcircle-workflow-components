@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: 24489a1
+commit: b08514f
 inputs:
   - key: "AC_SCRIPT_REPO_DIR"
     title: "Git Repository Directory to Reuse the Script"
@@ -31,7 +31,7 @@ inputs:
   - key: "AC_SCRIPT_GIT_PAT"
     title: "Personal Access Token"
     description: "The personal access token for Git provider authentication. Required if the Repository Directory is not provided. Public repository doesnt require PAT"
-    defaultValue: "AC_SCRIPT_GIT_PAT"
+    defaultValue: "$AC_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_BRANCH"
