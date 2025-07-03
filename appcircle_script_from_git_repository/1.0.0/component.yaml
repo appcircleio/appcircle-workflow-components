@@ -8,55 +8,55 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: fce631f
+commit: 24489a1
 inputs:
   - key: "AC_SCRIPT_REPO_DIR"
-    title: "Git Repository Directory On The Build Machine For Script Reuse"
-    description: "The local directory of the Git repository on the build machine. Required if Clone URL, Username, and Personal Access Token are not provided. If the script has already been cloned in a previous step, set this to AC_SCRIPT_REPO_OUTPUT_DIR."
+    title: "Git Repository Directory to Reuse the Script"
+    description: "If the Git repository has already been cloned in a previous step, set this to Repository Directory Output key. Required if Clone URL, Username, and Personal Access Token are not provided."
     defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_CLONE_URL"
     title: "Git Repository Clone URL"
-    description: "The URL of the Git repository to clone. Required if the repository directory is not provided."
+    description: "The URL of the Git repository to clone. Required if the Repository Directory is not provided."
     defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_USERNAME"
     title: "Username"
-    description: "The username for Git provider authentication. Required if the repository directory is not provided."
+    description: "The username for Git provider authentication. Required if the Repository Directory is not provided. Public repository doesnt require Username"
     defaultValue: "$AC_SCRIPT_GIT_USERNAME"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_PAT"
     title: "Personal Access Token"
-    description: "The personal access token for Git provider authentication. Required if the repository directory is not provided."
-    defaultValue: "$AC_REUSABLE_REPO_SCRIPT_GIT_PAT"
+    description: "The personal access token for Git provider authentication. Required if the Repository Directory is not provided. Public repository doesnt require PAT"
+    defaultValue: "AC_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_BRANCH"
     title: "Branch Name"
-    description: "The name of the branch to check out from the script repository."
+    description: "The name of the branch to checkout from the script repository. Default branch is main"
     defaultValue: "$AC_SCRIPT_GIT_BRANCH"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_FILENAME"
     title: "Script File Name"
-    description: "Provide the exact name of the script file to execute within the repository (e.g., test.sh, code.rb)."
+    description: "Provide the exact name of the script file to execute within the repository (e.g., test.sh, code.rb, python.py)."
     defaultValue: "$AC_SCRIPT_FILENAME"
     isRequired: true
     helpText: ""
   - key: "AC_SCRIPT_EXTRA_PARAMETERS"
-    title: "Extra Parameters For The Script"
+    title: "Extra Parameters for the Script"
     description: "Additional parameters to pass to the relevant script. Separate multiple parameters with \",\". If a parameter contains spaces, enclose it in \"\"."
     defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
 outputs:
   - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
-    title: "Repository Directory Output To Reuse The Script"
-    defaultValue: "AC_SCRIPT_REPO_DIR"
-    description: "The directory path of the cloned script repository on the build machine for reuse in subsequent steps."
+    title: "Repository Directory Output to Reuse the Script"
+    defaultValue: "AC_SCRIPT_REPO_OUTPUT_DIR"
+    description: "The repository directory output key of the custom script repository on the build machine for reuse in subsequent steps."
     helpText: ""
 processFilename:
 processArguments:
