@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_ios_build_sign"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
-commit: 75c95fb
+commit: b24c841
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
