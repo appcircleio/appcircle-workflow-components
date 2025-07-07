@@ -4,7 +4,7 @@ displayName: Resign V2 IPA
 description: "Resign IPA for autosign and resign-v2."
 webUrl: https://github.com/appcircleio/appcircle-ios-autosign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-autosign-component.git
-commit: 61adec2
+commit: 9b11043
 inputs:
 - key: "AC_RESIGN_FILE_URL"
   defaultValue: "$ResignFileUrl"
@@ -31,7 +31,7 @@ inputs:
   description: "BundleIds as params to fastlane"
   helpText:
 - key: "AC_PROVISIONING_PATHS"
-  defaultValue: "$ResignFileName"
+  defaultValue: "$AC_PROVISIONING_PATHS"
   isRequired: true
   title: Provision name and paths
   description: "Provision profile names and paths for fastlane"
