@@ -25,7 +25,7 @@ inputs:
   description: "Original file name"
   helpText:
 - key: "AC_APP_IDENTIFIERS"
-  defaultValue: "$ResignFileName"
+  defaultValue: "$AC_APP_IDENTIFIERS"
   isRequired: true
   title: BundleId array to use in fastlane
   description: "BundleIds as params to fastlane"
