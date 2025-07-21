@@ -1,14 +1,14 @@
 platform: iOS
-buildPlatform: ObjectiveCSwift, ReactNative
+buildPlatform: Flutter
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
 docsUrl: https://docs.appcircle.io/versioning/ios-version
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
-followingComponents: "appcircle_ios_build_sign"
+followingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
-commit: 9279c7b
+commit: 1351e09
 inputs:
   - key: 'AC_REPOSITORY_DIR'
     defaultValue: '$AC_REPOSITORY_DIR'
