@@ -8,47 +8,47 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: ed9f134
+commit: 2336aa2
 inputs:
   - key: "AC_SCRIPT_FILENAME"
     title: "Script File Name"
-    description: "Specifies the exact name of the script file to execute within the Git repository (e.g., test.sh, code.rb, python.py)."
+    description: "Specifies the exact name of the script file to execute within the Git repository (e.g., test.sh, code.rb, repositorySubfolder/python.py)."
     defaultValue: "$AC_SCRIPT_FILENAME"
     isRequired: true
     helpText: ""
   - key: "AC_SCRIPT_EXTRA_PARAMETERS"
     title: "Extra Parameters for the Script"
-    description: "Additional parameters to pass to the relevant script file. Separate multiple parameters with a comma \" , \". If a parameter contains spaces, enclose it in \" \"."
+    description: "Additional parameters to pass to the script (comma "," separated; if a parameter has an empty character, define it with " "; e.g. `param1,param2,\"string with spaces\",param3`)."
     defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_DIR"
-    title: "Repository Directory to Reuse the Script"
-    description: "If the Git repository has already been cloned in a previous workflow step, set Repository Directory Output here. Required if Clone URL, Username, and Personal Access Token are not provided."
+    title: "Repository Directory"
+    description: "If the Git repository has already been cloned in a previous step of the same workflow, set the Repository Directory Output here. This input is required if `Git Clone URL` is not provided."
     defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_CLONE_URL"
     title: "Git Repository Clone URL"
-    description: "Git repository clone URL (https). Required if the Repository Directory Output is not provided."
+    description: "Git repository clone URL (https). Required if the Repository Directory Output is not provided. (e.g. https://exampleGit.exampleRepo.git)"
     defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_USERNAME"
     title: "Username"
-    description: "Git provider username for authentication. Required if the Repository Directory Output is not provided. Public repository doesnt require Username"
+    description: "Git provider username for authentication. This is required if the Repository Directory input is not provided. A public repository does not require a username."
     defaultValue: "$AC_SCRIPT_GIT_USERNAME"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_PAT"
     title: "Personal Access Token"
-    description: "Git provider personal access token for authentication. Required if the Repository Directory Output is not provided. Public repository doesnt require PAT"
+    description: "Git provider personal access token for authentication. Required if the `Repository Directory` input is not provided. A public repository does not require a PAT."
     defaultValue: "$AC_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_BRANCH"
     title: "Branch Name"
-    description: "Name of the branch to checkout from the script repository. Default branch is main"
+    description: "Name of the branch to check out from the script repository. If not specified, the repository's default branch will be used."
     defaultValue: "$AC_SCRIPT_GIT_BRANCH"
     isRequired: false
     helpText: ""
@@ -56,7 +56,7 @@ outputs:
   - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
     title: "Repository Directory Output"
     defaultValue: "AC_SCRIPT_REPO_OUTPUT_DIR"
-    description: "Repository directory output of the custom script repository on the build machine for reuse in subsequent steps."
+    description: "Specifies a local directory path where the Git repository is cloned on the runner. This allows reusing the same repository in subsequent steps of the workflow."
     helpText: ""
 processFilename:
 processArguments:
