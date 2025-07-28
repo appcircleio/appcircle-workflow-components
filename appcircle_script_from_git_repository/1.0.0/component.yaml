@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: 2336aa2
+commit: bd383bc
 inputs:
   - key: "AC_SCRIPT_FILENAME"
     title: "Script File Name"
