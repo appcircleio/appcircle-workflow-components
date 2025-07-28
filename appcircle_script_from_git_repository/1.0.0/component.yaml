@@ -18,7 +18,7 @@ inputs:
     helpText: ""
   - key: "AC_SCRIPT_EXTRA_PARAMETERS"
     title: "Extra Parameters for the Script"
-    description: "Additional parameters to pass to the script (comma "," separated; if a parameter has an empty character, define it with " "; e.g. `param1,param2,\"string with spaces\",param3`)."
+    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"string with spaces\",param3`)."
     defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
