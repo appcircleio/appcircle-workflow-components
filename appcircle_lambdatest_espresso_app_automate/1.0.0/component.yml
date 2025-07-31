@@ -1,0 +1,62 @@
+platform: Android
+buildPlatform:
+displayName: LambdaTest App Automate - Espresso
+description: "Run your Espresso tests on LambdaTest App Automate"
+docsUrl:
+requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component
+repoUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component.git
+commit: 395ad62
+inputs:
+- key: "AC_LT_USERNAME"
+  defaultValue: "$AC_LT_USERNAME"
+  isRequired: true
+  title: "LambdaTest username"
+  description: "Username of the LambdaTest account."
+  helpText:
+- key: "AC_LT_ACCESS_KEY"
+  defaultValue: "$AC_LT_ACCESS_KEY"
+  isRequired: true
+  title: "LambdaTest access key"
+  description: "Access key for the LambdaTest account."
+  helpText:
+- key: "AC_LT_APK_PATH"
+  defaultValue: "$AC_APK_PATH"
+  isRequired: true
+  title: "Path of the APK"
+  description: "Full path of the APK file."
+  helpText:
+- key: "AC_LT_TEST_APK_PATH"
+  defaultValue: "$AC_TEST_APK_PATH"
+  isRequired: true
+  title: "Path of the testSuite APK"
+  description: "Path for the generated `*androidTest.apk` file."
+  helpText:
+- key: "AC_LT_PAYLOAD"
+  defaultValue: |
+    {
+      "app": "AC_LT_APP_URL",
+      "testSuite": "AC_LT_TEST_URL",
+      "device": ["Galaxy S21 5G-12"],
+      "queueTimeout": 10800,
+      "IdleTimeout": 150,
+      "network": false,
+      "deviceLog": true,
+      "build": "Proverbial-Espresso"
+    }
+  editorType: textarea
+  isRequired: false
+  title: Build Payload
+  description: "`AC_LT_APP_URL` and `AC_LT_TEST_URL` will be auto generated. Please check [documentation](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing) for more details about the payload."
+- key: "AC_LT_TIMEOUT"
+  defaultValue: "600"
+  isRequired: true
+  title: "Timeout"
+  description: "LambdaTest plan timeout in seconds."
+  helpText:
+processFilename: ruby
+processArguments: '%STEP_TEMP%/main.rb'
+files:
+  - 'main.rb'
