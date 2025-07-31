@@ -57,6 +57,6 @@ inputs:
   description: "LambdaTest plan timeout in seconds."
   helpText:
 processFilename: ruby
-processArguments: '%STEP_TEMP%/main.rb'
+processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
   - 'main.rb'
