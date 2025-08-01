@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component
 repoUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component.git
-commit: 46aec39
+commit: 2bf823b
 inputs:
 - key: "AC_LT_USERNAME"
   defaultValue: "$AC_LT_USERNAME"
@@ -55,6 +55,12 @@ inputs:
   isRequired: true
   title: "Timeout"
   description: "LambdaTest plan timeout in seconds."
+  helpText:
+outputs:
+- key: "AC_LT_TEST_RESULT_PATH"
+  defaultValue: "AC_LT_TEST_RESULT_PATH"
+  title: "LambdaTest Test Result Path"
+  description: "Path to save test results from LambdaTest. It should be a writable directory, by default under `AC_OUTPUT_DIR`."
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
