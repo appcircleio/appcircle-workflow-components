@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component
 repoUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component.git
-commit: 1f56ebc
+commit: e5fc931
 inputs:
 - key: "AC_LT_USERNAME"
   defaultValue: "$AC_LT_USERNAME"
