@@ -2,13 +2,13 @@ platform: Android
 buildPlatform:
 displayName: LambdaTest App Automate - Espresso
 description: "Run your Espresso tests on LambdaTest App Automate"
-docsUrl:
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/lambdatest-app-automate-espresso
 requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component
 repoUrl: https://github.com/appcircleio/appcircle-lambdatest-espresso-app-automate-component.git
-commit: a7adb7a
+commit: da643ce
 inputs:
 - key: "AC_LT_USERNAME"
   defaultValue: "$AC_LT_USERNAME"
