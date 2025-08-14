@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
 repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
-commit: 7ac4fb3
+commit: 276d5e9
 inputs:
   - key: "AC_SCRIPT_FILENAME"
     title: "Script File Name"
@@ -16,16 +16,10 @@ inputs:
     defaultValue: "$AC_SCRIPT_FILENAME"
     isRequired: true
     helpText: ""
-  - key: "AC_SCRIPT_EXTRA_PARAMETERS"
-    title: "Extra Parameters for the Script"
-    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"param3 with spaces\",param4`)."
-    defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
-    isRequired: false
-    helpText: ""
   - key: "AC_SCRIPT_REPO_DIR"
     title: "Repository Directory"
     description: "If the Git repository has already been cloned in a previous step of the same workflow, set the Repository Directory Output here. This input is required if `Git Clone URL` is not provided."
-    defaultValue: "$AC_SCRIPT_REPO_DIR"
+    defaultValue: "AC_SCRIPT_OUTPUT_REPO_DIR"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_CLONE_URL"
@@ -36,13 +30,13 @@ inputs:
     helpText: ""
   - key: "AC_SCRIPT_GIT_USERNAME"
     title: "Username"
-    description: "Git provider username for authentication. This is required if the Repository Directory input is not provided. A public repository does not require a username."
+    description: "Git provider username for authentication. This is required if the `Repository Directory` input is not provided and the Git repository is private."
     defaultValue: "$AC_SCRIPT_GIT_USERNAME"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_GIT_PAT"
     title: "Personal Access Token"
-    description: "Git provider personal access token for authentication. Required if the `Repository Directory` input is not provided. A public repository does not require a PAT."
+    description: "Git provider personal access token for authentication. Required if the `Repository Directory` input is not provided and the Git repository is private."
     defaultValue: "$AC_SCRIPT_GIT_PAT"
     isRequired: false
     helpText: ""
@@ -50,6 +44,12 @@ inputs:
     title: "Branch Name"
     description: "Name of the branch to check out from the script repository. If not specified, the repository's default branch will be used."
     defaultValue: "$AC_SCRIPT_GIT_BRANCH"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_EXTRA_PARAMETERS"
+    title: "Extra Parameters for the Script"
+    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"param3 with spaces\",param4`)."
+    defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
 outputs:
