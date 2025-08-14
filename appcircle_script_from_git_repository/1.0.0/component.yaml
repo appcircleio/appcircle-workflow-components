@@ -12,25 +12,25 @@ commit: bd383bc
 inputs:
   - key: "AC_SCRIPT_FILENAME"
     title: "Script File Name"
-    description: "Specifies the exact name of the script file to execute within the Git repository (e.g., test.sh, code.rb, repositorySubfolder/python.py)."
+    description: "Specifies the exact name of the script file to execute within the Git repository (e.g., `test.sh`, `code.rb` or `relative_path/python.py`)."
     defaultValue: "$AC_SCRIPT_FILENAME"
     isRequired: true
     helpText: ""
   - key: "AC_SCRIPT_EXTRA_PARAMETERS"
     title: "Extra Parameters for the Script"
-    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"string with spaces\",param3`)."
+    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"param3 with spaces\",param4`)."
     defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_DIR"
     title: "Repository Directory"
     description: "If the Git repository has already been cloned in a previous step of the same workflow, set the Repository Directory Output here. This input is required if `Git Clone URL` is not provided."
-    defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
+    defaultValue: "$AC_SCRIPT_REPO_DIR"
     isRequired: false
     helpText: ""
   - key: "AC_SCRIPT_REPO_CLONE_URL"
     title: "Git Repository Clone URL"
-    description: "Git repository clone URL (https). Required if the Repository Directory Output is not provided. (e.g. https://exampleGit.exampleRepo.git)"
+    description: "Git repository clone URL. Required if the Repository Directory Output is not provided. (e.g. https://exampleGit.exampleRepo.git)"
     defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
     isRequired: false
     helpText: ""
