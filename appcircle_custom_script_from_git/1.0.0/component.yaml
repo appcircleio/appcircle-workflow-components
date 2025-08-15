@@ -1,0 +1,62 @@
+platform: Common
+buildPlatform:
+displayName: Custom Script from Git
+description: "Get your compatible scripts from a Git repository onto the build machine."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/custom-script-from-git
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component
+repoUrl: https://github.com/appcircleio/appcircle-custom-script-from-git-component.git
+commit: 051a22a
+inputs:
+  - key: "AC_SCRIPT_FILENAME"
+    title: "Script File Name"
+    description: "Specifies the exact name of the script file to execute within the Git repository (e.g., `test.sh`, `code.rb` or `relative_path/python.py`)."
+    defaultValue: "$AC_SCRIPT_FILENAME"
+    isRequired: true
+    helpText: ""
+  - key: "AC_SCRIPT_REPO_DIR"
+    title: "Repository Directory"
+    description: "If the Git repository has already been cloned in a previous step of the same workflow, set the Repository Directory Output here. This input is required if `Git Clone URL` is not provided."
+    defaultValue: "$AC_SCRIPT_REPO_OUTPUT_DIR"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_REPO_CLONE_URL"
+    title: "Git Repository Clone URL"
+    description: "Git repository clone URL. Required if the Repository Directory Output is not provided. (e.g. https://exampleGit.exampleRepo.git)"
+    defaultValue: "$AC_SCRIPT_REPO_CLONE_URL"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_GIT_USERNAME"
+    title: "Username"
+    description: "Git provider username for authentication. This is required if the `Repository Directory` input is not provided and the Git repository is private."
+    defaultValue: "$AC_SCRIPT_GIT_USERNAME"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_GIT_PAT"
+    title: "Personal Access Token"
+    description: "Git provider personal access token for authentication. Required if the `Repository Directory` input is not provided and the Git repository is private."
+    defaultValue: "$AC_SCRIPT_GIT_PAT"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_GIT_BRANCH"
+    title: "Branch Name"
+    description: "Name of the branch to check out from the script repository. If not specified, the repository's default branch will be used."
+    defaultValue: "$AC_SCRIPT_GIT_BRANCH"
+    isRequired: false
+    helpText: ""
+  - key: "AC_SCRIPT_EXTRA_PARAMETERS"
+    title: "Extra Parameters for the Script"
+    description: "Additional parameters to pass to the script (comma \",\" separated; if a parameter has an empty character, define it with \" \"; e.g. `param1,param2,\"param3 with spaces\",param4`)."
+    defaultValue: "$AC_SCRIPT_EXTRA_PARAMETERS"
+    isRequired: false
+    helpText: ""
+outputs:
+  - key: "AC_SCRIPT_REPO_OUTPUT_DIR"
+    title: "Repository Directory Output"
+    defaultValue: "AC_SCRIPT_REPO_OUTPUT_DIR"
+    description: "Specifies a local directory path where the Git repository is cloned on the runner. This allows reusing the same repository in subsequent steps of the workflow."
+    helpText: ""
+processFilename:
+processArguments:
