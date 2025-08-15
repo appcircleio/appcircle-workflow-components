@@ -1,0 +1,28 @@
+platform: Common
+buildPlatform:
+displayName: Step test pulled from external repo
+description: "Step test pulled from external repo."
+docsUrl:
+requiredComponents:
+precedingComponents:
+followingComponents: 
+webUrl: https://github.com/ftmzhrsckldr/appcircle-test-external_component
+repoUrl: https://github.com/ftmzhrsckldr/appcircle-test-external_component.git
+commit: 61dc29c
+inputs:
+  - key: "AC_TEST_ENV"
+    title: "Test Environment Variable"
+    description: "Test environment variable."
+    defaultValue: "$AC_TEST_ENV"
+    isRequired: true
+    helpText: ""
+outputs:
+  - key: "AC_TEST_OUT_ENV"
+    title: "Test Environment"
+    defaultValue: "AC_TEST_OUT_ENV"
+    description: "Specifies output test environment."
+    helpText: ""
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - "main.rb"
