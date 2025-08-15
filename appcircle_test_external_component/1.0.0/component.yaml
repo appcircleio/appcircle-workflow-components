@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/ftmzhrsckldr/appcircle-test-external_component
 repoUrl: https://github.com/ftmzhrsckldr/appcircle-test-external_component.git
-commit: bc6f7f0
+commit: a3d9878
 inputs:
   - key: "AC_TEST_ENV"
     title: "Test Environment Variable"
