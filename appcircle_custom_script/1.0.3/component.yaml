@@ -13,7 +13,7 @@ commit: ed1b419
 inputs:
 - key: "Execute"
   editorType: select
-  options: "ruby,bash,python,javascript"
+  options: "ruby,bash,python,node"
   isRequired: true
   title: Execute with
   description: "Script to execute with. For example bash or ruby."
