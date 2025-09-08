@@ -9,11 +9,11 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
-commit: aeba0ba
+commit: 8ce5005
 inputs:
 - key: "Execute"
   editorType: select
-  options: "ruby,bash,python,node"
+  options: "bash,node,python,ruby"
   isRequired: true
   title: Execute with
   description: "Script to execute with. For example bash or ruby."
