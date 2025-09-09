@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: ba29922
+commit: 59235f8
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
