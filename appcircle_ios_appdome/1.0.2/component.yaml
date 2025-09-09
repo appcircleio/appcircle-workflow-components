@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts" 
 webUrl: https://github.com/appcircleio/appcircle-ios-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-appdome-component.git
-commit: e83d26d
+commit: 5e3eebf
 inputs:
 - key: "AC_APPDOME_IPA_PATH"
   defaultValue: "$AC_APPDOME_IPA_PATH"

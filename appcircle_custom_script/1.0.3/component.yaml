@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
-commit: ed1b419
+commit: 8ce5005
 inputs:
 - key: "Execute"
   editorType: select
