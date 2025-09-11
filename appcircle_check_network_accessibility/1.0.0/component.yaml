@@ -1,0 +1,111 @@
+platform: Common
+buildPlatform:
+displayName: Check Network Accessibility
+description: "Check the network access with necessary tools for Appcircle build module using pre-determined curl commands on runner."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/check-network-accessibility
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/check-network-accessibility
+repoUrl: https://github.com/appcircleio/check-network-accessibility.git
+commit:
+inputs:
+  - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
+    title: "Check github.com/appcircleio"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_RUBYGEMS"
+    title: "Check rubygems.org"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_INDEX_RUBYGEMS"
+    title: "Check index.rubygems.org"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_SERVICES_GRADLE_ORG"
+    title: "Check services.gradle.org"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_DL_GOOGLE_COM_ANDROID_REPOSITORY"
+    title: "Check dl.google.com/android/repository"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_DL_SSL_GOOGLE_COM_ANDROID_REPOSITORY"
+    title: "Check dl-ssl.google.com/android/repository"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_MAVEN_GOOGLE_COM"
+    title: "Check maven.google.com/web/index.html"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_REPO1_MAVEN_ORG_MAVEN2"
+    title: "Check repo1.maven.org/maven2"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_CDCOAPODS_ORG"
+    title: "Check cdn.cocoapods.org"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_GITHUB_COCOAPODS_SPECS"
+    title: "Check github.com/CocoaPods/Specs"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_FIREBASEAPPDISTRIBUTION_GOOGLEAPIS_COM"
+    title: "Check firebaseappdistribution.googleapis.com"
+    description: ""
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_EXTRA_URL_PARAMETERS"
+    title: ""
+    description: "Additional URL parameters to check network access (comma \",\" separated ; e.g. `https://URL1, https://URL2`)."
+    defaultValue: "$AC_CHECK_NETWORK_EXTRA_URL_PARAMETERS"
+    isRequired: false
+    helpText: ""
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - "main.rb"
