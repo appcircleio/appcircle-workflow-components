@@ -1,0 +1,160 @@
+platform: Android
+buildPlatform:
+displayName: "Sauce Labs Saucectl"
+description: "Automate the execution of UI tests for Android applications using Saucectl by Sauce Labs."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/sauce-labs-saucectl
+requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
+precedingComponents:
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component
+repoUrl: https://github.com/appcircleio/appcircle-sauce-labs-saucectl-component.git
+commit: caeafe0
+inputs:
+  - key: "AC_SL_CONFIG_PATH"
+    defaultValue: "./.sauce/config.yml"
+    isRequired: true
+    title: Sauce Labs Configuration File Path
+    description: "Path to the Sauce Labs configuration file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--config) documentation for the option detail."
+  - key: "AC_SL_USERNAME"
+    defaultValue: "$AC_SL_USERNAME"
+    isRequired: true
+    title: Sauce Labs Username
+    description: "Sauce Labs username. It must be set as a secret environment variable."
+  - key: "AC_SL_ACCESS_KEY"
+    defaultValue: "$AC_SL_ACCESS_KEY"
+    isRequired: true
+    title: Sauce Labs Access Key
+    description: "Sauce Labs access key. It must be set as a secret environment variable."
+  - key: "AC_SL_RUN_ONLY_VIA_CONFIG"
+    defaultValue: "false"
+    editorType: select
+    options: "true,false"
+    isRequired: true
+    title: Sauce Labs Run Only via Config
+    description: "Whether to run only using the configuration file. If you select this field as `true`, you will not need to fill in the following options."
+  - key: "AC_SL_SELECT_SUITE"
+    defaultValue: "$AC_SL_SELECT_SUITE"
+    isRequired: false
+    title: Sauce Labs Select Suite
+    description: "Specifies a test suite to execute by name rather than all suites defined in the config file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--select-suite) documentation for the option detail."
+  - key: "AC_SL_APP_PATH"
+    defaultValue: "$AC_APK_PATH"
+    isRequired: false
+    title: Sauce Labs App
+    description: "Path to the main application file that will be tested. This should be the location of the APK within the Sauce Labs environment or your build process. If not provided, app will be used as default in config.yml"
+  - key: "AC_SL_TEST_APP_PATH"
+    defaultValue: "$AC_TEST_APK_PATH"
+    isRequired: false
+    title: Sauce Labs Test App
+    description: "Path to the test application file, which contains the test code to be run against the main app. This is usually a separate test APK. If not provided, app will be used as default in config.yml"
+  - key: "AC_SL_ARTIFACT_CLEANUP"
+    defaultValue: "false"
+    editorType: select
+    options: "true,false"
+    isRequired: false
+    title: Sauce Labs Artifact Cleanup
+    description: "Clear the artifacts directory before downloading new test data. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactscleanup) documentation for the option detail."
+  - key: "AC_SL_DOWNLOAD_DIR"
+    defaultValue: "$AC_SL_DOWNLOAD_DIR"
+    isRequired: false
+    title: Sauce Labs Download Directory
+    description: "Specifies the path to the folder location in which to download artifacts. A separate subdirectory is generated in this location for each suite for which artifacts are downloaded. Must be set in conjunction with `Sauce Labs Download Match` and `Sauce Labs When to Download Artifacts`. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactsdownloaddirectory) documentation for the option detail."
+  - key: "AC_SL_DOWNLOAD_MATCH"
+    defaultValue: "$AC_SL_DOWNLOAD_MATCH"
+    isRequired: false
+    title: Sauce Labs Download Match
+    description: "Specifies which artifacts to download based on whether they match the name or file type pattern provided. Supports the wildcard character *. Must be set in conjunction with `Sauce Labs Download Directory` and `Sauce Labs When to Download Artifacts`. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactsdownloadwhen) documentation for the option detail."
+  - key: "AC_SL_WHEN_ARTIFACT_DOWNLOAD"
+    defaultValue: "never"
+    editorType: select
+    options: "always,never,pass,fail"
+    isRequired: false
+    title: Sauce Labs When to Download Artifacts
+    description: "Criteria for downloading assets. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--artifactsdownloadwhen) documentation for the option detail."
+  - key: "AC_SL_ASYNC"
+    defaultValue: "false"
+    editorType: select
+    options: "true,false"
+    isRequired: false
+    title: Sauce Labs Async
+    description: "Launch tests without waiting for preceding test results. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--async) documentation for the option detail."
+  - key: "AC_SL_BUILD"
+    defaultValue: "$AC_SL_BUILD"
+    isRequired: false
+    title: Sauce Labs Build Reference
+    description: "Associates the tests with a build to support easy filtering of related test results in the Sauce Labs UI. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--build) documentation for the option detail."
+  - key: "AC_SL_CCY"
+    defaultValue: "$AC_SL_CCY"
+    isRequired: false
+    title: Sauce Labs Concurrency
+    description: "Maximum tests to run concurrently. If the config defines more suites than the max, excess suites are queued and run in order as each suite completes. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--ccy) documentation for the option detail."
+  - key: "AC_SL_ENV"
+    defaultValue: "$AC_SL_ENV"
+    isRequired: false
+    title: Sauce Labs Environment Variables
+    description: "An environment variable key value pair that may be referenced in the tests executed by this command. Expanded environment variables are supported. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--env) documentation for the option detail."
+  - key: "AC_SL_FAIL_FAST"
+    defaultValue: "false"
+    editorType: select
+    options: "true,false"
+    isRequired: false
+    title: Sauce Labs Fail Fast
+    description: "Stop suite execution after the first failure. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--fail-fast) documentation for the option detail."
+  - key: "AC_SL_REGION"
+    defaultValue: "eu-central-1"
+    editorType: select
+    options: "us-west-1,us-east-4,eu-central-1"
+    isRequired: true
+    title: Sauce Labs Region
+    description: "Specifies the Sauce Labs data center through which tests will run. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--region) documentation for the option detail."
+  - key: "AC_SL_RETRIES"
+    defaultValue: "1"
+    isRequired: false
+    title: Sauce Labs Retries
+    description: "Number of times to rerun a failed test suite. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--retries) documentation for the option detail."
+  - key: "AC_SL_ROOT_DIR"
+    defaultValue: "$AC_REPOSITORY_DIR"
+    isRequired: false
+    title: Root Directory
+    description: "Specifies the project directory. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--root-dir) documentation for the option detail."
+  - key: "AC_SL_SAUCEIGNORE"
+    defaultValue: "$AC_SL_SAUCEIGNORE"
+    isRequired: false
+    title: Sauce Labs Sauce Ignore
+    description: "Specifies the path to the `.sauceignore` file. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--sauceignore) documentation for the option detail."
+  - key: "AC_SL_SHOW_CONSOLE_LOG"
+    defaultValue: "true"
+    editorType: select
+    options: "true,false"
+    isRequired: false
+    title: Sauce Labs Show Console Log
+    description: "Include the `console.log` contents in the output for all tests. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--show-console-log) documentation for the option detail."
+  - key: "AC_SL_TAGS"
+    defaultValue: "$AC_SL_TAGS"
+    isRequired: false
+    title: Sauce Labs Tags
+    description: "Keywords that may help you distinguish the test in Sauce Labs, and also help you apply filters to easily isolate tests based on metrics that are meaningful to you. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tags) documentation for the option detail."
+  - key: "AC_SL_TIMEOUT"
+    defaultValue: "10m"
+    isRequired: false
+    title: Sauce Labs Timeout
+    description: "Global timeout that limits how long saucectl can run in total. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--timeout) documentation for the option detail."
+  - key: "AC_SL_TUNNEL_NAME"
+    defaultValue: "$AC_SL_TUNNEL_NAME"
+    isRequired: false
+    title: Sauce Labs Tunnel Name
+    description: "Use a running Sauce Connect tunnel to test. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name) documentation for the option detail."
+  - key: "AC_SL_TUNNEL_OWNER"
+    defaultValue: "$AC_SL_TUNNEL_OWNER"
+    isRequired: false
+    title: Sauce Labs Tunnel Owner
+    description: "The tunnel owner, if it is not the testing account. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-owner) documentation for the option detail."
+  - key: "AC_SL_TUNNEL_TIMEOUT"
+    defaultValue: "$AC_SL_TUNNEL_TIMEOUT"
+    isRequired: false
+    title: Sauce Labs Tunnel Timeout
+    description: "How long to wait for the specified tunnel to be ready. Check [saucectl](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-timeout) documentation for the option detail."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - "main.rb"
