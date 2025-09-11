@@ -6,9 +6,9 @@ docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/check-network
 requiredComponents:
 precedingComponents:
 followingComponents:
-webUrl: https://github.com/appcircleio/check-network-accessibility
-repoUrl: https://github.com/appcircleio/check-network-accessibility.git
-commit:
+webUrl: https://github.com/appcircleio/appcircle-network-accessibility-check-component
+repoUrl: https://github.com/appcircleio/appcircle-network-accessibility-check-component.git
+commit: 99d5af4
 inputs:
   - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
     title: "Check github.com/appcircleio"
