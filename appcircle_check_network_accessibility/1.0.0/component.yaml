@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform:
-displayName: Check Network Accessibility
-description: "Check the network access with necessary tools for Appcircle build module using pre-determined curl commands on runner."
+displayName: Check Network Access
+description: "Check network access to external services for the Appcircle build module."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/check-network-accessibility
 requiredComponents:
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-network-accessibility-check-component
 repoUrl: https://github.com/appcircleio/appcircle-network-accessibility-check-component.git
-commit: 5f2401a
+commit: 221c32c
 inputs:
   - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
     title: "Check Appcircle GitHub Access"
