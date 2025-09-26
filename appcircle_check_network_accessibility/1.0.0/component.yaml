@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-check-network-access-component
 repoUrl: https://github.com/appcircleio/appcircle-check-network-access-component.git
-commit: eaa220a
+commit: 4db2292
 inputs:
   - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
     title: "Check Appcircle GitHub Access"
@@ -100,14 +100,14 @@ inputs:
     helpText: ""
   - key: "AC_CHECK_CONNECTION_TIMEOUT"
     title: "Set Connection Timeout"
-    description: "Specifies the maximum time (integer, in seconds) allowed for establishing a connection to the server before the request is aborted. `Default: 8 seconds.`"
-    defaultValue: "$AC_CHECK_CONNECTION_TIMEOUT"
+    description: "Specifies the maximum time (integer, in seconds) allowed for establishing a connection to the server before the request is aborted."
+    defaultValue: "8"
     isRequired: false
     helpText: ""
   - key: "AC_CHECK_CONNECTION_MAX_TIMEOUT"
     title: "Set Max Timeout"
-    description: "Specifies the maximum total time (integer, in seconds) allowed for the entire request (including connection, data transfer, and response) before it is aborted. `Default: 20 seconds.`"
-    defaultValue: "$AC_CHECK_CONNECTION_MAX_TIMEOUT"
+    description: "Specifies the maximum total time (integer, in seconds) allowed for the entire request (including connection, data transfer, and response) before it is aborted."
+    defaultValue: "20"
     isRequired: false
     helpText: ""
   - key: "AC_CHECK_NETWORK_EXTRA_URL_PARAMETERS"
