@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-check-network-access-component
 repoUrl: https://github.com/appcircleio/appcircle-check-network-access-component.git
-commit: 69d0b22
+commit: 122d658
 inputs:
   - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
     title: "Check Appcircle GitHub Access"
@@ -121,3 +121,4 @@ processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
   - "main.rb"
+  - "curl_exit_codes.yaml"
