@@ -1,0 +1,124 @@
+platform: Common
+buildPlatform:
+displayName: Check Network Access
+description: "Check the network access with external services for the Appcircle build module."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/check-network-access
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-check-network-access-component
+repoUrl: https://github.com/appcircleio/appcircle-check-network-access-component.git
+commit: 1dae246
+inputs:
+  - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
+    title: "Check Appcircle GitHub Access"
+    description: "Checks if the runner can access `https://github.com/appcircleio/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_RUBYGEMS"
+    title: "Check RubyGems Registry Access"
+    description: "Checks if the runner can access `https://rubygems.org/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_INDEX_RUBYGEMS"
+    title: "Check RubyGems Index Access"
+    description: "Checks if the runner can access `https://index.rubygems.org/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_SERVICES_GRADLE_ORG"
+    title: "Check Gradle Wrapper Services Access"
+    description: "Checks if the runner can access `https://services.gradle.org/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_DL_GOOGLE_COM_ANDROID_REPOSITORY"
+    title: "Check Android SDK Repository Access"
+    description: "Checks if the runner can access `https://dl.google.com/android/repository/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_DL_SSL_GOOGLE_COM_ANDROID_REPOSITORY"
+    title: "Check Android SDK Mirror Repository Access"
+    description: "Checks if the runner can access `https://dl-ssl.google.com/android/repository/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_MAVEN_GOOGLE_COM"
+    title: "Check Google Maven Repository Access"
+    description: "Checks if the runner can access `https://maven.google.com/web/index.html/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_REPO1_MAVEN_ORG_MAVEN2"
+    title: "Check Maven Central Repository Access"
+    description: "Checks if the runner can access `https://repo1.maven.org/maven2/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_CDCOAPODS_ORG"
+    title: "Check CocoaPods CDN Access"
+    description: "Checks if the runner can access `https://cdn.cocoapods.org/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_GITHUB_COCOAPODS_SPECS"
+    title: "Check CocoaPods Specs GitHub Access"
+    description: "Checks if the runner can access `https://github.com/CocoaPods/Specs/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_FIREBASEAPPDISTRIBUTION_GOOGLEAPIS_COM"
+    title: "Check Firebase App Distribution API Access"
+    description: "Checks if the runner can access `https://firebaseappdistribution.googleapis.com/` when enabled."
+    defaultValue: "true"
+    isRequired: false
+    editorType: "select"
+    options: "true,false"
+    helpText: ""
+  - key: "AC_CHECK_CONNECTION_TIMEOUT"
+    title: "Set Connection Timeout"
+    description: "Specifies the maximum time (integer, in seconds) allowed for establishing a connection to the server before the request is aborted."
+    defaultValue: "8"
+    isRequired: false
+    helpText: ""
+  - key: "AC_CHECK_CONNECTION_MAX_TIMEOUT"
+    title: "Set Max Timeout"
+    description: "Specifies the maximum total time (integer, in seconds) allowed for the entire request (including connection, data transfer, and response) before it is aborted."
+    defaultValue: "20"
+    isRequired: false
+    helpText: ""
+  - key: "AC_CHECK_NETWORK_EXTRA_URL_PARAMETERS"
+    title: "Additional URL parameters"
+    description: "Additional URL parameters to check network access (comma \",\" separated ; e.g. `https://URL1, https://URL2`)."
+    defaultValue: "$AC_CHECK_NETWORK_EXTRA_URL_PARAMETERS"
+    isRequired: false
+    helpText: ""
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+  - "main.rb"
+  - "curl_exit_codes.rb"
