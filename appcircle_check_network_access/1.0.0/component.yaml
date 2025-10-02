@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-check-network-access-component
 repoUrl: https://github.com/appcircleio/appcircle-check-network-access-component.git
-commit: 1dae246
+commit: b336285
 inputs:
   - key: "AC_CHECK_NETWORK_GITHUB_APPCIRCLE"
     title: "Check Appcircle GitHub Access"
