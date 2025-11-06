@@ -1,0 +1,39 @@
+platform:
+buildPlatform:
+displayName: "KOBIL Appshield Scanner"
+description: "Performs dynamic runtime scans for mobile app files (APK, AAB, IPA) to detect existing security mechanisms. Indicates whether an app is secure or not."
+webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
+repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
+commit: bf1df1a
+inputs:
+- key: "AC_APPSHIELD_APP_FILE_PATH"
+  defaultValue: false
+  isRequired: true
+  title: AAB/APK/IPA Path
+  description: "Path to the AAB/APK/IPA file for KOBIL Appshield Scanner to test"  
+  helpText:
+
+- key: "AC_APPSHIELD_API_KEY"
+  defaultValue: "f8b36d6f-7220-4fb5-8ad2-70a9a9dd2da6"
+  isRequired: true
+  title: User API Key
+  description: "User API Key for starting a test session"
+  helpText:
+
+- key: "AC_APPSHIELD_USER_MAIL"
+  defaultValue: false
+  isRequired: false
+  title: User e-mail
+  description: "(Optional) User e-mail for test result PDF."
+  helpText:
+
+outputs:
+- key: "AC_APPSHIELD_IS_APP_SECURE"
+  title: "Boolean test result"
+  defaultValue: null
+  description: "Boolean test result whether app is secure or not"
+  helpText:
+processFilename: python
+processArguments: '%AC_STEP_TEMP%/main.py'
+files:
+- "main.py"
