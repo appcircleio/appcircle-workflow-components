@@ -29,7 +29,7 @@ outputs:
   title: "Boolean test result"
   description: "Boolean test result whether app is secure or not"
   helpText:
-processFilename: ruby
-processArguments: '%AC_STEP_TEMP%/main.rb'
+processFilename: python
+processArguments: '%AC_STEP_TEMP%/main.py'
 files:
-- "main.rb"
+- "main.py"
