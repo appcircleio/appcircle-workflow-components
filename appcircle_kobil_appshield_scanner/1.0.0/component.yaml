@@ -2,9 +2,9 @@ platform: Common
 buildPlatform:
 displayName: "KOBIL Appshield Scanner"
 description: "Performs dynamic runtime scans for mobile app files (APK, AAB, IPA) to detect existing security mechanisms."
-webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
-repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
-commit: b4cfe8d
+webUrl:   https://github.com/ftmzhrsckldr/python-test-script
+repoUrl: https://github.com/ftmzhrsckldr/python-test-script.git
+commit: e079844
 inputs:
 - key: "AC_APPSHIELD_APP_FILE_PATH"
   defaultValue: "false"
