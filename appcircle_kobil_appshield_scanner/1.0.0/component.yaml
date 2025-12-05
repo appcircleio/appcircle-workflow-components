@@ -4,7 +4,7 @@ displayName: "KOBIL Appshield Scanner"
 description: "Performs dynamic runtime scans for mobile app files (APK, AAB, IPA) to detect existing security mechanisms."
 webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
 repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
-commit: e325651
+commit: f16a5ad
 inputs:
 - key: "AC_APPSHIELD_APP_FILE_PATH"
   defaultValue: false
@@ -17,7 +17,7 @@ inputs:
   defaultValue: "f8b36d6f-7220-4fb5-8ad2-70a9a9dd2da6"
   isRequired: true
   title: User API Key
-  description: "User API Key for starting a test session."
+  description: "User API key for starting a test session."
   helpText:
 
 - key: "AC_APPSHIELD_USER_MAIL"
