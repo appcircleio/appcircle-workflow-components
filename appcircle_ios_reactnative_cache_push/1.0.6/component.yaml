@@ -1,0 +1,39 @@
+platform: iOS
+buildPlatform: ReactNative
+displayName: "Cache Push"
+description: "Uploads user selected files and folders to Appcircle cache."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-cache/cache-push
+requiredComponents: "appcircle_git_clone"
+precedingComponents: 
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-cache-push-component
+repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
+commit: d4e080b 
+inputs:
+- key: "AC_CACHE_LABEL"
+  defaultValue: "$AC_BUILD_PROFILE_ID/cache"
+  isRequired: true
+  title: Cache Label
+  description: "User defined cache label to identify one cache from others. Both cache push and pull steps should have the same value to match."
+  helpText:
+- key: "AC_CACHE_INCLUDED_PATHS"
+  defaultValue: "~/Library/Caches/CocoaPods:~/Library/Caches/Yarn:ios/Pods:ios/Podfile.lock"
+  isRequired: true
+  title: Included Paths
+  description: "Specifies the files and folders which should be in cache. Multiple glob patterns can be provided as a colon-separated list. For example; .gradle:app/build"
+  helpText:
+- key: "AC_CACHE_EXCLUDED_PATHS"
+  defaultValue: ""
+  isRequired: false
+  title: Excluded Paths
+  description: "Specifies the files and folders which should be ignored from cache. Multiple glob patterns can be provided as a colon-separated list. For example; .gradle/*.lock:*.apk"
+  helpText:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: false
+  title: Repository Path
+  description: "Specifies the cloned repository path."
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
