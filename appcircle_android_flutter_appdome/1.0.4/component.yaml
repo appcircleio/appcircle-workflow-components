@@ -47,14 +47,8 @@ inputs:
   isRequired: true
   editorType: select
   title: Google Play Signing?
-  description: "Sign the app for Google Play? If 'true', the Google Play App Signing fingerprint must be provided via AC_GOOGLE_SIGN_FINGERPRINT."
+  description: "Sign the app for Google Play? If 'true', requires $AC_SIGN_FINGERPRINT in the Secrets tab."
   options: "true,false"
-  helpText:
-- key: "AC_GOOGLE_SIGN_FINGERPRINT"
-  defaultValue: "$AC_GOOGLE_SIGN_FINGERPRINT"
-  isRequired: false
-  title: Google Play App Signing Fingerprint
-  description: "Fingerprint of the Google Play App Signing certificate. Required when Google Play Signing is enabled. Define this value as a secret under the Environment Variables section."
   helpText:
 - key: "AC_APPDOME_BUILD_LOGS"
   defaultValue: "false"
