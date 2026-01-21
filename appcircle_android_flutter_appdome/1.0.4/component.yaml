@@ -1,14 +1,14 @@
 platform: Android
-buildPlatform: ReactNative, JavaKotlin
+buildPlatform: Flutter
 displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/appdome-build-to-secure-for-android
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+requiredComponents: "appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
-commit: 92427be
+commit: 0f4805f
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
@@ -47,14 +47,8 @@ inputs:
   isRequired: true
   editorType: select
   title: Google Play Signing?
-  description: "Sign the app for Google Play? If 'true', the Google Play App Signing fingerprint must be provided via AC_GOOGLE_SIGN_FINGERPRINT."
+  description: "Sign the app for Google Play? If 'true', requires $AC_SIGN_FINGERPRINT in the Secrets tab."
   options: "true,false"
-  helpText:
-- key: "AC_GOOGLE_SIGN_FINGERPRINT"
-  defaultValue: "$AC_GOOGLE_SIGN_FINGERPRINT"
-  isRequired: false
-  title: Google Play App Signing Fingerprint
-  description: "Fingerprint of the Google Play App Signing certificate. Required when Google Play Signing is enabled. Define this value as a secret under the Environment Variables section."
   helpText:
 - key: "AC_APPDOME_BUILD_LOGS"
   defaultValue: "false"
