@@ -1,13 +1,17 @@
-platform: Common
-buildPlatform:
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
 displayName: "KOBIL Appshield Scanner"
-description: "Performs dynamic runtime scans for mobile app files (APK, AAB, IPA) to detect existing security mechanisms."
+description: "Runs dynamic analysis on mobile apps to detect security mechanisms."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/kobil-appshield-scanner
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents:
+followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
 repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
-commit: 7836fed
+commit: 9618d2d
 inputs:
 - key: "AC_APPSHIELD_APP_FILE_PATH"
-  defaultValue: "$AC_APPSHIELD_APP_FILE_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
   isRequired: true
   title: AAB/APK/IPA Path
   description: "Path to the AAB/APK/IPA file for KOBIL Appshield Scanner to test."  
@@ -17,7 +21,7 @@ inputs:
   defaultValue: "f8b36d6f-7220-4fb5-8ad2-70a9a9dd2da6"
   isRequired: true
   title: User API Key
-  description: "User API key for starting a test session."
+  description: "User API key for starting a test session. If not provided, the default value provided for Appcircle users can be used."
   helpText:
 
 - key: "AC_APPSHIELD_USER_MAIL"
@@ -36,6 +40,7 @@ inputs:
  
 outputs:
 - key: "AC_APPSHIELD_IS_APP_SECURE"
+  defaultValue: "AC_APPSHIELD_IS_APP_SECURE"
   title: "Boolean test result"
   description: "Boolean test result whether app is secure or not"
   helpText:
