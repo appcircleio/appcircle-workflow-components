@@ -1,0 +1,51 @@
+platform: iOS
+buildPlatform: ObjectiveCSwift, ReactNative
+displayName: "KOBIL Appshield Scanner"
+description: "Runs dynamic analysis on mobile apps to detect security mechanisms."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/kobil-appshield-scanner
+requiredComponents: "appcircle_ios_build_sign"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
+repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
+commit: 54d54d9
+inputs:
+- key: "AC_APPSHIELD_APP_FILE_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
+  isRequired: true
+  title: AAB/APK/IPA Path
+  description: "Path to the AAB/APK/IPA file for KOBIL Appshield Scanner to test."  
+  helpText:
+
+- key: "AC_APPSHIELD_API_KEY"
+  defaultValue: "5e3ba594-ab46-4530-9738-d961dc42977e"
+  isRequired: true
+  title: User API Key
+  description: "User API key for starting a test session. If not provided, the default value provided for Appcircle users can be used."
+  helpText:
+
+- key: "AC_APPSHIELD_USER_MAIL"
+  defaultValue: "$AC_APPSHIELD_USER_MAIL"
+  isRequired: false
+  title: User e-mail
+  description: "An e-mail address for sending the test result PDF."
+  helpText:
+
+- key: "AC_APPSHIELD_UPLOAD_TIMEOUT"
+  defaultValue: "300"
+  isRequired: false
+  title: File Upload Timeout
+  description: "File upload timeout in seconds."
+  helpText:
+ 
+outputs:
+- key: "AC_APPSHIELD_IS_APP_SECURE"
+  defaultValue: "AC_APPSHIELD_IS_APP_SECURE"
+  title: "Boolean test result"
+  description: "Boolean test result whether app is secure or not"
+  helpText:
+
+processFilename: python
+processArguments: '%AC_STEP_TEMP%/main.py'
+files:
+- "main.py"
