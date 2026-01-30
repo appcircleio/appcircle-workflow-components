@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
 repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
-commit: 9618d2d
+commit: 54d54d9
 inputs:
 - key: "AC_APPSHIELD_APP_FILE_PATH"
   defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
@@ -18,7 +18,7 @@ inputs:
   helpText:
 
 - key: "AC_APPSHIELD_API_KEY"
-  defaultValue: "f8b36d6f-7220-4fb5-8ad2-70a9a9dd2da6"
+  defaultValue: "5e3ba594-ab46-4530-9738-d961dc42977e"
   isRequired: true
   title: User API Key
   description: "User API key for starting a test session. If not provided, the default value provided for Appcircle users can be used."

@@ -1,10 +1,10 @@
 platform: Android
-buildPlatform: ReactNative, JavaKotlin
+buildPlatform: Flutter
 displayName: "KOBIL Appshield Scanner"
 description: "Runs dynamic analysis on mobile apps to detect security mechanisms."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/kobil-appshield-scanner
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+requiredComponents: "appcircle_android_flutter_build"
+precedingComponents: "appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
 repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git

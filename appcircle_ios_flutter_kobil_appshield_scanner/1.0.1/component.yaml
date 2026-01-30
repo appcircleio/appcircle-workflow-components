@@ -1,17 +1,17 @@
-platform: Android
-buildPlatform: ReactNative, JavaKotlin
+platform: iOS
+buildPlatform: Flutter
 displayName: "KOBIL Appshield Scanner"
 description: "Runs dynamic analysis on mobile apps to detect security mechanisms."
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/kobil-appshield-scanner
-requiredComponents: "appcircle_android_build"
-precedingComponents: "appcircle_android_sign"
+requiredComponents: "appcircle_ios_flutter_build,appcircle_ios_build_sign"
+precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component
 repoUrl: https://github.com/appcircleio/appcircle-kobil-appshield-scanner-component.git
 commit: 54d54d9
 inputs:
 - key: "AC_APPSHIELD_APP_FILE_PATH"
-  defaultValue: "$AC_APK_PATH"
+  defaultValue: "$AC_OUTPUT_DIR/MyApp.ipa"
   isRequired: true
   title: AAB/APK/IPA Path
   description: "Path to the AAB/APK/IPA file for KOBIL Appshield Scanner to test."  
