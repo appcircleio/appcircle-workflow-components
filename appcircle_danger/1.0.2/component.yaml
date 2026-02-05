@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-danger-component
 repoUrl: https://github.com/appcircleio/appcircle-danger-component.git
-commit: 00903c2
+commit: b14c032
 inputs:
 - key: 'AC_REPOSITORY_DIR'
   defaultValue: '$AC_REPOSITORY_DIR'
@@ -27,61 +27,73 @@ inputs:
   description: "Extra command line parameters. Enter --verbose for verbose mode."
   helpText:
 - key: "DANGER_GITHUB_API_TOKEN"
+  defaultValue: "$DANGER_GITHUB_API_TOKEN"
   isRequired: false
   title: Github Access Token
   description: "Github Access Token for the bot user."
   helpText:
 - key: "DANGER_GITHUB_HOST"
+  defaultValue: "$DANGER_GITHUB_HOST"
   isRequired: false
   title: Github Enterprise Host
   description: "The host that GitHub is running on. Example git.corp.com"
   helpText:
 - key: "DANGER_GITHUB_API_BASE_URL"
+  defaultValue: "$DANGER_GITHUB_API_BASE_URL"
   isRequired: false
   title: Github Enterprise Base URL
   description: "the host that the GitHub Enterprise API is reachable on. Example https://git.corp.com/api/v3"
   helpText:
 - key: "DANGER_GITLAB_API_TOKEN"
+  defaultValue: "$DANGER_GITLAB_API_TOKEN"
   isRequired: false
   title: GitLab Access Token
   description: "GitLab Access Token for the bot user."
   helpText:
 - key: "DANGER_GITLAB_HOST"
+  defaultValue: "$DANGER_GITLAB_HOST"
   isRequired: false
   title: GitLab Self-Hosted Host
   description: "The host that GitLab is running on. Example git.corp.com"
   helpText:
 - key: "DANGER_GITLAB_API_BASE_URL"
+  defaultValue: "$DANGER_GITLAB_API_BASE_URL"
   isRequired: false
   title: GitLab Self-Hosted Base URL
   description: "the host that the GitHub Enterprise API is reachable on. Example https://git.corp.com/api/v4"
   helpText:
 - key: "DANGER_BITBUCKETCLOUD_USERNAME"
+  defaultValue: "$DANGER_BITBUCKETCLOUD_USERNAME"
   isRequired: false
   title: Bitbucket Username
   description: "Bitbucket username for the bot user."
   helpText:
 - key: "DANGER_BITBUCKETCLOUD_PASSWORD"
+  defaultValue: "$DANGER_BITBUCKETCLOUD_PASSWORD"
   isRequired: false
   title: Bitbucket Password
   description: "Bitbucket password for the bot user"
   helpText:
 - key: "DANGER_BITBUCKETCLOUD_UUID"
+  defaultValue: "$DANGER_BITBUCKETCLOUD_UUID"
   isRequired: false
   title: Bitbucket UUID
   description: "Bitbucket UUID of the bot user"
   helpText:
 - key: "DANGER_BITBUCKETSERVER_USERNAME"
+  defaultValue: "$DANGER_BITBUCKETSERVER_USERNAME"
   isRequired: false
   title: Bitbucket Self-Hosted Username
   description: "Bitbucket username for the bot user."
   helpText:
 - key: "DANGER_BITBUCKETSERVER_PASSWORD"
+  defaultValue: "$DANGER_BITBUCKETSERVER_PASSWORD"
   isRequired: false
   title: Bitbucket Self-Hosted Password
   description: "Bitbucket password for the bot user"
   helpText:
 - key: "DANGER_BITBUCKETSERVER_HOST"
+  defaultValue: "$DANGER_BITBUCKETSERVER_HOST"
   isRequired: false
   title: Bitbucket Host
   description: "The host that Bitbucket is running on. Example git.corp.com"
