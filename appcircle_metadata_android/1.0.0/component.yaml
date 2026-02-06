@@ -19,3 +19,4 @@ processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
 - "main.rb"
+hidden: true
