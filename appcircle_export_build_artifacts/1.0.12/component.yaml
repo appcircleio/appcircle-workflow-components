@@ -1,0 +1,31 @@
+platform: Common
+buildPlatform:
+displayName: "Export Build Artifacts"
+description: "Exports the specified build artifacts from the build agent to the Appcircle dashboard. The exported files will be available for download from the artifacts section of the completed build."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/export-build-artifacts
+requiredComponents:
+precedingComponents: "appcircle_git_clone"
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
+repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
+commit: 11fd3e0
+inputs:
+- key: "AC_UPLOAD_DIR"
+  defaultValue: "$AC_OUTPUT_DIR"
+  isRequired: true
+  title: Artifact Directory
+  description: "If a folder path is specified, the files in this folder will be exported as artifacts. If a file path is specified, that file will be exported as an artifact. Uploading files with a 0 byte size in the specified path will be skipped."
+  helpText:
+- key: "AC_DISABLE_UPLOAD_ON_FAIL"
+  defaultValue: "false"
+  isRequired: false
+  editorType: select
+  options: "false,true"
+  title: Delete Artifacts for Failed Workflows
+  description: "Delete build artifacts if any of your workflow steps failed. Only build logs will be uploaded."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
