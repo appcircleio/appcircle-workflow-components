@@ -5,6 +5,7 @@ description: "Re-sign the unsigned output file from the build step with the sele
 webUrl: https://github.com/appcircleio/appcircle-android-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-resign-component.git
 commit: 10e21f6
+hidden: true
 inputs:
 - key: "AC_RESIGN_APK_URL"
   defaultValue: "$ResignFileUrl"
