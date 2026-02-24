@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_android_post_process,appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-sign-component.git
-commit: dfde5c6
+commit: 6625e03
 inputs:
 - key: "AC_APK_PATH"
   defaultValue: "$AC_APK_PATH"
