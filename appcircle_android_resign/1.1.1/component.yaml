@@ -9,6 +9,7 @@ followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-android-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-resign-component.git
 commit: bed52df
+hidden: true
 inputs:
 - key: "AC_RESIGN_APK_URL"
   defaultValue: "$ResignFileUrl"
