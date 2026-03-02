@@ -31,6 +31,7 @@ inputs:
 - key: "AC_CLEAN_BUILD"
   title: Clean Build
   defaultValue: "true"
+  isRequired: false
   options: "true,false"
   editorType: select
   description: "Adds the clean parameter to xcodebuild command. When true, builds from a clean state. When false, performs incremental build without cleaning."
