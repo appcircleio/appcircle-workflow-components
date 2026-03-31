@@ -5,6 +5,7 @@ description: "Resign IPA for autosign and resign-v2."
 webUrl: https://github.com/appcircleio/appcircle-ios-autosign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-autosign-component.git
 commit: 474caba
+hidden: true
 inputs:
 - key: "AC_RESIGN_FILE_URL"
   defaultValue: "$ResignFileUrl"
