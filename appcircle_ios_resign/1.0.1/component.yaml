@@ -5,6 +5,7 @@ description: "Resign IPA with different certificates and provisioning profiles."
 webUrl: https://github.com/appcircleio/appcircle-ios-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-resign-component.git
 commit: 959a7fe
+hidden: true
 inputs:
 - key: "AC_RESIGN_IPA_URL"
   defaultValue: "$ResignFileUrl"
