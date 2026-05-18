@@ -1,7 +1,7 @@
 platform: common
 buildPlatform:
 displayName: Appcircle Prep Step Tests
-description: "Test for latest version of components"
+description: "Test for latest version of components 2.0.0"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/appcircle-codepush
 requiredComponents:
 precedingComponents: 
