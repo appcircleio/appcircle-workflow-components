@@ -1,11 +1,12 @@
-platform: common
+platform: Common
 buildPlatform:
-displayName: Appcircle Prep Step Tests
-description: "Test for latest version of components"
-docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/appcircle-codepush
+componentType: appcircle_custom_script
+displayName: Custom Script
+description: "Prep component tests"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/custom-script
 requiredComponents:
-precedingComponents: 
-followingComponents: 
+precedingComponents:
+followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
 commit: 8ce5005
