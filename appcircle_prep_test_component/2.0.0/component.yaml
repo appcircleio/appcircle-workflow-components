@@ -25,7 +25,5 @@ inputs:
   description: "Script to execute."
   helpText:
 outputs:
-processFilename: ruby
-processArguments: '%AC_STEP_TEMP%/main.rb'
-files:
-- "main.rb"
+processFilename:
+processArguments:
