@@ -1,6 +1,6 @@
 platform: common
-buildPlatform: ReactNative
-displayName: Appcircle CodePush
+buildPlatform:
+displayName: Appcircle Prep Step Tests
 description: "Release a React Native update to Appcircle CodePush."
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/appcircle-codepush
 requiredComponents: "appcircle_git_clone,appcircle_npm_yarn,appcircle_node_install"
