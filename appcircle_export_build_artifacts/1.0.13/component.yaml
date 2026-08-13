@@ -8,7 +8,7 @@ precedingComponents: "appcircle_git_clone"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: 52e174a
+commit: 29d1e0b
 inputs:
 - key: "AC_UPLOAD_DIR"
   defaultValue: "$AC_OUTPUT_DIR"
