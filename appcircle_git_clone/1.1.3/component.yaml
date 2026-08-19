@@ -44,6 +44,16 @@ inputs:
   title: Submodule
   description: "Used to specify whether the submodule should be cloned."
   helpText:
+- key: "AC_GIT_FETCH_DEPTH"
+  isRequired: false
+  title: Fetch Depth
+  description: "Optional. Number of commits fetched for the given reference and for the submodules. Leave empty to keep the default behavior. Set it to 1 to avoid fetching the full history of the branch when a specific commit is given."
+  helpText:
+- key: "AC_GIT_FETCH_JOBS"
+  isRequired: false
+  title: Fetch Jobs
+  description: "Optional. Number of parallel jobs Git uses while fetching, including the recursive submodule update. Leave empty to let Git use its own default."
+  helpText:
 - key: "AC_GIT_CACHE_CREDENTIALS"
   isRequired: false
   defaultValue: "true"
