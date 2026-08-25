@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: d02b9f8
+commit: 7f1d779
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -21,6 +21,14 @@ inputs:
   isRequired: false
   title: Source Path
   description: "Path of the source code to scan. A relative value is resolved against the cloned repository directory. Defaults to the repository root."
+  helpText:
+- key: "AC_MOBSFSCAN_SCAN_MODE"
+  defaultValue: "light"
+  isRequired: false
+  editorType: select
+  options: "light,advance"
+  title: Scan Mode
+  description: "`light` runs the mobsfscan CLI, installed at runtime, and needs nothing on the runner. `advance` sends a zip of the source code to the MobSF installation provisioned on the runner, which adds the manifest, certificate and AppSec score analysis. When the runner has no usable MobSF, `advance` reports why and falls back to the light scan instead of failing."
   helpText:
 - key: "AC_MOBSFSCAN_SCAN_TYPE"
   defaultValue: "auto"
@@ -71,6 +79,22 @@ inputs:
   title: Scan Timeout
   description: "Timeout in seconds for a single mobsfscan run. The step terminates the scan and fails when it is exceeded."
   helpText:
+- key: "AC_MOBSFSCAN_ADVANCE_TIMEOUT"
+  defaultValue: "1800"
+  isRequired: false
+  title: Advance Scan Timeout
+  description: "Timeout in seconds for the MobSF scan in `advance` mode. MobSF's own decompile and SAST timeouts are 1000 seconds each, so keep this above their sum."
+  helpText:
+- key: "AC_MOBSFSCAN_MOBSF_PREFIX"
+  isRequired: false
+  title: MobSF Installation Prefix
+  description: "Where MobSF is installed on the runner, used by `advance` mode. When empty the step looks at `MOBSF_HOME`, then `/usr/local/appcircle/mobsf` (macOS) and `/opt/appcircle/mobsf` (Linux)."
+  helpText:
+- key: "AC_MOBSFSCAN_MOBSF_CONTROL"
+  isRequired: false
+  title: MobSF Control Script Path
+  description: "Path of `mobsf-control.sh`, which ships with the runner package. When empty the step looks under the installation prefix, the runner scripts directory and PATH."
+  helpText:
 - key: "AC_MOBSFSCAN_EXTRA_PARAMETERS"
   isRequired: false
   title: Scanner Parameters
@@ -87,6 +111,21 @@ inputs:
   description: "Directory or URL holding the mobsfscan wheels for an air gapped install. When set, pip runs with `--no-index`."
   helpText:
 outputs:
+- key: "AC_MOBSFSCAN_SCAN_MODE_USED"
+  title: "Scan Mode Used"
+  defaultValue: "AC_MOBSFSCAN_SCAN_MODE_USED"
+  description: "Specifies which scan actually ran, `light` or `advance`. Requesting `advance` on a runner without MobSF reports `light`."
+  helpText:
+- key: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
+  title: "MobSF Report Path"
+  defaultValue: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
+  description: "Specifies the path of the MobSF JSON report. Only set when the advance scan ran."
+  helpText:
+- key: "AC_MOBSFSCAN_SECURITY_SCORE"
+  title: "Security Score"
+  defaultValue: "AC_MOBSFSCAN_SECURITY_SCORE"
+  description: "Specifies the MobSF AppSec security score. Only set when the advance scan ran."
+  helpText:
 - key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
   title: "JSON Report Path"
   defaultValue: "AC_MOBSFSCAN_JSON_REPORT_PATH"
