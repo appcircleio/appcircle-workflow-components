@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: 02139b1
+commit: f4439c3
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -53,12 +53,12 @@ inputs:
   description: "Report format to publish. The variable also accepts a comma separated list."
   helpText:
 - key: "AC_MOBSFSCAN_SEVERITY_THRESHOLD"
-  defaultValue: "error"
+  defaultValue: "critical"
   isRequired: false
   editorType: select
-  options: "error,warning,info,none"
-  title: Severity Threshold
-  description: "Fails the build when a finding at or above this severity is reported. `none` is report only."
+  options: "critical,normal,low,none"
+  title: Fail Build On
+  description: "Breaks the pipeline when the report holds a finding at this level or worse. `low` is strictest, `none` only reports."
   helpText:
 - key: "AC_MOBSFSCAN_CONFIG_PATH"
   isRequired: false
@@ -89,16 +89,6 @@ inputs:
   isRequired: false
   title: Scanner Parameters
   description: "Extra command line parameters for mobsfscan, passed as separate arguments."
-  helpText:
-- key: "AC_MOBSFSCAN_PIP_INDEX_URL"
-  isRequired: false
-  title: Pip Index URL
-  description: "Alternative Python package index. The value is masked in the logs."
-  helpText:
-- key: "AC_MOBSFSCAN_PIP_FIND_LINKS"
-  isRequired: false
-  title: Pip Find Links
-  description: "Directory or URL holding the mobsfscan wheels for an air gapped install."
   helpText:
 outputs:
 - key: "AC_MOBSFSCAN_SCAN_MODE_USED"
@@ -139,17 +129,17 @@ outputs:
 - key: "AC_MOBSFSCAN_ERROR_COUNT"
   title: "Error Finding Count"
   defaultValue: "AC_MOBSFSCAN_ERROR_COUNT"
-  description: "Specifies the number of findings with `ERROR` severity."
+  description: "Specifies the number of critical findings."
   helpText:
 - key: "AC_MOBSFSCAN_WARNING_COUNT"
   title: "Warning Finding Count"
   defaultValue: "AC_MOBSFSCAN_WARNING_COUNT"
-  description: "Specifies the number of findings with `WARNING` severity."
+  description: "Specifies the number of normal findings."
   helpText:
 - key: "AC_MOBSFSCAN_INFO_COUNT"
   title: "Info Finding Count"
   defaultValue: "AC_MOBSFSCAN_INFO_COUNT"
-  description: "Specifies the number of findings with `INFO` severity."
+  description: "Specifies the number of low findings."
   helpText:
 - key: "AC_MOBSFSCAN_HIGHEST_SEVERITY"
   title: "Highest Severity"
