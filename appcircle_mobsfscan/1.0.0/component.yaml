@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: 6fcf4fc
+commit: 02139b1
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -20,7 +20,7 @@ inputs:
   defaultValue: "$AC_REPOSITORY_DIR"
   isRequired: false
   title: Source Path
-  description: "Path of the source code to scan. A relative value is resolved against the cloned repository directory. Defaults to the repository root."
+  description: "Path of the source code to scan. A relative value is resolved against the cloned repository directory."
   helpText:
 - key: "AC_MOBSFSCAN_SCAN_MODE"
   defaultValue: "light"
@@ -28,7 +28,7 @@ inputs:
   editorType: select
   options: "light,advance"
   title: Scan Mode
-  description: "`light` runs the mobsfscan CLI, installed at runtime, and needs nothing on the runner. `advance` sends a zip of the source code to the MobSF installation provisioned on the runner, which adds the manifest, certificate and AppSec score analysis. When the runner has no usable MobSF, `advance` reports why and falls back to the light scan instead of failing."
+  description: "`light` runs the mobsfscan CLI. `advance` uses the runner's MobSF, falling back to `light`."
   helpText:
 - key: "AC_MOBSFSCAN_SCAN_TYPE"
   defaultValue: "auto"
@@ -36,7 +36,7 @@ inputs:
   editorType: select
   options: "auto,android,ios"
   title: Scan Type
-  description: "Rule set to use. `auto` detects the platform from the source code, `android` and `ios` force a rule set."
+  description: "Rule set to use. `auto` detects the platform from the source code."
   helpText:
 - key: "AC_MOBSFSCAN_VERSION"
   defaultValue: "1.0.0"
@@ -50,7 +50,7 @@ inputs:
   editorType: select
   options: "sarif,json,html,sonarqube,gitlab-sast"
   title: Output Format
-  description: "Report format to publish. Each format costs its own scan run, so the step produces one. Setting the variable to a comma separated list, for example `sarif,json`, still produces several."
+  description: "Report format to publish. The variable also accepts a comma separated list."
   helpText:
 - key: "AC_MOBSFSCAN_SEVERITY_THRESHOLD"
   defaultValue: "error"
@@ -58,12 +58,12 @@ inputs:
   editorType: select
   options: "error,warning,info,none"
   title: Severity Threshold
-  description: "Fails the build when a finding at or above this severity is reported. `none` is report only. `info` also counts the informational best practice rules, which report on almost every project."
+  description: "Fails the build when a finding at or above this severity is reported. `none` is report only."
   helpText:
 - key: "AC_MOBSFSCAN_CONFIG_PATH"
   isRequired: false
   title: Config File Path
-  description: "Path of the `.mobsf` YAML config used for rule tuning. A relative value is resolved against the source path. When empty, a `.mobsf` file at the scan root is picked up automatically."
+  description: "Path of the `.mobsf` config for rule tuning. When empty, a `.mobsf` file at the scan root is used."
   helpText:
 - key: "AC_MOBSFSCAN_SAVE_REPORT"
   defaultValue: "true"
@@ -77,44 +77,34 @@ inputs:
   defaultValue: "900"
   isRequired: false
   title: Scan Timeout
-  description: "Timeout in seconds for a single mobsfscan run. The step terminates the scan and fails when it is exceeded."
+  description: "Timeout in seconds for a single mobsfscan run."
   helpText:
 - key: "AC_MOBSFSCAN_ADVANCE_TIMEOUT"
   defaultValue: "1800"
   isRequired: false
   title: Advance Scan Timeout
-  description: "Timeout in seconds for the MobSF scan in `advance` mode. MobSF's own decompile and SAST timeouts are 1000 seconds each, so keep this above their sum."
-  helpText:
-- key: "AC_MOBSFSCAN_MOBSF_PREFIX"
-  isRequired: false
-  title: MobSF Installation Prefix
-  description: "Where MobSF is installed on the runner, used by `advance` mode. When empty the step looks at `MOBSF_HOME`, then `/usr/local/appcircle/mobsf` (macOS) and `/opt/appcircle/mobsf` (Linux)."
-  helpText:
-- key: "AC_MOBSFSCAN_MOBSF_CONTROL"
-  isRequired: false
-  title: MobSF Control Script Path
-  description: "Path of `mobsf-control.sh`, which ships with the runner package. When empty the step looks under the installation prefix, the runner scripts directory and PATH."
+  description: "Timeout in seconds for the MobSF scan in `advance` mode."
   helpText:
 - key: "AC_MOBSFSCAN_EXTRA_PARAMETERS"
   isRequired: false
   title: Scanner Parameters
-  description: "Extra command line parameters for mobsfscan, split with shell word rules and passed as separate arguments. For example `-mp thread`."
+  description: "Extra command line parameters for mobsfscan, passed as separate arguments."
   helpText:
 - key: "AC_MOBSFSCAN_PIP_INDEX_URL"
   isRequired: false
   title: Pip Index URL
-  description: "Alternative Python package index to install mobsfscan from. Use this on runners without access to pypi.org. The value is masked in the logs."
+  description: "Alternative Python package index. The value is masked in the logs."
   helpText:
 - key: "AC_MOBSFSCAN_PIP_FIND_LINKS"
   isRequired: false
   title: Pip Find Links
-  description: "Directory or URL holding the mobsfscan wheels for an air gapped install. When set, pip runs with `--no-index`."
+  description: "Directory or URL holding the mobsfscan wheels for an air gapped install."
   helpText:
 outputs:
 - key: "AC_MOBSFSCAN_SCAN_MODE_USED"
   title: "Scan Mode Used"
   defaultValue: "AC_MOBSFSCAN_SCAN_MODE_USED"
-  description: "Specifies which scan actually ran, `light` or `advance`. Requesting `advance` on a runner without MobSF reports `light`."
+  description: "Specifies which scan actually ran, `light` or `advance`."
   helpText:
 - key: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
   title: "MobSF Report Path"
@@ -129,12 +119,12 @@ outputs:
 - key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
   title: "JSON Report Path"
   defaultValue: "AC_MOBSFSCAN_JSON_REPORT_PATH"
-  description: "Specifies the path of the JSON report. Only set when `json` is one of the requested output formats."
+  description: "Specifies the path of the JSON report, when `json` was requested."
   helpText:
 - key: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
   title: "SARIF Report Path"
   defaultValue: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
-  description: "Specifies the path of the SARIF 2.1.0 report. Only set when `sarif` is one of the requested output formats."
+  description: "Specifies the path of the SARIF 2.1.0 report, when `sarif` was requested."
   helpText:
 - key: "AC_MOBSFSCAN_REPORT_DIR"
   title: "Report Directory"
@@ -144,7 +134,7 @@ outputs:
 - key: "AC_MOBSFSCAN_FINDING_COUNT"
   title: "Finding Count"
   defaultValue: "AC_MOBSFSCAN_FINDING_COUNT"
-  description: "Specifies the total number of findings, including the informational missing best practice rules."
+  description: "Specifies the total number of findings."
   helpText:
 - key: "AC_MOBSFSCAN_ERROR_COUNT"
   title: "Error Finding Count"
@@ -164,9 +154,10 @@ outputs:
 - key: "AC_MOBSFSCAN_HIGHEST_SEVERITY"
   title: "Highest Severity"
   defaultValue: "AC_MOBSFSCAN_HIGHEST_SEVERITY"
-  description: "Specifies the highest reported severity. One of `ERROR`, `WARNING`, `INFO`, or `NONE` when nothing was reported."
+  description: "Specifies the highest reported severity, or `NONE`."
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
 - "main.rb"
+- "mobsf.rb"
