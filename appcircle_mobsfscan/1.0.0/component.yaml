@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: f4439c3
+commit: ca98704
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -96,6 +96,16 @@ outputs:
   defaultValue: "AC_MOBSFSCAN_SCAN_MODE_USED"
   description: "Specifies which scan actually ran, `light` or `advance`."
   helpText:
+- key: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
+  title: "SARIF Report Path"
+  defaultValue: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
+  description: "Specifies the path of the SARIF 2.1.0 report, when `sarif` was requested."
+  helpText:
+- key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
+  title: "JSON Report Path"
+  defaultValue: "AC_MOBSFSCAN_JSON_REPORT_PATH"
+  description: "Specifies the path of the JSON report, when `json` was requested."
+  helpText:
 - key: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
   title: "MobSF Report Path"
   defaultValue: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
@@ -104,47 +114,32 @@ outputs:
 - key: "AC_MOBSFSCAN_SECURITY_SCORE"
   title: "Security Score"
   defaultValue: "AC_MOBSFSCAN_SECURITY_SCORE"
-  description: "Specifies the MobSF AppSec security score. Only set when the advance scan ran."
-  helpText:
-- key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
-  title: "JSON Report Path"
-  defaultValue: "AC_MOBSFSCAN_JSON_REPORT_PATH"
-  description: "Specifies the path of the JSON report, when `json` was requested."
-  helpText:
-- key: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
-  title: "SARIF Report Path"
-  defaultValue: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
-  description: "Specifies the path of the SARIF 2.1.0 report, when `sarif` was requested."
-  helpText:
-- key: "AC_MOBSFSCAN_REPORT_DIR"
-  title: "Report Directory"
-  defaultValue: "AC_MOBSFSCAN_REPORT_DIR"
-  description: "Specifies the directory that holds the generated reports."
+  description: "Specifies the MobSF security score out of 100. Only set when the advance scan ran."
   helpText:
 - key: "AC_MOBSFSCAN_FINDING_COUNT"
   title: "Finding Count"
   defaultValue: "AC_MOBSFSCAN_FINDING_COUNT"
   description: "Specifies the total number of findings."
   helpText:
-- key: "AC_MOBSFSCAN_ERROR_COUNT"
-  title: "Error Finding Count"
-  defaultValue: "AC_MOBSFSCAN_ERROR_COUNT"
+- key: "AC_MOBSFSCAN_CRITICAL_COUNT"
+  title: "Critical Count"
+  defaultValue: "AC_MOBSFSCAN_CRITICAL_COUNT"
   description: "Specifies the number of critical findings."
   helpText:
-- key: "AC_MOBSFSCAN_WARNING_COUNT"
-  title: "Warning Finding Count"
-  defaultValue: "AC_MOBSFSCAN_WARNING_COUNT"
+- key: "AC_MOBSFSCAN_NORMAL_COUNT"
+  title: "Normal Count"
+  defaultValue: "AC_MOBSFSCAN_NORMAL_COUNT"
   description: "Specifies the number of normal findings."
   helpText:
-- key: "AC_MOBSFSCAN_INFO_COUNT"
-  title: "Info Finding Count"
-  defaultValue: "AC_MOBSFSCAN_INFO_COUNT"
+- key: "AC_MOBSFSCAN_LOW_COUNT"
+  title: "Low Count"
+  defaultValue: "AC_MOBSFSCAN_LOW_COUNT"
   description: "Specifies the number of low findings."
   helpText:
-- key: "AC_MOBSFSCAN_HIGHEST_SEVERITY"
-  title: "Highest Severity"
-  defaultValue: "AC_MOBSFSCAN_HIGHEST_SEVERITY"
-  description: "Specifies the highest reported severity, or `NONE`."
+- key: "AC_MOBSFSCAN_WORST_LEVEL"
+  title: "Worst Level Found"
+  defaultValue: "AC_MOBSFSCAN_WORST_LEVEL"
+  description: "Specifies the worst level found: `critical`, `normal`, `low`, or `none`."
   helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
