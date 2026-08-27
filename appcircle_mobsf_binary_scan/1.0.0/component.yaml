@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: f9de6e2
+commit: 0dcccdb
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
@@ -26,7 +26,7 @@ inputs:
 - key: "AC_MOBSF_MIN_SCORE"
   isRequired: false
   title: Minimum Security Score
-  description: "Breaks the pipeline when the MobSF score out of 100 falls below this. Empty disables the score check."
+  description: "Breaks the pipeline when the MobSF score out of 100 falls below this. Empty disables the check. It is checked independently of Fail Build On, so either gate on its own breaks the build."
   helpText:
 - key: "AC_MOBSF_SCAN_TIMEOUT"
   defaultValue: "1800"
@@ -40,14 +40,9 @@ inputs:
   editorType: select
   options: "true,false"
   title: Save Report
-  description: "The report will be copied into the artifacts folder if set to true."
+  description: "The JSON report will be copied into the artifacts folder if set to true. JSON is the only format MobSF reports here, its PDF export needs `wkhtmltopdf`, which is not installed on the runners."
   helpText:
 outputs:
-- key: "AC_MOBSF_REPORT_PATH"
-  title: "MobSF Report Path"
-  defaultValue: "AC_MOBSF_REPORT_PATH"
-  description: "Specifies the path of the MobSF JSON report."
-  helpText:
 - key: "AC_MOBSF_SCANNED_ARTIFACT"
   title: "Scanned Artifact"
   defaultValue: "AC_MOBSF_SCANNED_ARTIFACT"
