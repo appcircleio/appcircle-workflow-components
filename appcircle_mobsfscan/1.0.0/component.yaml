@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: ea36090
+commit: 284988e
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -28,7 +28,7 @@ inputs:
   editorType: select
   options: "light,advance"
   title: Scan Mode
-  description: "`light` runs the mobsfscan CLI. `advance` uses the runner's MobSF, falling back to `light`."
+  description: "`light` runs the mobsfscan CLI and can report in every format the Output Format field offers. `advance` uses the runner's MobSF, which reports JSON only, and falls back to `light` when the runner cannot serve it."
   helpText:
 - key: "AC_MOBSFSCAN_SCAN_TYPE"
   defaultValue: "auto"
@@ -50,7 +50,7 @@ inputs:
   editorType: select
   options: "sarif,json,html,sonarqube,gitlab-sast"
   title: Output Format
-  description: "Report format to publish. The variable also accepts a comma separated list."
+  description: "Report format to publish, applies to the `light` scan. The `advance` scan reports JSON only. The variable also accepts a comma separated list."
   helpText:
 - key: "AC_MOBSFSCAN_SEVERITY_THRESHOLD"
   defaultValue: "critical"
@@ -59,6 +59,11 @@ inputs:
   options: "critical,normal,low,none"
   title: Fail Build On
   description: "Breaks the pipeline when the report holds a finding at this level or worse. `low` is strictest, `none` only reports."
+  helpText:
+- key: "AC_MOBSFSCAN_MIN_SCORE"
+  isRequired: false
+  title: Minimum Security Score
+  description: "Breaks the pipeline when the MobSF score out of 100 falls below this. Empty disables the check. It is checked independently of Fail Build On, so either gate on its own breaks the build. Only the `advance` scan reports a score, the `light` scan skips the check."
   helpText:
 - key: "AC_MOBSFSCAN_CONFIG_PATH"
   isRequired: false
@@ -95,16 +100,6 @@ outputs:
   title: "Scan Mode Used"
   defaultValue: "AC_MOBSFSCAN_SCAN_MODE_USED"
   description: "Specifies which scan actually ran, `light` or `advance`."
-  helpText:
-- key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
-  title: "JSON Report Path"
-  defaultValue: "AC_MOBSFSCAN_JSON_REPORT_PATH"
-  description: "Specifies the path of the JSON report, when `json` was requested."
-  helpText:
-- key: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
-  title: "MobSF Report Path"
-  defaultValue: "AC_MOBSFSCAN_MOBSF_REPORT_PATH"
-  description: "Specifies the path of the MobSF JSON report. Only set when the advance scan ran."
   helpText:
 - key: "AC_MOBSFSCAN_SECURITY_SCORE"
   title: "Security Score"
