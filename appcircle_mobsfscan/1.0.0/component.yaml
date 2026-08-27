@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform: JavaKotlin, ObjectiveCSwift
-displayName: "MobSF Scan"
-description: "Runs mobsfscan static analysis on mobile source code"
+displayName: "MobSF Source Code Scan"
+description: "Scans Android and iOS source code for security issues"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsfscan
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: ca98704
+commit: ea36090
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -95,11 +95,6 @@ outputs:
   title: "Scan Mode Used"
   defaultValue: "AC_MOBSFSCAN_SCAN_MODE_USED"
   description: "Specifies which scan actually ran, `light` or `advance`."
-  helpText:
-- key: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
-  title: "SARIF Report Path"
-  defaultValue: "AC_MOBSFSCAN_SARIF_REPORT_PATH"
-  description: "Specifies the path of the SARIF 2.1.0 report, when `sarif` was requested."
   helpText:
 - key: "AC_MOBSFSCAN_JSON_REPORT_PATH"
   title: "JSON Report Path"
