@@ -1,14 +1,14 @@
 platform: Common
 buildPlatform: JavaKotlin, ObjectiveCSwift
 displayName: "MobSF Binary Scan"
-description: "Runs MobSF static analysis on the built APK, AAB or IPA"
+description: "Scans the built APK, AAB or IPA for security issues"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-binary-scan
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: 0fc3a65
+commit: f9de6e2
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
