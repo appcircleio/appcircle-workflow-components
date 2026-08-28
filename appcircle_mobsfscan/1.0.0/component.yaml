@@ -2,13 +2,13 @@ platform: Common
 buildPlatform: JavaKotlin, ObjectiveCSwift
 displayName: "MobSF Source Code Scan"
 description: "Scans Android and iOS source code for security issues"
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsfscan
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-source-code-scan
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: a1759c5
+commit: a297d17
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
