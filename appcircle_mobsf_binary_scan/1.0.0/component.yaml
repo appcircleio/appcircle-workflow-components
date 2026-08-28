@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: 1b6bf0b
+commit: 0c19bd4
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
