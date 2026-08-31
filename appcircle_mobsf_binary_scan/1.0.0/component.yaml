@@ -1,14 +1,14 @@
 platform: Common
-buildPlatform: JavaKotlin, ObjectiveCSwift
+buildPlatform: JavaKotlin, ObjectiveCSwift, ReactNative, Flutter
 displayName: "MobSF Binary Scan"
 description: "Scans the built APK, AAB or IPA for security issues"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-binary-scan
 requiredComponents:
-precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
+precedingComponents: "appcircle_android_build,appcircle_ios_build_sign,appcircle_android_flutter_build,appcircle_ios_flutter_build"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: 0c19bd4
+commit: aec773f
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
@@ -24,9 +24,10 @@ inputs:
   description: "Breaks the pipeline on a finding at this level or worse. `low` is strictest, `none` only reports."
   helpText:
 - key: "AC_MOBSF_MIN_SCORE"
+  defaultValue: "0"
   isRequired: false
-  title: Minimum Security Score
-  description: "Breaks the pipeline below this MobSF score out of 100. Empty disables the check."
+  title: Fail Build Minimum Security Score
+  description: "Breaks the pipeline below this MobSF score out of 100. `0` disables the check."
   helpText:
 - key: "AC_MOBSF_SCAN_TIMEOUT"
   defaultValue: "1800"
