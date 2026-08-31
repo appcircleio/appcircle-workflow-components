@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: b3dd704
+commit: 9bb2a17
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
