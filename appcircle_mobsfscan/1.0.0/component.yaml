@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsfscan-component
 repoUrl: https://github.com/appcircleio/appcircle-mobsfscan-component.git
-commit: a1759c5
+commit: b3dd704
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -61,9 +61,10 @@ inputs:
   description: "Breaks the pipeline on a finding at this level or worse. `low` is strictest, `none` only reports."
   helpText:
 - key: "AC_MOBSFSCAN_MIN_SCORE"
+  defaultValue: "0"
   isRequired: false
-  title: Minimum Security Score
-  description: "Breaks the pipeline below this MobSF score out of 100. Empty disables it, and only the `advance` scan reports a score."
+  title: Fail Build Minimum Security Score
+  description: "Breaks the pipeline below this MobSF score out of 100. `0` disables it, and only the `advance` scan reports a score."
   helpText:
 - key: "AC_MOBSFSCAN_CONFIG_PATH"
   isRequired: false

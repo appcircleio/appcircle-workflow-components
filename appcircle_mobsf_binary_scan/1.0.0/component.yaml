@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: 1b6bf0b
+commit: fd2d9cd
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
@@ -24,9 +24,10 @@ inputs:
   description: "Breaks the pipeline on a finding at this level or worse. `low` is strictest, `none` only reports."
   helpText:
 - key: "AC_MOBSF_MIN_SCORE"
+  defaultValue: "0"
   isRequired: false
-  title: Minimum Security Score
-  description: "Breaks the pipeline below this MobSF score out of 100. Empty disables the check."
+  title: Fail Build Minimum Security Score
+  description: "Breaks the pipeline below this MobSF score out of 100. `0` disables the check."
   helpText:
 - key: "AC_MOBSF_SCAN_TIMEOUT"
   defaultValue: "1800"
