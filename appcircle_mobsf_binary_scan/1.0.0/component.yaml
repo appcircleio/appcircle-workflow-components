@@ -1,14 +1,14 @@
 platform: Common
-buildPlatform: JavaKotlin, ObjectiveCSwift
+buildPlatform: JavaKotlin, ObjectiveCSwift, ReactNative, Flutter
 displayName: "MobSF Binary Scan"
 description: "Scans the built APK, AAB or IPA for security issues"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-binary-scan
 requiredComponents:
-precedingComponents: "appcircle_android_build,appcircle_ios_build_sign"
+precedingComponents: "appcircle_android_build,appcircle_ios_build_sign,appcircle_android_flutter_build,appcircle_ios_flutter_build"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
 repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
-commit: 3eeb8e0
+commit: 651879c
 inputs:
 - key: "AC_MOBSF_ARTIFACT_PATH"
   isRequired: false
