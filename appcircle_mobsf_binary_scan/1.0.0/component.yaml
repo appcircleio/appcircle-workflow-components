@@ -1,0 +1,85 @@
+platform: Common
+buildPlatform: JavaKotlin, ObjectiveCSwift, ReactNative, Flutter
+displayName: "MobSF Binary Scan"
+description: "Scans the built APK, AAB or IPA for security issues"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-binary-scan
+requiredComponents:
+precedingComponents: "appcircle_android_build,appcircle_ios_build_sign,appcircle_android_flutter_build,appcircle_ios_flutter_build"
+followingComponents: "appcircle_export_build_artifacts"
+webUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan
+repoUrl: https://github.com/appcircleio/appcircle-mobsf-binary-scan.git
+commit: aec773f
+inputs:
+- key: "AC_MOBSF_ARTIFACT_PATH"
+  isRequired: false
+  title: Artifact Path
+  description: "The APK, AAB or IPA to scan, or the folder holding it. When empty the step finds it from the build variables."
+  helpText:
+- key: "AC_MOBSF_FAIL_ON"
+  defaultValue: "critical"
+  isRequired: false
+  editorType: select
+  options: "critical,normal,low,none"
+  title: Fail Build On
+  description: "Breaks the pipeline on a finding at this level or worse. `low` is strictest, `none` only reports."
+  helpText:
+- key: "AC_MOBSF_MIN_SCORE"
+  defaultValue: "0"
+  isRequired: false
+  title: Fail Build Minimum Security Score
+  description: "Breaks the pipeline below this MobSF score out of 100. `0` disables the check."
+  helpText:
+- key: "AC_MOBSF_SCAN_TIMEOUT"
+  defaultValue: "1800"
+  isRequired: false
+  title: Scan Timeout
+  description: "Timeout in seconds for the MobSF scan. Keep it above 2000 for large binaries."
+  helpText:
+- key: "AC_MOBSF_SAVE_REPORT"
+  defaultValue: "true"
+  isRequired: false
+  editorType: select
+  options: "true,false"
+  title: Save Report
+  description: "Copies the JSON report into the artifacts folder when true. MobSF supports JSON only."
+  helpText:
+outputs:
+- key: "AC_MOBSF_SCANNED_ARTIFACT"
+  title: "Scanned Artifact"
+  defaultValue: "AC_MOBSF_SCANNED_ARTIFACT"
+  description: "The artifact that was scanned."
+  helpText:
+- key: "AC_MOBSF_SECURITY_SCORE"
+  title: "Security Score"
+  defaultValue: "AC_MOBSF_SECURITY_SCORE"
+  description: "The MobSF score out of 100."
+  helpText:
+- key: "AC_MOBSF_FINDING_COUNT"
+  title: "Finding Count"
+  defaultValue: "AC_MOBSF_FINDING_COUNT"
+  description: "Total number of findings."
+  helpText:
+- key: "AC_MOBSF_CRITICAL_COUNT"
+  title: "Critical Count"
+  defaultValue: "AC_MOBSF_CRITICAL_COUNT"
+  description: "Number of critical findings."
+  helpText:
+- key: "AC_MOBSF_NORMAL_COUNT"
+  title: "Normal Count"
+  defaultValue: "AC_MOBSF_NORMAL_COUNT"
+  description: "Number of normal findings."
+  helpText:
+- key: "AC_MOBSF_LOW_COUNT"
+  title: "Low Count"
+  defaultValue: "AC_MOBSF_LOW_COUNT"
+  description: "Number of low findings."
+  helpText:
+- key: "AC_MOBSF_WORST_LEVEL"
+  title: "Worst Level Found"
+  defaultValue: "AC_MOBSF_WORST_LEVEL"
+  description: "The worst level found: `critical`, `normal`, `low`, or `none`."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
