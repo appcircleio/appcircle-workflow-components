@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: Bundle Universal Apk
 description: "Generates an universal APK from an AAB"

@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Add Badge onto Your App Icon
 description: "Install Imagemagick and add badge onto your icons."

@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: FTP Upload
 description: "Upload file or folders to given FTP server."

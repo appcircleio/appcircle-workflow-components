@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Azure DevOps Bot for Swiftlint Report
 description: "Bot script that allows Swiftlint outputs to make changes to Azure DevOps Pull Requests."

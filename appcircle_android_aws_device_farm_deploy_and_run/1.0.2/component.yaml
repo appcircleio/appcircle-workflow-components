@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."

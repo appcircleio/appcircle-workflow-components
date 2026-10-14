@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Android Lint
 description: "Run lint gradle task on your Android project's source files."

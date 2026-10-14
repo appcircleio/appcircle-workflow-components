@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Testinium
 description: "Run your test plans with Testinium"

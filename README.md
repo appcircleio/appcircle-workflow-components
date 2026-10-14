@@ -10,6 +10,19 @@ You can find more information about the workflows and how to use a specific comp
 ## Contribution
 You can create a new component by following the format in the currently available samples, which consist of a YAML file accompanied by a source repository.
 
+## Air-gap support (`airgapSupport`)
+Every `<component>/<version>/component.yaml` declares whether the workflow step can run in an air-gapped self-hosted installation, as a top-level line:
+
+```yaml
+platform: Common
+airgapSupport: true
+```
+
+- `true`: the step runs in an air-gapped installation. It may run offline, use only internal services, go through the customer's artifact proxy, or take an input that points it to an internal service.
+- `false`: the step needs public SaaS or internet by design, or it needs a code change before it can run air-gapped.
+
+The field is required. The `Validate airgapSupport` GitHub Actions check fails on a pull request when a `component.yaml` has no `airgapSupport: true|false` line, has more than one, or is not at `<component>/<version>/component.yaml`. It blocks the merge once it is set as a required status check. When you add a new component version, set the field in the same pull request. Background: BE-9509.
+
 ## Reporting an Issue / Reaching Us
 If you encounter any issues related with a component in this repository, you can raise an issue here.
 

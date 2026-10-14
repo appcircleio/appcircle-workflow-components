@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Azure DevOps Bot for Detekt Report
 description: "Bot script that allows Detekt outputs to make changes to Azure DevOps Pull Requests."

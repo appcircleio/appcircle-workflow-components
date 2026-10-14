@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: File Size Check for Android
 description: "Checks the file size of build artifacts."

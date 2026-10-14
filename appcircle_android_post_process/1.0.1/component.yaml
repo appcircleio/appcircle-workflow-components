@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android App Post-Processor
 description: "System operations to identify and process the output files."

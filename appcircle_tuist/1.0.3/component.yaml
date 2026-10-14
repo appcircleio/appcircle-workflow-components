@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: ObjectiveCSwift
 displayName: Tuist Install
 description: "Install Tuist and Generate a Project."

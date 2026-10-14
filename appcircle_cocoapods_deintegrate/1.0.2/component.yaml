@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Cocoapods Deintegrate
 description: "Remove all traces of CocoaPods from the project."

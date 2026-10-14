@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: false
 buildPlatform:
 displayName: SonarQube Scanner
 description: "Runs SonarQube Scanner CLI."

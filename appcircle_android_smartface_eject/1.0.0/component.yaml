@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: false
 buildPlatform: Smartface
 displayName: "Smartface Eject for Android"
 description: "Creates Android Studio project to build from your smartface workspace."

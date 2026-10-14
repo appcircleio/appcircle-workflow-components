@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform:
 displayName: Carthage
 description: "Execute Carthage script in the project path."

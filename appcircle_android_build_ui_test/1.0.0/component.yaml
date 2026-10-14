@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin, Flutter
 displayName: "Android Build for UI Testing"
 description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."

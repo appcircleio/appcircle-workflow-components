@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: false
 buildPlatform: Flutter
 displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
