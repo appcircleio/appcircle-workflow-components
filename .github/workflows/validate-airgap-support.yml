@@ -1,0 +1,55 @@
+name: Validate airgapSupport
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+      - 'release/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check airgapSupport in every component.yaml
+        shell: python3 {0}
+        run: |
+          import os, re, sys
+
+          FORMAT = re.compile(r"^airgapSupport: (true|false)[ \t]*$")
+          errors, checked = [], 0
+
+          for root, dirs, files in os.walk("."):
+              dirs[:] = sorted(d for d in dirs if d != ".git")
+              for name in sorted(files):
+                  if name not in ("component.yaml", "component.yml"):
+                      continue
+                  path = os.path.relpath(os.path.join(root, name), ".")
+                  parts = path.split(os.sep)
+                  if len(parts) != 3 or name != "component.yaml":
+                      errors.append((path, "must be at <type>/<version>/component.yaml"))
+                      continue
+                  checked += 1
+                  try:
+                      text = open(path, "rb").read().decode("utf-8-sig")
+                  except UnicodeDecodeError:
+                      errors.append((path, "not valid UTF-8"))
+                      continue
+                  lines = [l for l in text.splitlines() if l.startswith("airgapSupport:")]
+                  if len(lines) != 1:
+                      errors.append((path, f"expected exactly one 'airgapSupport:' line, found {len(lines)}"))
+                  elif not FORMAT.match(lines[0]):
+                      errors.append((path, f"expected 'airgapSupport: true' or 'airgapSupport: false', found {lines[0]!r}"))
+
+          if checked == 0:
+              errors.append((None, "no <type>/<version>/component.yaml found"))
+          for path, message in errors:
+              print(f"::error file={path}::{path}: {message}" if path else f"::error::{message}")
+          if errors:
+              sys.exit(f"{len(errors)} problem(s) in {checked} component.yaml file(s)")
+          print(f"OK: {checked} component.yaml file(s) declare airgapSupport")

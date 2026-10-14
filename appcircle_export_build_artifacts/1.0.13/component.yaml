@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts from the build agent to the Appcircle dashboard. The exported files will be available for download from the artifacts section of the completed build."

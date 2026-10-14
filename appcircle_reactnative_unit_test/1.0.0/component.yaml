@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: true
 buildPlatform: ReactNative
 displayName: "React Native Unit Test"
 description: "Run React Native unit tests with Jest."

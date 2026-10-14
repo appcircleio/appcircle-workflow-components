@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."

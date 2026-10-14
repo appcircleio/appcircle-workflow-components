@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Resign V2 IPA
 description: "Resign IPA for autosign and resign-v2."

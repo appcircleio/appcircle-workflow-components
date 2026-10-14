@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Custom Script from Git
 description: "Get your compatible scripts from a Git repository onto the build machine."

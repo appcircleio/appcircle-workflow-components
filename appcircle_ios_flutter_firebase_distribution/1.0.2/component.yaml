@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: Flutter
 displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"

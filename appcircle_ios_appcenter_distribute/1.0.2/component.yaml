@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: "App Center iOS Distribute"
 description: "Distribute IPA and dSYM files to App Center."

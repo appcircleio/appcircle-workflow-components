@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Re-Sign
 description: "Re-sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."

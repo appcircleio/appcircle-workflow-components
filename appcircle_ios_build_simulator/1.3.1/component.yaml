@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86/arm64 architecture."

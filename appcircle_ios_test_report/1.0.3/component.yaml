@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ObjectiveCSwift, Flutter
 displayName: Test Reports
 description: Parse test and coverage results.

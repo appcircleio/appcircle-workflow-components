@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Metadata
 description: Produce metadata from the selected repository.

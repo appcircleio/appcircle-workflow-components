@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."

@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: Smartface
 displayName: "Smartface Eject for iOS"
 description: "Generates xcode project for build from the smartface workspace."

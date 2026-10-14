@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: false
 buildPlatform: ReactNative, JavaKotlin
 displayName: Data Theorem Mobile Secure for Android
 description: "Scan your app using Mobile Secure"

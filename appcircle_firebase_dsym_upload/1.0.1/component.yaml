@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform:
 displayName: Firebase Upload dSYM
 description: "Upload debug symbols to Firebase"

@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: File Size Check for iOS
 description: "Checks the file size of build artifacts."

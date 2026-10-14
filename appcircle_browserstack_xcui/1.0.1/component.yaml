@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform:
 displayName: BrowserStack App Automate - XCUI
 description: "Run your XCUI tests on BrowserStack App Automate"

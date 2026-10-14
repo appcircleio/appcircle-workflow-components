@@ -1,4 +1,5 @@
 platform:
+airgapSupport: true
 buildPlatform:
 displayName: File size check
 description: "Checks the file size of build artifacts."

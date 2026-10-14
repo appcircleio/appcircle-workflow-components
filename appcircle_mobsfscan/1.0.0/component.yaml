@@ -1,4 +1,5 @@
 platform: Common
+airgapSupport: true
 buildPlatform: JavaKotlin, ObjectiveCSwift
 displayName: "MobSF Source Code Scan"
 description: "Scans Android and iOS source code for security issues"

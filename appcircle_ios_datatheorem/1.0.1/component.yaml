@@ -1,4 +1,5 @@
 platform: iOS
+airgapSupport: false
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Data Theorem Mobile Secure
 description: "Scan your app using Mobile Secure"

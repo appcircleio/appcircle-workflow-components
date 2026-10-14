@@ -1,4 +1,5 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Add Badge onto Your App Icon for Android
 description: "Install Imagemagick and add badge onto your icons."
