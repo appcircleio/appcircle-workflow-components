@@ -22,12 +22,12 @@ inputs:
   title: "Gradle Distribution Mirror URL"
   description: "URL of a raw (generic) repository on your artifact proxy that proxies `https://services.gradle.org/`. Used when Gradle Wrapper is set to update."
 - key: "AC_MIRROR_GRADLE_WRAPPER"
-  defaultValue: "fail"
+  defaultValue: "update"
   isRequired: false
   title: "Gradle Wrapper"
   editorType: select
   options: "update,fail,warn"
-  description: "What to do when a `gradle-wrapper.properties` of the project still downloads Gradle from services.gradle.org. `update`: point its `distributionUrl` at the Gradle Distribution Mirror URL in the cloned copy (nothing is pushed). `fail`: stop the build. `warn`: print a warning and continue."
+  description: "What to do when a `gradle-wrapper.properties` of the project still downloads Gradle from services.gradle.org. `update`: point its `distributionUrl` at the Gradle Distribution Mirror URL in the cloned copy (nothing is pushed); if that URL is empty, the build stops. `fail`: stop the build. `warn`: print a warning and continue."
 - key: "AC_MIRROR_GRADLE_USERNAME"
   defaultValue: "$AC_MIRROR_GRADLE_USERNAME"
   isRequired: false

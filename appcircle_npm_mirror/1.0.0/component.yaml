@@ -17,7 +17,7 @@ inputs:
   title: "npm Mirror URL"
   description: "URL of an npm repository on your artifact proxy (a proxy of `https://registry.npmjs.org`). Used by npm, Yarn 1, Yarn 2 and later, pnpm and Corepack in the later steps. If empty, they use the public registry."
 - key: "AC_MIRROR_NPM_LOCKFILE"
-  defaultValue: "fail"
+  defaultValue: "update"
   isRequired: false
   title: "Lockfile"
   editorType: select
