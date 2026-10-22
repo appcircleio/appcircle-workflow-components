@@ -1,0 +1,28 @@
+platform: Common
+airgapSupport: true
+buildPlatform:
+displayName: "Git Mirror"
+description: "Points git at the mirrors of public git repositories on your git server, for dependencies such as CocoaPods git pods, Swift packages and git submodules on runners without internet access."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/git-mirror
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-git-mirror-component
+repoUrl: https://github.com/appcircleio/appcircle-git-mirror-component.git
+commit: baa3176
+inputs:
+- key: "AC_MIRROR_GIT"
+  defaultValue: "$AC_MIRROR_GIT"
+  isRequired: false
+  title: "Git Mirror URL"
+  description: "Base URL on your git server under which the repositories of the Git Source are mirrored with the same paths, for example `https://git.example.com/github/` for `https://github.com/<owner>/<repository>`. If empty, the step does nothing."
+- key: "AC_MIRROR_GIT_SOURCE"
+  defaultValue: "https://github.com/"
+  isRequired: false
+  title: "Git Source"
+  description: "Base URL of the public git host whose repositories are mirrored. Its https, http, ssh and `git@host:` forms are all sent to the Git Mirror URL. For another host, add the step again with that host."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
