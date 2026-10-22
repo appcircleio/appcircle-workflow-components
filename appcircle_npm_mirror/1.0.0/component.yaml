@@ -1,0 +1,40 @@
+platform: Common
+airgapSupport: true
+buildPlatform:
+displayName: "npm Mirror"
+description: "Points npm, Yarn, pnpm, Corepack, the Node.js install and React Native's Maven downloads at your artifact proxy, for runners without internet access."
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/npm-mirror
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-npm-mirror-component
+repoUrl: https://github.com/appcircleio/appcircle-npm-mirror-component.git
+commit: ad51276
+inputs:
+- key: "AC_MIRROR_NPM"
+  defaultValue: "$AC_MIRROR_NPM"
+  isRequired: false
+  title: "npm Mirror URL"
+  description: "URL of an npm repository on your artifact proxy (a proxy of `https://registry.npmjs.org`). Used by npm, Yarn 1, Yarn 2 and later, pnpm and Corepack in the later steps. If empty, they use the public registry."
+- key: "AC_MIRROR_NPM_LOCKFILE"
+  defaultValue: "fail"
+  isRequired: false
+  title: "Lockfile"
+  editorType: select
+  options: "update,fail,warn"
+  description: "What to do when a lockfile of the project still downloads from the public registry: a Yarn 1 `yarn.lock` with `registry.yarnpkg.com` or `registry.npmjs.org` URLs, or a `package-lock.json` with `registry.yarnpkg.com` URLs (npm rewrites `registry.npmjs.org` by itself). `update`: point the URLs at the npm Mirror URL in the cloned copy (nothing is pushed). `fail`: stop the build. `warn`: print a warning and continue."
+- key: "AC_MIRROR_NODE"
+  defaultValue: "$AC_MIRROR_NODE"
+  isRequired: false
+  title: "Node.js Mirror URL"
+  description: "URL of a raw (generic) repository on your artifact proxy that proxies `https://nodejs.org/dist`. Set as `N_NODE_MIRROR` for the Install Node step."
+- key: "AC_MIRROR_REACT_NATIVE_MAVEN"
+  defaultValue: "$AC_MIRROR_GRADLE"
+  isRequired: false
+  title: "React Native Maven Mirror URL"
+  description: "URL of a Maven repository on your artifact proxy that serves Maven Central, usually the same group as the Gradle Mirror. Set as `ENTERPRISE_REPOSITORY`, from which React Native 0.81 and later download Hermes and their prebuilt iOS frameworks."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
