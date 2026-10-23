@@ -3,7 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Flutter Mirror"
 description: "Points pub and the Flutter tool at your artifact proxy, for Flutter builds on runners without internet access."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/flutter-mirror
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-mirror
 requiredComponents:
 precedingComponents:
 followingComponents:

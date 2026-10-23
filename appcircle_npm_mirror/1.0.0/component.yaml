@@ -3,13 +3,13 @@ airgapSupport: true
 buildPlatform:
 displayName: "npm Mirror"
 description: "Points npm, Yarn, pnpm, Corepack, the Node.js install and React Native's Maven downloads at your artifact proxy, for runners without internet access."
-docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/npm-mirror
+docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/npm-mirror
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-npm-mirror-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-mirror-component.git
-commit: ad51276
+commit: 93aa027
 inputs:
 - key: "AC_MIRROR_NPM"
   defaultValue: "$AC_MIRROR_NPM"
@@ -17,7 +17,7 @@ inputs:
   title: "npm Mirror URL"
   description: "URL of an npm repository on your artifact proxy (a proxy of `https://registry.npmjs.org`). Used by npm, Yarn 1, Yarn 2 and later, pnpm and Corepack in the later steps. If empty, they use the public registry."
 - key: "AC_MIRROR_NPM_LOCKFILE"
-  defaultValue: "fail"
+  defaultValue: "update"
   isRequired: false
   title: "Lockfile"
   editorType: select

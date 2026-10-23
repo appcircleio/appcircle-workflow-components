@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component.git
-commit: 0f6c47b
+commit: 9a70e0f
 inputs:
 - key: "AC_MIRROR_COCOAPODS"
   defaultValue: "$AC_MIRROR_COCOAPODS"
@@ -17,7 +17,7 @@ inputs:
   title: "CocoaPods Mirror URL"
   description: "URL of a CocoaPods proxy on your artifact proxy (it serves the CDN protocol of `https://cdn.cocoapods.org/`). If empty, the step does nothing."
 - key: "AC_MIRROR_COCOAPODS_PODFILE"
-  defaultValue: "fail"
+  defaultValue: "update"
   isRequired: false
   title: "Podfile Source"
   editorType: select
