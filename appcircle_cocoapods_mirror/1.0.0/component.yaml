@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component.git
-commit: 0f6c47b
+commit: 9a70e0f
 inputs:
 - key: "AC_MIRROR_COCOAPODS"
   defaultValue: "$AC_MIRROR_COCOAPODS"

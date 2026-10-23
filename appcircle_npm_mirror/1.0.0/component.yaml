@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-npm-mirror-component
 repoUrl: https://github.com/appcircleio/appcircle-npm-mirror-component.git
-commit: ad51276
+commit: 93aa027
 inputs:
 - key: "AC_MIRROR_NPM"
   defaultValue: "$AC_MIRROR_NPM"

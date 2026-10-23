@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-gradle-mirror-component
 repoUrl: https://github.com/appcircleio/appcircle-gradle-mirror-component.git
-commit: da339df
+commit: f75a4f3
 inputs:
 - key: "AC_MIRROR_GRADLE"
   defaultValue: "$AC_MIRROR_GRADLE"
