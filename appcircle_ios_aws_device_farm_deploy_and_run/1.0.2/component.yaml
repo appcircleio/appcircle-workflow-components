@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/aws-device-farm-and-deploy
 requiredComponents: "appcircle_ios_build_for_testing"
 precedingComponents: "appcircle_ios_build_version_increment"

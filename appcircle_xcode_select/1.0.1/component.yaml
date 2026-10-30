@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Xcode Select"
 description: "Use to specify xcode version."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcode-select
 requiredComponents:
 precedingComponents:

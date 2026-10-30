@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for Android'
+category: "versioning"
 webUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-version-increment-component.git
 commit: f63fb7b

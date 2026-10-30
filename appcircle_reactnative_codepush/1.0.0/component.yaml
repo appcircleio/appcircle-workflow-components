@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: ReactNative
 displayName: Appcircle CodePush
 description: "Release a React Native update to Appcircle CodePush."
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/appcircle-codepush
 requiredComponents: "appcircle_git_clone,appcircle_npm_yarn,appcircle_node_install"
 precedingComponents: 

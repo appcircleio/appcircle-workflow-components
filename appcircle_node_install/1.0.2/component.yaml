@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Install Node
 description: "Select a specific Node version for the build. Defaults to: lts"
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-node-install-component
 repoUrl: https://github.com/appcircleio/appcircle-node-install-component.git
 commit: d65ba5b

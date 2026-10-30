@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86/arm64 architecture."
+category: "build"
 description: "Download and install certificates and provisioning profiles."
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-ios-simulator
 requiredComponents: "appcircle_git_clone,appcircle_xcode_select"

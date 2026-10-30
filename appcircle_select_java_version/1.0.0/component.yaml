@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Select Java Version"
 description: "Switch the current Java version to the selected one."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/select-java-version
 requiredComponents:
 precedingComponents:

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-test-report-component
 repoUrl: https://github.com/appcircleio/appcircle-test-report-component.git
 commit: 583affd

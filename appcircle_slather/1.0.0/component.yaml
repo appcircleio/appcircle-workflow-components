@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-slather-component
 repoUrl: https://github.com/appcircleio/appcircle-slather-component.git
 commit: 79d2501

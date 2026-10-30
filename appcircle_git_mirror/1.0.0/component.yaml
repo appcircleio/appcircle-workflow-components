@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Git Mirror"
 description: "Points git at the mirrors of public git repositories on your git server, for dependencies such as CocoaPods git pods, Swift packages and git submodules on runners without internet access."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/git-mirror
 requiredComponents:
 precedingComponents:

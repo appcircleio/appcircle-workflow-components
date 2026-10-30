@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Activate SSH Private Key
 description: "Activate SSH private key in RSA format."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component
 repoUrl: https://github.com/appcircleio/appcircle-activate-ssh-key-component.git
 commit: 3f323d7

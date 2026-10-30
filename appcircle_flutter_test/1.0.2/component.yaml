@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Test
 description: "Run Flutter test command."
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-test
 requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
 precedingComponents:

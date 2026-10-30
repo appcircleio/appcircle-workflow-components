@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Android Dependency Report
 description: "Rendering the dependency report."
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-dependency-report
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

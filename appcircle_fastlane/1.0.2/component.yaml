@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Fastlane
 description: "Runs fastlane lane."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-fastlane-component
 repoUrl: https://github.com/appcircleio/appcircle-fastlane-component.git
 commit: 8faf250

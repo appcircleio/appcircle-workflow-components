@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Gradle Runner
 description: "Runs a Gradle task"
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component
 repoUrl: https://github.com/appcircleio/appcircle-android-gradle-task-component.git
 commit: 873f0f8

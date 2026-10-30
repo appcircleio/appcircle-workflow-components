@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Data Theorem Mobile Secure
 description: "Scan your app using Mobile Secure"
+category: "security"
 webUrl: https://github.com/appcircleio/appcircle-datatheorem-component
 repoUrl: https://github.com/appcircleio/appcircle-datatheorem-component.git
 commit: 4600167

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: JavaKotlin, ObjectiveCSwift
 displayName: "MobSF Source Code Scan"
 description: "Scans Android and iOS source code for security issues"
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-source-code-scan
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Carthage
 description: "Execute Carthage script in the project path."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-carthage-component
 repoUrl: https://github.com/appcircleio/appcircle-carthage-component.git
 commit: be80274

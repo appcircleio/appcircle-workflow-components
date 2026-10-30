@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Install Certificates & Profiles"
 description: "Download and install certificates and provisioning profiles."
+category: "sign"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/install-certificates-provisions
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

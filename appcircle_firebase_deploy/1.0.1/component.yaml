@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Firebase Deployment
 description: "Deploy your web applications to Firebase Hosting"
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/firebase-deployment
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

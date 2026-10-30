@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Cocoapods Install
 description: "Execute CocoaPods install in the project path."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-component.git
 commit: fa877ae

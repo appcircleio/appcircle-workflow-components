@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: AppSweep Mobile Security Testing
 description: "Scan your Android app using AppSweep"
+category: "security"
 webUrl: https://github.com/appcircleio/appcircle-appsweep-component
 repoUrl: https://github.com/appcircleio/appcircle-appsweep-component.git
 commit: 6dc4179

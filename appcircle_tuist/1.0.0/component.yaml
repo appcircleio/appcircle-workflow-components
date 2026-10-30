@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Tuist
 description: "Install Tuist and Generate a Project."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-tuist-component
 repoUrl: https://github.com/appcircleio/appcircle-tuist-component.git
 commit: 7125bc3

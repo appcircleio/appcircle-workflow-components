@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Firebase Upload dSYM
 description: "Upload debug symbols to Firebase"
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/firebase-upload-dsym
 requiredComponents:
 precedingComponents: "appcircle_ios_build_sign,appcircle_ios_flutter_build"

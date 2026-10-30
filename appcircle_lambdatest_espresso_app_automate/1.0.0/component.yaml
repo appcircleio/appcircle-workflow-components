@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: LambdaTest App Automate - Espresso
 description: "Run your Espresso tests on LambdaTest App Automate"
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/lambdatest-app-automate-espresso
 requiredComponents: "appcircle_git_clone,appcircle_android_build_ui_test"
 precedingComponents:

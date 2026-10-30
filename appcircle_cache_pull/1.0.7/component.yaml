@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
+category: "cache"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-cache/cache-pull
 requiredComponents:
 precedingComponents: "appcircle_git_clone"

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: Android Sign
 description: "Sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
+category: "sign"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-sign
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents:

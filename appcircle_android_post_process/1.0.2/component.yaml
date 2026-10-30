@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin, Flutter
 displayName: Android App Post-Processor
 description: "System operations to identify and process the output files."
+category: "build"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/post-processor
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_android_sign,appcircle_android_build,appcircle_android_flutter_build,appcircle_android_flutter_sign"

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-netrc-component
 repoUrl: https://github.com/appcircleio/appcircle-netrc-component.git
 commit: 3e39d81

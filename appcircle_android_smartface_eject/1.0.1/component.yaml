@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform: Smartface
 displayName: "Smartface Eject for Android"
 description: "Creates Android Studio project to build from your smartface workspace."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component
 repoUrl: https://github.com/appcircleio/appcircle-android-smartface-eject-component.git
 commit: 61e009f

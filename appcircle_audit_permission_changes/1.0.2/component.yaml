@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Audit Permission Changes"
 description: "Check your permissions of app according to reference branch"
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/audit-permission-change
 requiredComponents: "appcircle_git_clone"
 precedingComponents: 

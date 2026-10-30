@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for Unit and UI Tests"
 description: "Performs unit and UI tests for your iOS applications."
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-unit-and-ui-test
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
 precedingComponents: "appcircle_cocoapods,appcircle_carthage"

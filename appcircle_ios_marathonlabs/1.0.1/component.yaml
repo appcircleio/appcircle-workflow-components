@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform: ObjectiveCSwift
 displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android and iOS tests on Marathon Cloud."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/marathon-cloud
 requiredComponents: "appcircle_ios_build_for_testing"
 precedingComponents: 

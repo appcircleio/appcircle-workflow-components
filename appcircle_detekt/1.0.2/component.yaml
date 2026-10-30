@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Detekt
 description: "Runs detekt gradle task"
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/detekt
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

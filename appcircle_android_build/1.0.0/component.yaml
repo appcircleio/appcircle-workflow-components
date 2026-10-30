@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin, Smartface
 displayName: "Android Build"
 description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-android-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-component.git
 commit: c7c17e3

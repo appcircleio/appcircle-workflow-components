@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: File size check
 description: "Checks the file size of build artifacts."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-filesize-component
 repoUrl: https://github.com/appcircleio/appcircle-filesize-component.git
 commit: c00845e

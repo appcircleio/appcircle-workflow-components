@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for iOS"
 description: "Build your Flutter project for iOS."
+category: "build"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-build-for-ios
 requiredComponents: "appcircle_git_clone,appcircle_xcode_select,appcircle_flutter_install"
 precedingComponents: "appcircle_cocoapods"
