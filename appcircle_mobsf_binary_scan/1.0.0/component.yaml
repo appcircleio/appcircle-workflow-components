@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: JavaKotlin, ObjectiveCSwift, ReactNative, Flutter
 displayName: "MobSF Binary Scan"
 description: "Scans the built APK, AAB or IPA for security issues"
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/mobsf-binary-scan
 requiredComponents:
 precedingComponents: "appcircle_android_build,appcircle_ios_build_sign,appcircle_android_flutter_build,appcircle_ios_flutter_build"

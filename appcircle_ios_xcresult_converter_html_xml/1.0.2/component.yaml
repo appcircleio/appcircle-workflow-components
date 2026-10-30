@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: "Convert Xcresult to HTML/XML"
 description: "Convert test results from Xcresult to HTML/XML"
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/convert-xcresult-to-xml-html
 requiredComponents: "appcircle_ios_test"
 precedingComponents: 

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-for-testing.git
 commit: c33ea3c

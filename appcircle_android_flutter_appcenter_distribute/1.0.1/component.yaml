@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appcenter-distribute-component.git
 commit: d82fc74

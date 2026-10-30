@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Fortify on Demand Mobile Assessment
 description: "Submits a Fortify on Demand Mobile Assessment"
+category: "security"
 webUrl: https://github.com/appcircleio/appcircle-fod-mobile-assessment
 repoUrl: https://github.com/appcircleio/appcircle-fod-mobile-assessment.git
 commit: afeebd8

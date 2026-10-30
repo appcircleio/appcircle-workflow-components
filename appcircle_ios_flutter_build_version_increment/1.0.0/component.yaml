@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Increment Build Number
 description: 'Increment Build Number by 1.'
+category: "versioning"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-version-increment.git
 commit: 453d7b0

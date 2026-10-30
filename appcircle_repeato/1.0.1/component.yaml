@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Repeato Test Runner
 description: "You can execute Repeato tests before deploying your app build."
+category: "device-testing"
 webUrl: https://github.com/appcircleio/appcircle-repeato-component
 repoUrl: https://github.com/appcircleio/appcircle-repeato-component.git
 commit: 09b710c

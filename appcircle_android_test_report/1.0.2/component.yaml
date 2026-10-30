@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.
+category: "test"
 docsUrl: https://docs.appcircle.io/continuous-testing/running-android-unit-tests/#generating-test-report
 requiredComponents: "appcircle_android_unit_test"
 precedingComponents:

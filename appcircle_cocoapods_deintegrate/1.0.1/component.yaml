@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Cocoapods Deintegrate
 description: "Remove all traces of CocoaPods from the project."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component
 repoUrl: https://github.com/appcircleio/appcircle-cocoapods-deintegrate-component.git
 commit: c02a0df

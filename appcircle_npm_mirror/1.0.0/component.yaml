@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "npm Mirror"
 description: "Points npm, Yarn, pnpm, Corepack, the Node.js install and React Native's Maven downloads at your artifact proxy, for runners without internet access."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/npm-mirror
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Gradle Mirror"
 description: "Points the Gradle builds of the workflow at a Maven repository on your artifact proxy, for runners without internet access."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/gradle-mirror
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

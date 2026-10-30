@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Analyze
 description: "Run flutter analyze command."
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-analyze-component.git
 commit: 1b5b1dd

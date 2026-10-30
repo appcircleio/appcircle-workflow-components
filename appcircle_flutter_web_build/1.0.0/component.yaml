@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for Web"
 description: "Build your Flutter project with Flutter SDK."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-web-build-component.git
 commit: d50ff52

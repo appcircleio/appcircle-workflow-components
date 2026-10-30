@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: SonarQube Scanner
 description: "Runs SonarQube Scanner CLI."
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/sonarqube
 requiredComponents:
 precedingComponents:

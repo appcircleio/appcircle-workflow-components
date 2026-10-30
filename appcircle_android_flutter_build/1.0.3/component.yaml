@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for Android"
 description: "Build your Flutter project with Flutter SDK."
+category: "build"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-build-for-android
 requiredComponents: "appcircle_git_clone,appcircle_flutter_install"
 precedingComponents: "appcircle_gradle_mirror"

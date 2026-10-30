@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: SonarQube Scanner
 description: "Runs SonarQube Scanner CLI."
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-sonarqube-component
 repoUrl: https://github.com/appcircleio/appcircle-sonarqube-component.git
 commit: 4893f6d

@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: JavaKotlin, Flutter
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/wait-for-android-emulator
 requiredComponents: "appcircle_android_build_ui_test"
 precedingComponents: "appcircle_android_sign,appcircle_android_flutter_sign"

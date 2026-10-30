@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
 commit: 697c1ad

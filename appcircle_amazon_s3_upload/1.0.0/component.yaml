@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Upload Files to Amazon S3
 description: "Upload a file to Amazon S3."
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3
 repoUrl: https://github.com/appcircleio/appcircle-file-upload-to-aws3.git
 commit: f9ad03b

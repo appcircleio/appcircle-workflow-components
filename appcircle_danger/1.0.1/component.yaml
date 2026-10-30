@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Danger
 description: "Runs Danger CI"
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/danger
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

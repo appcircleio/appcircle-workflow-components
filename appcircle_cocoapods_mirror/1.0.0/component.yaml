@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "CocoaPods Mirror"
 description: "Points CocoaPods at the CocoaPods repository on your artifact proxy, for runners without internet access."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/cocoapods-mirror
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

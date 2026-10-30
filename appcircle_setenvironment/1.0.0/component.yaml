@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Set Environment Variable
 description: "Set environment variables for the build."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-setenvironment-component
 repoUrl: https://github.com/appcircleio/appcircle-setenvironment-component.git
 commit: f7b5a1c

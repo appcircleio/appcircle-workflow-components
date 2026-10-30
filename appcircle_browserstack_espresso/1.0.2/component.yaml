@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: BrowserStack App Automate - Espresso
 description: "Run your Espresso tests on BrowserStack App Automate"
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/browserstack-app-automate-espresso
 requiredComponents: "appcircle_android_build_ui_test"
 precedingComponents:

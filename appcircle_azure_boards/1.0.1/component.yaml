@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/azure-board
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

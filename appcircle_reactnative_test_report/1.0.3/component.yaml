@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: ReactNative
 displayName: Test Reports
 description: Parse test and coverage results.
+category: "test"
 docsUrl: https://docs.appcircle.io/continuous-testing/workflows/react-native-specific-workflow-steps/test-reports-react-native
 requiredComponents:
 precedingComponents: "appcircle_reactnative_unit_test,appcircle_reactnative_ui_test"

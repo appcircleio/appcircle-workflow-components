@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-badge-component
 repoUrl: https://github.com/appcircleio/appcircle-badge-component.git
 commit: 61fab3c

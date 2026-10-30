@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform: Flutter
 displayName: "App Center Android Distribute"
 description: "Distribute APK, AAB, and mapping files to App Center."
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/app-center-android-distribution
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

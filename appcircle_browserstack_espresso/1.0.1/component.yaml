@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: BrowserStack App Automate - Espresso
 description: "Run your Espresso tests on BrowserStack App Automate"
+category: "device-testing"
 webUrl: https://github.com/appcircleio/appcircle-browserstack-espresso-component
 repoUrl: https://github.com/appcircleio/appcircle-browserstack-espresso-component.git
 commit: d1e2ac1

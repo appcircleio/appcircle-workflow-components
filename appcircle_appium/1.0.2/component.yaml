@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Appium Server
 description: "Installs and runs Appium Server."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/appium-server
 requiredComponents:
 precedingComponents:

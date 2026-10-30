@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: Android App Post-Processor
 description: "System operations to identify and process the output files."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-android-post-process-component
 repoUrl: https://github.com/appcircleio/appcircle-android-post-process-component.git
 commit: 46abd1a

@@ -4,6 +4,7 @@ buildPlatform:
 componentType: appcircle_custom_script
 displayName: Custom Script
 description: "Carry out any custom operation in the build machine with a compatible script."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-custom-script
 repoUrl: https://github.com/appcircleio/appcircle-custom-script.git
 commit: c163e15

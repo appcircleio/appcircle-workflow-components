@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform: Flutter
 displayName: Flutter Install
 description: "Install spesificed flutter version. Defaults to: stable. You can use any available tag or branch in Flutter SDK repo."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-install
 requiredComponents: 
 precedingComponents: 

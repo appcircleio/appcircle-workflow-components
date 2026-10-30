@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Add Badge onto Your App Icon for Android
 description: "Install Imagemagick and add badge onto your icons."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/add-badge-app-icon
 requiredComponents: "appcircle_git_clone"
 precedingComponents: "appcircle_android_build_version_increment"

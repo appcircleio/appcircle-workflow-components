@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Server Diagnostic"
 description: "The Server Diagnostic Component is responsible for diagnosing the upload speed and server timeout in SELF-HOSTED deployments. "
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-server-diagnostic
 repoUrl: https://github.com/appcircleio/appcircle-server-diagnostic.git
 commit: 8dee1c2

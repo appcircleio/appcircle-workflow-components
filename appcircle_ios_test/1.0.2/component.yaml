@@ -3,6 +3,7 @@ airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for Unit and UI Tests"
 description: "Performs unit and UI tests for your iOS applications."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-ios-test-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-test-component.git
 commit: 867f154

@@ -3,6 +3,7 @@ airgapSupport: false
 buildPlatform:
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/maestro-cloud-upload
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
