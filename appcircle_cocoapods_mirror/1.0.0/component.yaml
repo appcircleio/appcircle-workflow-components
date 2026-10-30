@@ -1,0 +1,31 @@
+platform: iOS
+airgapSupport: true
+buildPlatform:
+displayName: "CocoaPods Mirror"
+description: "Points CocoaPods at the CocoaPods repository on your artifact proxy, for runners without internet access."
+category: "utility"
+docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/cocoapods-mirror
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component
+repoUrl: https://github.com/appcircleio/appcircle-cocoapods-mirror-component.git
+commit: 9a70e0f
+inputs:
+- key: "AC_MIRROR_COCOAPODS"
+  defaultValue: "$AC_MIRROR_COCOAPODS"
+  isRequired: false
+  title: "CocoaPods Mirror URL"
+  description: "URL of a CocoaPods proxy on your artifact proxy (it serves the CDN protocol of `https://cdn.cocoapods.org/`). If empty, the step does nothing."
+- key: "AC_MIRROR_COCOAPODS_PODFILE"
+  defaultValue: "update"
+  isRequired: false
+  title: "Podfile Source"
+  editorType: select
+  options: "update,fail,warn"
+  description: "What to do when a Podfile of the project uses the public CocoaPods trunk (`https://cdn.cocoapods.org/`, the old `https://github.com/CocoaPods/Specs.git`, or no `source` line at all). `update`: point it at the CocoaPods Mirror URL in the cloned copy (nothing is pushed). `fail`: stop the build. `warn`: print a warning and continue."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

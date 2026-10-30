@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Sign
 description: "Sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
+category: "sign"
 webUrl: https://github.com/appcircleio/appcircle-android-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-sign-component.git
 commit: a3d10d4

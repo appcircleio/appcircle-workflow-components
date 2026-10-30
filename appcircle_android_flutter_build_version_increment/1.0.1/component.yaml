@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for Android'
+category: "versioning"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/increment-build-and-version-number
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

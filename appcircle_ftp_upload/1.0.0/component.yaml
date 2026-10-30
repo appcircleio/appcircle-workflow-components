@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: FTP Upload
 description: "Upload file or folders to given FTP server."
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-ftp-upload-component
 repoUrl: https://github.com/appcircleio/appcircle-ftp-upload-component.git
 commit: 9733c8d

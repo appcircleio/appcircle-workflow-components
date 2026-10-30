@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Publish Release Notes
 description: "Publish release notes to stores."
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-release-notes-component
 repoUrl: https://github.com/appcircleio/appcircle-release-notes-component.git
 commit: 2d5f99a

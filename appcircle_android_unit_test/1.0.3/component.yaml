@@ -1,11 +1,12 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Android Unit Tests
 description: "Run Android project's unit tests."
-categories: ["test"]
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/android-unit-tests
 requiredComponents: "appcircle_git_clone"
-precedingComponents:
+precedingComponents: "appcircle_gradle_mirror"
 followingComponents: "appcircle_android_test_report,appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."
+category: "utility"
 webUrl: https://github.com/appcircleio/appcircle-azure-boards-component
 repoUrl: https://github.com/appcircleio/appcircle-azure-boards-component.git
 commit: 6b92602

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Analyze
 description: "Run flutter analyze command."
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-analyze
 requiredComponents: "appcircle_flutter_install"
 precedingComponents: 

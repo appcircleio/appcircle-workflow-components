@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/xcodebuild-for-testing
 requiredComponents: "appcircle_xcode_select,appcircle_git_clone"
 precedingComponents: "appcircle_cocoapods,appcircle_carthage"

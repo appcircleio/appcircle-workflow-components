@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform: Flutter
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/maestro-cloud-upload
 requiredComponents: "appcircle_git_clone,appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Danger
 description: "Runs Danger CI"
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-danger-component
 repoUrl: https://github.com/appcircleio/appcircle-danger-component.git
 commit: 3f0a8f1

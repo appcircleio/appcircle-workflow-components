@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: AppSweep Mobile Security Testing
 description: "Scan your Android app using AppSweep"
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/appsweep-mobile-security-testing
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

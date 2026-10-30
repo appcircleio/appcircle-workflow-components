@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform: Flutter
 displayName: Testinium
 description: "Run your test plans with Testinium"
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

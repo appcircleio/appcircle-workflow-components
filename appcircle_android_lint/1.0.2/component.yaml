@@ -1,11 +1,12 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Android Lint
 description: "Run lint gradle task on your Android project's source files."
-categories: ["code-quality"]
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/lint
 requiredComponents: "appcircle_git_clone"
-precedingComponents:
+precedingComponents: "appcircle_gradle_mirror"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-android-lint-component
 repoUrl: https://github.com/appcircleio/appcircle-android-lint-component.git

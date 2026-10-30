@@ -1,7 +1,9 @@
 platform:
+airgapSupport: false
 buildPlatform:
 displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-distribution-component.git
 commit: 2a0f447

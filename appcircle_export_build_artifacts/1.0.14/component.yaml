@@ -1,15 +1,16 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts from the build agent to the Appcircle dashboard. The exported files will be available for download from the artifacts section of the completed build."
-categories: ["utility"]
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/export-build-artifacts
 requiredComponents:
 precedingComponents: "appcircle_git_clone"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-export-build-artifacts
 repoUrl: https://github.com/appcircleio/appcircle-export-build-artifacts.git
-commit: 29d1e0b
+commit: 9b66e92
 inputs:
 - key: "AC_UPLOAD_DIR"
   defaultValue: "$AC_OUTPUT_DIR"

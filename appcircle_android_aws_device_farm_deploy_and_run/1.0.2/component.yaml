@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: AWS Device Farm Deploy and Run
 description: "Deploy a file to AWS Device Farm and run tests."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/aws-device-farm-and-deploy
 requiredComponents: "appcircle_android_build_ui_test"
 precedingComponents: "appcircle_android_sign,appcircle_android_flutter_sign,appcircle_android_build_version_increment"

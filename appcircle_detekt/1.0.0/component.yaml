@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Detekt
 description: "Runs detekt gradle task"
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-detekt-component
 repoUrl: https://github.com/appcircleio/appcircle-detekt-component.git
 commit: ea2000c

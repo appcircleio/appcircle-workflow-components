@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Appium Server
 description: "Installs and runs Appium Server."
+category: "device-testing"
 webUrl: https://github.com/appcircleio/appcircle-appium-component
 repoUrl: https://github.com/appcircleio/appcircle-appium-component.git
 commit: 069cd70

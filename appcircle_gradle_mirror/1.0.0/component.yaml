@@ -1,0 +1,57 @@
+platform: Android
+airgapSupport: true
+buildPlatform:
+displayName: "Gradle Mirror"
+description: "Points the Gradle builds of the workflow at a Maven repository on your artifact proxy, for runners without internet access."
+category: "utility"
+docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/gradle-mirror
+requiredComponents: "appcircle_git_clone"
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-gradle-mirror-component
+repoUrl: https://github.com/appcircleio/appcircle-gradle-mirror-component.git
+commit: f75a4f3
+inputs:
+- key: "AC_MIRROR_GRADLE"
+  defaultValue: "$AC_MIRROR_GRADLE"
+  isRequired: false
+  title: "Gradle Mirror URL"
+  description: "URL of a Maven repository on your artifact proxy, usually a group that serves Google Maven, Maven Central, the Gradle Plugin Portal and every other repository your projects use. Every remote repository of the build is sent to it. If empty, the step does nothing."
+- key: "AC_MIRROR_GRADLE_DISTRIBUTION"
+  defaultValue: "$AC_MIRROR_GRADLE_DISTRIBUTION"
+  isRequired: false
+  title: "Gradle Distribution Mirror URL"
+  description: "URL of a raw (generic) repository on your artifact proxy that proxies `https://services.gradle.org/`. Used when Gradle Wrapper is set to update."
+- key: "AC_MIRROR_GRADLE_WRAPPER"
+  defaultValue: "update"
+  isRequired: false
+  title: "Gradle Wrapper"
+  editorType: select
+  options: "update,fail,warn"
+  description: "What to do when a `gradle-wrapper.properties` of the project still downloads Gradle from services.gradle.org. `update`: point its `distributionUrl` at the Gradle Distribution Mirror URL in the cloned copy (nothing is pushed); if that URL is empty, the build stops. `fail`: stop the build. `warn`: print a warning and continue."
+- key: "AC_MIRROR_GRADLE_USERNAME"
+  defaultValue: "$AC_MIRROR_GRADLE_USERNAME"
+  isRequired: false
+  title: "Gradle Mirror Username"
+  description: "User for the Gradle mirror. If both Gradle Mirror Username and Password are empty, the shared `AC_MIRROR_USERNAME` and `AC_MIRROR_PASSWORD` are used."
+- key: "AC_MIRROR_GRADLE_PASSWORD"
+  defaultValue: "$AC_MIRROR_GRADLE_PASSWORD"
+  isRequired: false
+  title: "Gradle Mirror Password"
+  description: "Password for the Gradle mirror user. Store it as a secret environment variable."
+- key: "AC_MIRROR_USERNAME"
+  defaultValue: "$AC_MIRROR_USERNAME"
+  isRequired: false
+  title: "Shared Mirror Username"
+  description: "User shared by all mirror steps, used when the Gradle Mirror Username and Password are empty."
+- key: "AC_MIRROR_PASSWORD"
+  defaultValue: "$AC_MIRROR_PASSWORD"
+  isRequired: false
+  title: "Shared Mirror Password"
+  description: "Password of the shared mirror user. Store it as a secret environment variable."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
+- "appcircle-mirror.gradle"

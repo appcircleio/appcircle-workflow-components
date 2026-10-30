@@ -1,11 +1,12 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Install Node
 description: "Select a specific Node version for the build. Defaults to: lts"
-categories: ["utility"]
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install
 requiredComponents: 
-precedingComponents: 
+precedingComponents: "appcircle_npm_mirror"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-node-install-component
 repoUrl: https://github.com/appcircleio/appcircle-node-install-component.git

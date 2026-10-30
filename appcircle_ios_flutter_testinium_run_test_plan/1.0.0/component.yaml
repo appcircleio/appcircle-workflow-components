@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Testinium Run Test Plan
 description: "Run test plan with Testinium."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-run-test-plan
 requiredComponents: "appcircle_ios_flutter_testinium_upload_app"
 precedingComponents:

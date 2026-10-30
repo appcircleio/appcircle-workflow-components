@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Test
 description: "Run Flutter test command."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-flutter-test-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-test-component.git
 commit: 48616a1

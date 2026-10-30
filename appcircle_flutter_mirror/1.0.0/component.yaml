@@ -1,0 +1,29 @@
+platform: Common
+airgapSupport: true
+buildPlatform:
+displayName: "Flutter Mirror"
+description: "Points pub and the Flutter tool at your artifact proxy, for Flutter builds on runners without internet access."
+category: "utility"
+docsUrl: https://docs.appcircle.io/workflows/flutter-specific-workflow-steps/flutter-mirror
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-flutter-mirror-component
+repoUrl: https://github.com/appcircleio/appcircle-flutter-mirror-component.git
+commit: 0fa2300
+inputs:
+- key: "AC_MIRROR_PUB"
+  defaultValue: "$AC_MIRROR_PUB"
+  isRequired: false
+  title: "pub Mirror URL"
+  description: "URL of a pub repository on your artifact proxy (a proxy of `https://pub.dev`). Set as `PUB_HOSTED_URL` for the later steps. If empty, pub uses pub.dev."
+- key: "AC_MIRROR_FLUTTER"
+  defaultValue: "$AC_MIRROR_FLUTTER"
+  isRequired: false
+  title: "Flutter Storage Mirror URL"
+  description: "URL of a raw (generic) repository on your artifact proxy that proxies `https://storage.googleapis.com`. Set as `FLUTTER_STORAGE_BASE_URL` for the later steps: Flutter Install downloads the SDK from it, and the Flutter tool and the Flutter Gradle plugin download the engine artifacts from it. If empty, Flutter uses storage.googleapis.com."
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"

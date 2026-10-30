@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Azure DevOps Bot for Detekt Report
 description: "Bot script that allows Detekt outputs to make changes to Azure DevOps Pull Requests."
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-android-azure-bot-for-detekt-component
 repoUrl: https://github.com/appcircleio/appcircle-android-azure-bot-for-detekt-component.git
 commit: 5f060d4

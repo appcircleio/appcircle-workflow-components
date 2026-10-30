@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Check Network Access
 description: "Check the network access with external services for the Appcircle build module."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/check-network-access
 requiredComponents:
 precedingComponents:

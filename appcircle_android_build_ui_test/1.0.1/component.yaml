@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin, Flutter
 displayName: "Android Build for UI Testing"
 description: "Build your test applications with gradlew(./gradlew assembleDebug assembleAndroidTest)."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-build-ui-test-component.git
 commit: c24d2ff

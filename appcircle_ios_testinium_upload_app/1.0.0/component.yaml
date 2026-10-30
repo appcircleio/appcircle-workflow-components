@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-upload-app
 requiredComponents: "appcircle_ios_build_sign"
 precedingComponents:

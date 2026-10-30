@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: Bundle Universal Apk
 description: "Generates an universal APK from an AAB"
+category: "build"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/bundle-universal-apk
 requiredComponents:
 precedingComponents: "appcircle_android_sign"

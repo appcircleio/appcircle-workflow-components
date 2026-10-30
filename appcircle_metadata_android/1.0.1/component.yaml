@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Metadata
 description: Produce metadata from the selected repository.
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-android-metadata-component
 repoUrl: https://github.com/appcircleio/appcircle-android-metadata-component.git
 commit: 9375bbe

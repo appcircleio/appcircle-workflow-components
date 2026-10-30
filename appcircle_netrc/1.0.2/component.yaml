@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/authenticate-with-netrc
 requiredComponents: 
 precedingComponents: 

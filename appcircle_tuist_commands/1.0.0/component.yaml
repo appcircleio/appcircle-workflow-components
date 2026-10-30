@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ObjectiveCSwift
 displayName: Tuist Commands
 description: "Run Tuist Commands"
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist-commands
 requiredComponents: "appcircle_git_clone,appcircle_tuist"
 precedingComponents: 

@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Flutter
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/testinium-steps/testinium-upload-app
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

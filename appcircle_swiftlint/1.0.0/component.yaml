@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Swiftlint
 description: "Install Swiftlint and lint swift files."
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-swiftlint-component
 repoUrl: https://github.com/appcircleio/appcircle-swiftlint-component.git
 commit: d7712de

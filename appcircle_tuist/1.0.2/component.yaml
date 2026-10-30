@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: false
 buildPlatform:
 displayName: Tuist
 description: "Install Tuist and Generate a Project."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/tuist
 requiredComponents: "appcircle_git_clone"
 precedingComponents: 

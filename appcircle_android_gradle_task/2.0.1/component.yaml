@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Gradle Runner
 description: "Runs a Gradle task"
+category: "build"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/gradle-runner
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

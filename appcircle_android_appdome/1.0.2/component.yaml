@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
+category: "security"
 webUrl: https://github.com/appcircleio/appcircle-android-appdome-component
 repoUrl: https://github.com/appcircleio/appcircle-android-appdome-component.git
 commit: 2e3a2ac

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: "Cache Pull"
 description: "Downloads cache from Appcircle, extracts files and folders to source locations."
+category: "cache"
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git
 commit: 5dafe2f

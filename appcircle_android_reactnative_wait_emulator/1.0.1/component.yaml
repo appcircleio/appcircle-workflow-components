@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: 
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-android-wait-emulator
 repoUrl: https://github.com/appcircleio/appcircle-android-wait-emulator.git
 commit: 31ff0a4

@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform: JavaKotlin
 displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android tests on Marathon Cloud."
+category: "device-testing"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/marathon-cloud
 requiredComponents: "appcircle_android_build_ui_test"
 precedingComponents:

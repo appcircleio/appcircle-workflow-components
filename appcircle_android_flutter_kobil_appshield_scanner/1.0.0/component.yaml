@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform: Flutter
 displayName: "KOBIL Appshield Scanner"
 description: "Runs dynamic analysis on mobile apps to detect security mechanisms."
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/kobil-appshield-scanner
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Install Node
 description: "Select a specific Node version for the build. Defaults to: lts"
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install
 requiredComponents: 
 precedingComponents: 

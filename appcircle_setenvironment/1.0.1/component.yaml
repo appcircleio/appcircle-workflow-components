@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Set Environment Variable
 description: "Set environment variables for the build."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/set-environment-variable
 requiredComponents:
 precedingComponents:

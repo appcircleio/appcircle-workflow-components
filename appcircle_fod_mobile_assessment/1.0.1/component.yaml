@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: false
 buildPlatform:
 displayName: Fortify on Demand Mobile Assessment
 description: "Submits a Fortify on Demand Mobile Assessment"
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/fod-mobile-assesment
 requiredComponents:
 precedingComponents:

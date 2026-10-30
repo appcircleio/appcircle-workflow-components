@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Re-Sign
 description: "Re-sign the unsigned output file from the build step with the selected keystore to export a binary compatible with Android devices."
+category: "sign"
 webUrl: https://github.com/appcircleio/appcircle-android-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-android-resign-component.git
 commit: 10e21f6

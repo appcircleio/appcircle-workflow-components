@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Fastlane
 description: "Runs fastlane lane."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/fastlane
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

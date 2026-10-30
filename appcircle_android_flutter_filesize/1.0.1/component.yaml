@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Flutter
 displayName: File Size Check
 description: "Checks the file size of build artifacts."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-and-test/file-size-check
 requiredComponents: "appcircle_android_flutter_build"
 precedingComponents: "appcircle_android_flutter_sign"

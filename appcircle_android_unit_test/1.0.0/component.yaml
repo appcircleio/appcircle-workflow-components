@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Android Unit Tests
 description: "Run Android project's unit tests."
+category: "test"
 webUrl: https://github.com/appcircleio/appcircle-android-unit-test-component
 repoUrl: https://github.com/appcircleio/appcircle-android-unit-test-component.git
 commit: 5779f72

@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ObjectiveCSwift, Flutter
 displayName: Test Reports
 description: Parse test and coverage results.
+category: "test"
 docsUrl: https://docs.appcircle.io/continuous-testing/running-ios-unit-and-ui-tests#generating-test-report
 requiredComponents: "appcircle_ios_test"
 precedingComponents: "appcircle_ios_xcresult_converter_html_xml"

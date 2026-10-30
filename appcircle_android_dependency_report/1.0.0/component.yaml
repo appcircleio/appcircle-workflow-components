@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform:
 displayName: Android Dependency Report
 description: "Rendering the dependency report."
+category: "code-quality"
 webUrl: https://github.com/appcircleio/appcircle-dependency-report
 repoUrl: https://github.com/appcircleio/appcircle-dependency-report.git
 commit: 83a22ac

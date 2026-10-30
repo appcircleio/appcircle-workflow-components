@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for Devices"
 description: "Build your application for iOS devices in ARM architecture (required for the  Share with Testers feature)."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-sign-component.git
 commit: e72d190

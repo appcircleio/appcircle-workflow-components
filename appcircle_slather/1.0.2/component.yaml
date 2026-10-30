@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."
+category: "test"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/slather
 requiredComponents: "appcircle_git_clone,appcircle_ios_test"
 precedingComponents: 

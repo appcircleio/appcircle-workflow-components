@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Smartface
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
+category: "cache"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
 commit: ab0c2ac

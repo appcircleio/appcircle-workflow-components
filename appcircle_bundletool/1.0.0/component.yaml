@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform:
 displayName: Bundle Universal Apk
 description: "Generates an universal APK from an AAB"
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-bundletool-component
 repoUrl: https://github.com/appcircleio/appcircle-bundletool-component.git
 commit: 6c59bdd

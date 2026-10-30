@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: false
 buildPlatform: ReactNative, JavaKotlin
 displayName: Appdome Build-2Secure for Android
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API."
+category: "security"
 docsUrl: https://docs.appcircle.io/workflows/android-specific-workflow-steps/appdome-build-to-secure-for-android
 requiredComponents: "appcircle_android_build"
 precedingComponents: "appcircle_android_sign"

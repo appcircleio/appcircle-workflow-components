@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: Swiftlint
 description: "Install Swiftlint and lint swift files."
+category: "code-quality"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/swiftlint
 requiredComponents: "appcircle_cocoapods,appcircle_xcode_select,appcircle_git_clone"
 precedingComponents:

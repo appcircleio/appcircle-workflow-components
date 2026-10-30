@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: false
 buildPlatform:
 displayName: BrowserStack App Automate - XCUI
 description: "Run your XCUI tests on BrowserStack App Automate"
+category: "device-testing"
 webUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component
 repoUrl: https://github.com/appcircleio/appcircle-browserstack-xcui-component.git
 commit: b00e8df

@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for iOS Simulator"
 description: "Build your application for iOS Simulator in x86/arm64 architecture."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-ios-build-simulator
 repoUrl: https://github.com/appcircleio/appcircle-ios-build-simulator.git
 commit: a173dec

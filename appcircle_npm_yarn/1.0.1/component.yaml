@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: npm/Yarn Commands
 description: "Runs npm/yarn with the given commands."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/npm-yarn-commands
 requiredComponents: "appcircle_git_clone,appcircle_node_install"
 precedingComponents:

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: false
 buildPlatform:
 displayName: Upload Files to Amazon S3
 description: "Upload a file to Amazon S3."
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/upload-files-to-amazon-s3
 requiredComponents:
 precedingComponents:

@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: true
 buildPlatform:
 displayName: Publish Release Notes
 description: "Publish release notes to the selected distribution modules."
+category: "distribution"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/publish-release-notes
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

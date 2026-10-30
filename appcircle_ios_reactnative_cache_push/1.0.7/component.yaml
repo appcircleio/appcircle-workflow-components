@@ -1,7 +1,9 @@
 platform: iOS
+airgapSupport: true
 buildPlatform: ReactNative
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."
+category: "cache"
 docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/build-cache/cache-push
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

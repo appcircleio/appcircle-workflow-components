@@ -1,7 +1,9 @@
 platform: Android
+airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for Android"
 description: "Build your Flutter project with Flutter SDK."
+category: "build"
 webUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component
 repoUrl: https://github.com/appcircleio/appcircle-android-flutter-build-component.git
 commit: 09b7012

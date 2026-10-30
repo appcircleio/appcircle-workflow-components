@@ -1,7 +1,9 @@
 platform: Common
+airgapSupport: false
 buildPlatform:
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."
+category: "device-testing"
 webUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component
 repoUrl: https://github.com/appcircleio/appcircle-maestro-cloud-upload-component.git
 commit: a8c7189
