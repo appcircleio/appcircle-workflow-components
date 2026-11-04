@@ -9,7 +9,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-marathonlabs-component
 repoUrl: https://github.com/appcircleio/appcircle-marathonlabs-component.git
-commit: ab27687
+commit: 4691e2b
 inputs:
 - key: "AC_MARATHON_API_KEY"
   defaultValue: "$AC_MARATHON_API_KEY"

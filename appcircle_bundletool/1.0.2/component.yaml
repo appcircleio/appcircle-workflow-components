@@ -9,7 +9,7 @@ precedingComponents: "appcircle_android_sign"
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-bundletool-component
 repoUrl: https://github.com/appcircleio/appcircle-bundletool-component.git
-commit: 3cf8ecc
+commit: 2adc690
 inputs:
 - key: "AC_BUNDLETOOL_VERSION"
   title: "Bundletool version"
