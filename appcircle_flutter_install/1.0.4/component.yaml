@@ -9,7 +9,7 @@ precedingComponents: "appcircle_flutter_mirror"
 followingComponents: 
 webUrl: https://github.com/appcircleio/appcircle-flutter-install-component
 repoUrl: https://github.com/appcircleio/appcircle-flutter-install-component.git
-commit: dbf2a0b
+commit: 0d1d38e
 inputs:
 - key: "AC_SELECTED_FLUTTER_VERSION"
   isRequired: false
