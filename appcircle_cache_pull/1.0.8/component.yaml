@@ -9,7 +9,7 @@ precedingComponents: "appcircle_git_clone"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-cache-pull-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-pull-component.git
-commit: 869cdc5
+commit: 4d75904
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/cache"
