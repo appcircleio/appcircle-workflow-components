@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Install
 description: "Installs the selected Flutter version from the official Flutter release archives. Defaults to: stable. Branches and commits are installed from the Flutter SDK repo and require GitHub access."

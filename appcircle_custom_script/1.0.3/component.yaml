@@ -1,5 +1,4 @@
 ﻿platform: Common
-airgapSupport: true
 buildPlatform:
 componentType: appcircle_custom_script
 displayName: Custom Script

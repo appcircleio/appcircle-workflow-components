@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Git Clone
 description: Clone the selected repository to the build machine.

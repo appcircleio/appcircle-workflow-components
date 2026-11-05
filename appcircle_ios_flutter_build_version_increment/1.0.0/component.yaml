@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: Increment Build Number
 description: 'Increment Build Number by 1.'

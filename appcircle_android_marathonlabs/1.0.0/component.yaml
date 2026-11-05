@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform: JavaKotlin
 displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android and iOS tests on Marathon Cloud."

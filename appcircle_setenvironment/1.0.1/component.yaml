@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Set Environment Variable
 description: "Set environment variables for the build."

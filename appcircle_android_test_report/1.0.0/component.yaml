@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform:
 displayName: Test Reports
 description: Parse test and coverage results.

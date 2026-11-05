@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin, Smartface
 displayName: "Android Build"
 description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."

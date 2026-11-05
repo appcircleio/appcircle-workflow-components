@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Activate SSH Private Key
 description: "Activate SSH private key in RSA format."

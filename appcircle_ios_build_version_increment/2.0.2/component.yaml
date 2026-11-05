@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'

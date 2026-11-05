@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "Install Certificates & Profiles"
 description: "Download and install certificates and provisioning profiles."

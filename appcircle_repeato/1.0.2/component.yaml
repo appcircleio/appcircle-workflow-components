@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: false
 buildPlatform:
 displayName: Repeato Test Runner
 description: "You can execute Repeato tests before deploying your app build."

@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: Flutter
 displayName: File Size Check
 description: "Checks the file size of build artifacts."
