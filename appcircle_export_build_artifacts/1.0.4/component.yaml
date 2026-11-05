@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: "Export Build Artifacts"
 description: "Exports the specified build artifacts for download from the completed builds list."

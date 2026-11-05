@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform: ReactNative
 displayName: "React Native UI Test"
 description: "Run React Native UI tests with Detox."

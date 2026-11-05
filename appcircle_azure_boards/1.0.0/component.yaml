@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Azure Boards
 description: "Add comment to Azure Boards Issue and optionally change the status."

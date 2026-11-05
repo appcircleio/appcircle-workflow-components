@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform: ReactNative, JavaKotlin
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."

@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "Resign IPA"
 description: "Resign IPA with different certificates and provisioning profiles."

@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform:
 displayName: AppSweep Mobile Security Testing
 description: "Scan your Android app using AppSweep"

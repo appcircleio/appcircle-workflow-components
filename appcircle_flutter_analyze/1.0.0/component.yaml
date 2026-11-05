@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Analyze
 description: "Run flutter analyze command."

@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform: ReactNative, JavaKotlin
 displayName: Firebase App Distribution for Android
 description: "Distribute your builds via Firebase App Distribution"

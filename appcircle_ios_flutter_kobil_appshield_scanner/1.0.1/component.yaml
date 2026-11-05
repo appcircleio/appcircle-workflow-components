@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform: Flutter
 displayName: "KOBIL Appshield Scanner"
 description: "Runs dynamic analysis on mobile apps to detect security mechanisms."

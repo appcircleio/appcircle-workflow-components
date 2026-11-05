@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: JavaKotlin, ObjectiveCSwift, ReactNative, Flutter
 displayName: "MobSF Binary Scan"
 description: "Scans the built APK, AAB or IPA for security issues"

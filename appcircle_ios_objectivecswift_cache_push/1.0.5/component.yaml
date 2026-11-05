@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform: ObjectiveCSwift
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."

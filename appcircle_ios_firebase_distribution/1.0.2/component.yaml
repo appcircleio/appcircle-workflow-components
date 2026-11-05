@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Firebase App Distribution for iOS
 description: "Distribute your builds via Firebase App Distribution"

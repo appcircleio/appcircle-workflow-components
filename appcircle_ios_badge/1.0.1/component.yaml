@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Add badge onto your app icon
 description: "Install Imagemagick and add badge onto your icons."
