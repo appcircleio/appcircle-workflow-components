@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: Cocoapods Install
 description: "Execute CocoaPods install in the project path."

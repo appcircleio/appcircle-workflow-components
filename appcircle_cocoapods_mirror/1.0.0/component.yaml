@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "CocoaPods Mirror"
 description: "Points CocoaPods at the CocoaPods repository on your artifact proxy, for runners without internet access."

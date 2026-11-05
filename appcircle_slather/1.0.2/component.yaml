@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: Slather
 description: "Install Slather and generate test coverage reports for Xcode projects."

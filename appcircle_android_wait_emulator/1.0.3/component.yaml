@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: JavaKotlin, Flutter
 displayName: "Wait for Android emulator"
 description: "Wait for Android emulator to boot"

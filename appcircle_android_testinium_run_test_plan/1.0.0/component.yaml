@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Testinium Run Test Plan
 description: "Run test plan with Testinium."

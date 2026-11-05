@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Authenticate with netrc
 description: "Add credentials to the .netrc file"

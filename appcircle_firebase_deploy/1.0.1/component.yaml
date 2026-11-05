@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: false
 buildPlatform:
 displayName: Firebase Deployment
 description: "Deploy your web applications to Firebase Hosting"

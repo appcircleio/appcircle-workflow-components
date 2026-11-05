@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "Xcode Select"
 description: "Use to specify xcode version."

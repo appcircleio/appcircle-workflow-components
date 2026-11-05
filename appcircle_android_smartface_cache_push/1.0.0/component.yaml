@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: Smartface
 displayName: "Cache Push"
 description: "Uploads user selected files and folders to Appcircle cache."

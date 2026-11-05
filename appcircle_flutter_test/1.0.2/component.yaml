@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Test
 description: "Run Flutter test command."

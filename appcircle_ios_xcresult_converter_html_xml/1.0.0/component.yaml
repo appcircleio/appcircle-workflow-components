@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform:
 displayName: "Convert Xcresult to HTML/XML"
 description: "Convert test results from Xcresult to HTML/XML"

@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: false
 buildPlatform:
 displayName: Fortify on Demand Mobile Assessment
 description: "Submits a Fortify on Demand Mobile Assessment"

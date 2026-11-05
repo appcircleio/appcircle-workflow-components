@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: npm/Yarn Commands
 description: "Runs npm/yarn with the given commands."

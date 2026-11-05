@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: ReactNative, JavaKotlin
 displayName: Testinium Upload App
 description: "Enables uploading mobile applications to the Testinium platform."
