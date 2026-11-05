@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: "Flutter Mirror"
 description: "Points pub and the Flutter tool at your artifact proxy, for Flutter builds on runners without internet access."

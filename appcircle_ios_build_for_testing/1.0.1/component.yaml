@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild Build for Testing"
 description: "Build your application for testing."

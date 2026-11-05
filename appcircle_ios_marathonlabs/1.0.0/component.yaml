@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform: ObjectiveCSwift
 displayName: "Marathon Cloud"
 description: "With this step you can easily run your Android and iOS tests on Marathon Cloud."

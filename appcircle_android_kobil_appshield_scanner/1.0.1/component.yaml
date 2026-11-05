@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform: ReactNative, JavaKotlin
 displayName: "KOBIL Appshield Scanner"
 description: "Runs dynamic analysis on mobile apps to detect security mechanisms."

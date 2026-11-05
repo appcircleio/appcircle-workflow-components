@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for Android"
 description: "Build your Flutter project with Flutter SDK."

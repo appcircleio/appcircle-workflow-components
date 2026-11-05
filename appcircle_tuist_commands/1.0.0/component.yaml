@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform: ObjectiveCSwift
 displayName: Tuist Commands
 description: "Run Tuist Commands"

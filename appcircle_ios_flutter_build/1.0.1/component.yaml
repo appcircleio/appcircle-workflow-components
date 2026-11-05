@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for iOS"
 description: "Build your Flutter project for iOS."

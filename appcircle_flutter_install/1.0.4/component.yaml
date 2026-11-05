@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: Flutter
 displayName: Flutter Install
 description: "Install spesificed flutter version. Defaults to: stable. You can use any available tag or branch in Flutter SDK repo."

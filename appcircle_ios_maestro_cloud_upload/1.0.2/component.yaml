@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: false
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Maestro Cloud Upload
 description: "Upload both your app binary and flows to Maestro Cloud."

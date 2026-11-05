@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: false
 buildPlatform:
 displayName: Firebase App Distribution
 description: "Distribute your builds via Firebase App Distribution"

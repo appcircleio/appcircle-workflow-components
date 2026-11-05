@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: Audit Permission Changes
 description: "Permission Differance Checker"

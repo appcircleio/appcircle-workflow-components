@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Publish Release Notes
 description: "Publish release notes to stores."

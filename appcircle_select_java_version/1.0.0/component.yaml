@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: "Select Java Version"
 description: "Switch the current Java version to the selected one."

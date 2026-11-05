@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform:
 displayName: "Xcodebuild for Unit and UI Tests"
 description: "Performs unit and UI tests for your iOS applications."

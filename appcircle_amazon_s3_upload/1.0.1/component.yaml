@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: false
 buildPlatform:
 displayName: Upload Files to Amazon S3
 description: "Upload a file to Amazon S3."

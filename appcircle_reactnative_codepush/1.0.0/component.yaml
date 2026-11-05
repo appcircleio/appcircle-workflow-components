@@ -1,5 +1,4 @@
 platform: common
-airgapSupport: true
 buildPlatform: ReactNative
 displayName: Appcircle CodePush
 description: "Release a React Native update to Appcircle CodePush."

@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform:
 displayName: Jira Comment
 description: "Add comment to Jira Issue and optionally change the status."

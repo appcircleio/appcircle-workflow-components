@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform:
 displayName: Detekt
 description: "Runs detekt gradle task"

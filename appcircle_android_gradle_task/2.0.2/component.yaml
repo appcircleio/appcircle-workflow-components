@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: true
 buildPlatform:
 displayName: Gradle Runner
 description: "Runs a Gradle task"

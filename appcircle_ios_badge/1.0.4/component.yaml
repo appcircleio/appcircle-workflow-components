@@ -1,5 +1,4 @@
 platform: iOS
-airgapSupport: true
 buildPlatform: ObjectiveCSwift, ReactNative
 displayName: Add Badge onto Your App Icon for iOS
 description: "Install Imagemagick and add badge onto your icons."

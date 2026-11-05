@@ -1,5 +1,4 @@
 platform: Common
-airgapSupport: true
 buildPlatform: Flutter
 displayName: "Flutter Build for Web"
 description: "Build your Flutter project with Flutter SDK."

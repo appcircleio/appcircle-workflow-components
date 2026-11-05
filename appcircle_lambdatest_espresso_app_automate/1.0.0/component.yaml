@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform:
 displayName: LambdaTest App Automate - Espresso
 description: "Run your Espresso tests on LambdaTest App Automate"

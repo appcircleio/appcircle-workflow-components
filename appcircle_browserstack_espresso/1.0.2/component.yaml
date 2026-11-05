@@ -1,5 +1,4 @@
 platform: Android
-airgapSupport: false
 buildPlatform:
 displayName: BrowserStack App Automate - Espresso
 description: "Run your Espresso tests on BrowserStack App Automate"
