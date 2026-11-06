@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents: "appcircle_export_build_artifacts"
 webUrl: https://github.com/appcircleio/appcircle-cache-push-component
 repoUrl: https://github.com/appcircleio/appcircle-cache-push-component.git
-commit: 1f7d911
+commit: 095ae61
 inputs:
 - key: "AC_CACHE_LABEL"
   defaultValue: "$AC_BUILD_PROFILE_ID/cache"
@@ -27,7 +27,7 @@ inputs:
   isRequired: false
   title: Excluded Paths
   description: "Specifies the files and folders which should be ignored from cache. Multiple glob patterns can be provided as a colon-separated list. For example; .gradle/*.lock:*.apk"
-  helpText:
+  helpText: "An exclude applies only to includes with the same prefix. A pattern without a prefix (for example *.lock) applies only to repository includes. To exclude inside a ~/ include, start the pattern with ~/ (for example ~/.gradle/**/*.lock)."
 - key: "AC_CACHE_KEY_FILE"
   defaultValue: ""
   isRequired: false
