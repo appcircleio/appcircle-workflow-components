@@ -2,6 +2,7 @@ platform: iOS
 buildPlatform:
 displayName: Carthage
 description: "Execute Carthage script in the project path."
+category: "utility"
 docsUrl: https://docs.appcircle.io/workflows/ios-specific-workflow-steps/carthage
 requiredComponents: "appcircle_git_clone"
 precedingComponents:

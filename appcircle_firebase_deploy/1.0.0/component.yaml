@@ -2,6 +2,7 @@ platform: Common
 buildPlatform:
 displayName: Firebase Deployment
 description: "Deploy your web applications to Firebase Hosting"
+category: "distribution"
 webUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component
 repoUrl: https://github.com/appcircleio/appcircle-firebase-deploy-component.git
 commit: f9c52ca

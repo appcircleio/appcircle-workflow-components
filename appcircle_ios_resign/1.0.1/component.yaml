@@ -2,6 +2,7 @@ platform: iOS
 buildPlatform:
 displayName: "Resign IPA"
 description: "Resign IPA with different certificates and provisioning profiles."
+category: "sign"
 webUrl: https://github.com/appcircleio/appcircle-ios-resign-component
 repoUrl: https://github.com/appcircleio/appcircle-ios-resign-component.git
 commit: 959a7fe
