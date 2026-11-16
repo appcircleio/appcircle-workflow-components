@@ -1,0 +1,102 @@
+platform:
+buildPlatform:
+displayName: Ostorlab Security Scan
+description: "Uploads the built APK, AAB or IPA to Ostorlab and starts a security scan"
+docsUrl: https://docs.appcircle.io/workflows/common-workflow-steps/ostorlab-security-scan
+requiredComponents:
+precedingComponents:
+followingComponents:
+webUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component
+repoUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component.git
+commit: abcfd6e
+inputs:
+- key: "AC_OSTORLAB_API_KEY"
+  defaultValue: "$OSTORLAB_API_KEY"
+  isRequired: true
+  title: Ostorlab API Key
+  description: "The Ostorlab API key. Store it as a secret named `OSTORLAB_API_KEY` in an environment variable group and select the group in the configuration."
+  helpText:
+- key: "AC_OSTORLAB_ARTIFACT_PATH"
+  isRequired: false
+  title: Artifact Path
+  description: "The APK, AAB or IPA to scan, or the folder holding it. When empty the step finds it from the build variables."
+  helpText:
+- key: "AC_OSTORLAB_SCAN_PROFILE"
+  defaultValue: "fast_scan"
+  isRequired: true
+  editorType: select
+  options: "fast_scan,full_scan"
+  title: Scan Profile
+  description: "`fast_scan` runs static analysis only. `full_scan` runs static, dynamic and backend analysis."
+  helpText:
+- key: "AC_OSTORLAB_SCAN_TITLE"
+  defaultValue: "Appcircle scan"
+  isRequired: false
+  title: Scan Title
+  description: "The scan title shown in Ostorlab."
+  helpText:
+- key: "AC_OSTORLAB_BREAK_ON_RISK_RATING"
+  defaultValue: "none"
+  isRequired: false
+  editorType: select
+  options: "none,high,medium,low,potentially,hardening"
+  title: Break On Risk Rating
+  description: "Waits for the scan and breaks the pipeline when the risk rating is higher than this value. `high` breaks only on Critical. `none` does not wait for the result."
+  helpText:
+- key: "AC_OSTORLAB_MAX_WAIT_MINUTES"
+  defaultValue: "30"
+  isRequired: false
+  title: Max Wait Minutes
+  description: "How long to wait for the scan result when Break On Risk Rating is set. The step fails if the scan does not finish in time."
+  helpText:
+- key: "AC_OSTORLAB_TEST_CREDENTIALS_LOGIN"
+  isRequired: false
+  title: Test Credentials Login
+  description: "Username the Full Scan uses to log in to the application."
+  helpText:
+- key: "AC_OSTORLAB_TEST_CREDENTIALS_PASSWORD"
+  isRequired: false
+  title: Test Credentials Password
+  description: "Password the Full Scan uses to log in to the application. Use a secret environment variable, for example `$OSTORLAB_TEST_PASSWORD`."
+  helpText:
+- key: "AC_OSTORLAB_UI_PROMPTS"
+  isRequired: false
+  editorType: textarea
+  title: UI Prompts
+  description: "Natural language instructions that tell the scanner how to navigate the application. One prompt per line as `name: action`, for example `login: Tap the Login button and sign in`."
+  helpText:
+- key: "AC_OSTORLAB_EXTRA_ARGUMENTS"
+  isRequired: false
+  title: Extra Arguments
+  description: "Extra `ostorlab ci-scan run` options, for example `--test-credentials-role admin --sbom sbom.json`."
+  helpText:
+- key: "AC_OSTORLAB_CLI_VERSION"
+  isRequired: false
+  title: Ostorlab CLI Version
+  description: "The Ostorlab CLI version to install, for example `2.22.14`. When empty the latest version is installed."
+  helpText:
+- key: "AC_OSTORLAB_PYTHON_PATH"
+  isRequired: false
+  title: Python Path
+  description: "Python 3.13 or later used to install the Ostorlab CLI. When empty the step finds it on PATH."
+  helpText:
+outputs:
+- key: "AC_OSTORLAB_SCAN_ID"
+  title: "Scan ID"
+  defaultValue: "AC_OSTORLAB_SCAN_ID"
+  description: "The ID of the scan created in Ostorlab."
+  helpText:
+- key: "AC_OSTORLAB_RISK_RATING"
+  title: "Risk Rating"
+  defaultValue: "AC_OSTORLAB_RISK_RATING"
+  description: "The risk rating of the scan. Empty when the step does not wait for the result."
+  helpText:
+- key: "AC_OSTORLAB_SCANNED_ARTIFACT"
+  title: "Scanned Artifact"
+  defaultValue: "AC_OSTORLAB_SCANNED_ARTIFACT"
+  description: "The artifact that was uploaded to Ostorlab."
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
