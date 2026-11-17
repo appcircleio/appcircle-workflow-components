@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_flutter_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component
 repoUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component.git
-commit: abcfd6e
+commit: 2bf8818
 inputs:
 - key: "AC_OSTORLAB_API_KEY"
   defaultValue: "$OSTORLAB_API_KEY"
