@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component
 repoUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component.git
-commit: 2bf8818
+commit: 50a09f2
 inputs:
 - key: "AC_OSTORLAB_API_KEY"
   defaultValue: "$OSTORLAB_API_KEY"
@@ -17,9 +17,10 @@ inputs:
   description: "The Ostorlab API key. Store it as a secret named `OSTORLAB_API_KEY` in an environment variable group and select the group in the configuration."
   helpText:
 - key: "AC_OSTORLAB_ARTIFACT_PATH"
-  isRequired: false
+  defaultValue: "$AC_EXPORT_DIR"
+  isRequired: true
   title: Artifact Path
-  description: "The IPA to scan, or the folder holding it. When empty the step uses the .ipa under `$AC_EXPORT_DIR`."
+  description: "The IPA to scan, or the folder holding it. Defaults to the export folder of the Xcodebuild for Devices step. A folder must hold exactly one IPA."
   helpText:
 - key: "AC_OSTORLAB_SCAN_PROFILE"
   defaultValue: "fast_scan"
