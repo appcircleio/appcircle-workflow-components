@@ -8,7 +8,7 @@ precedingComponents: "appcircle_android_sign"
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component
 repoUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component.git
-commit: 2bf8818
+commit: 50a09f2
 inputs:
 - key: "AC_OSTORLAB_API_KEY"
   defaultValue: "$OSTORLAB_API_KEY"
@@ -17,9 +17,10 @@ inputs:
   description: "The Ostorlab API key. Store it as a secret named `OSTORLAB_API_KEY` in an environment variable group and select the group in the configuration."
   helpText:
 - key: "AC_OSTORLAB_ARTIFACT_PATH"
-  isRequired: false
+  defaultValue: "$AC_SIGNED_APK_PATH"
+  isRequired: true
   title: Artifact Path
-  description: "The APK or AAB to scan, or the folder holding it. When empty the step uses `$AC_SIGNED_APK_PATH`, `$AC_APK_PATH`, `$AC_SIGNED_AAB_PATH` or `$AC_AAB_PATH`, in that order."
+  description: "The APK or AAB to scan. Defaults to the signed APK from the Android Sign step. Use `$AC_SIGNED_AAB_PATH` to scan the AAB."
   helpText:
 - key: "AC_OSTORLAB_SCAN_PROFILE"
   defaultValue: "fast_scan"

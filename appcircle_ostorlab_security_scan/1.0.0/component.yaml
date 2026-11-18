@@ -8,7 +8,7 @@ precedingComponents:
 followingComponents:
 webUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component
 repoUrl: https://github.com/appcircleio/appcircle-ostorlab-security-scan-component.git
-commit: 2bf8818
+commit: 50a09f2
 inputs:
 - key: "AC_OSTORLAB_API_KEY"
   defaultValue: "$OSTORLAB_API_KEY"
@@ -17,9 +17,9 @@ inputs:
   description: "The Ostorlab API key. Store it as a secret named `OSTORLAB_API_KEY` in an environment variable group and select the group in the configuration."
   helpText:
 - key: "AC_OSTORLAB_ARTIFACT_PATH"
-  isRequired: false
+  isRequired: true
   title: Artifact Path
-  description: "The APK, AAB or IPA to scan, or the folder holding it. When empty the step finds it from the build variables."
+  description: "The APK, AAB or IPA to scan, for example `$AC_SIGNED_APK_PATH`, or the folder holding it, for example `$AC_EXPORT_DIR`. A folder must hold exactly one artifact."
   helpText:
 - key: "AC_OSTORLAB_SCAN_PROFILE"
   defaultValue: "fast_scan"
