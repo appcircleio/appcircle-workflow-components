@@ -2,6 +2,7 @@ platform: iOS
 buildPlatform: Flutter
 displayName: Increment Build and Version Number
 description: 'Increment Build and Version Number for iOS'
+category: "versioning"
 docsUrl: https://docs.appcircle.io/versioning/ios-version
 requiredComponents: "appcircle_git_clone"
 precedingComponents:
